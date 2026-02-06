@@ -245,6 +245,57 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--navy); }
   line-height: 1;
 }
 
+/* Scenario sliders */
+.scenario-slider-group {
+  display: flex;
+  gap: 14px;
+  margin: 10px 0 8px;
+}
+.scenario-slider {
+  flex: 1;
+  background: var(--light-blue);
+  border-radius: 6px;
+  padding: 12px 14px;
+  text-align: center;
+}
+.scenario-slider label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 4px;
+}
+.scenario-slider .slider-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.scenario-slider input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 4px;
+  background: var(--teal);
+  border-radius: 2px;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.scenario-slider input[type="range"]:hover { opacity: 1; }
+.scenario-slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--navy);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
 /* Section Divider */
 .slide-divider {
   display: flex;
@@ -454,32 +505,43 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--navy); }
   <div class="section-label">PORTFOLIO CONSTRUCTION</div>
   <div class="slide-title">Anchored in real assets. Driven by structural conviction.</div>
   <div class="slide-subtitle">A portfolio designed to compound through regime change &mdash; not despite it</div>
-  <div class="card-row" style="margin-top:12px;">
-    <div class="card">
-      <div class="card-label">THE FOUNDATION</div>
-      <div class="card-text">Triple-net commercial real estate with investment-grade tenants. Contractual USD cash flows, hard asset collateral, and a capital base that exists independent of market sentiment. The real estate generates stable yield and serves as the anchor &mdash; both structurally and psychologically.</div>
+  <div style="display:flex; gap:18px; margin-top:12px; flex:1; min-height:0;">
+    <div style="flex:1; display:flex; flex-direction:column; gap:10px;">
+      <div class="card" style="flex:1;">
+        <div class="card-label">THE FOUNDATION &mdash; REAL ESTATE (~45%)</div>
+        <div class="card-text">Triple-net commercial real estate with investment-grade tenants. Contractual USD cash flows, hard asset collateral, and a capital base that exists independent of market sentiment.</div>
+        <div class="card-text" style="margin-top:8px; font-size:12px; color:var(--navy);">
+          <strong>Structure:</strong> 100% equity acquisition &rarr; 55% LTV cash-out refinance<br>
+          <strong>Tenants:</strong> AAA credit rating, NNN lease structure<br>
+          <strong>Debt:</strong> 10-year term, 30-year amortization<br>
+          <strong>NOI Policy:</strong> Full surplus accumulated in U.S. Treasuries
+        </div>
+      </div>
+      <div class="card" style="flex:1;">
+        <div class="card-label">THE ENGINE &mdash; THEMATIC ALPHA (~55%)</div>
+        <div class="card-text">Deployed into secular macro shifts with decade-long runways. Commodities, infrastructure, real assets, and technology positions designed to capture asymmetric upside from structural change.</div>
+        <div class="card-text" style="margin-top:8px; font-size:12px; color:var(--navy);">
+          <strong>Permitted:</strong> Equities, ETFs, bonds, commodities, FX, futures, options, crypto<br>
+          <strong>Max Position:</strong> 10% of portfolio NAV<br>
+          <strong>Prohibited:</strong> Margin, borrowing, outright shorts<br>
+          <strong>Benchmark:</strong> S&P 500 Total Return Index
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <div class="card-label">THE ENGINE</div>
-      <div class="card-text">A thematic alpha portfolio deployed into secular macro shifts with decade-long runways. Commodities, infrastructure, real assets, and technology positions designed to capture asymmetric upside from the structural forces reshaping capital flows and the physical economy.</div>
-    </div>
-  </div>
-  <div class="card-row" style="margin-top:4px;">
-    <div class="stat-card">
-      <div class="stat-number">$20M</div>
-      <div class="stat-label">LP Committed Capital</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">10Y</div>
-      <div class="stat-label">Fund Life</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">55%</div>
-      <div class="stat-label">Maximum LTV</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">AAA</div>
-      <div class="stat-label">Target Tenant Credit</div>
+    <div style="width:300px; display:flex; flex-direction:column; gap:10px;">
+      <div style="flex:1; display:flex; align-items:center; justify-content:center;">
+        <canvas id="chart-capital-split" style="max-width:260px; max-height:260px;"></canvas>
+      </div>
+      <div class="card-row" style="margin:0; gap:10px;">
+        <div class="stat-card" style="padding:12px 8px;">
+          <div class="stat-number" style="font-size:28px;">$20M</div>
+          <div class="stat-label" style="font-size:10px;">LP Capital</div>
+        </div>
+        <div class="stat-card" style="padding:12px 8px;">
+          <div class="stat-number" style="font-size:28px;">10Y</div>
+          <div class="stat-label" style="font-size:10px;">Fund Life</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -494,33 +556,50 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--navy); }
 
 <div class="slide" id="slide-4">
   <div class="section-label">PORTFOLIO CONSTRUCTION</div>
-  <div class="slide-title">Base case projections</div>
-  <div class="slide-subtitle">10-year fund life &middot; illustrative returns on $20M LP committed capital</div>
-  <div style="display:flex; gap:24px; margin-top:32px;">
-    <div class="stat-card" style="padding:32px 28px;">
-      <div class="giant-number">9.0%</div>
-      <div class="stat-label" style="font-size:14px;">LP Net IRR</div>
+  <div class="slide-title">Scenario analysis</div>
+  <div class="slide-subtitle">Adjust assumptions to model projected returns over the 10-year fund life</div>
+  <div class="scenario-slider-group">
+    <div class="scenario-slider">
+      <label>RE Appreciation</label>
+      <div class="slider-value" id="val-re">3.0%</div>
+      <input type="range" id="slider-re" min="0" max="8" step="0.5" value="3">
     </div>
-    <div class="stat-card" style="padding:32px 28px;">
-      <div class="giant-number">2.37&times;</div>
-      <div class="stat-label" style="font-size:14px;">LP MOIC</div>
+    <div class="scenario-slider">
+      <label>Alpha Return</label>
+      <div class="slider-value" id="val-alpha">12.0%</div>
+      <input type="range" id="slider-alpha" min="0" max="25" step="0.5" value="12">
+    </div>
+    <div class="scenario-slider">
+      <label>Loan Rate</label>
+      <div class="slider-value" id="val-loan">6.0%</div>
+      <input type="range" id="slider-loan" min="3" max="9" step="0.25" value="6">
+    </div>
+    <div class="scenario-slider">
+      <label>Cap Rate</label>
+      <div class="slider-value" id="val-cap">6.0%</div>
+      <input type="range" id="slider-cap" min="3" max="9" step="0.25" value="6">
     </div>
   </div>
-  <div class="card-row" style="margin-top:18px;">
-    <div class="stat-card">
-      <div class="stat-number">$47.3M</div>
-      <div class="stat-label">Total LP Distributions</div>
+  <div class="chart-area" style="flex:1; min-height:0;"><canvas id="chart-scenario-nav"></canvas></div>
+  <div class="card-row" style="margin-top:6px;">
+    <div class="stat-card" style="padding:14px 12px;">
+      <div class="stat-number" id="metric-irr" style="font-size:30px;">9.0%</div>
+      <div class="stat-label">LP Net IRR</div>
     </div>
-    <div class="stat-card">
-      <div class="stat-number">$27.3M</div>
+    <div class="stat-card" style="padding:14px 12px;">
+      <div class="stat-number" id="metric-moic" style="font-size:30px;">2.37&times;</div>
+      <div class="stat-label">LP MOIC</div>
+    </div>
+    <div class="stat-card" style="padding:14px 12px;">
+      <div class="stat-number" id="metric-dist" style="font-size:30px;">$47.3M</div>
+      <div class="stat-label">Total Distributions</div>
+    </div>
+    <div class="stat-card" style="padding:14px 12px;">
+      <div class="stat-number" id="metric-profit" style="font-size:30px;">$27.3M</div>
       <div class="stat-label">LP Net Profit</div>
     </div>
-    <div class="stat-card">
-      <div class="stat-number">11.1%</div>
-      <div class="stat-label">NAV IRR (Gross)</div>
-    </div>
   </div>
-  <div class="source-line" style="margin-top:auto;">Projections are illustrative and based on base case assumptions &middot; Past performance is not indicative of future results</div>
+  <div class="source-line">Projections are illustrative &middot; 2/20 fee structure with 8% hurdle &middot; Past performance is not indicative of future results</div>
 </div>
 
 <div class="slide" id="slide-5">
@@ -1223,6 +1302,171 @@ function downloadChart(canvasId, filename) {
   link.href = canvas.toDataURL('image/png');
   link.click();
 }
+
+// ==========================
+// CHART: CAPITAL STRUCTURE DONUT (SLIDE 2)
+// ==========================
+(function() {
+  var c = document.getElementById('chart-capital-split');
+  if (!c) return;
+  new Chart(c, {
+    type: 'doughnut',
+    data: {
+      labels: ['RE Equity (45%)', 'Thematic Alpha (51%)', 'Costs (4%)'],
+      datasets: [{
+        data: [9.0, 10.18, 0.82],
+        backgroundColor: ['#2a7a8c', '#0d2137', '#8a96a0'],
+        borderColor: '#ffffff',
+        borderWidth: 3,
+        hoverOffset: 6
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      cutout: '55%',
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { font: { family: 'Inter', size: 11 }, color: '#0d2137', padding: 12, usePointStyle: true, pointStyle: 'circle' }
+        },
+        tooltip: {
+          backgroundColor: '#0d2137',
+          titleFont: { family: 'Inter', size: 11 }, bodyFont: { family: 'Inter', size: 11 },
+          callbacks: { label: function(ctx) { return ctx.label + ': $' + ctx.parsed.toFixed(1) + 'M'; } }
+        }
+      }
+    },
+    plugins: [{
+      id: 'donutCenter',
+      beforeDraw: function(chart) {
+        var w = chart.width, h = chart.height, ctx2 = chart.ctx;
+        ctx2.save();
+        ctx2.font = '700 22px Playfair Display';
+        ctx2.fillStyle = '#0d2137';
+        ctx2.textAlign = 'center';
+        ctx2.textBaseline = 'middle';
+        var centerY = (chart.chartArea.top + chart.chartArea.bottom) / 2;
+        ctx2.fillText('$20M', w / 2, centerY - 10);
+        ctx2.font = '400 11px Inter';
+        ctx2.fillStyle = '#5a6a78';
+        ctx2.fillText('LP Capital', w / 2, centerY + 12);
+        ctx2.restore();
+      }
+    }]
+  });
+})();
+
+// ==========================
+// CHART: INTERACTIVE SCENARIO ANALYSIS (SLIDE 4)
+// ==========================
+(function() {
+  var canvas = document.getElementById('chart-scenario-nav');
+  if (!canvas) return;
+  var sRE = document.getElementById('slider-re');
+  var sAlpha = document.getElementById('slider-alpha');
+  var sLoan = document.getElementById('slider-loan');
+  var sCap = document.getElementById('slider-cap');
+  if (!sRE || !sAlpha || !sLoan || !sCap) return;
+
+  function calc(reA, alphaR, loanR, capR) {
+    var lp = 20, prop = 20, loan = prop * 0.55, costs = 0.82;
+    var alpha0 = loan - costs, feeRate = 0.02, tRate = 0.04;
+    var mr = loanR / 12, np = 360;
+    var mp = loan * mr * Math.pow(1 + mr, np) / (Math.pow(1 + mr, np) - 1);
+    var aDS = mp * 12;
+    var navH = [], reH = [], alphaH = [];
+    var reV = prop, aV = alpha0, cash = 0, lb = loan;
+    navH.push(reV + aV + cash - lb);
+    reH.push(reV - lb);
+    alphaH.push(aV + cash);
+    for (var y = 1; y <= 10; y++) {
+      reV *= (1 + reA);
+      var noi = reV * capR;
+      var exNOI = Math.max(0, noi - aDS);
+      cash = cash * (1 + tRate) + exNOI;
+      var py = y * 12;
+      lb = loan * (Math.pow(1 + mr, np) - Math.pow(1 + mr, py)) / (Math.pow(1 + mr, np) - 1);
+      var bNAV = reV + aV + cash - lb;
+      var fee = Math.max(0, bNAV) * feeRate;
+      aV = aV * (1 + alphaR) - fee;
+      if (aV < 0) aV = 0;
+      navH.push(reV + aV + cash - lb);
+      reH.push(reV - lb);
+      alphaH.push(aV + cash);
+    }
+    var total = reV + aV + cash - lb;
+    var profit = total - lp;
+    var hurdle = lp * (Math.pow(1.08, 10) - 1);
+    var carry = 0;
+    if (profit > hurdle) {
+      var ex = profit - hurdle;
+      var cu = Math.min(ex, hurdle * 0.25);
+      carry = cu + Math.max(0, ex - cu) * 0.20;
+    }
+    var dist = total - carry;
+    var lProfit = dist - lp;
+    var moic = dist / lp;
+    var irr = Math.pow(Math.max(0.01, dist) / lp, 0.1) - 1;
+    return { navH: navH, reH: reH, alphaH: alphaH, irr: irr, moic: moic, dist: dist, profit: lProfit };
+  }
+
+  var chart = new Chart(canvas, {
+    type: 'line',
+    data: {
+      labels: ['Yr 0','Yr 1','Yr 2','Yr 3','Yr 4','Yr 5','Yr 6','Yr 7','Yr 8','Yr 9','Yr 10'],
+      datasets: [
+        { label: 'Total NAV', data: [], borderColor: '#0d2137', backgroundColor: 'rgba(13,33,55,0.06)', borderWidth: 2.5, tension: 0.3, fill: true, pointRadius: 4, pointBackgroundColor: '#0d2137' },
+        { label: 'RE Equity', data: [], borderColor: '#2a7a8c', backgroundColor: 'rgba(42,122,140,0.04)', borderWidth: 2, tension: 0.3, fill: true, pointRadius: 3, pointBackgroundColor: '#2a7a8c' },
+        { label: 'Alpha + Cash', data: [], borderColor: '#e67e22', backgroundColor: 'rgba(230,126,34,0.04)', borderWidth: 2, tension: 0.3, fill: true, pointRadius: 3, pointBackgroundColor: '#e67e22' }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      layout: { padding: { top: 10, right: 16, bottom: 4, left: 8 } },
+      scales: {
+        x: { ticks: { font: { family: 'Inter', size: 11 }, color: '#5a6a78' }, grid: { display: false } },
+        y: {
+          beginAtZero: true,
+          ticks: { callback: function(v) { return '$' + v.toFixed(0) + 'M'; }, font: { family: 'Inter', size: 11 }, color: '#5a6a78' },
+          grid: { color: 'rgba(0,0,0,0.045)', drawBorder: false },
+          title: { display: true, text: 'Value ($M)', font: { family: 'Inter', size: 11, weight: 500 }, color: '#5a6a78' }
+        }
+      },
+      plugins: {
+        legend: { position: 'top', align: 'end', labels: { usePointStyle: true, pointStyle: 'circle', font: { family: 'Inter', size: 11 }, padding: 16, color: '#0d2137' } },
+        tooltip: { backgroundColor: '#0d2137', titleFont: { family: 'Inter', size: 11 }, bodyFont: { family: 'Inter', size: 11 },
+          callbacks: { label: function(ctx) { return ctx.dataset.label + ': $' + ctx.parsed.y.toFixed(1) + 'M'; } }
+        }
+      }
+    }
+  });
+
+  function update() {
+    var re = parseFloat(sRE.value) / 100;
+    var al = parseFloat(sAlpha.value) / 100;
+    var lo = parseFloat(sLoan.value) / 100;
+    var ca = parseFloat(sCap.value) / 100;
+    document.getElementById('val-re').textContent = parseFloat(sRE.value).toFixed(1) + '%';
+    document.getElementById('val-alpha').textContent = parseFloat(sAlpha.value).toFixed(1) + '%';
+    document.getElementById('val-loan').textContent = parseFloat(sLoan.value).toFixed(1) + '%';
+    document.getElementById('val-cap').textContent = parseFloat(sCap.value).toFixed(1) + '%';
+    var r = calc(re, al, lo, ca);
+    chart.data.datasets[0].data = r.navH;
+    chart.data.datasets[1].data = r.reH;
+    chart.data.datasets[2].data = r.alphaH;
+    chart.update('none');
+    document.getElementById('metric-irr').textContent = (r.irr * 100).toFixed(1) + '%';
+    document.getElementById('metric-moic').innerHTML = r.moic.toFixed(2) + '&times;';
+    document.getElementById('metric-dist').textContent = '$' + r.dist.toFixed(1) + 'M';
+    document.getElementById('metric-profit').textContent = '$' + r.profit.toFixed(1) + 'M';
+  }
+
+  sRE.addEventListener('input', update);
+  sAlpha.addEventListener('input', update);
+  sLoan.addEventListener('input', update);
+  sCap.addEventListener('input', update);
+  update();
+})();
 
 // ==========================
 // CHART: CAPITAL DEPLOYMENT WATERFALL (SLIDE 3)
