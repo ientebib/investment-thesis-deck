@@ -567,47 +567,35 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--navy); }
   <div class="section-label">PORTFOLIO CONSTRUCTION</div>
   <div class="slide-title">Anchored in real assets. Driven by structural conviction.</div>
   <div class="slide-subtitle">A portfolio designed to compound through regime change &mdash; not despite it</div>
-  <div style="display:flex; gap:24px; flex:1; min-height:0;">
-    <div style="flex:3; display:flex; flex-direction:column; gap:12px;">
-      <div class="card" style="flex:1; display:flex; flex-direction:column; justify-content:center; margin-bottom:0;">
-        <div class="card-label" style="font-size:14px; margin-bottom:16px; letter-spacing:2.5px;">THE FOUNDATION &mdash; REAL ESTATE (~45%)</div>
-        <div class="card-text" style="font-size:18px; line-height:1.8;">Triple-net commercial real estate with investment-grade tenants. Contractual USD cash flows, hard asset collateral, and a capital base that exists independent of market sentiment.</div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px 32px; margin-top:20px; font-size:16px; color:var(--navy); line-height:1.7;">
-          <div><strong>Structure:</strong> 100% equity acquisition &rarr; 55% LTV cash-out refi</div>
-          <div><strong>Tenants:</strong> AAA credit rating, NNN lease structure</div>
+  <div style="flex:1; min-height:0; display:flex; flex-direction:column; gap:16px;">
+    <!-- Three-column: Foundation | Donut | Engine -->
+    <div style="display:flex; gap:20px; flex:1; min-height:0;">
+      <!-- Left: Foundation -->
+      <div class="card" style="flex:1; margin-bottom:0; display:flex; flex-direction:column; padding:32px 30px;">
+        <div style="font-family:'Playfair Display',serif; font-size:52px; font-weight:900; color:var(--teal); margin-bottom:4px; line-height:1;">45%</div>
+        <div class="card-label" style="font-size:13px; margin-bottom:18px; letter-spacing:2.5px;">THE FOUNDATION &mdash; REAL ESTATE</div>
+        <div class="card-text" style="font-size:17px; line-height:1.8; flex:1;">Triple-net commercial real estate with investment-grade tenants. Contractual USD cash flows, hard asset collateral, and a capital base that exists independent of market sentiment.</div>
+        <div style="border-top:1px solid rgba(42,122,140,0.2); padding-top:16px; margin-top:auto; display:grid; grid-template-columns:1fr; gap:8px; font-size:15px; color:var(--navy); line-height:1.65;">
+          <div><strong>Structure:</strong> 100% equity &rarr; 55% LTV cash-out refi</div>
+          <div><strong>Tenants:</strong> AAA credit, NNN lease structure</div>
           <div><strong>Debt:</strong> 10-year term, 30-year amortization</div>
-          <div><strong>NOI Policy:</strong> Full surplus accumulated in U.S. Treasuries</div>
+          <div><strong>NOI:</strong> Full surplus &rarr; U.S. Treasuries</div>
         </div>
       </div>
-      <div class="card" style="flex:1; display:flex; flex-direction:column; justify-content:center; margin-bottom:0;">
-        <div class="card-label" style="font-size:14px; margin-bottom:16px; letter-spacing:2.5px;">THE ENGINE &mdash; STRUCTURAL LONG PORTFOLIO (~55%)</div>
-        <div class="card-text" style="font-size:18px; line-height:1.8;">Deployed into secular macro shifts with decade-long runways. Commodities, infrastructure, real assets, and technology positions designed to capture asymmetric upside from structural change.</div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px 28px; margin-top:18px; font-size:16px; color:var(--navy); line-height:1.7;">
-          <div><strong>Permitted:</strong> Equities, ETFs, bonds, commodities, FX, futures, options, crypto</div>
+      <!-- Center: Donut chart -->
+      <div style="width:280px; flex-shrink:0; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+        <canvas id="chart-capital-split" style="max-width:260px; max-height:260px;"></canvas>
+      </div>
+      <!-- Right: Engine -->
+      <div class="card" style="flex:1; margin-bottom:0; display:flex; flex-direction:column; padding:32px 30px; border-left-color:#0d2137;">
+        <div style="font-family:'Playfair Display',serif; font-size:52px; font-weight:900; color:var(--navy); margin-bottom:4px; line-height:1;">55%</div>
+        <div class="card-label" style="font-size:13px; margin-bottom:18px; color:#0d2137; letter-spacing:2.5px;">THE ENGINE &mdash; STRUCTURAL LONG</div>
+        <div class="card-text" style="font-size:17px; line-height:1.8; flex:1;">Deployed into secular macro shifts with decade-long runways. Commodities, infrastructure, real assets, and technology positions designed to capture asymmetric upside from structural change.</div>
+        <div style="border-top:1px solid rgba(13,33,55,0.15); padding-top:16px; margin-top:auto; display:grid; grid-template-columns:1fr; gap:8px; font-size:15px; color:var(--navy); line-height:1.65;">
+          <div><strong>Permitted:</strong> Equities, ETFs, commodities, FX, futures, options, crypto</div>
           <div><strong>Max Position:</strong> 10% of portfolio NAV</div>
           <div><strong>Prohibited:</strong> Margin, borrowing, outright shorts</div>
-          <div><strong>Benchmark:</strong> S&P 500 Total Return Index</div>
-        </div>
-      </div>
-    </div>
-    <div style="width:380px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px;">
-      <canvas id="chart-capital-split" style="max-width:320px; max-height:320px;"></canvas>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; width:100%;">
-        <div class="stat-card" style="padding:16px 10px;">
-          <div class="stat-number" style="font-size:26px;">$20M</div>
-          <div class="stat-label">LP Capital</div>
-        </div>
-        <div class="stat-card" style="padding:16px 10px;">
-          <div class="stat-number" style="font-size:26px;">10Y</div>
-          <div class="stat-label">Fund Life</div>
-        </div>
-        <div class="stat-card" style="padding:16px 10px;">
-          <div class="stat-number" style="font-size:26px;">55%</div>
-          <div class="stat-label">Max LTV</div>
-        </div>
-        <div class="stat-card" style="padding:16px 10px;">
-          <div class="stat-number" style="font-size:26px;">8%</div>
-          <div class="stat-label">Preferred Return</div>
+          <div><strong>Benchmark:</strong> S&P 500 Total Return</div>
         </div>
       </div>
     </div>
@@ -1669,15 +1657,15 @@ function downloadChart(canvasId, filename) {
       beforeDraw: function(chart) {
         var w = chart.width, h = chart.height, ctx2 = chart.ctx;
         ctx2.save();
-        ctx2.font = '700 22px Playfair Display';
+        ctx2.font = '700 28px Playfair Display';
         ctx2.fillStyle = '#0d2137';
         ctx2.textAlign = 'center';
         ctx2.textBaseline = 'middle';
         var centerY = (chart.chartArea.top + chart.chartArea.bottom) / 2;
-        ctx2.fillText('$20M', w / 2, centerY - 10);
-        ctx2.font = '400 11px Inter';
+        ctx2.fillText('$20M', w / 2, centerY - 12);
+        ctx2.font = '400 13px Inter';
         ctx2.fillStyle = '#5a6a78';
-        ctx2.fillText('LP Capital', w / 2, centerY + 12);
+        ctx2.fillText('LP Capital', w / 2, centerY + 16);
         ctx2.restore();
       }
     }]
