@@ -243,7 +243,7 @@ export function NeuralStackLogo({
             fill="none"
             stroke="rgba(12, 13, 16, 0.55)"
             strokeWidth={hoverLayer === null ? 0.8 : 1.05}
-            opacity={Math.max(0.12, pulse)}
+            opacity={Number(Math.max(0.12, pulse).toFixed(4))}
             strokeLinejoin="round"
             strokeLinecap="round"
           />

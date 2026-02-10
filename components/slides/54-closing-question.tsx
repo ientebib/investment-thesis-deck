@@ -1,4 +1,3 @@
-import { SourceLine } from "@/components/ui";
 import { slide54ClosingData } from "@/lib/data/slides";
 
 const slideData = slide54ClosingData;
@@ -21,7 +20,6 @@ export function Slide54ClosingQuestion() {
           Author of <em>The Stack: On Software and Sovereignty</em>
         </div>
       </div>
-      <SourceLine text={slideData.sourceLine} />
     </>
   );
 }

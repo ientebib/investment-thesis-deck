@@ -20,7 +20,7 @@ export const slide51TermsAtGlanceData: Slide51TermsAtGlanceData = {
       rows: [
         { label: "Permitted", value: "Equities, ETFs, bonds, commodities, FX, futures, options, crypto, Treasuries" },
         { label: "Max Single Position", value: "10% of portfolio NAV" },
-        { label: "Margin / Borrowing", value: "Prohibited" },
+        { label: "Margin", value: "Prohibited" },
         { label: "Outright Shorts", value: "Prohibited" },
         { label: "Derivatives Leverage", value: "Permitted" }
       ]

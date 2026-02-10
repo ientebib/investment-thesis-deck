@@ -13,10 +13,9 @@ function barColor(index: number) {
   if (!signal) {
     return theme.textMuted;
   }
-  if (signal.group === "employer") {
-    return index % 2 === 0 ? chartSeriesColor(theme, 1) : theme.negative;
-  }
-  return index % 2 === 0 ? chartSeriesColor(theme, 0) : theme.secondaryLight;
+  return signal.group === "employer"
+    ? chartSeriesColor(theme, 1)
+    : chartSeriesColor(theme, 0);
 }
 
 const chartData: ChartData<"bar"> = {
@@ -80,7 +79,7 @@ export function Slide43LaborExposure() {
         subtitle={`${slideData.subtitle} ${slideData.body}`}
       />
 
-      <div className="chart-area">
+      <div className="chart-area" style={{ marginTop: 8 }}>
         <BarChart data={chartData} options={chartOptions} />
       </div>
 

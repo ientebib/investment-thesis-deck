@@ -98,11 +98,6 @@ export function Slide42IntersectionDemand() {
     <>
       <SectionHeader sectionLabel={slideData.sectionLabel} title={slideData.title} subtitle={slideData.subtitle} />
 
-      <section className="commodities-reshoring">
-        <h3 className="commodities-reshoring-title">Physical input intensity</h3>
-        <p className="commodities-reshoring-body">{slideData.body}</p>
-      </section>
-
       <div className="chart-area">
         <BarChart data={chartData} options={chartOptions} plugins={[absoluteLabelsPlugin]} />
       </div>

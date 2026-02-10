@@ -1,8 +1,9 @@
 "use client";
 
 import { FormEvent, useEffect, useState } from "react";
+import { NeuralStackLogo } from "@/components/ui/NeuralStackLogo";
 
-const DEFAULT_ACCESS_HASH = "dGhlc3RhY2syMDI1";
+const DEFAULT_ACCESS_HASH = "c3RhY2syMDI2";
 
 export default function HomePage() {
   const [password, setPassword] = useState("");
@@ -10,7 +11,7 @@ export default function HomePage() {
 
   useEffect(() => {
     if (sessionStorage.getItem("deck_auth") === "1") {
-      window.location.href = "/deck";
+      window.location.href = "/deck-react";
     }
   }, []);
 
@@ -20,7 +21,7 @@ export default function HomePage() {
 
     if (btoa(password) === accessHash) {
       sessionStorage.setItem("deck_auth", "1");
-      window.location.href = "/deck";
+      window.location.href = "/deck-react";
       return;
     }
 
@@ -32,18 +33,26 @@ export default function HomePage() {
   return (
     <main className="auth-body">
       <div className="gate">
-        <div className="logo-mark">
-          <span>S</span>
+        <div className="gate-logo-wrap">
+          <NeuralStackLogo size={120} interactive animate density="high" />
         </div>
-        <div className="fund-name">Stack Holdings</div>
-        <div className="fund-sub">Investment Thesis</div>
+        <div className="title-main">Stack Holdings</div>
+        <div className="title-underline" />
+        <div className="title-definition">
+          <span className="title-definition-term">Stack</span>{" "}
+          <span className="title-definition-phonetic">/stak/</span>{" "}
+          <span className="title-definition-pos">— noun</span>
+          <div className="title-definition-meaning">
+            The global infrastructure through which the planet thinks. From earth to cloud.
+          </div>
+        </div>
 
         <form id="authForm" onSubmit={handleAuth}>
           <div className="input-group">
             <input
               type="password"
               id="passInput"
-              placeholder="Enter access code"
+              placeholder="Enter password"
               autoComplete="off"
               autoFocus
               value={password}
@@ -51,12 +60,14 @@ export default function HomePage() {
             />
           </div>
           <button type="submit" className="submit-btn">
-            View Presentation
+            Enter Presentation
           </button>
         </form>
 
         <div className={`error-msg ${showError ? "show" : ""}`}>Incorrect access code</div>
-        <div className="footer-text">Confidential - Authorized recipients only</div>
+        <div className="title-confidential" style={{ marginTop: 28 }}>
+          Confidential &middot; February 2026
+        </div>
       </div>
     </main>
   );

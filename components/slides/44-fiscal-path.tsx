@@ -93,7 +93,7 @@ export function Slide44FiscalPath() {
         </section>
 
         <section className="global-repricing-panel">
-          <div className="exec-summary-thesis-stack">
+          <div className="exec-summary-thesis-stack exec-summary-thesis-stack--spread">
             {slideData.cards.map((card) => (
               <article key={card.title} className="exec-summary-intersection-card">
                 <h3 className={`exec-summary-intersection-title ${toneClass(card.tone)}`}>{card.title}</h3>

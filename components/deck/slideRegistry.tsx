@@ -58,11 +58,8 @@ import { Slide54ClosingQuestion } from "@/components/slides/54-closing-question"
 import { Slide55AppendixDivider } from "@/components/slides/55-appendix-divider";
 import { Slide56GpuGenerationLadder } from "@/components/slides/56-gpu-generation-ladder";
 import { Slide57InterconnectionQueues } from "@/components/slides/57-interconnection-queues";
-import { Slide58GpuPackaging } from "@/components/slides/58-gpu-packaging";
-import { Slide59LlmArchitecture } from "@/components/slides/59-llm-architecture";
 import { Slide60AiComputeSpend } from "@/components/slides/60-ai-compute-spend";
 import { Slide61CopperDeficit } from "@/components/slides/61-copper-deficit";
-import { Slide62UnderwritingFramework } from "@/components/slides/62-underwriting-framework";
 import type { DeckSection, DeckSlide } from "@/components/deck/types";
 
 const migratedSlides: Record<number, ComponentType> = {
@@ -123,11 +120,8 @@ const migratedSlides: Record<number, ComponentType> = {
   55: Slide55AppendixDivider,
   56: Slide56GpuGenerationLadder,
   57: Slide57InterconnectionQueues,
-  58: Slide58GpuPackaging,
-  59: Slide59LlmArchitecture,
   60: Slide60AiComputeSpend,
-  61: Slide61CopperDeficit,
-  62: Slide62UnderwritingFramework
+  61: Slide61CopperDeficit
 };
 
 export const deckSections: DeckSection[] = [
@@ -140,7 +134,7 @@ export const deckSections: DeckSection[] = [
   { from: 48, to: 48, label: "Portfolio" },
   { from: 49, to: 53, label: "Fund Terms" },
   { from: 54, to: 54, label: "Close" },
-  { from: 55, to: 62, label: "Appendix" }
+  { from: 55, to: 61, label: "Appendix" }
 ];
 
 function sectionLabelForSlide(slideNumber: number) {
@@ -172,6 +166,9 @@ function buildPendingSlide(slideNumber: number, slideTitle: string, manifestEntr
   };
 }
 
+// Slides removed from the deck (skip during build)
+const deletedSlides = new Set([58, 59, 62]);
+
 // Build the full deck: slide 1 from manifest, insert new slide 2 (Leadership),
 // then shift all remaining manifest slides up by 1.
 const slidesFromManifest: DeckSlide[] = [];
@@ -202,6 +199,7 @@ for (const entry of manifest.slides) {
 
   // All other legacy slides shift up by 1
   const deckNumber = legacyNumber + 1;
+  if (deletedSlides.has(deckNumber)) continue;
   const slideTitle = entry.title || `Slide ${deckNumber}`;
   const MigratedSlide = migratedSlides[deckNumber];
 

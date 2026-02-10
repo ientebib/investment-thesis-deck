@@ -119,8 +119,7 @@ export function Slide45FinancialRepression() {
             <article className="exec-summary-intersection-card">
               <h3 className="exec-summary-intersection-title exec-summary-primary-tone">{slideData.precedentTitle}</h3>
               <p className="exec-summary-intersection-body">
-                <span className="accent-secondary">{slideData.precedentMetricFrom}</span> to{" "}
-                <span className="accent-primary">{slideData.precedentMetricTo}</span>
+                {slideData.precedentMetricFrom} to {slideData.precedentMetricTo}
               </p>
               <p className="commodities-reshoring-body">{slideData.precedentBody}</p>
             </article>

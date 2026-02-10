@@ -71,7 +71,7 @@ export function Slide32AiAdoption() {
 
       <div className="adoption-layout">
         <h3 className="adoption-row-label">{slideData.enterpriseLabel}</h3>
-        <div className="adoption-card-grid">
+        <div className="adoption-card-grid adoption-card-grid--3col">
           {slideData.cards.map((card) => (
             <article key={card.label} className="adoption-card">
               <div className="adoption-card-metric">{card.metric}</div>

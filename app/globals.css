@@ -159,64 +159,42 @@ a {
 }
 
 .auth-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(color-mix(in srgb, var(--primary) 14%, transparent) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in srgb, var(--secondary) 12%, transparent) 1px, transparent 1px);
-  background-size: 60px 60px;
-  opacity: 0.2;
-  pointer-events: none;
+  display: none;
 }
 
 .gate {
-  width: min(92vw, 430px);
+  width: min(92vw, 480px);
   text-align: center;
   position: relative;
   z-index: 1;
-  background: color-mix(in srgb, var(--surface-1) 82%, transparent);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
   padding: 24px;
 }
 
-.logo-mark {
-  width: 48px;
-  height: 48px;
-  border: 1px solid color-mix(in srgb, var(--primary) 40%, var(--border));
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 28px;
-  background: color-mix(in srgb, var(--primary-muted) 35%, transparent);
+.gate-logo-wrap {
+  width: 140px;
+  height: 140px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
 }
 
-.logo-mark span {
-  font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 500;
-  color: var(--primary);
-}
-
-.fund-name {
-  font-family: var(--font-display);
+.gate .title-main {
   font-size: 36px;
-  font-weight: 400;
-  color: var(--text-primary);
-  letter-spacing: 0.5px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
-.fund-sub {
-  font-family: var(--font-data);
-  font-size: var(--type-micro-size);
-  font-weight: 400;
-  color: var(--text-muted);
-  letter-spacing: var(--type-micro-letter-spacing);
-  text-transform: uppercase;
-  margin-bottom: 38px;
+.gate .title-underline {
+  width: 80px;
+  margin-bottom: 16px;
+}
+
+.gate .title-definition {
+  font-size: 15px;
+  margin-bottom: 28px;
+}
+
+.gate .title-definition-meaning {
+  font-size: 14px;
 }
 
 .input-group {
@@ -332,11 +310,14 @@ a {
   height: 100vh;
   overflow: hidden;
   background: var(--bg-alt);
+  display: flex;
+  flex-direction: column;
 }
 
 .presentation {
   width: 100%;
-  height: 100%;
+  flex: 1;
+  min-height: 0;
   position: relative;
 }
 
@@ -657,24 +638,11 @@ h3 {
 }
 
 .controls {
-  position: fixed;
-  bottom: 0;
-  right: 0;
   display: flex;
   align-items: center;
   gap: 8px;
-  z-index: 1000;
   font-family: var(--font-body);
-  padding: 6px 12px;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-  pointer-events: none;
-}
-
-.controls.visible,
-.controls:hover {
-  opacity: 1;
-  pointer-events: all;
+  flex-shrink: 0;
 }
 
 .slide-counter {
@@ -705,28 +673,11 @@ h3 {
 }
 
 .section-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
   gap: 2px;
-  z-index: 999;
-  padding: 6px 80px 6px 12px;
-  background: color-mix(in srgb, var(--surface-1) 92%, transparent);
-  backdrop-filter: blur(8px);
-  border-top: 1px solid var(--border);
-  opacity: 0;
-  transition: opacity 0.25s ease;
-  pointer-events: none;
-}
-
-.section-nav.visible,
-.section-nav:hover {
-  opacity: 1;
-  pointer-events: all;
 }
 
 .section-nav-group {
@@ -768,13 +719,21 @@ h3 {
 }
 
 .progress-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   height: 3px;
   background: var(--primary);
-  z-index: 1001;
   transition: width 0.25s ease;
+}
+
+.deck-bottom-bar {
+  flex-shrink: 0;
+  background: var(--surface-1);
+  border-top: 1px solid var(--border);
+}
+
+.deck-bottom-content {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
 }
 
 .debug-badge {
@@ -1071,19 +1030,13 @@ h3 {
 .slide-header-logo {
   width: 18px;
   height: 18px;
-  border: 1px solid color-mix(in srgb, var(--primary) 40%, var(--border));
-  border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: color-mix(in srgb, var(--primary-muted) 35%, transparent);
 }
 
-.slide-header-logo span {
-  font-family: var(--font-display);
-  font-size: 10px;
-  font-weight: 500;
-  color: var(--primary);
+.slide-header-logo svg {
+  display: block;
 }
 
 .slide-header-wordmark {
@@ -1369,8 +1322,14 @@ h3 {
 .exec-summary-thesis-stack {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  justify-content: center;
+  gap: 24px;
+  flex: 1;
+  padding-top: 16px;
+  padding-bottom: 28px;
+}
+
+.exec-summary-thesis-stack--spread {
+  justify-content: space-between;
 }
 
 .exec-summary-thesis-block {
@@ -1599,8 +1558,9 @@ h3 {
   min-height: 0;
   margin-top: 10px;
   display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 8px;
+  grid-template-rows: auto auto;
+  gap: 12px;
+  align-content: start;
 }
 
 .ai-portfolio-card-grid {
@@ -1659,6 +1619,23 @@ h3 {
 
 .ai-portfolio-chart-area {
   margin-bottom: 0;
+  flex: 0 0 auto;
+  max-height: none;
+}
+
+.ai-portfolio-chart-area .thesis-table th {
+  width: auto;
+}
+
+.ai-portfolio-chart-area .thesis-table th,
+.ai-portfolio-chart-area .thesis-table td {
+  padding: 8px 6px;
+  font-size: 12px;
+}
+
+.ai-portfolio-chart-area .thesis-table th:last-child,
+.ai-portfolio-chart-area .thesis-table td:last-child {
+  min-width: 140px;
 }
 
 /* ── Slide 29 · Value Chain ─────────────────────────────── */
@@ -1798,8 +1775,12 @@ h3 {
 
 .adoption-card-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
+}
+
+.adoption-card-grid--3col {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .adoption-card {
@@ -1807,27 +1788,27 @@ h3 {
   border: 1px solid var(--border);
   border-top: 2px solid var(--primary);
   border-radius: var(--radius-md);
-  padding: 6px 10px;
+  padding: 8px 12px;
 }
 
 .adoption-card-metric {
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1;
   color: var(--primary);
 }
 
 .adoption-card-label {
-  margin-top: 2px;
+  margin-top: 3px;
   font-family: var(--font-body);
-  font-size: 10px;
+  font-size: 11px;
   color: var(--text-primary);
 }
 
 .adoption-card-detail {
   margin-top: 4px;
   font-family: var(--font-data);
-  font-size: 8px;
+  font-size: 9px;
   color: var(--text-muted);
 }
 
@@ -1848,7 +1829,6 @@ h3 {
   min-height: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .global-repricing-label {
@@ -2004,7 +1984,7 @@ h3 {
 .us-advantage-card-title {
   margin: 0;
   font-family: var(--font-data);
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -2020,7 +2000,7 @@ h3 {
 
 .us-advantage-card-metric {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 400;
   line-height: 1;
   color: var(--text-primary);
@@ -2036,7 +2016,7 @@ h3 {
 
 .us-advantage-card-metric-delta {
   font-family: var(--font-data);
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 400;
   letter-spacing: 1px;
   color: var(--text-muted);
@@ -2045,7 +2025,7 @@ h3 {
 .us-advantage-card-description {
   margin: 0;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.55;
   color: var(--text-secondary);
 }
@@ -2060,7 +2040,7 @@ h3 {
 
 .us-advantage-card-points li {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.5;
   color: var(--text-tertiary);
 }
@@ -2206,7 +2186,7 @@ h3 {
   margin-top: 10px;
   display: grid;
   grid-template-rows: 1fr auto;
-  gap: 8px;
+  gap: 12px;
 }
 
 .terms-panel-grid {
@@ -2236,15 +2216,34 @@ h3 {
   color: var(--text-tertiary);
 }
 
+.terms-panel-card .thesis-table {
+  flex: 1;
+  display: grid;
+}
+
+.terms-panel-card .thesis-table tbody {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.terms-panel-card .thesis-table tr {
+  display: grid;
+  grid-template-columns: 38% 1fr;
+  align-content: center;
+}
+
 .terms-panel-card .thesis-table td {
   font-family: var(--font-data);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--text-primary);
+  padding: 0 4px 0 0;
 }
 
 .terms-panel-card .thesis-table th {
-  font-size: 10px;
+  font-size: 11px;
+  font-weight: 400;
+  padding: 0 8px 0 0;
 }
 
 .terms-lifecycle-wrap {
@@ -2304,8 +2303,8 @@ h3 {
   min-height: 0;
   margin-top: 10px;
   display: grid;
-  grid-template-rows: auto auto auto;
-  gap: 8px;
+  grid-template-rows: 1fr auto auto;
+  gap: 12px;
 }
 
 .risk-columns {
@@ -2320,6 +2319,8 @@ h3 {
   border-top: 2px solid var(--border-light);
   border-radius: var(--radius-md);
   padding: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .risk-column-card--primary {
@@ -2335,13 +2336,14 @@ h3 {
   padding-left: 14px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  flex: 1;
+  justify-content: space-around;
 }
 
 .risk-list li {
   font-family: var(--font-body);
-  font-size: 12px;
-  line-height: 1.45;
+  font-size: 14px;
+  line-height: 1.55;
   color: var(--text-secondary);
 }
 
@@ -2389,9 +2391,9 @@ h3 {
   border-left: 3px solid var(--primary);
   border-radius: var(--radius-sm);
   background: color-mix(in srgb, var(--surface-1) 90%, var(--bg-alt));
-  padding: 8px 10px;
+  padding: 12px 16px;
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.55;
   color: var(--text-secondary);
 }
@@ -2937,6 +2939,232 @@ h3 {
   line-height: 1.45;
   color: var(--text-secondary);
 }
+
+/* ========== Slide 47: Research Architecture Diagram ========== */
+
+.ra-diagram {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+}
+
+/* Every tier row: label on left, content on right */
+.ra-tier {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ra-tier--connector {
+  flex-shrink: 0;
+}
+
+.ra-tier-label {
+  flex-shrink: 0;
+  width: 100px;
+  font-family: var(--font-data);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+/* Connector: centered arrows */
+.ra-connector-area {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Down arrow: line then triangle */
+.ra-connector-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  gap: 2px;
+}
+
+.ra-connector-line::before {
+  content: "";
+  width: 0;
+  height: 12px;
+  border-left: 1.5px solid var(--text-muted);
+}
+
+.ra-connector-line::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--text-muted);
+}
+
+/* Up arrow: triangle then line (reversed) */
+.ra-connector-line--up {
+  flex-direction: column-reverse;
+}
+
+.ra-connector-line--up::after {
+  border-top: none;
+  border-bottom: 6px solid var(--text-muted);
+}
+
+/* --- Tier 1: Data Sources --- */
+.ra-sources-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.ra-source-card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-top: 2.5px solid var(--caution);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px 16px;
+}
+
+.ra-source-group-name {
+  font-family: var(--font-data);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 10px;
+}
+
+.ra-source-items {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ra-source-item {
+  font-family: var(--font-data);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+/* --- Tier 2: Central Agent --- */
+.ra-agent-box {
+  flex: 1;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--primary) 6%, var(--surface-1)),
+    color-mix(in srgb, var(--secondary) 5%, var(--surface-1))
+  );
+  border: 1.5px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 18px 24px 16px;
+  text-align: center;
+}
+
+.ra-agent-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.ra-agent-icon {
+  color: var(--primary);
+  font-size: 14px;
+}
+
+.ra-agent-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text-primary);
+  letter-spacing: 0.3px;
+}
+
+.ra-agent-detail {
+  font-family: var(--font-data);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.ra-tools-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.ra-tool-chip {
+  font-family: var(--font-data);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  background: color-mix(in srgb, var(--primary) 10%, var(--surface-2));
+  border: 1px solid color-mix(in srgb, var(--primary) 25%, var(--border));
+  border-radius: 3px;
+  padding: 4px 12px;
+  letter-spacing: 0.3px;
+}
+
+/* --- Tier 3: Skills Library --- */
+.ra-skills-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+}
+
+.ra-skill-chip {
+  font-family: var(--font-data);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--secondary);
+  background: color-mix(in srgb, var(--secondary) 8%, var(--surface-1));
+  border: 1px solid color-mix(in srgb, var(--secondary) 30%, var(--border));
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  text-align: center;
+}
+
+/* --- Tier 4: Outputs --- */
+.ra-outputs-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 7px;
+}
+
+.ra-output-chip {
+  font-family: var(--font-data);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: color-mix(in srgb, var(--secondary) 6%, var(--surface-1));
+  border: 1px solid color-mix(in srgb, var(--secondary) 20%, var(--border));
+  border-top: 2.5px solid var(--secondary);
+  border-radius: var(--radius-sm);
+  padding: 12px 10px;
+  text-align: center;
+}
+
+/* ========== End Slide 47 ========== */
 
 @media (max-height: 800px) {
   .slide {

@@ -202,31 +202,33 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
         ))}
       </div>
 
-      <div className="progress-bar" id="progressBar" style={{ width: `${progressPercent}%` }} />
-
-      <div className={`section-nav ${showNav ? "visible" : ""}`} id="sectionNav">
-        {sections.map((section, index) => {
-          const active = currentSlideNumber >= section.from && currentSlideNumber <= section.to;
-          return (
-            <div key={section.label} className="section-nav-group">
-              <button
-                className={`section-nav-btn ${active ? "active-section" : ""}`}
-                onClick={() => setSlideByNumber(section.from)}
-              >
-                {section.label}
-              </button>
-              {index < sections.length - 1 ? <div className="section-nav-sep" /> : null}
+      <div className="deck-bottom-bar">
+        <div className="progress-bar" id="progressBar" style={{ width: `${progressPercent}%` }} />
+        <div className="deck-bottom-content">
+          <div className="section-nav" id="sectionNav">
+            {sections.map((section, index) => {
+              const active = currentSlideNumber >= section.from && currentSlideNumber <= section.to;
+              return (
+                <div key={section.label} className="section-nav-group">
+                  <button
+                    className={`section-nav-btn ${active ? "active-section" : ""}`}
+                    onClick={() => setSlideByNumber(section.from)}
+                  >
+                    {section.label}
+                  </button>
+                  {index < sections.length - 1 ? <div className="section-nav-sep" /> : null}
+                </div>
+              );
+            })}
+          </div>
+          <div className="controls">
+            <button className="fs-btn" onClick={toggleFullscreen} title="Press F">
+              ☐ Fullscreen
+            </button>
+            <div className="slide-counter" id="slideCounter">
+              {currentSlideNumber} / {totalSlides}
             </div>
-          );
-        })}
-      </div>
-
-      <div className={`controls ${showNav ? "visible" : ""}`}>
-        <button className="fs-btn" onClick={toggleFullscreen} title="Press F">
-          ☐ Fullscreen
-        </button>
-        <div className="slide-counter" id="slideCounter">
-          {currentSlideNumber} / {totalSlides}
+          </div>
         </div>
       </div>
 
