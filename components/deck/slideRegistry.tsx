@@ -2,12 +2,14 @@ import type { ComponentType } from "react";
 import manifest from "@/migration/slide_manifest.json";
 import { PendingMigrationSlide } from "@/components/deck/PendingMigrationSlide";
 import { Slide01Title } from "@/components/slides/01-title";
+import { Slide02AgendaJourney } from "@/components/slides/02-agenda-journey";
 import { Slide02Leadership } from "@/components/slides/02-leadership";
 import { Slide03CapitalSplit } from "@/components/slides/03-capital-split";
 import { Slide04CapitalWaterfall } from "@/components/slides/04-capital-waterfall";
 import { Slide05NnnOpportunities } from "@/components/slides/05-nnn-opportunities";
 import { Slide06NnnStructure } from "@/components/slides/06-nnn-structure";
 import { Slide07ExecutiveSummary } from "@/components/slides/07-executive-summary";
+import { Slide08ScenarioMatrix } from "@/components/slides/08-scenario-matrix";
 import { Slide08MacroShiftDivider } from "@/components/slides/08-macro-shift-divider";
 import { Slide09FederalDebt } from "@/components/slides/09-federal-debt";
 import { Slide10InterestExpense } from "@/components/slides/10-interest-expense";
@@ -64,77 +66,79 @@ import type { DeckSection, DeckSlide } from "@/components/deck/types";
 
 const migratedSlides: Record<number, ComponentType> = {
   1: Slide01Title,
-  2: Slide02Leadership,
-  3: Slide03CapitalSplit,
-  4: Slide04CapitalWaterfall,
-  5: Slide05NnnOpportunities,
-  6: Slide06NnnStructure,
-  7: Slide07ExecutiveSummary,
-  8: Slide08MacroShiftDivider,
-  9: Slide09FederalDebt,
-  10: Slide10InterestExpense,
-  11: Slide11InterestVsRevenue,
-  12: Slide12TermPremium,
-  13: Slide13GlobalRepricing,
-  14: Slide14CoreInflation,
-  15: Slide15PriceChanges,
-  16: Slide16PolicyUncertainty,
-  17: Slide17UsStructuralAdvantage,
-  18: Slide18RealAssetsDivider,
-  19: Slide19GoldVsTreasuries,
-  20: Slide20CentralBankGold,
-  21: Slide21Sp500GoldRatio,
-  22: Slide22GoldVsRealYield,
-  23: Slide23MineLeadTimes,
-  24: Slide24MineralConcentration,
-  25: Slide25MineralDemand,
-  26: Slide26BeyondGold,
-  27: Slide27AiBuildoutDivider,
-  28: Slide28WhyAiMatters,
-  29: Slide29AiValueChain,
-  30: Slide30CapabilityBenchmarks,
-  31: Slide31TaskHorizon,
-  32: Slide32AiAdoption,
-  33: Slide33AiRevenue,
-  34: Slide34TrainingCompute,
-  35: Slide35TrainingCost,
-  36: Slide36HardwareShipments,
-  37: Slide37HyperscalerCapex,
-  38: Slide38DatacenterBuildout,
-  39: Slide39DatacenterLoad,
-  40: Slide40InferenceEconomics,
-  41: Slide41ForcesCompoundDivider,
-  42: Slide42IntersectionDemand,
-  43: Slide43LaborExposure,
-  44: Slide44FiscalPath,
-  45: Slide45FinancialRepression,
-  46: Slide46PortfolioConstructionDivider,
-  47: Slide47ResearchInfrastructure,
-  48: Slide48LeadingIndicators,
-  49: Slide49FundTermsDivider,
-  50: Slide50ScenarioAnalysis,
-  51: Slide51TermsAtAGlance,
-  52: Slide52RiskArchitecture,
-  53: Slide53PortfolioRegimeShift,
-  54: Slide54ClosingQuestion,
-  55: Slide55AppendixDivider,
-  56: Slide56GpuGenerationLadder,
-  57: Slide57InterconnectionQueues,
-  60: Slide60AiComputeSpend,
-  61: Slide61CopperDeficit
+  2: Slide02AgendaJourney,
+  3: Slide02Leadership,
+  4: Slide03CapitalSplit,
+  5: Slide04CapitalWaterfall,
+  6: Slide05NnnOpportunities,
+  7: Slide06NnnStructure,
+  8: Slide07ExecutiveSummary,
+  9: Slide08ScenarioMatrix,
+  10: Slide08MacroShiftDivider,
+  11: Slide09FederalDebt,
+  12: Slide10InterestExpense,
+  13: Slide11InterestVsRevenue,
+  14: Slide12TermPremium,
+  15: Slide13GlobalRepricing,
+  16: Slide14CoreInflation,
+  17: Slide15PriceChanges,
+  18: Slide16PolicyUncertainty,
+  19: Slide17UsStructuralAdvantage,
+  20: Slide18RealAssetsDivider,
+  21: Slide19GoldVsTreasuries,
+  22: Slide20CentralBankGold,
+  23: Slide21Sp500GoldRatio,
+  24: Slide22GoldVsRealYield,
+  25: Slide23MineLeadTimes,
+  26: Slide24MineralConcentration,
+  27: Slide25MineralDemand,
+  28: Slide26BeyondGold,
+  29: Slide27AiBuildoutDivider,
+  30: Slide28WhyAiMatters,
+  31: Slide29AiValueChain,
+  32: Slide30CapabilityBenchmarks,
+  33: Slide31TaskHorizon,
+  34: Slide32AiAdoption,
+  35: Slide33AiRevenue,
+  36: Slide34TrainingCompute,
+  37: Slide35TrainingCost,
+  38: Slide36HardwareShipments,
+  39: Slide37HyperscalerCapex,
+  40: Slide38DatacenterBuildout,
+  41: Slide39DatacenterLoad,
+  42: Slide40InferenceEconomics,
+  43: Slide41ForcesCompoundDivider,
+  44: Slide42IntersectionDemand,
+  45: Slide43LaborExposure,
+  46: Slide44FiscalPath,
+  47: Slide45FinancialRepression,
+  48: Slide46PortfolioConstructionDivider,
+  49: Slide47ResearchInfrastructure,
+  50: Slide48LeadingIndicators,
+  51: Slide49FundTermsDivider,
+  52: Slide50ScenarioAnalysis,
+  53: Slide51TermsAtAGlance,
+  54: Slide52RiskArchitecture,
+  55: Slide53PortfolioRegimeShift,
+  56: Slide54ClosingQuestion,
+  57: Slide55AppendixDivider,
+  58: Slide56GpuGenerationLadder,
+  59: Slide57InterconnectionQueues,
+  62: Slide60AiComputeSpend,
+  63: Slide61CopperDeficit
 };
 
 export const deckSections: DeckSection[] = [
-  { from: 1, to: 6, label: "Overview" },
-  { from: 7, to: 7, label: "Thesis" },
-  { from: 8, to: 17, label: "Macro Shift" },
-  { from: 18, to: 27, label: "Real Assets" },
-  { from: 28, to: 41, label: "AI Infra" },
-  { from: 42, to: 47, label: "Compounding" },
-  { from: 48, to: 48, label: "Portfolio" },
-  { from: 49, to: 53, label: "Fund Terms" },
-  { from: 54, to: 54, label: "Close" },
-  { from: 55, to: 61, label: "Appendix" }
+  { from: 1, to: 7, label: "Overview" },
+  { from: 8, to: 9, label: "Thesis" },
+  { from: 10, to: 19, label: "Macro Shift" },
+  { from: 20, to: 29, label: "Real Assets" },
+  { from: 30, to: 43, label: "AI Infra" },
+  { from: 44, to: 49, label: "Compounding" },
+  { from: 50, to: 50, label: "Portfolio" },
+  { from: 51, to: 55, label: "Fund Terms" },
+  { from: 56, to: 56, label: "Close" },
+  { from: 57, to: 64, label: "Appendix" }
 ];
 
 function sectionLabelForSlide(slideNumber: number) {
@@ -166,11 +170,12 @@ function buildPendingSlide(slideNumber: number, slideTitle: string, manifestEntr
   };
 }
 
-// Slides removed from the deck (skip during build)
-const deletedSlides = new Set([58, 59, 62]);
+// Slides removed from the deck by original deck IDs (stable even after reordering).
+const deletedSlides = new Set([12, 16, 22, 27, 33, 35, 37, 40, 45, 47, 60, 61, 64]);
 
-// Build the full deck: slide 1 from manifest, insert new slide 2 (Leadership),
-// then shift all remaining manifest slides up by 1.
+// Build the full deck: slide 1 from manifest, insert Agenda (2),
+// Leadership (3), Scenario Matrix (9), then shift remaining manifest slides.
+// Legacy slides 2-6 shift +2, legacy slides >= 7 shift +3.
 const slidesFromManifest: DeckSlide[] = [];
 
 for (const entry of manifest.slides) {
@@ -186,19 +191,57 @@ for (const entry of manifest.slides) {
       content: <Slide01Title />
     });
 
-    // Insert new Leadership slide at position 2 (not in manifest)
+    // Insert Agenda slide at position 2
     slidesFromManifest.push({
       number: 2,
-      title: "Leadership",
+      title: "Agenda",
       sectionLabel: sectionLabelForSlide(2),
+      migrationStatus: "migrated",
+      content: <Slide02AgendaJourney />
+    });
+
+    // Insert Leadership slide at position 3
+    slidesFromManifest.push({
+      number: 3,
+      title: "Leadership",
+      sectionLabel: sectionLabelForSlide(3),
       migrationStatus: "migrated",
       content: <Slide02Leadership />
     });
     continue;
   }
 
-  // All other legacy slides shift up by 1
-  const deckNumber = legacyNumber + 1;
+  // Legacy slide 6 (Executive Summary) is deck 8; after it, inject Scenario Matrix at 9
+  if (legacyNumber === 6) {
+    const deckNumber = legacyNumber + 2; // deck 8
+    const slideTitle = entry.title || `Slide ${deckNumber}`;
+    const MigratedSlide = migratedSlides[deckNumber];
+
+    if (MigratedSlide) {
+      slidesFromManifest.push({
+        number: deckNumber,
+        title: slideTitle,
+        sectionLabel: sectionLabelForSlide(deckNumber),
+        migrationStatus: "migrated",
+        content: <MigratedSlide />
+      });
+    } else {
+      slidesFromManifest.push(buildPendingSlide(deckNumber, slideTitle, entry));
+    }
+
+    // Insert new Scenario Matrix slide at position 9 (not in manifest)
+    slidesFromManifest.push({
+      number: 9,
+      title: "Scenario Matrix",
+      sectionLabel: sectionLabelForSlide(9),
+      migrationStatus: "migrated",
+      content: <Slide08ScenarioMatrix />
+    });
+    continue;
+  }
+
+  // Legacy slides 2-5 shift +2; legacy slides >= 7 shift +3
+  const deckNumber = legacyNumber < 7 ? legacyNumber + 2 : legacyNumber + 3;
   if (deletedSlides.has(deckNumber)) continue;
   const slideTitle = entry.title || `Slide ${deckNumber}`;
   const MigratedSlide = migratedSlides[deckNumber];
@@ -216,4 +259,65 @@ for (const entry of manifest.slides) {
   }
 }
 
-export const deckSlides = slidesFromManifest;
+function applyManualOrdering(slides: DeckSlide[]): DeckSlide[] {
+  const moveSlideNumber = (deckSlides: DeckSlide[], from: number, to: number) => {
+    if (from === to) {
+      return deckSlides;
+    }
+
+    return deckSlides.map((slide) => {
+      let nextNumber = slide.number;
+
+      if (slide.number === from) {
+        nextNumber = to;
+      } else if (from > to && slide.number >= to && slide.number < from) {
+        nextNumber = slide.number + 1;
+      } else if (from < to && slide.number > from && slide.number <= to) {
+        nextNumber = slide.number - 1;
+      }
+
+      if (nextNumber === slide.number) {
+        return slide;
+      }
+
+      return {
+        ...slide,
+        number: nextNumber,
+        sectionLabel: sectionLabelForSlide(nextNumber)
+      };
+    });
+  };
+
+  // Move "Beyond gold..." from 28 to 25 (after Gold vs Real Yield).
+  const remapped = moveSlideNumber(slides, 28, 25);
+
+  // Move selected slides into appendix ordering.
+  const annexRelocations = new Map<number, number>([
+    [41, 60], // US datacenter load doubles...
+    [42, 61], // Inference is 45% of compute spend...
+    [46, 64] // There is no fiscally neutral path...
+  ]);
+
+  const annexRemapped = remapped.map((slide) => {
+    const nextNumber = annexRelocations.get(slide.number);
+    if (!nextNumber) {
+      return slide;
+    }
+
+    return {
+      ...slide,
+      number: nextNumber,
+      sectionLabel: sectionLabelForSlide(nextNumber)
+    };
+  });
+
+  // Reorder opening narrative:
+  // - Move current slide 8 ("Two foundational macro views") to position 4.
+  // - Move current slide 55 ("Traditional portfolio construction...") to position 5.
+  const introRemapped = moveSlideNumber(moveSlideNumber(annexRemapped, 8, 4), 55, 5);
+
+  introRemapped.sort((a, b) => a.number - b.number);
+  return introRemapped;
+}
+
+export const deckSlides = applyManualOrdering(slidesFromManifest);

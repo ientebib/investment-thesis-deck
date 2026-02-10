@@ -5,6 +5,7 @@ export { slide04CapitalWaterfallData } from "@/lib/data/slides/slide04";
 export { slide05NnnOpportunitiesData } from "@/lib/data/slides/slide05";
 export { slide06NnnStructureData } from "@/lib/data/slides/slide06";
 export { slide07ExecutiveSummaryData } from "@/lib/data/slides/slide07";
+export { slide08ConvexityData } from "@/lib/data/slides/slide08-convexity";
 export { slide08MacroShiftDividerData } from "@/lib/data/slides/slide08";
 export { slide09FederalDebtData } from "@/lib/data/slides/slide09";
 export { slide10InterestExpenseData } from "@/lib/data/slides/slide10";

@@ -12,7 +12,7 @@ const yieldRows = japanUkYieldSeries as Array<{
 export const slide13GlobalRepricingData: Slide13GlobalRepricingData = {
   sectionLabel: "THESIS A - GLOBAL",
   title: "This is not just the US",
-  subtitle: "Japan and the UK are repricing long-run constraints.",
+  subtitle: "Japan and the UK are repricing long-run constraints",
   dates: yieldRows.map((row) => row.date),
   japan10y: yieldRows.map((row) => row.japan_10y),
   jpyusd: yieldRows.map((row) => row.jpyusd),

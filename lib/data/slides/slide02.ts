@@ -3,7 +3,7 @@ import type { Slide02LeadershipData } from "@/lib/data/types";
 export const slide02LeadershipData: Slide02LeadershipData = {
   sectionLabel: "OVERVIEW",
   title: "Leadership",
-  subtitle: "Operators and allocators with direct experience building AI systems at scale and trading across global macro markets.",
+  subtitle: "Operators and allocators with direct experience building AI systems at scale and trading across global macro markets",
   description: "",
   partners: [
     {

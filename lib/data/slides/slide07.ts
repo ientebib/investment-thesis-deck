@@ -2,7 +2,7 @@ import type { Slide07ExecutiveSummaryData } from "@/lib/data/types";
 
 export const slide07ExecutiveSummaryData: Slide07ExecutiveSummaryData = {
   sectionLabel: "EXECUTIVE SUMMARY",
-  title: "Two foundational macro views.",
+  title: "Two foundational macro views",
   subtitle: "",
   thesisCards: [
     {

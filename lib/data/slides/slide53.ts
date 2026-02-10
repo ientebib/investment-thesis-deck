@@ -11,8 +11,8 @@ const rows = bucketSeries as Array<{
 
 export const slide53RegimeShiftData: Slide53RegimeShiftData = {
   sectionLabel: "PORTFOLIO CONSTRUCTION",
-  title: "Traditional portfolio construction was designed for a regime that no longer exists.",
-  subtitle: "At current starting valuations, historical forward real return base rates for broad equity beta are materially compressed.",
+  title: "Traditional portfolio construction was designed for a regime that no longer exists",
+  subtitle: "At current starting valuations, historical forward real return base rates for broad equity beta are materially compressed",
   chartLabel: "Historical base rates by starting CAPE",
   buckets: rows.map((row) => ({
     bucket: row.bucket,

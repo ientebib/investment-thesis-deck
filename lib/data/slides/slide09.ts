@@ -2,7 +2,7 @@ import type { Slide09FederalDebtData } from "@/lib/data/types";
 
 export const slide09FederalDebtData: Slide09FederalDebtData = {
   sectionLabel: "THESIS A - FISCAL CONSTRAINT",
-  title: "Federal debt is no longer cyclical. It's structural.",
+  title: "Federal debt is no longer cyclical. It's structural",
   subtitle:
     "Fiscal spending is politically driven and structurally uncontrolled, backstopped by a Federal Reserve balance sheet that has expanded 10x since 2008.",
   years: [

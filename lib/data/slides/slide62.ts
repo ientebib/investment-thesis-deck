@@ -3,7 +3,7 @@ import type { Slide62UnderwriteData } from "@/lib/data/types";
 export const slide62UnderwriteData: Slide62UnderwriteData = {
   sectionLabel: "APPENDIX - UNDERWRITING",
   title: "How we underwrite",
-  subtitle: "Institutional gate-based underwriting with explicit failure conditions, kill-switches, and hard risk rails.",
+  subtitle: "Institutional gate-based underwriting with explicit failure conditions, kill-switches, and hard risk rails",
   gates: [
     {
       step: "1",

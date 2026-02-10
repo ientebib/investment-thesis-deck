@@ -10,7 +10,7 @@ const rows = centralBankGoldSeries as Array<{
 export const slide20CentralBankGoldData: Slide19CentralBankGoldData = {
   sectionLabel: "REAL ASSETS - GOLD",
   title: "Central-bank buying stayed elevated in 2025 after three 1,000t+ years",
-  subtitle: "Annual net change in central-bank gold holdings (tonnes).",
+  subtitle: "Annual net change in central-bank gold holdings (tonnes)",
   years: rows.map((row) => row.year),
   netPurchasesTonnes: rows.map((row) => row.net_purchases_tonnes),
   highlightYears: [2022, 2023, 2024],

@@ -3,7 +3,7 @@ import type { Slide48LeadingIndicatorsData } from "@/lib/data/types";
 export const slide48LeadingIndicatorsData: Slide48LeadingIndicatorsData = {
   sectionLabel: "PORTFOLIO - LEADING INDICATORS",
   title: "What we track",
-  subtitle: "Three signal towers feed one decision engine: buildout velocity, macro constraints, and market regime.",
+  subtitle: "Three signal towers feed one decision engine: buildout velocity, macro constraints, and market regime",
   towers: [
     {
       title: "AI Buildout",

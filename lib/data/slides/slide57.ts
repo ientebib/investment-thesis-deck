@@ -9,7 +9,7 @@ const rows = interconnectionSeries as Array<{
 export const slide57InterconnectionData: Slide57InterconnectionData = {
   sectionLabel: "APPENDIX - POWER",
   title: "Interconnection queues stretch 5-7 years",
-  subtitle: "The grid cannot accommodate projected demand without large new transmission investment.",
+  subtitle: "The grid cannot accommodate projected demand without large new transmission investment",
   points: rows.map((row) => ({
     year: row.year,
     activeQueueGw: row.active_queue_gw

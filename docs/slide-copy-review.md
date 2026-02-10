@@ -5,11 +5,6 @@ Source: `lib/data/slides/*.ts` + `components/slides/*.tsx`
 
 Use this as an editable language sheet. Each slide includes a key-value map of extracted copy so you can rewrite titles, subtitles, and prose in one pass.
 
-## Deck Status
-
-- Slides currently excluded from runtime deck: 58, 59, 62
-- Total slide data files parsed: 62
-
 ## Slide 01
 
 - Status: active

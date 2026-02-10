@@ -9,7 +9,7 @@ const rows = repressionReturns as Array<{
 export const slide45FinancialRepressionData: Slide45FinancialRepressionData = {
   sectionLabel: "INTERSECTION - ENDGAME",
   title: "Financial repression is the proven playbook for sovereign deleveraging",
-  subtitle: "Real rates below nominal growth transfer wealth from nominal claims to the sovereign.",
+  subtitle: "Real rates below nominal growth transfer wealth from nominal claims to the sovereign",
   body: "Real rates held below nominal growth for decades, silently transferring wealth from holders of nominal claims to the government. The same real assets that capture value from the AI buildout are the natural hedge.",
   chartLabel: "Real annualized returns during financial repression (1946-1980)",
   returns: rows.map((row) => ({

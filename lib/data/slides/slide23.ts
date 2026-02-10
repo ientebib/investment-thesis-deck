@@ -10,7 +10,7 @@ const rows = mineLeadSeries as Array<{
 export const slide23MineLeadTimesData: Slide23MineLeadTimesData = {
   sectionLabel: "REAL ASSETS - SUPPLY INELASTICITY",
   title: "Mine development timelines have tripled in three decades",
-  subtitle: "Even if demand signals are clear today, new supply cannot respond for 18-29 years.",
+  subtitle: "Even if demand signals are clear today, new supply cannot respond for 18-29 years",
   periods: rows.map((row) => row.period),
   yearsToProduction: rows.map((row) => row.years),
   projectedPeriod: "Non-Operating (Projected)",

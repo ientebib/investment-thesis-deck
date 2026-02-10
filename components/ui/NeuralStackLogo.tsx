@@ -11,12 +11,6 @@ type LayerGeometry = {
   centerY: number;
   halfWidth: number;
   halfHeight: number;
-  gridDivisions: number;
-};
-
-type Route = {
-  points: Array<{ x: number; y: number }>;
-  phase: number;
 };
 
 type NeuralStackLogoProps = {
@@ -27,98 +21,8 @@ type NeuralStackLogoProps = {
   showLabels?: boolean;
 };
 
-const ROUTE_COUNTS: Record<Density, number> = {
-  low: 8,
-  medium: 14,
-  high: 20,
-  extreme: 28
-};
-
-function seededRandom(seed: number) {
-  let state = seed;
-  return () => {
-    state = (state * 16807) % 2147483647;
-    return (state - 1) / 2147483646;
-  };
-}
-
-function clampToDiamond(
-  centerX: number,
-  centerY: number,
-  halfWidth: number,
-  halfHeight: number,
-  x: number,
-  y: number
-) {
-  const nx = (x - centerX) / halfWidth;
-  const ny = (y - centerY) / halfHeight;
-  const norm = Math.abs(nx) + Math.abs(ny);
-
-  if (norm <= 1) {
-    return { x, y };
-  }
-
-  const scale = 1 / norm;
-  return {
-    x: centerX + nx * halfWidth * scale,
-    y: centerY + ny * halfHeight * scale
-  };
-}
-
-function gridPath(cx: number, cy: number, halfWidth: number, halfHeight: number, divisions: number) {
-  const left = cx - halfWidth;
-  const commands: string[] = [];
-
-  for (let i = 0; i <= divisions; i += 1) {
-    const t = i / divisions;
-    commands.push(
-      `M${left + t * halfWidth},${cy - t * halfHeight} L${left + t * halfWidth + halfWidth},${
-        cy - t * halfHeight + halfHeight
-      }`
-    );
-    commands.push(
-      `M${left + t * halfWidth},${cy + t * halfHeight} L${left + t * halfWidth + halfWidth},${
-        cy + t * halfHeight - halfHeight
-      }`
-    );
-  }
-
-  return commands.join(" ");
-}
-
 function planePolygon(cx: number, cy: number, halfWidth: number, halfHeight: number) {
   return `${cx - halfWidth},${cy} ${cx},${cy - halfHeight} ${cx + halfWidth},${cy} ${cx},${cy + halfHeight}`;
-}
-
-function generateRoutes(layers: LayerGeometry[], count: number, seed: number) {
-  const random = seededRandom(seed);
-  const routes: Route[] = [];
-
-  for (let routeIndex = 0; routeIndex < count; routeIndex += 1) {
-    const base = (random() - 0.5) * 1.35;
-    const drift = (random() - 0.5) * 0.24;
-
-    const points = layers.map((layer, layerIndex) => {
-      const nx = base + drift * layerIndex + (random() - 0.5) * 0.16;
-      const ny = (random() - 0.5) * (0.46 - layerIndex * 0.06);
-
-      return clampToDiamond(
-        layer.centerX,
-        layer.centerY,
-        layer.halfWidth,
-        layer.halfHeight,
-        layer.centerX + nx * layer.halfWidth,
-        layer.centerY + ny * layer.halfHeight
-      );
-    });
-
-    routes.push({
-      points,
-      phase: random() * Math.PI * 2
-    });
-  }
-
-  return routes;
 }
 
 export function NeuralStackLogo({
@@ -149,14 +53,20 @@ export function NeuralStackLogo({
 
   const centerX = size / 2;
   const topY = size * 0.16;
-  const gapY = size * 0.205;
+  const gapScaleByDensity: Record<Density, number> = {
+    low: 0.198,
+    medium: 0.202,
+    high: 0.205,
+    extreme: 0.21
+  };
+  const gapY = size * gapScaleByDensity[density];
 
   const layers = useMemo<LayerGeometry[]>(() => {
     const base = [
-      { label: "INTERFACE", scale: 0.79, gridDivisions: 5 },
-      { label: "ADDRESS", scale: 0.89, gridDivisions: 6 },
-      { label: "CITY", scale: 0.99, gridDivisions: 7 },
-      { label: "EARTH", scale: 1.09, gridDivisions: 8 }
+      { label: "INTERFACE", scale: 0.79 },
+      { label: "ADDRESS", scale: 0.89 },
+      { label: "CITY", scale: 0.99 },
+      { label: "EARTH", scale: 1.09 }
     ];
 
     return base.map((layer, index) => {
@@ -167,16 +77,10 @@ export function NeuralStackLogo({
         centerX,
         centerY,
         halfWidth: size * 0.265 * layer.scale,
-        halfHeight: size * 0.082 * layer.scale,
-        gridDivisions: layer.gridDivisions
+        halfHeight: size * 0.082 * layer.scale
       };
     });
   }, [centerX, gapY, size, topY]);
-
-  const routes = useMemo(
-    () => generateRoutes(layers, ROUTE_COUNTS[density], 9077 + size),
-    [density, layers, size]
-  );
 
   function layerShift(layerIndex: number) {
     const hoverLift =
@@ -226,30 +130,6 @@ export function NeuralStackLogo({
       onPointerLeave={onPointerLeave}
       aria-hidden="true"
     >
-      {routes.map((route, routeIndex) => {
-        const points = route.points
-          .map((point, pointIndex) => {
-            const shift = layerShift(pointIndex);
-            return `${point.x + shift.x},${point.y + shift.y}`;
-          })
-          .join(" ");
-
-        const pulse = animate ? 0.2 + Math.sin(clock * 1.6 + route.phase) * 0.08 : 0.2;
-
-        return (
-          <polyline
-            key={`route-${routeIndex}`}
-            points={points}
-            fill="none"
-            stroke="rgba(12, 13, 16, 0.55)"
-            strokeWidth={hoverLayer === null ? 0.8 : 1.05}
-            opacity={Number(Math.max(0.12, pulse).toFixed(4))}
-            strokeLinejoin="round"
-            strokeLinecap="round"
-          />
-        );
-      })}
-
       {layers.map((layer, layerIndex) => {
         const shift = layerShift(layerIndex);
         const cx = layer.centerX + shift.x;
@@ -264,17 +144,9 @@ export function NeuralStackLogo({
           >
             <polygon
               points={planePolygon(cx, cy, layer.halfWidth, layer.halfHeight)}
-              fill="transparent"
+              fill="rgba(8, 9, 11, 0.015)"
               stroke="rgba(8, 9, 11, 0.86)"
               strokeWidth={highlighted ? 1.2 : 1.05}
-            />
-
-            <path
-              d={gridPath(cx, cy, layer.halfWidth, layer.halfHeight, layer.gridDivisions)}
-              fill="none"
-              stroke="rgba(22, 24, 28, 0.35)"
-              strokeWidth={0.42}
-              opacity={highlighted ? 0.9 : 0.74}
             />
 
             {showLabels ? (

@@ -10,7 +10,7 @@ const rows = shareSeries as Array<{
 export const slide40InferenceEconomicsData: Slide40InferenceEconomicsData = {
   sectionLabel: "THESIS B - ECONOMICS",
   title: "Inference is 45% of compute spend and growing",
-  subtitle: "Agentic workloads turn single prompts into sustained reasoning sessions.",
+  subtitle: "Agentic workloads turn single prompts into sustained reasoning sessions",
   body: "Models get cheaper per token, but usage grows faster. As workloads shift from single queries to autonomous multi-step agents, inference share compounds and keeps physical infrastructure demand elevated.",
   years: rows.map((row) => row.year),
   trainingPct: rows.map((row) => row.training_pct),

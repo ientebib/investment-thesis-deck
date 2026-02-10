@@ -10,7 +10,7 @@ const rows = almpSeries as Array<{
 export const slide44FiscalPathData: Slide44FiscalPathData = {
   sectionLabel: "INTERSECTION - FISCAL",
   title: "There is no fiscally neutral path through AI displacement",
-  subtitle: "Labor-heavy tax systems face rising automation pressure.",
+  subtitle: "Labor-heavy tax systems face rising automation pressure",
   body: "60% of advanced-economy jobs are exposed to AI. UBI-style responses are possible in theory, but the US still relies on labor-heavy taxes and has not enacted a replacement tax base at comparable scale.",
   chartLabel: "Public spending on active labor market policies (% of GDP, 2019)",
   oecdAveragePct: 0.5,

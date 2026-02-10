@@ -10,7 +10,7 @@ const rows = computeSpendSeries as Array<{
 export const slide60ComputeSpendData: Slide60ComputeSpendData = {
   sectionLabel: "APPENDIX - COMPUTE SPEND",
   title: "AI lab compute spend is doubling every year",
-  subtitle: "Every dollar here flows into chips, power, and cooling - the physical layer of the AI stack.",
+  subtitle: "Every dollar here flows into chips, power, and cooling - the physical layer of the AI stack",
   points: rows.map((row) => ({
     year: row.year,
     openAiUsdBillions: row.openai_usd_billions,

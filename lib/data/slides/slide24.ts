@@ -6,7 +6,7 @@ const rows = mineralsConcentrationSeries as Array<{ mineral: string; share_pct: 
 export const slide24MineralConcentrationData: Slide24MineralConcentrationData = {
   sectionLabel: "REAL ASSETS - CONCENTRATION RISK",
   title: "China refines 19 of the 20 strategic minerals the IEA tracks",
-  subtitle: "Average market share: ~70%. Gallium: 98.7%. Magnesium: 95%. Rare earths: ~90%.",
+  subtitle: "Average market share: ~70%. Gallium: 98.7%. Magnesium: 95%. Rare earths: ~90%",
   minerals: rows.map((row) => row.mineral),
   refiningSharePct: rows.map((row) => row.share_pct),
   sourceLine: "Source: Various. See IEA Critical Minerals report."

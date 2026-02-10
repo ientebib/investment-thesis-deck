@@ -13,7 +13,7 @@ const rows = metrSeries as Array<{
 export const slide31TaskHorizonData: Slide31TaskHorizonData = {
   sectionLabel: "THESIS B - SCALING",
   title: "The task horizon is doubling every 4.3 months",
-  subtitle: "METR Horizon v1.1 - GPT-5.2 can complete tasks that take humans roughly 6.5 hours.",
+  subtitle: "METR Horizon v1.1 - GPT-5.2 can complete tasks that take humans roughly 6.5 hours",
   points: rows.map((row) => ({
     group: row.group,
     xMonth: row.x_month,

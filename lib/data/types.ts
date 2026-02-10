@@ -141,6 +141,27 @@ export type Slide07ExecutiveSummaryData = {
   sourceLine: string;
 };
 
+export type Slide08QuadrantTone = "primary" | "secondary" | "caution" | "negative";
+
+export type Slide08QuadrantData = {
+  title: string;
+  narrative: string;
+  tone: Slide08QuadrantTone;
+  position: "tl" | "tr" | "bl" | "br";
+};
+
+export type Slide08ConvexityData = {
+  sectionLabel: string;
+  title: string;
+  subtitle: string;
+  xAxisLeft: string;
+  xAxisRight: string;
+  yAxisTop: string;
+  yAxisBottom: string;
+  quadrants: Slide08QuadrantData[];
+  sourceLine: string;
+};
+
 export type Slide08SectionDividerData = {
   sectionLabel: string;
   title: string;

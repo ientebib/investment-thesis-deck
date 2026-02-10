@@ -11,7 +11,7 @@ const rows = laborSignals as Array<{
 export const slide43LaborExposureData: Slide43LaborExposureData = {
   sectionLabel: "INTERSECTION - LABOR",
   title: "Labor exposure is broad and automation plans are accelerating",
-  subtitle: "Sourced values only: 2025 labor exposure and 2030 employer planning signals.",
+  subtitle: "Sourced values only: 2025 labor exposure and 2030 employer planning signals",
   body: "ILO's 2025 index puts exposure at 25% globally (34% in high-income economies; 11% in low-income). WEF reports 73% of employers plan task automation and 41% expect workforce reductions by 2030.",
   signals: rows.map((row) => ({
     metric: row.metric,

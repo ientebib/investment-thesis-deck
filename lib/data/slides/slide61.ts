@@ -10,7 +10,7 @@ const rows = copperSeries as Array<{
 export const slide61CopperDeficitData: Slide61CopperDeficitData = {
   sectionLabel: "APPENDIX - COPPER",
   title: "Even if every announced project proceeds, copper faces a ~27% supply deficit by 2035",
-  subtitle: "Demand from electrification and AI infrastructure outpaces credible supply additions.",
+  subtitle: "Demand from electrification and AI infrastructure outpaces credible supply additions",
   points: rows.map((row) => ({
     year: row.year,
     supplyMt: row.supply_mt,

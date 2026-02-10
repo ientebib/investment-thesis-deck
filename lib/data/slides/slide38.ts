@@ -10,7 +10,7 @@ const rows = frontierPowerSeries as Array<{
 export const slide38DatacenterBuildoutData: Slide38DatacenterBuildoutData = {
   sectionLabel: "THESIS B - INFRASTRUCTURE",
   title: "The datacenter buildout is at megaproject scale",
-  subtitle: "Operational AI datacenter power moves from low single digits to triple digits in GW terms.",
+  subtitle: "Operational AI datacenter power moves from low single digits to triple digits in GW terms",
   stats: [
     { value: "4.3", label: "2023 GW" },
     { value: "21", label: "2025 GW" },

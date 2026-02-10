@@ -10,7 +10,7 @@ const rows = goldYieldSeries as Array<{
 export const slide22GoldYieldData: Slide21GoldYieldData = {
   sectionLabel: "REAL ASSETS - GOLD",
   title: "The gold-real yield relationship broke in 2022",
-  subtitle: "Gold is now priced as a hedge against institutional risk, not rates.",
+  subtitle: "Gold is now priced as a hedge against institutional risk, not rates",
   dates: rows.map((row) => row.date),
   goldPriceLn: rows.map((row) => row.gold_price_ln),
   real10yYield: rows.map((row) => row.real_10y_yield),

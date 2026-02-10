@@ -11,7 +11,7 @@ const rows = metalPricesSeries as Array<{
 export const slide26BeyondGoldData: Slide26BeyondGoldData = {
   sectionLabel: "THESIS A - COMMODITIES",
   title: "Beyond gold: silver, copper, and uranium are repricing on structural demand",
-  subtitle: "Electrification, AI infrastructure, and reshoring are converging on the same constrained supply chains.",
+  subtitle: "Electrification, AI infrastructure, and reshoring are converging on the same constrained supply chains",
   cards: [
     {
       title: "Silver",

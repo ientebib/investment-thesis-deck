@@ -46,7 +46,7 @@ const categories: Array<{ label: string; value: number }> = [
 export const slide15PriceChangesData: Slide15PriceChangesData = {
   sectionLabel: "THESIS A - INFLATION REGIME",
   title: "Inflation concentrates where supply can't scale",
-  subtitle: "Cumulative price change by category, 2000-2025.",
+  subtitle: "Cumulative price change by category, 2000-2025",
   categories: categories.map((item) => item.label),
   values: categories.map((item) => item.value),
   overallCpiValue: latest.overall_cpi,

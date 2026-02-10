@@ -41,6 +41,7 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
 
   const currentIndex = slideIndexByNumber.get(currentSlideNumber) ?? 0;
   const progressPercent = ((currentIndex + 1) / totalSlides) * 100;
+  const displaySlideNumber = currentIndex + 1;
 
   function setSlideByNumber(target: number) {
     if (!slideNumberSet.has(target)) {
@@ -258,7 +259,7 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
         </div>
       ) : null}
       <div className="presentation" id="presentation">
-        {slides.map((slide) => (
+        {slides.map((slide, index) => (
           <section
             key={slide.number}
             className={`slide ${isMobileLayout || slide.number === currentSlideNumber ? "active" : ""}`}
@@ -273,7 +274,7 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
             ) : null}
             {slide.number !== 1 && (
               <>
-                <SlideHeaderBar slideNumber={slide.number} totalSlides={totalSlides} />
+                <SlideHeaderBar slideNumber={index + 1} totalSlides={totalSlides} />
                 <hr className="slide-separator" />
               </>
             )}
@@ -308,7 +309,7 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
               ☐ Fullscreen
             </button>
             <div className="slide-counter" id="slideCounter">
-              {currentSlideNumber} / {totalSlides}
+              {displaySlideNumber} / {totalSlides}
             </div>
           </div>
         </div>

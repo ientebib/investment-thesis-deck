@@ -3,7 +3,7 @@ import type { Slide59LlmWorkflowData } from "@/lib/data/types";
 export const slide59LlmWorkflowData: Slide59LlmWorkflowData = {
   sectionLabel: "APPENDIX",
   title: "How large language models work",
-  subtitle: "A simplified view of the architecture behind frontier AI systems.",
+  subtitle: "A simplified view of the architecture behind frontier AI systems",
   pipelineSteps: [
     {
       step: "1",

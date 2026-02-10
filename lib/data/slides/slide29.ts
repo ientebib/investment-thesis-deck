@@ -3,7 +3,7 @@ import type { Slide29ValueChainData } from "@/lib/data/types";
 export const slide29ValueChainData: Slide29ValueChainData = {
   sectionLabel: "THESIS B - VALUE CHAIN",
   title: "AI Value Chain: Constraint to Cash-Flow Map",
-  subtitle: "Investment framing: physical bottlenecks first, capability conversion second, recurring monetization last.",
+  subtitle: "Investment framing: physical bottlenecks first, capability conversion second, recurring monetization last",
   flowLabels: ["1. Physical constraints", "2. Model conversion", "3. Revenue capture"],
   phases: [
     {
