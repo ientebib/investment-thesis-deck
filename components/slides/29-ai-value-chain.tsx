@@ -6,9 +6,12 @@ const slideData = slide29ValueChainData;
 export function Slide29AiValueChain() {
   return (
     <>
-      <div className="section-label">{slideData.sectionLabel}</div>
-      <div className="slide-title">{slideData.title}</div>
-      <div className="slide-subtitle ai-value-chain-slide-subtitle">{slideData.subtitle}</div>
+      <SectionHeader
+        sectionLabel={slideData.sectionLabel}
+        title={slideData.title}
+        subtitle={slideData.subtitle}
+        subtitleClassName="ai-value-chain-slide-subtitle"
+      />
 
       <div className="ai-value-chain-layout">
         <div className="ai-value-chain-flow">

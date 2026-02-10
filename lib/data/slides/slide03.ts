@@ -2,8 +2,8 @@ import type { Slide03CapitalSplitData } from "@/lib/data/types";
 
 export const slide03CapitalSplitData: Slide03CapitalSplitData = {
   sectionLabel: "FUND STRUCTURE",
-  title: "Anchored in real assets. Driven by structural conviction",
-  subtitle: "Protected downside with uncapped upside",
+  title: "Capital Structure and Deployment Mix",
+  subtitle: "Stabilized NNN collateral base paired with a liquid structural sleeve for upside participation",
   centerValue: "$20M",
   centerCaption: "LP CAPITAL",
   pillars: [
