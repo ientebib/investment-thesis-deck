@@ -9,7 +9,7 @@ const rows = trainingComputeSeries as Array<{
 }>;
 
 export const slide34TrainingComputeData: Slide34TrainingComputeData = {
-  sectionLabel: "THESIS B - COMPUTE",
+  sectionLabel: "AI INFRASTRUCTURE",
   title: "Training compute has grown 5 orders of magnitude since 2017",
   subtitle:
     "Each generation requires substantially more hardware - from roughly 10^21 to around 5x10^26 FLOP in less than a decade.",

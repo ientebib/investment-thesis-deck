@@ -711,6 +711,10 @@ h3 {
   color: #ffffff;
 }
 
+.section-nav-btn.active-section.active-section--secondary {
+  background: var(--secondary);
+}
+
 .section-nav-sep {
   width: 1px;
   height: 14px;
@@ -1126,8 +1130,8 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 48px;
-  padding: 20px 40px;
+  gap: 34px;
+  padding: 14px 28px;
 }
 
 .journey-row {
@@ -1136,6 +1140,14 @@ h3 {
   justify-content: center;
   position: relative;
   gap: 32px;
+}
+
+.journey-row--two {
+  padding: 0 14%;
+}
+
+.journey-row--three {
+  padding: 0 4%;
 }
 
 .journey-row .journey-line {
@@ -1149,7 +1161,7 @@ h3 {
 }
 
 .journey-row--bottom {
-  padding: 0 12%;
+  padding: 0 14%;
 }
 
 .journey-stop {
@@ -1158,6 +1170,7 @@ h3 {
   align-items: center;
   text-align: center;
   flex: 1;
+  min-width: 0;
   position: relative;
   z-index: 1;
   gap: 10px;
@@ -1180,7 +1193,7 @@ h3 {
 
 .journey-stop-title {
   font-family: var(--font-display);
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 400;
   color: var(--text-primary);
   line-height: 1.2;
@@ -1188,10 +1201,23 @@ h3 {
 
 .journey-stop-desc {
   font-family: var(--font-body);
-  font-size: 15px;
-  line-height: 1.55;
+  font-size: 14px;
+  line-height: 1.58;
   color: var(--text-secondary);
   max-width: 300px;
+}
+
+.journey-stop--subpoint .journey-num {
+  background: var(--secondary);
+}
+
+.journey-stop--subpoint .journey-stop-title {
+  font-size: 18px;
+}
+
+.journey-stop--subpoint .journey-stop-desc {
+  font-size: 13.5px;
+  line-height: 1.56;
 }
 
 /* ── Slide 02 · Leadership ─────────────────────────────── */
@@ -1399,10 +1425,10 @@ h3 {
 .exec-summary-thesis-stack {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 30px;
   flex: 1;
-  padding-top: 16px;
-  padding-bottom: 28px;
+  padding-top: 10px;
+  padding-bottom: 18px;
 }
 
 .exec-summary-thesis-stack--spread {
@@ -1410,16 +1436,16 @@ h3 {
 }
 
 .exec-summary-thesis-block {
-  padding: 0 0 20px 0;
+  padding: 0 0 28px 0;
   border-bottom: 1px solid var(--border);
   display: flex;
   flex-direction: column;
 }
 
 .exec-summary-thesis-title {
-  margin: 0 0 10px;
+  margin: 0 0 16px;
   font-family: var(--font-data);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -1449,6 +1475,20 @@ h3 {
 .exec-summary-thesis-body strong {
   font-weight: 600;
   color: var(--text-primary);
+}
+
+.exec-summary-bullet-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 14px;
+}
+
+.exec-summary-bullet-item {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.68;
+  color: var(--text-secondary);
 }
 
 .exec-summary-intersection-conclusion strong {
@@ -1714,6 +1754,10 @@ h3 {
   padding: 18px 0 18px 24px;
 }
 
+.section-divider-block--secondary {
+  border-left-color: var(--secondary);
+}
+
 .section-divider-kicker {
   margin-bottom: 8px;
   font-family: var(--font-data);
@@ -1721,6 +1765,10 @@ h3 {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--primary);
+}
+
+.section-divider-kicker--secondary {
+  color: var(--secondary);
 }
 
 .section-divider-headline {
@@ -1921,6 +1969,11 @@ h3 {
 
 /* ── Slide 29 · Value Chain ─────────────────────────────── */
 
+.ai-value-chain-slide-subtitle {
+  font-size: 19px;
+  line-height: 1.42;
+}
+
 .ai-value-chain-layout {
   flex: 1;
   min-height: 0;
@@ -1942,7 +1995,7 @@ h3 {
   border: 1px solid color-mix(in srgb, var(--secondary) 22%, var(--border));
   background: color-mix(in srgb, var(--surface-1) 86%, var(--bg-alt));
   font-family: var(--font-data);
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 1.6px;
   text-transform: uppercase;
   color: var(--text-tertiary);
@@ -1977,7 +2030,7 @@ h3 {
 .ai-value-chain-phase-title {
   margin: 0 0 4px;
   font-family: var(--font-data);
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--secondary);
@@ -1986,8 +2039,8 @@ h3 {
 .ai-value-chain-phase-description {
   margin: 0;
   font-family: var(--font-body);
-  font-size: 11px;
-  line-height: 1.45;
+  font-size: 15px;
+  line-height: 1.5;
   color: var(--text-secondary);
 }
 
@@ -2014,24 +2067,24 @@ h3 {
 .ai-value-chain-node-title {
   margin: 0;
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 16px;
   color: var(--text-primary);
 }
 
 .ai-value-chain-node-subtitle {
   margin: 3px 0 0;
   font-family: var(--font-body);
-  font-size: 10px;
+  font-size: 14px;
   color: var(--text-tertiary);
-  line-height: 1.35;
+  line-height: 1.45;
 }
 
 .ai-value-chain-node-evidence {
   margin: 4px 0 0;
   font-family: var(--font-data);
-  font-size: 8px;
+  font-size: 11px;
   color: var(--text-muted);
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 /* ── Slide 32 · Adoption ────────────────────────────────── */
@@ -2324,6 +2377,14 @@ h3 {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--text-tertiary);
+}
+
+.us-advantage-card--primary .us-advantage-card-title {
+  color: var(--primary);
+}
+
+.us-advantage-card--negative .us-advantage-card-title {
+  color: var(--negative);
 }
 
 .us-advantage-card-metric-wrap {

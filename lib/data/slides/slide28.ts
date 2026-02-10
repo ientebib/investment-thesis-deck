@@ -8,7 +8,7 @@ const rows = electricitySeries as Array<{
 }>;
 
 export const slide28AiPortfolioImpactData: Slide28AiPortfolioImpactData = {
-  sectionLabel: "THE AI BUILDOUT",
+  sectionLabel: "AI INFRASTRUCTURE",
   title: "Why AI matters for this portfolio",
   subtitle:
     "Not a technology bet - a physical infrastructure bet. Every GPU cluster needs power, copper, and concrete.",

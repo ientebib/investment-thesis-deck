@@ -1,7 +1,7 @@
 import type { Slide08ConvexityData } from "@/lib/data/types";
 
 export const slide08ConvexityData: Slide08ConvexityData = {
-  sectionLabel: "PORTFOLIO CONVEXITY",
+  sectionLabel: "WHAT WE EXPECT & FUND TERMS",
   title: "Scenario matrix",
   subtitle: "How the portfolio performs across macro regimes",
   xAxisLeft: "ADOPTION STALLS",

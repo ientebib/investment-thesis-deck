@@ -4,7 +4,7 @@ import type { Slide12TermPremiumData } from "@/lib/data/types";
 const termPremiumRows = termPremiumSeries as Array<{ date: string; value: number }>;
 
 export const slide12TermPremiumData: Slide12TermPremiumData = {
-  sectionLabel: "THESIS A - ASSET PRICING",
+  sectionLabel: "MACRO THESIS",
   title: "The term premium is back",
   subtitle:
     "After a decade of suppression, investors are again demanding compensation for holding long-duration government debt.",

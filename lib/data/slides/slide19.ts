@@ -8,7 +8,7 @@ const rows = goldTreasuriesSeries as Array<{
 }>;
 
 export const slide19GoldTreasuriesData: Slide18GoldTreasuriesData = {
-  sectionLabel: "REAL ASSETS - GOLD",
+  sectionLabel: "MACRO THESIS",
   title: "Gold has overtaken Treasuries in central bank reserves",
   subtitle: "Sovereign reserve managers are diversifying away from dollar-denominated debt",
   dates: rows.map((row) => row.date),

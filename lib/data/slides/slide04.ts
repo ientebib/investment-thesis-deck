@@ -1,7 +1,7 @@
 import type { Slide04CapitalWaterfallData } from "@/lib/data/types";
 
 export const slide04CapitalWaterfallData: Slide04CapitalWaterfallData = {
-  sectionLabel: "PORTFOLIO CONSTRUCTION",
+  sectionLabel: "FUND STRUCTURE",
   title: "How capital flows through the structure",
   subtitle: "100% equity acquisition → 55% LTV cash-out refinance → structural long portfolio",
   yAxisTitle: "Capital ($M)",

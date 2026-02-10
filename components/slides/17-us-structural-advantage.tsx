@@ -13,10 +13,12 @@ export function Slide17UsStructuralAdvantage() {
           <article key={card.title} className={`us-advantage-card us-advantage-card--${card.tone}`}>
             <header className="us-advantage-card-head">
               <h3 className="us-advantage-card-title">{card.title}</h3>
-              <div className="us-advantage-card-metric-wrap">
-                <span className="us-advantage-card-metric">{card.metric}</span>
-                {card.metricDelta ? <span className="us-advantage-card-metric-delta">{card.metricDelta}</span> : null}
-              </div>
+              {card.metric.trim() || card.metricDelta ? (
+                <div className="us-advantage-card-metric-wrap">
+                  {card.metric.trim() ? <span className="us-advantage-card-metric">{card.metric}</span> : null}
+                  {card.metricDelta ? <span className="us-advantage-card-metric-delta">{card.metricDelta}</span> : null}
+                </div>
+              ) : null}
             </header>
 
             <p className="us-advantage-card-description">{card.description}</p>

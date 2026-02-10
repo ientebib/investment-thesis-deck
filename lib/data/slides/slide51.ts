@@ -1,7 +1,7 @@
 import type { Slide51TermsAtGlanceData } from "@/lib/data/types";
 
 export const slide51TermsAtGlanceData: Slide51TermsAtGlanceData = {
-  sectionLabel: "FUND TERMS",
+  sectionLabel: "WHAT WE EXPECT & FUND TERMS",
   title: "Terms at a glance",
   subtitle: "Key economics, governance, and liquidity mechanics",
   panels: [

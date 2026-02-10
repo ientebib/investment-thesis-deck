@@ -291,10 +291,13 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
           <div className="section-nav" id="sectionNav">
             {sections.map((section, index) => {
               const active = currentSlideNumber >= section.from && currentSlideNumber <= section.to;
+              const isSecondarySection =
+                section.label === "Macro Thesis" ||
+                section.label === "AI Infrastructure";
               return (
                 <div key={section.label} className="section-nav-group">
                   <button
-                    className={`section-nav-btn ${active ? "active-section" : ""}`}
+                    className={`section-nav-btn ${active ? "active-section" : ""} ${active && isSecondarySection ? "active-section--secondary" : ""}`}
                     onClick={() => setSlideByNumber(section.from)}
                   >
                     {section.label}

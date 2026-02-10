@@ -1,7 +1,7 @@
 import type { Slide50ScenarioAnalysisData } from "@/lib/data/types";
 
 export const slide50ScenarioAnalysisData: Slide50ScenarioAnalysisData = {
-  sectionLabel: "PORTFOLIO CONSTRUCTION",
+  sectionLabel: "WHAT WE EXPECT & FUND TERMS",
   title: "Scenario analysis",
   subtitle: "Adjust assumptions to model projected returns. NOI escalates 2% annually. 10-year fund life",
   controls: [

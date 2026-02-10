@@ -10,7 +10,7 @@ const rows = capexSeries as Array<{
 }>;
 
 export const slide37HyperscalerCapexData: Slide37HyperscalerCapexData = {
-  sectionLabel: "THESIS B - AI INFRASTRUCTURE",
+  sectionLabel: "AI INFRASTRUCTURE",
   title: "Hyperscaler capex is entering escape velocity",
   subtitle:
     "Microsoft, Meta, Alphabet, and Amazon are expected to spend above $600B this year, up materially from 2025 levels.",

@@ -34,7 +34,8 @@ const donutOptions: ChartOptions<"doughnut"> = {
         color: theme.textTertiary,
         padding: 16,
         usePointStyle: true,
-        pointStyle: "circle"
+        pointStyle: "circle",
+        sort: (a, b) => (b.index ?? 0) - (a.index ?? 0)
       }
     },
     tooltip: {

@@ -10,7 +10,7 @@ const rows = bucketSeries as Array<{
 }>;
 
 export const slide53RegimeShiftData: Slide53RegimeShiftData = {
-  sectionLabel: "PORTFOLIO CONSTRUCTION",
+  sectionLabel: "LONG STRUCTURE PORTFOLIO SLEEVE",
   title: "Traditional portfolio construction was designed for a regime that no longer exists",
   subtitle: "At current starting valuations, historical forward real return base rates for broad equity beta are materially compressed",
   chartLabel: "Historical base rates by starting CAPE",

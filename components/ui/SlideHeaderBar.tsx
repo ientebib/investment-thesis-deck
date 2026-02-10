@@ -12,7 +12,7 @@ export function SlideHeaderBar({ slideNumber, totalSlides }: SlideHeaderBarProps
         <div className="slide-header-logo">
           <NeuralStackLogo size={18} interactive={false} animate={false} density="low" />
         </div>
-        <span className="slide-header-wordmark">The Stack</span>
+        <span className="slide-header-wordmark">Stack Capital</span>
       </div>
       <span className="slide-header-meta">
         Confidential &middot; {slideNumber} / {totalSlides}

@@ -4,7 +4,7 @@ import type { Slide20SpGoldRatioData } from "@/lib/data/types";
 const rows = spGoldRatioSeries as Array<{ date: string; sp500_gold_ratio: number }>;
 
 export const slide21SpGoldRatioData: Slide20SpGoldRatioData = {
-  sectionLabel: "REAL ASSETS - GOLD",
+  sectionLabel: "MACRO THESIS",
   title: "Priced in gold, US equities have made no progress since the GFC",
   subtitle: "Equities have kept pace with money supply growth, but not with real store-of-value assets",
   dates: rows.map((row) => row.date),

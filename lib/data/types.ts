@@ -127,6 +127,7 @@ export type Slide06NnnStructureData = {
 export type Slide07ThesisCardData = {
   title: string;
   body: string;
+  bullets?: string[];
   tone: "primary" | "secondary";
 };
 
@@ -138,6 +139,7 @@ export type Slide07ExecutiveSummaryData = {
   intersectionTitle: string;
   intersectionBody: string;
   intersectionConclusion: string;
+  intersectionBullets?: string[];
   sourceLine: string;
 };
 

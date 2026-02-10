@@ -10,7 +10,7 @@ const policySeries = policyUncertaintyQuarterly as {
 };
 
 export const slide16PolicyUncertaintyData: Slide16PolicyUncertaintyData = {
-  sectionLabel: "THESIS A - POLICY",
+  sectionLabel: "MACRO THESIS",
   title: "Policy uncertainty is structural, not episodic",
   subtitle: "Tariffs, sanctions, and fiscal expansion create persistent repricing across asset classes",
   qLabels: policySeries.qLabels,

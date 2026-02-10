@@ -10,7 +10,7 @@ const rows = demandInputs as Array<{
 }>;
 
 export const slide42IntersectionDemandData: Slide42IntersectionDemandData = {
-  sectionLabel: "INTERSECTION",
+  sectionLabel: "AI INFRASTRUCTURE",
   title: "AI is deflationary in cognition. Inflationary in everything it needs to run",
   subtitle: "Physical bottlenecks are now the real constraint layer",
   body: "Electricity, copper, grid hardware, aluminum, advanced packaging, and specialized memory all face permitting, geopolitical, and supply-chain bottlenecks.",

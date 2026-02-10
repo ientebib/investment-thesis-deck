@@ -1,7 +1,7 @@
 import type { Slide03CapitalSplitData } from "@/lib/data/types";
 
 export const slide03CapitalSplitData: Slide03CapitalSplitData = {
-  sectionLabel: "PORTFOLIO CONSTRUCTION",
+  sectionLabel: "FUND STRUCTURE",
   title: "Anchored in real assets. Driven by structural conviction",
   subtitle: "Protected downside with uncapped upside",
   centerValue: "$20M",

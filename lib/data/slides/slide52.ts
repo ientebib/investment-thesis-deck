@@ -1,7 +1,7 @@
 import type { Slide52RiskArchitectureData } from "@/lib/data/types";
 
 export const slide52RiskArchitectureData: Slide52RiskArchitectureData = {
-  sectionLabel: "RISK MANAGEMENT",
+  sectionLabel: "WHAT WE EXPECT & FUND TERMS",
   title: "Risk architecture",
   subtitle: "Every risk has a structural mitigation built into the fund design",
   riskFactorsTitle: "Risk Factors",

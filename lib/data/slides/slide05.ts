@@ -1,7 +1,7 @@
 import type { Slide05NnnOpportunitiesData } from "@/lib/data/types";
 
 export const slide05NnnOpportunitiesData: Slide05NnnOpportunitiesData = {
-  sectionLabel: "PORTFOLIO CONSTRUCTION",
+  sectionLabel: "REAL ESTATE FOUNDATION",
   title: "Illustrative NNN lease opportunities",
   subtitle:
     "The types of properties we target — investment-grade tenants, absolute NNN structure, long-duration cash flows",

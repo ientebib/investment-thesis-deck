@@ -4,7 +4,7 @@ import type { Slide32AdoptionData } from "@/lib/data/types";
 const rows = usageSeries as Array<{ period: string; weekly_users_millions: number }>;
 
 export const slide32AdoptionData: Slide32AdoptionData = {
-  sectionLabel: "THE AI BUILDOUT - ADOPTION",
+  sectionLabel: "AI INFRASTRUCTURE",
   title: "AI adoption is unprecedented - consumer and enterprise",
   subtitle:
     "~900M weekly consumer users and 1.3M+ business customers across leading labs. OpenAI leads customer count while Anthropic has material enterprise spend share.",

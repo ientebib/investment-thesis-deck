@@ -1,7 +1,7 @@
 import type { Slide06NnnStructureData } from "@/lib/data/types";
 
 export const slide06NnnStructureData: Slide06NnnStructureData = {
-  sectionLabel: "PORTFOLIO CONSTRUCTION",
+  sectionLabel: "REAL ESTATE FOUNDATION",
   title: "NNN leases in Florida: structure and financing",
   subtitle: "The asset, location edge, and debt profile",
   assetLabel: "THE ASSET",

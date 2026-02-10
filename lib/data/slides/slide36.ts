@@ -8,7 +8,7 @@ const rows = hardwareSeries as Array<{
 }>;
 
 export const slide36HardwareData: Slide36HardwareData = {
-  sectionLabel: "THESIS B - HARDWARE",
+  sectionLabel: "AI INFRASTRUCTURE",
   title: "32x more chips shipped in three years",
   subtitle: "Accelerator shipments and associated spend have moved into a steep compounding phase",
   shipmentsStats: [

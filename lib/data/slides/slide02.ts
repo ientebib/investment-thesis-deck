@@ -14,7 +14,7 @@ export const slide02LeadershipData: Slide02LeadershipData = {
     {
       name: "Isaac",
       role: "Managing Partner & CTO",
-      bio: "Oversaw AI automation and ML systems at Kavak, Latin America\u2019s largest automotive marketplace, across pricing, operations, and product. Worked at Angel Ventures, one of the most active venture capital firms in Latin America, on deal evaluation and due diligence across early- and growth-stage companies. Studied Finance at Tecnologico de Monterrey."
+      bio: "Oversaw AI automation and ML systems at Kavak, Latin America\u2019s largest automotive marketplace. Worked at Angel Ventures, one of the most active venture capital firms in Latin America, investing across early- and growth-stage companies. Studied Finance at Tecnologico de Monterrey."
     }
   ],
   sourceLine: "Source: Internal team bios, Feb 2026"

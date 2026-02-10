@@ -1,13 +1,13 @@
 import type { Slide29ValueChainData } from "@/lib/data/types";
 
 export const slide29ValueChainData: Slide29ValueChainData = {
-  sectionLabel: "THESIS B - VALUE CHAIN",
+  sectionLabel: "AI INFRASTRUCTURE",
   title: "AI Value Chain: Constraint to Cash-Flow Map",
   subtitle: "Investment framing: physical bottlenecks first, capability conversion second, recurring monetization last",
   flowLabels: ["1. Physical constraints", "2. Model conversion", "3. Revenue capture"],
   phases: [
     {
-      phaseTitle: "Physical layer",
+      phaseTitle: "Physical stack",
       phaseDescription: "Hard assets and permitting cadence set the supply ceiling.",
       nodes: [
         {
@@ -33,7 +33,7 @@ export const slide29ValueChainData: Slide29ValueChainData = {
       ]
     },
     {
-      phaseTitle: "Model layer",
+      phaseTitle: "Model stack",
       phaseDescription: "Post-training turns raw capability into reliable production behavior.",
       nodes: [
         {
@@ -54,7 +54,7 @@ export const slide29ValueChainData: Slide29ValueChainData = {
       ]
     },
     {
-      phaseTitle: "Revenue layer",
+      phaseTitle: "Revenue stack",
       phaseDescription: "Monetization compounds when inference is embedded in workflows.",
       nodes: [
         {

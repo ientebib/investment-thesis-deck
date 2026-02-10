@@ -1,7 +1,7 @@
 import type { Slide10InterestExpenseData } from "@/lib/data/types";
 
 export const slide10InterestExpenseData: Slide10InterestExpenseData = {
-  sectionLabel: "THESIS A - FISCAL CONSTRAINT",
+  sectionLabel: "MACRO THESIS",
   title: "Interest expense is now a major budget item",
   subtitle: "Debt service crowds out fiscal flexibility and narrows the policy toolkit. Deficits persist even in expansions",
   years: [

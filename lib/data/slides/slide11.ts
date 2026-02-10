@@ -1,7 +1,7 @@
 import type { Slide11InterestRevenueData } from "@/lib/data/types";
 
 export const slide11InterestRevenueData: Slide11InterestRevenueData = {
-  sectionLabel: "THESIS A - FISCAL CONSTRAINT",
+  sectionLabel: "MACRO THESIS",
   title: "For every $5 the government collects, $1 goes to interest",
   subtitle:
     "The debt compounds itself. The increase in interest expense widens the deficit, which requires more borrowing, which keeps rates elevated. This is the fiscal spiral - already in motion.",
