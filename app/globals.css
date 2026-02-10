@@ -3282,3 +3282,162 @@ h3 {
     max-width: 500px;
   }
 }
+
+.mobile-deck-banner {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface-1) 95%, transparent);
+  backdrop-filter: blur(4px);
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.mobile-deck-banner-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid color-mix(in srgb, var(--primary) 35%, var(--border));
+  background: color-mix(in srgb, var(--primary) 8%, var(--surface-1));
+  color: var(--primary-dark);
+  text-decoration: none;
+  font-family: var(--font-data);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.deck-react.mobile-layout {
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.deck-react.mobile-layout .presentation {
+  position: static;
+  flex: none;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 10px 16px;
+}
+
+.deck-react.mobile-layout .slide {
+  position: relative;
+  display: flex !important;
+  opacity: 1;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  padding: 16px 14px 18px;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: visible;
+}
+
+.deck-react.mobile-layout .slide-header-bar {
+  height: auto;
+  min-height: 20px;
+}
+
+.deck-react.mobile-layout .slide-title {
+  font-size: 28px;
+  line-height: 1.18;
+}
+
+.deck-react.mobile-layout .slide-subtitle {
+  font-size: 13px;
+  letter-spacing: 0.7px;
+}
+
+.deck-react.mobile-layout .slide-content-zone {
+  gap: 12px;
+}
+
+.deck-react.mobile-layout .slide-content-zone > .split-overview-layout,
+.deck-react.mobile-layout .slide-content-zone > .chart-area,
+.deck-react.mobile-layout .slide-content-zone > .leadership-description,
+.deck-react.mobile-layout .slide-content-zone > .leadership-grid,
+.deck-react.mobile-layout .slide-content-zone > .slide-footer {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.deck-react.mobile-layout .chart-area {
+  flex: none;
+  min-height: 280px;
+  height: 300px;
+  max-height: none;
+}
+
+.deck-react.mobile-layout .slide-footer {
+  height: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.deck-react.mobile-layout .title-slide {
+  min-height: 72vh;
+  justify-content: center;
+  padding: 20px 6px;
+}
+
+.deck-react.mobile-layout .title-logo-wrap {
+  width: 132px;
+  height: 132px;
+}
+
+.deck-react.mobile-layout .title-main {
+  font-size: 34px;
+}
+
+.deck-react.mobile-layout .title-definition {
+  font-size: 15px;
+  margin-bottom: 22px;
+}
+
+.deck-react.mobile-layout .title-sub2 {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.deck-react.mobile-layout .split-overview-layout,
+.deck-react.mobile-layout .leadership-grid,
+.deck-react.mobile-layout .nnn-grid,
+.deck-react.mobile-layout .nnn-structure-layout,
+.deck-react.mobile-layout .migration-metadata-grid,
+.deck-react.mobile-layout .scenario-controls-grid,
+.deck-react.mobile-layout .scenario-metrics-grid,
+.deck-react.mobile-layout .valuation-layout,
+.deck-react.mobile-layout .valuation-side-stack,
+.deck-react.mobile-layout .terms-panel-grid,
+.deck-react.mobile-layout .risk-stress-grid,
+.deck-react.mobile-layout .llm-pipeline-grid,
+.deck-react.mobile-layout .llm-concepts-grid,
+.deck-react.mobile-layout .risk-columns,
+.deck-react.mobile-layout .underwrite-layout,
+.deck-react.mobile-layout .underwrite-gates,
+.deck-react.mobile-layout .gpu-packaging-detail-row {
+  grid-template-columns: 1fr !important;
+}
+
+.deck-react.mobile-layout .nnn-structure-vrule {
+  display: none;
+}
+
+.deck-react.mobile-layout .nnn-process-row {
+  flex-direction: column;
+}

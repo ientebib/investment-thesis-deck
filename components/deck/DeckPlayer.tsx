@@ -16,6 +16,7 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
   const [currentSlideNumber, setCurrentSlideNumber] = useState(slides[0]?.number ?? 1);
   const [showNav, setShowNav] = useState(true);
   const [debugMode, setDebugMode] = useState(false);
+  const [isMobileLayout, setIsMobileLayout] = useState(false);
   const [visitedSlides, setVisitedSlides] = useState<Set<number>>(() => new Set([slides[0]?.number ?? 1]));
   const rootRef = useRef<HTMLElement>(null);
   const navTimerRef = useRef<number | null>(null);
@@ -84,6 +85,24 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
     rootRef.current?.focus();
   }, []);
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const forceDesktop = params.get("desktop") === "1";
+    const mediaQuery = window.matchMedia("(max-width: 980px)");
+
+    const applyLayout = () => {
+      setIsMobileLayout(mediaQuery.matches && !forceDesktop);
+    };
+
+    applyLayout();
+    if (typeof mediaQuery.addEventListener === "function") {
+      mediaQuery.addEventListener("change", applyLayout);
+      return () => mediaQuery.removeEventListener("change", applyLayout);
+    }
+    mediaQuery.addListener(applyLayout);
+    return () => mediaQuery.removeListener(applyLayout);
+  }, []);
+
   // Dev helper: expose navigation to console for QA
   useEffect(() => {
     (window as unknown as Record<string, unknown>).__deckGoTo = (n: number) => setSlideByNumber(n);
@@ -91,6 +110,16 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
   });
 
   useEffect(() => {
+    if (!isMobileLayout) {
+      return;
+    }
+    setVisitedSlides(new Set(slides.map((slide) => slide.number)));
+  }, [isMobileLayout, slides]);
+
+  useEffect(() => {
+    if (isMobileLayout) {
+      return;
+    }
     // Lazy-mount: mark slide as visited so its content renders
     // only when the slide is first displayed (visible with real dimensions).
     setVisitedSlides((prev) => {
@@ -102,9 +131,12 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
     // Chart.js needs a resize event to recalculate dimensions
     const timer = setTimeout(() => window.dispatchEvent(new Event("resize")), 80);
     return () => clearTimeout(timer);
-  }, [currentSlideNumber]);
+  }, [currentSlideNumber, isMobileLayout]);
 
   useEffect(() => {
+    if (isMobileLayout) {
+      return;
+    }
     function isEditableTarget(target: EventTarget | null) {
       const element = target as HTMLElement | null;
       if (!element) {
@@ -149,9 +181,13 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
     return () => {
       window.removeEventListener("keydown", onKeyDown, { capture: true });
     };
-  }, [nextSlide, prevSlide, revealNav, toggleFullscreen]);
+  }, [isMobileLayout, nextSlide, prevSlide, revealNav, toggleFullscreen]);
 
   useEffect(() => {
+    if (isMobileLayout) {
+      setShowNav(false);
+      return;
+    }
     revealNav();
 
     function onMove() {
@@ -165,21 +201,29 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
       }
       window.removeEventListener("mousemove", onMove);
     };
-  }, [revealNav]);
+  }, [isMobileLayout, revealNav]);
 
   return (
     <main
-      className="deck-react"
+      className={`deck-react ${isMobileLayout ? "mobile-layout" : ""}`}
       ref={rootRef}
       tabIndex={0}
       onMouseDown={() => rootRef.current?.focus()}
       onTouchStart={() => rootRef.current?.focus()}
     >
+      {isMobileLayout ? (
+        <div className="mobile-deck-banner">
+          <span>Best experienced on desktop.</span>
+          <a className="mobile-deck-banner-link" href="/deck-react?desktop=1">
+            Open Desktop View
+          </a>
+        </div>
+      ) : null}
       <div className="presentation" id="presentation">
         {slides.map((slide) => (
           <section
             key={slide.number}
-            className={`slide ${slide.number === currentSlideNumber ? "active" : ""}`}
+            className={`slide ${isMobileLayout || slide.number === currentSlideNumber ? "active" : ""}`}
             id={`slide-${slide.number}`}
           >
             {debugMode ? (
@@ -202,7 +246,7 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
         ))}
       </div>
 
-      <div className="deck-bottom-bar">
+      <div className="deck-bottom-bar" style={{ display: isMobileLayout ? "none" : undefined }}>
         <div className="progress-bar" id="progressBar" style={{ width: `${progressPercent}%` }} />
         <div className="deck-bottom-content">
           <div className="section-nav" id="sectionNav">
