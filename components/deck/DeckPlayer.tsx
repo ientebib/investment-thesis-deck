@@ -17,6 +17,7 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
   const [showNav, setShowNav] = useState(true);
   const [debugMode, setDebugMode] = useState(false);
   const [isMobileLayout, setIsMobileLayout] = useState(false);
+  const [showMobileHint, setShowMobileHint] = useState(false);
   const [visitedSlides, setVisitedSlides] = useState<Set<number>>(() => new Set([slides[0]?.number ?? 1]));
   const rootRef = useRef<HTMLElement>(null);
   const navTimerRef = useRef<number | null>(null);
@@ -111,10 +112,42 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
 
   useEffect(() => {
     if (!isMobileLayout) {
+      setShowMobileHint(false);
       return;
     }
     setVisitedSlides(new Set(slides.map((slide) => slide.number)));
   }, [isMobileLayout, slides]);
+
+  useEffect(() => {
+    if (!isMobileLayout) {
+      return;
+    }
+
+    const key = "deck-mobile-hint-seen";
+    const alreadySeen = window.sessionStorage.getItem(key) === "1";
+    if (alreadySeen) {
+      setShowMobileHint(false);
+      return;
+    }
+
+    setShowMobileHint(true);
+    const timer = window.setTimeout(() => {
+      setShowMobileHint(false);
+      window.sessionStorage.setItem(key, "1");
+    }, 3500);
+
+    function hideHint() {
+      setShowMobileHint(false);
+      window.sessionStorage.setItem(key, "1");
+      window.clearTimeout(timer);
+    }
+
+    window.addEventListener("scroll", hideHint, { passive: true, once: true });
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener("scroll", hideHint);
+    };
+  }, [isMobileLayout]);
 
   useEffect(() => {
     if (isMobileLayout) {
@@ -211,12 +244,17 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
       onMouseDown={() => rootRef.current?.focus()}
       onTouchStart={() => rootRef.current?.focus()}
     >
-      {isMobileLayout ? (
+      {isMobileLayout && showMobileHint ? (
         <div className="mobile-deck-banner">
           <span>Best experienced on desktop.</span>
-          <a className="mobile-deck-banner-link" href="/deck-react?desktop=1">
-            Open Desktop View
-          </a>
+          <div className="mobile-deck-banner-actions">
+            <a className="mobile-deck-banner-link" href="/deck-react?desktop=1">
+              Open Desktop View
+            </a>
+            <button className="mobile-deck-banner-close" onClick={() => setShowMobileHint(false)} aria-label="Dismiss hint">
+              Dismiss
+            </button>
+          </div>
         </div>
       ) : null}
       <div className="presentation" id="presentation">

@@ -3316,6 +3316,24 @@ h3 {
   text-transform: uppercase;
 }
 
+.mobile-deck-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mobile-deck-banner-close {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-data);
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
 .deck-react.mobile-layout {
   height: auto;
   min-height: 100vh;
