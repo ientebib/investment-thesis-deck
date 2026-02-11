@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import Link from "next/link";
 import { NeuralStackLogo } from "@/components/ui/NeuralStackLogo";
 
 export default function InvestorLoginPage() {
@@ -91,7 +92,7 @@ export default function InvestorLoginPage() {
         </div>
 
         <div className="investor-login-footer">
-          <a href="/" className="investor-login-footer-link">&larr; Back</a>
+          <Link href="/" className="investor-login-footer-link">&larr; Back</Link>
         </div>
       </div>
 

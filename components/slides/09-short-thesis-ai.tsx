@@ -35,7 +35,7 @@ export function Slide09ShortThesisAi() {
 
         <p className="thesis-punch-statement">
           AI capability is compounding exponentially, but value capture
-          concentrates where supply can't keep up — in physical infrastructure,
+          concentrates where supply can&apos;t keep up — in physical infrastructure,
           power, and minerals.
         </p>
 

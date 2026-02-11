@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import type { DeckSection, DeckSlide } from "@/components/deck/types";
 import { SlideHeaderBar } from "@/components/ui";
 
@@ -309,9 +310,9 @@ export function DeckPlayer({ sections, slides, desktopViewHref = "/deck-react?de
             })}
           </div>
           <div className="controls">
-            <a className="deck-home-link" href="/" title="Back to materials">
+            <Link className="deck-home-link" href="/" title="Back to materials">
               ← Home
-            </a>
+            </Link>
             <button className="fs-btn" onClick={toggleFullscreen} title="Press F">
               ☐ Fullscreen
             </button>

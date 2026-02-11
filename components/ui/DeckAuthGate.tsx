@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, ReactNode, useEffect, useState } from "react";
+import Link from "next/link";
 import { NeuralStackLogo } from "@/components/ui/NeuralStackLogo";
 
 const DEFAULT_ACCESS_HASH = "c3RhY2syMDI2";
@@ -65,7 +66,7 @@ export function DeckAuthGate({ children }: { children: ReactNode }) {
 
         <div className={`error-msg ${showError ? "show" : ""}`}>Incorrect access code</div>
 
-        <a href="/" className="gate-back-link">&larr; Back to materials</a>
+        <Link href="/" className="gate-back-link">&larr; Back to materials</Link>
       </div>
     </main>
   );
