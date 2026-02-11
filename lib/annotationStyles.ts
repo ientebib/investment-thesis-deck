@@ -89,6 +89,15 @@ export function calloutLabel(
     color?: string;
     fontSize?: number;
     fontWeight?: number;
+    xAdjust?: number;
+    yAdjust?: number;
+    backgroundColor?: string;
+    borderColor?: string;
+    borderWidth?: number;
+    borderRadius?: number;
+    padding?: number;
+    clip?: boolean;
+    drawTime?: "beforeDatasetsDraw" | "afterDatasetsDraw" | "afterDraw";
   }
 ) {
   return {
@@ -97,7 +106,15 @@ export function calloutLabel(
     yValue: opts.yValue,
     content: Array.isArray(opts.content) ? opts.content : [opts.content],
     color: opts.color ?? theme.textMuted,
-    backgroundColor: "transparent",
+    backgroundColor: opts.backgroundColor ?? "transparent",
+    borderColor: opts.borderColor ?? "transparent",
+    borderWidth: opts.borderWidth ?? 0,
+    borderRadius: opts.borderRadius ?? 0,
+    padding: opts.padding ?? 0,
+    xAdjust: opts.xAdjust ?? 0,
+    yAdjust: opts.yAdjust ?? 0,
+    clip: opts.clip ?? false,
+    drawTime: opts.drawTime ?? "afterDraw",
     font: {
       family: fonts.data,
       size: opts.fontSize ?? 10,

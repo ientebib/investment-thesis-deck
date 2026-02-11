@@ -84,3 +84,10 @@ These files are maintained by the design reviewer. The parallel migration agent 
 - **Section divider duplicate content**: Slide 08 had both SectionHeader and a custom block rendering the same text. Removed SectionHeader for section dividers.
 - **Dev helper**: DeckPlayer exposes `window.__deckGoTo(slideNumber)` for QA navigation via console.
 - **Stale `.next` cache**: After heavy HMR, the `.next` cache can corrupt (`__webpack_modules__[moduleId] is not a function`). Fix: kill server, `rm -rf .next`, restart.
+
+## Localhost Reliability Protocol
+- Canonical recovery + checks live in `docs/DEV_SERVER_RUNBOOK.md`.
+- Use `npm run dev:doctor` before claiming localhost is fixed.
+- Never claim a fix until both return HTTP `200`:
+  - `http://127.0.0.1:3000/deck-react-short`
+  - `http://127.0.0.1:3000/deck-react-short-internal`

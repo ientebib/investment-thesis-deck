@@ -55,7 +55,7 @@ import { Slide46PortfolioConstructionDivider } from "@/components/slides/46-port
 import { Slide47ResearchInfrastructure } from "@/components/slides/47-research-infrastructure";
 import { Slide48LeadingIndicators } from "@/components/slides/48-leading-indicators";
 import { Slide49FundTermsDivider } from "@/components/slides/49-fund-terms-divider";
-import { Slide50ScenarioAnalysis } from "@/components/slides/50-scenario-analysis";
+import { Slide50ScenarioAnalysis, Slide50ScenarioAnalysisInternal } from "@/components/slides/50-scenario-analysis";
 import { Slide51TermsAtAGlance } from "@/components/slides/51-terms-at-a-glance";
 import { Slide52RiskArchitecture } from "@/components/slides/52-risk-architecture";
 import { Slide53PortfolioRegimeShift } from "@/components/slides/53-portfolio-regime-shift";
@@ -128,7 +128,8 @@ const migratedSlides: Record<number, ComponentType> = {
   58: Slide56GpuGenerationLadder,
   59: Slide57InterconnectionQueues,
   62: Slide60AiComputeSpend,
-  63: Slide61CopperDeficit
+  63: Slide61CopperDeficit,
+  64: Slide50ScenarioAnalysisInternal
 };
 
 export const deckSections: DeckSection[] = [

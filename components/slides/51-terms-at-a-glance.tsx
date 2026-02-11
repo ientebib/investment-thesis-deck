@@ -8,7 +8,7 @@ export function Slide51TermsAtAGlance() {
     <>
       <SectionHeader sectionLabel={slideData.sectionLabel} title={slideData.title} subtitle={slideData.subtitle} />
 
-      <div className="terms-layout">
+      <div className="terms-layout terms-layout--at-glance">
         <div className="terms-panel-grid">
           {slideData.panels.map((panel) => (
             <article key={panel.title} className="terms-panel-card">

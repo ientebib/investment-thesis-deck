@@ -7,12 +7,13 @@ import { SlideHeaderBar } from "@/components/ui";
 type DeckPlayerProps = {
   sections: DeckSection[];
   slides: DeckSlide[];
+  desktopViewHref?: string;
 };
 
 const NEXT_KEYS = new Set(["ArrowRight", "ArrowDown"]);
 const PREV_KEYS = new Set(["ArrowLeft", "ArrowUp"]);
 
-export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
+export function DeckPlayer({ sections, slides, desktopViewHref = "/deck-react?desktop=1" }: DeckPlayerProps) {
   const [currentSlideNumber, setCurrentSlideNumber] = useState(slides[0]?.number ?? 1);
   const [showNav, setShowNav] = useState(true);
   const [debugMode, setDebugMode] = useState(false);
@@ -249,7 +250,7 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
         <div className="mobile-deck-banner">
           <span>Best experienced on desktop.</span>
           <div className="mobile-deck-banner-actions">
-            <a className="mobile-deck-banner-link" href="/deck-react?desktop=1">
+            <a className="mobile-deck-banner-link" href={desktopViewHref}>
               Open Desktop View
             </a>
             <button className="mobile-deck-banner-close" onClick={() => setShowMobileHint(false)} aria-label="Dismiss hint">
@@ -308,6 +309,9 @@ export function DeckPlayer({ sections, slides }: DeckPlayerProps) {
             })}
           </div>
           <div className="controls">
+            <a className="deck-home-link" href="/" title="Back to materials">
+              ← Home
+            </a>
             <button className="fs-btn" onClick={toggleFullscreen} title="Press F">
               ☐ Fullscreen
             </button>

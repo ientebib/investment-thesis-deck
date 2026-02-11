@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:doctor": "bash scripts/dev_server.sh doctor",
+    "dev:restart": "bash scripts/dev_server.sh restart",
+    "dev:status": "bash scripts/dev_server.sh status",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

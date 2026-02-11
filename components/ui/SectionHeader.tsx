@@ -1,7 +1,7 @@
 type SectionHeaderProps = {
   sectionLabel: string;
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   subtitleClassName?: string;
 };
 
@@ -54,8 +54,8 @@ const TITLE_ACRONYMS = new Set([
   "US"
 ]);
 
-function stripTerminalPeriod(text: string): string {
-  return text.trim().replace(/\.+$/, "").trim();
+function stripTerminalPeriod(text: string | null | undefined): string {
+  return (text ?? "").trim().replace(/\.+$/, "").trim();
 }
 
 function titleCaseToken(token: string, isFirst: boolean, isLast: boolean): string {
@@ -75,15 +75,16 @@ function titleCaseToken(token: string, isFirst: boolean, isLast: boolean): strin
   return cased.join("-");
 }
 
-function normalizeTitle(title: string): string {
+function normalizeTitle(title: string | null | undefined): string {
   const cleaned = stripTerminalPeriod(title);
+  if (!cleaned) return "";
   const words = cleaned.split(/\s+/).filter(Boolean);
   return words
     .map((word, idx) => titleCaseToken(word, idx === 0, idx === words.length - 1))
     .join(" ");
 }
 
-function normalizeSubtitle(subtitle: string): string {
+function normalizeSubtitle(subtitle: string | null | undefined): string {
   return stripTerminalPeriod(subtitle);
 }
 
