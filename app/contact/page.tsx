@@ -17,15 +17,15 @@ export default function ContactPage() {
 
         <div className="contact-details">
           <div className="contact-row">
-            <span className="contact-row-label">Isaac</span>
-            <a className="contact-row-value" href="mailto:isaac@thestack.capital">
-              isaac@thestack.capital
-            </a>
-          </div>
-          <div className="contact-row">
             <span className="contact-row-label">Marcos</span>
             <a className="contact-row-value" href="mailto:marcos@thestack.capital">
               marcos@thestack.capital
+            </a>
+          </div>
+          <div className="contact-row">
+            <span className="contact-row-label">Isaac</span>
+            <a className="contact-row-value" href="mailto:isaac@thestack.capital">
+              isaac@thestack.capital
             </a>
           </div>
         </div>
