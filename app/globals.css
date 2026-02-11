@@ -679,16 +679,14 @@ h3 {
 }
 
 .fs-btn {
-  font-family: var(--font-data);
-  font-size: var(--type-axis-size);
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
+  font-size: 14px;
   background: color-mix(in srgb, var(--surface-1) 90%, transparent);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 5px 10px;
+  padding: 4px 8px;
   cursor: pointer;
   color: var(--text-secondary);
+  line-height: 1;
 }
 
 .fs-btn:hover {
@@ -696,17 +694,19 @@ h3 {
 }
 
 .deck-home-link {
-  font-family: var(--font-data);
-  font-size: var(--type-axis-size);
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
   text-decoration: none;
   background: color-mix(in srgb, var(--surface-1) 90%, transparent);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 5px 10px;
+  padding: 4px 8px;
   color: var(--text-secondary);
   transition: background 0.2s;
+  line-height: 1;
 }
 
 .deck-home-link:hover {
@@ -784,7 +784,7 @@ h3 {
 
 .deck-bottom-content .section-nav {
   flex: 0 1 auto;
-  max-width: calc(100% - 420px);
+  max-width: calc(100% - 280px);
   overflow-x: auto;
   scrollbar-width: none;
 }
