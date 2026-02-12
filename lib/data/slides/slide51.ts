@@ -63,5 +63,5 @@ export const slide51TermsAtGlanceData: Slide51TermsAtGlanceData = {
     "Full Lock-Up - 2% fee on committed capital",
     "GP Discretionary Window - 2% fee on NAV"
   ],
-  sourceLine: "Source: Draft fund term sheet and LPA framework (internal working draft, Feb 2026)"
+  sourceLine: ""
 };

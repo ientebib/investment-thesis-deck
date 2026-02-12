@@ -30,5 +30,5 @@ export const slide52RiskArchitectureData: Slide52RiskArchitectureData = {
     { title: "Rate Spike", detail: "10-year fixed term insulates from interim rate movements" }
   ],
   conclusion: "The real estate collar creates a structural floor. The structural long portfolio creates the upside.",
-  sourceLine: "Source: Internal underwriting policy and portfolio risk limits (v2026.02)"
+  sourceLine: ""
 };

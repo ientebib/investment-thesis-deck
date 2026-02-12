@@ -2046,6 +2046,7 @@ h3 {
   flex: 1;
   min-height: 0;
   margin-top: 10px;
+  margin-bottom: 12px;
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 8px;
