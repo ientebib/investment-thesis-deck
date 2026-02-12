@@ -43,9 +43,6 @@ export function DeckAuthGate({ children }: { children: ReactNode }) {
         <div className="gate-logo-wrap">
           <NeuralStackLogo size={100} interactive animate density="high" />
         </div>
-        <div className="title-main">Stack Capital</div>
-        <div className="title-underline" />
-        <p className="gate-hint">Enter access code to view materials</p>
 
         <form id="authForm" onSubmit={handleAuth}>
           <div className="input-group">

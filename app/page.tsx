@@ -1,53 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import Link from "next/link";
 import { NeuralStackLogo } from "@/components/ui/NeuralStackLogo";
 import { MathewTerminal } from "@/components/ui/MathewTerminal";
-
-/* ── Mathew Memory Feed ─────────────────────────────────── */
-
-const MEMORY_ITEMS = [
-  "NVDA filed 10-K yesterday — reviewing transcript",
-  "Last risk analysis completed 1 day ago",
-  "Earnings calendar — ORCL reports Feb 12",
-  "Updating supply chain data from Semi Analysis",
-  "No new risk flags since last portfolio scan",
-  "Macro data refresh in 4h — Trading Economics",
-];
-
-function MathewMemory() {
-  const [idx, setIdx] = useState(0);
-  const [fading, setFading] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFading(true);
-      setTimeout(() => {
-        setIdx((prev) => (prev + 2) % MEMORY_ITEMS.length);
-        setFading(false);
-      }, 400);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const line1 = MEMORY_ITEMS[idx];
-  const line2 = MEMORY_ITEMS[(idx + 1) % MEMORY_ITEMS.length];
-
-  return (
-    <div className="mathew-memory">
-      <div className={`mathew-memory-lines${fading ? " mathew-memory-lines--fade" : ""}`}>
-        <div className="mathew-memory-item">
-          <span className="mathew-memory-pulse" />
-          <span className="mathew-memory-text">{line1}</span>
-        </div>
-        <div className="mathew-memory-item mathew-memory-item--dim">
-          <span className="mathew-memory-tick" />
-          <span className="mathew-memory-text">{line2}</span>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function HomePage() {
   const [showMathew, setShowMathew] = useState(false);
@@ -62,67 +18,37 @@ export default function HomePage() {
           <NeuralStackLogo size={86} interactive animate density="high" />
         </div>
         <h1 className="deck-home-title">Stack Capital</h1>
-        <div className="deck-home-definition">
-          <span className="deck-home-def-term">Stack</span>{" "}
-          <span className="deck-home-def-phonetic">/stak/</span>{" "}
-          <span className="deck-home-def-pos">&mdash; noun</span>
-          <p className="deck-home-def-meaning">
-            The global infrastructure through which the planet thinks. From earth to cloud.
-          </p>
-        </div>
-        <p className="deck-home-subtitle">
-          Confidential &middot; February 2026
+        <p className="deck-home-tagline">
+          A private investment firm taking a structural approach to long-horizon
+          capital deployment across technology infrastructure and critical supply chains
         </p>
       </section>
 
-      <section className="deck-home-grid">
-        <article className="deck-home-card deck-home-card--accent">
-          <p className="deck-home-card-tag">Executive Summary</p>
-          <h2 className="deck-home-card-title">Pitch Deck</h2>
-          <a className="deck-home-card-cta deck-home-card-cta--secondary" href="/deck-react-short">
-            Open Pitch Deck
-          </a>
-        </article>
+      <nav className="deck-home-nav">
+        <Link className="deck-home-nav-link" href="/deck-react-short">
+          Pitch Deck
+        </Link>
+        <span className="deck-home-nav-sep" />
+        <Link className="deck-home-nav-link" href="/deck-react">
+          Investment Thesis
+        </Link>
+        <span className="deck-home-nav-sep" />
+        <Link className="deck-home-nav-link" href="/investor-login">
+          Investor Login
+        </Link>
+      </nav>
 
-        <article className="deck-home-card">
-          <p className="deck-home-card-tag">Investment Thesis</p>
-          <h2 className="deck-home-card-title">Investment Thesis</h2>
-          <a className="deck-home-card-cta" href="/deck-react">
-            Open Investment Thesis
-          </a>
-        </article>
-
-        <article className="deck-home-card deck-home-card--portal">
-          <p className="deck-home-card-tag">Investor Portal</p>
-          <h2 className="deck-home-card-title">LP Login</h2>
-          <a className="deck-home-card-cta deck-home-card-cta--portal" href="/investor-login">
-            Investor Login
-          </a>
-        </article>
-      </section>
-
-      <section className="deck-home-mathew">
-        <button
-          className="deck-home-mathew-card"
-          onClick={() => setShowMathew(true)}
-          type="button"
-        >
-          <div className="deck-home-mathew-info">
-            <div className="deck-home-mathew-badge">
-              <span className="deck-home-mathew-dot" />
-              AI Research Infrastructure
-            </div>
-            <h2 className="deck-home-mathew-title">Meet Mathew</h2>
-            <p className="deck-home-mathew-copy">
-              Proprietary Portfolio Research and Monitoring
-            </p>
-            <span className="deck-home-mathew-cta">
-              Launch Demo &rarr;
-            </span>
-          </div>
-          <MathewMemory />
-        </button>
-      </section>
+      <button
+        className="deck-home-mathew-line"
+        onClick={() => setShowMathew(true)}
+        type="button"
+      >
+        <span className="deck-home-mathew-dot" />
+        <span className="deck-home-mathew-line-text">
+          Mathew &mdash; AI Research Demo
+        </span>
+        <span className="deck-home-mathew-line-arrow">&rarr;</span>
+      </button>
 
       {showMathew && <MathewTerminal onClose={() => setShowMathew(false)} />}
     </main>
