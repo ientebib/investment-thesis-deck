@@ -12,9 +12,7 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "validate:design": "node scripts/validate_design_system.mjs",
-    "sync:legacy": "bash scripts/sync_legacy_deck.sh",
-    "manifest:slides": "python3 scripts/build_slide_manifest.py",
-    "docs:agent-brief": "node scripts/build_slide_agent_brief.mjs"
+    "export:pdf:react": "bash scripts/export_react_pdf.sh"
   },
   "dependencies": {
     "chart.js": "^4.4.1",

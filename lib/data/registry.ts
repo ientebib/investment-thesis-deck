@@ -1,6 +1,6 @@
 import manifest from "@/migration/slide_manifest.json";
 
-export type SlideDataStatus = "react-dataset" | "legacy-inline";
+export type SlideDataStatus = "react-dataset";
 
 export type SlideDataSource = {
   slide: number;
@@ -79,7 +79,7 @@ export const slideDataRegistry: SlideDataSource[] = manifest.slides.map((slide) 
   return {
     slide: deckNumber,
     title: slide.title || `Slide ${deckNumber}`,
-    status: reactDatasetSources[deckNumber] ? "react-dataset" : "legacy-inline",
-    sources: reactDatasetSources[deckNumber] ?? ["output/InvestmentThesis.html"]
+    status: "react-dataset",
+    sources: reactDatasetSources[deckNumber] ?? []
   };
 });

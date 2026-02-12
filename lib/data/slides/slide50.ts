@@ -35,10 +35,10 @@ export const slide50ScenarioAnalysisData: Slide50ScenarioAnalysisData = {
     {
       id: "structuralLongReturnPct",
       label: "Structural Long Portfolio Return",
-      min: 0,
-      max: 25,
-      step: 0.5,
-      defaultValue: 22.5,
+      min: -100,
+      max: 100,
+      step: 1,
+      defaultValue: 25,
       format: "percent_1"
     }
   ],

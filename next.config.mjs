@@ -6,16 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  outputFileTracingRoot: __dirname,
-  async redirects() {
-    return [
-      {
-        source: "/InvestmentThesis.html",
-        destination: "/deck-react",
-        permanent: true
-      }
-    ];
-  }
+  outputFileTracingRoot: __dirname
 };
 
 export default nextConfig;

@@ -8,6 +8,7 @@ import { Slide05NnnOpportunities } from "@/components/slides/05-nnn-opportunitie
 import { Slide07ExecutiveSummary } from "@/components/slides/07-executive-summary";
 import { Slide08bShortThesisMacroProof } from "@/components/slides/08b-short-thesis-macro-proof";
 import { Slide08cShortThesisMacroProof2 } from "@/components/slides/08c-short-thesis-macro-proof-2";
+import { Slide17UsStructuralAdvantage } from "@/components/slides/17-us-structural-advantage";
 import { Slide09bShortThesisAiProof } from "@/components/slides/09b-short-thesis-ai-proof";
 import { Slide09cShortThesisAiProof2 } from "@/components/slides/09c-short-thesis-ai-proof-2";
 import { Slide51TermsAtAGlance } from "@/components/slides/51-terms-at-a-glance";
@@ -17,9 +18,9 @@ import { Slide55ClosingThankYou } from "@/components/slides/55-closing-thank-you
 export const shortDeckSections: DeckSection[] = [
   { from: 1, to: 3, label: "Overview" },
   { from: 4, to: 7, label: "Fund Structure" },
-  { from: 8, to: 11, label: "Core Thesis" },
-  { from: 12, to: 13, label: "Terms & Returns" },
-  { from: 14, to: 14, label: "Closing" }
+  { from: 8, to: 12, label: "Core Thesis" },
+  { from: 13, to: 14, label: "Terms & Returns" },
+  { from: 15, to: 15, label: "Closing" }
 ];
 
 export const shortDeckSlides: DeckSlide[] = [
@@ -102,20 +103,27 @@ export const shortDeckSlides: DeckSlide[] = [
   },
   {
     number: 12,
+    title: "The US still grows. Most developed economies don't",
+    sectionLabel: "CORE THESIS",
+    migrationStatus: "migrated",
+    content: <Slide17UsStructuralAdvantage />
+  },
+  {
+    number: 13,
     title: "Fund Terms",
     sectionLabel: "TERMS & RETURNS",
     migrationStatus: "migrated",
     content: <Slide51TermsAtAGlance />
   },
   {
-    number: 13,
+    number: 14,
     title: "Dashboard de Expected Returns",
     sectionLabel: "TERMS & RETURNS",
     migrationStatus: "migrated",
     content: <Slide50ScenarioAnalysis />
   },
   {
-    number: 14,
+    number: 15,
     title: "Closing",
     sectionLabel: "CLOSING",
     migrationStatus: "migrated",

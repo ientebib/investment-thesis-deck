@@ -74,11 +74,7 @@ function defaultControls(): ScenarioValues {
   }, {} as ScenarioValues);
 }
 
-function controlBounds(control: Slide50ScenarioControlData, mode: "investor" | "internal") {
-  if (mode === "internal" && control.id === "structuralLongReturnPct") {
-    return { min: -100, max: 100, step: 1 };
-  }
-
+function controlBounds(control: Slide50ScenarioControlData) {
   return {
     min: control.min,
     max: control.max,
@@ -368,19 +364,17 @@ function ScenarioControls({
   controls,
   values,
   setValues,
-  mode,
   idPrefix
 }: {
   controls: Slide50ScenarioControlData[];
   values: ScenarioValues;
   setValues: Dispatch<SetStateAction<ScenarioValues>>;
-  mode: "investor" | "internal";
   idPrefix: string;
 }) {
   return (
     <div className="scenario-controls-grid">
       {controls.map((control) => {
-        const bounds = controlBounds(control, mode);
+        const bounds = controlBounds(control);
 
         return (
           <article key={`${idPrefix}-${control.id}`} className="scenario-control-card">
@@ -515,7 +509,7 @@ export function Slide50ScenarioAnalysis() {
       <SectionHeader sectionLabel={slideData.sectionLabel} title={slideData.title} subtitle={slideData.subtitle} />
 
       <div className="scenario-layout">
-        <ScenarioControls controls={slideData.controls} values={controls} setValues={setControls} mode="investor" idPrefix="scenario-investor" />
+        <ScenarioControls controls={slideData.controls} values={controls} setValues={setControls} idPrefix="scenario-investor" />
 
         <div className="chart-area scenario-chart-area">
           <LineChart data={chartData} options={chartOptions} />
@@ -674,7 +668,7 @@ export function Slide50ScenarioAnalysisInternal() {
       <div className="scenario-dl-layout">
         <div className="scenario-dl-sliders">
           {slideData.controls.map((control) => {
-            const bounds = controlBounds(control, "internal");
+            const bounds = controlBounds(control);
             return (
               <article key={control.id} className="scenario-control-card">
                 <label className="scenario-control-label" htmlFor={`dl-${control.id}`}>

@@ -1,6 +1,6 @@
 # Slide Components
 
-Each slide will be migrated 1:1 from `output/InvestmentThesis.html` into one file per slide.
+Each slide lives as a React component with its data in `lib/data/slides/*`.
 
 Planned naming:
 - `01-title.tsx`
