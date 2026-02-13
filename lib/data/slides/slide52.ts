@@ -6,29 +6,29 @@ export const slide52RiskArchitectureData: Slide52RiskArchitectureData = {
   subtitle: "Every risk has a structural mitigation built into the fund design",
   riskFactorsTitle: "Risk Factors",
   riskFactors: [
-    "Property value decline affecting refinancing ability",
-    "Tenant default and loss of contractual cash flow",
-    "Interest-rate risk at balloon refinancing in year 10",
-    "Market risk across structural long portfolio positions",
+    "Market risk across concentrated long positions",
     "Crypto and FX volatility at the position level",
-    "Structural leverage through real estate debt"
+    "Liquidity risk in alternative and smaller-cap positions",
+    "Correlation risk in macro drawdowns across asset classes",
+    "Regulatory and geopolitical disruption to portfolio themes",
+    "Key-person risk concentrated in a small team"
   ],
   mitigantsTitle: "Structural Mitigants",
   mitigants: [
-    "55% LTV hard cap preserves a 45% equity cushion",
-    "AAA NNN tenants with contractual investment-grade cash flows",
-    "Full NOI surplus accumulated in US Treasuries",
-    "10% position limit enforces diversification",
-    "No margin and no outright shorts",
-    "30-year amortization for manageable debt service"
+    "10% single-position limit enforces diversification",
+    "No margin and no outright shorts eliminates forced liquidation risk",
+    "Multi-asset class exposure (equities, commodities, crypto, FX, Treasuries)",
+    "Conviction positions sized with defined downside tolerance",
+    "Quarterly NAV reporting with direct LP-to-GP communication",
+    "10-year lock-up aligns incentives and prevents forced selling"
   ],
-  stressTitle: "Stress scenario - what if everything goes wrong?",
+  stressTitle: "Stress scenario — what if everything goes wrong?",
   stressCards: [
-    { title: "-30% Real Estate", detail: "45% equity cushion absorbs decline before LTV breach" },
-    { title: "-50% Portfolio", detail: "No margin means no forced liquidation; RE collar preserves capital" },
-    { title: "Tenant Default", detail: "AAA NNN lease plus T-bill reserve covers 2+ years debt service" },
-    { title: "Rate Spike", detail: "10-year fixed term insulates from interim rate movements" }
+    { title: "-50% Portfolio", detail: "No margin means no forced liquidation; fund can wait for recovery" },
+    { title: "Correlation Spike", detail: "Multi-asset diversification limits single-scenario drawdown" },
+    { title: "Liquidity Freeze", detail: "Long-only structure with no leverage eliminates margin calls" },
+    { title: "Regime Reversal", detail: "Conviction positions underwritten with 3-5 year thesis horizon" }
   ],
-  conclusion: "The real estate collar creates a structural floor. The structural long portfolio creates the upside.",
+  conclusion: "A long-only, no-leverage structure with position limits creates natural downside protection. The concentrated thesis creates the upside.",
   sourceLine: ""
 };

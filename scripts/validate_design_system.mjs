@@ -182,39 +182,6 @@ for (const file of slideFiles) {
     addIssue(file, "section divider slides must not use SectionHeader");
   }
 
-  if (file.startsWith("03-")) {
-    if (!source.includes("semanticColor")) {
-      addIssue(file, "missing semanticColor usage for channel-consistent chart coloring");
-    }
-    if (!source.includes("semanticPanelClass") && !source.includes("ThesisPanelCard")) {
-      addIssue(file, "missing semanticPanelClass usage for panel accents");
-    }
-    if (!source.includes("ThesisPanelCard")) {
-      addIssue(file, "slide 3 should use ThesisPanelCard component for panel consistency");
-    }
-  }
-
-  if (file.startsWith("04-")) {
-    if (!source.includes("SectionHeader")) {
-      addIssue(file, "slide 4 should use SectionHeader component");
-    }
-    if (!source.includes("SourceLine")) {
-      addIssue(file, "slide 4 should use SourceLine component");
-    }
-  }
-
-  if (file.startsWith("05-")) {
-    if (!source.includes("NnnPropertyCard")) {
-      addIssue(file, "slide 5 should use NnnPropertyCard component for card consistency");
-    }
-    if (!source.includes("SectionHeader")) {
-      addIssue(file, "slide 5 should use SectionHeader component");
-    }
-    if (!source.includes("SourceLine")) {
-      addIssue(file, "slide 5 should use SourceLine component");
-    }
-  }
-
   if (source.includes("ChartData<") && !source.includes("theme")) {
     addIssue(file, "chart slide should consume theme tokens");
   }

@@ -1,4 +1,3 @@
-import type { SemanticConcept } from "@/lib/semanticChannels";
 
 export type TableRow = {
   label: string;
@@ -23,104 +22,6 @@ export type Slide02LeadershipData = {
   subtitle: string;
   description: string;
   partners: Slide02PartnerData[];
-  sourceLine: string;
-};
-
-export type Slide03PillarData = {
-  concept: SemanticConcept;
-  title: string;
-  allocationPct: number;
-  description: string;
-  rows: TableRow[];
-};
-
-export type Slide03CapitalSplitData = {
-  sectionLabel: string;
-  title: string;
-  subtitle: string;
-  centerValue: string;
-  centerCaption: string;
-  pillars: Slide03PillarData[];
-  sourceLine: string;
-};
-
-export type WaterfallDatasetName = "base" | "increase" | "decrease" | "total";
-
-export type Slide04WaterfallPoint = {
-  label: string;
-  tickLabel: string | [string, string];
-  base: number;
-  increase: number;
-  decrease: number;
-  total: number;
-  annotationText?: string;
-  annotationDataset?: Exclude<WaterfallDatasetName, "base">;
-};
-
-export type Slide04CapitalWaterfallData = {
-  sectionLabel: string;
-  title: string;
-  subtitle: string;
-  yAxisTitle: string;
-  yAxisMax: number;
-  yAxisStep: number;
-  points: Slide04WaterfallPoint[];
-  sourceLine: string;
-};
-
-export type Slide05PropertyCardData = {
-  category: string;
-  title: string;
-  subtitle: string;
-  image: string;
-  imageObjectPosition?: string;
-  rows: TableRow[];
-};
-
-export type Slide05ProcessStepData = {
-  title: string;
-  description: string;
-};
-
-export type Slide05NnnOpportunitiesData = {
-  sectionLabel: string;
-  title: string;
-  subtitle: string;
-  cards: Slide05PropertyCardData[];
-  processSteps: Slide05ProcessStepData[];
-  sourceLine: string;
-};
-
-export type Slide06HighlightedRowData = {
-  label: string;
-  value: string;
-  tone?: "primary" | "negative";
-};
-
-export type Slide06NnnStructureData = {
-  sectionLabel: string;
-  title: string;
-  subtitle: string;
-  assetLabel: string;
-  assetDescription: string;
-  whyFloridaLabel: string;
-  whyFloridaRows: Slide06HighlightedRowData[];
-  migrationChartTitle: string;
-  migrationYears: string[];
-  migrationValues: number[];
-  debtProfileLabel: string;
-  debtProfileRows: Slide06HighlightedRowData[];
-  noiDebtChartTitle: string;
-  noiDebtAssumptions: {
-    propertyValue: number;
-    capRate: number;
-    ltv: number;
-    rate: number;
-    amortizationYears: number;
-    treasuryYield: number;
-    noiEscalation: number;
-    years: number;
-  };
   sourceLine: string;
 };
 
@@ -414,24 +315,27 @@ export type Slide28AiPortfolioImpactData = {
   sourceLine: string;
 };
 
-export type Slide29ValueChainNodeData = {
+export type Slide29InteractiveNodeData = {
+  id: string;
   title: string;
   subtitle: string;
-  evidence: string;
+  description: string;
+  keyPlayers?: string;
 };
 
-export type Slide29ValueChainPhaseData = {
-  phaseTitle: string;
-  phaseDescription: string;
-  nodes: Slide29ValueChainNodeData[];
+export type Slide29InteractiveLayerData = {
+  id: number;
+  name: string;
+  shortName: string;
+  description: string;
+  nodes: Slide29InteractiveNodeData[];
 };
 
-export type Slide29ValueChainData = {
+export type Slide29InteractiveValueChainData = {
   sectionLabel: string;
   title: string;
   subtitle: string;
-  flowLabels: [string, string, string];
-  phases: Slide29ValueChainPhaseData[];
+  layers: Slide29InteractiveLayerData[];
   sourceLine: string;
 };
 
@@ -682,31 +586,68 @@ export type Slide47ResearchInfrastructureData = {
   sourceLine: string;
 };
 
-export type Slide48SignalTowerData = {
-  title: string;
-  tone: "primary" | "secondary" | "negative";
-  points: string[];
+export type KPIGrade = "A" | "B" | "C";
+
+export type Slide48KPI = {
+  id: string;
+  name: string;
+  source: string;
+  frequency: string;
+  grade: KPIGrade;
 };
 
-export type Slide48CoverageRowData = {
+export type Slide48Scenario = {
+  name: string;
+};
+
+export type Slide48ScenarioSet = {
+  id: string;
+  scenarios: Slide48Scenario[];
+  persistence: string;
+};
+
+export type Slide48Dependency = {
+  targetId: string;
+  type: "requires" | "amplifies" | "conditional_on";
+};
+
+export type Slide48Hypothesis = {
+  id: string;
+  name: string;
+  claim: string;
+  tier: 1 | 2;
   cadence: string;
-  aiBuildout: "Primary" | "Secondary";
-  macro: "Primary" | "Secondary";
-  market: "Primary" | "Secondary";
-  action: string;
+  dependencies: Slide48Dependency[];
+  kpis: Slide48KPI[];
+  scenarioSet: Slide48ScenarioSet;
+};
+
+export type Slide48Trend = {
+  id: string;
+  name: string;
+  horizon: string;
+  status: string;
+  tone: "primary" | "secondary" | "tertiary";
+  hypotheses: Slide48Hypothesis[];
 };
 
 export type Slide48LeadingIndicatorsData = {
   sectionLabel: string;
   title: string;
   subtitle: string;
-  towers: Slide48SignalTowerData[];
-  coverageTitle: string;
-  coverageRows: Slide48CoverageRowData[];
+  trends: Slide48Trend[];
+  stats: {
+    trends: number;
+    hypotheses: number;
+    kpis: number;
+    scenarioSets: number;
+    scenarios: number;
+    validationChecks: number;
+  };
   sourceLine: string;
 };
 
-export type Slide50ScenarioControlId = "entryCapRatePct" | "exitCapRatePct" | "loanRatePct" | "structuralLongReturnPct";
+export type Slide50ScenarioControlId = "annualReturnPct";
 
 export type Slide50ScenarioControlData = {
   id: Slide50ScenarioControlId;
@@ -733,24 +674,22 @@ export type Slide50ScenarioAnalysisData = {
   sourceLine: string;
 };
 
-export type Slide51TermsPanelData = {
-  title: string;
-  rows: TableRow[];
-};
-
-export type Slide51TermsLifecycleSegmentData = {
+export type FundStructureRow = {
   label: string;
-  tone: "primary" | "secondary";
+  value: string;
 };
 
-export type Slide51TermsAtGlanceData = {
+export type FundStructureSection = {
+  title: string;
+  rows: FundStructureRow[];
+};
+
+export type Slide51FundStructureData = {
   sectionLabel: string;
   title: string;
   subtitle: string;
-  panels: Slide51TermsPanelData[];
-  lifecycleTitle: string;
-  lifecycleSegments: Slide51TermsLifecycleSegmentData[];
-  lifecycleNotes: [string, string];
+  leftSections: FundStructureSection[];
+  rightSections: FundStructureSection[];
   sourceLine: string;
 };
 

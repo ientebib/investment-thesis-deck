@@ -158,40 +158,44 @@ export function Slide53PortfolioRegimeShift() {
         </section>
 
         <section className="valuation-side-stack">
-          <article className="terms-panel-card">
-            <h3 className="terms-panel-title">{slideData.tableTitle}</h3>
-            <table className="thesis-table">
-              <thead>
-                <tr>
-                  <th>Metric</th>
-                  <th>Current</th>
-                  <th>Long-run Mean</th>
-                  <th>Signal</th>
-                </tr>
-              </thead>
-              <tbody>
-                {slideData.snapshotRows.map((row) => (
-                  <tr key={row.metric}>
-                    <th>{row.metric}</th>
-                    <td>{row.current}</td>
-                    <td>{row.longRunMean}</td>
-                    <td className={row.tone === "negative" ? "semantic-negative" : "text-tertiary"}>{row.signal}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </article>
+          <div className="fs-col fs-col--inline">
+            <div className="fs-section">
+              <div className="fs-section-header">{slideData.tableTitle}</div>
+              <div className="fs-snapshot-header">
+                <span className="fs-snapshot-metric-label">Metric</span>
+                <span className="fs-snapshot-col-label">Current</span>
+                <span className="fs-snapshot-col-label">Long-run Mean</span>
+                <span className="fs-snapshot-col-label">Signal</span>
+              </div>
+              {slideData.snapshotRows.map((row) => (
+                <div key={row.metric} className="fs-snapshot-row">
+                  <span className="fs-term">{row.metric}</span>
+                  <span className="fs-def">{row.current}</span>
+                  <span className="fs-def">{row.longRunMean}</span>
+                  <span className={`fs-def ${row.tone === "negative" ? "semantic-negative" : ""}`}>{row.signal}</span>
+                </div>
+              ))}
+            </div>
+          </div>
 
-          <article className="exec-summary-intersection-card">
-            <h3 className="exec-summary-intersection-title semantic-negative">{slideData.whereWeAreTitle}</h3>
-            <p className="exec-summary-intersection-body">{slideData.whereWeAreMetric}</p>
-            <p className="commodities-reshoring-body">{slideData.whereWeAreBody}</p>
-          </article>
+          <div className="fs-col fs-col--inline">
+            <div className="fs-section">
+              <div className="fs-section-header">{slideData.whereWeAreTitle}</div>
+              <div className="fs-callout-body">
+                <span className="fs-callout-metric">{slideData.whereWeAreMetric}</span>
+                <span className="fs-callout-text">{slideData.whereWeAreBody}</span>
+              </div>
+            </div>
+          </div>
 
-          <article className="exec-summary-intersection-card">
-            <h3 className="exec-summary-intersection-title exec-summary-secondary-tone">{slideData.implicationTitle}</h3>
-            <p className="commodities-reshoring-body">{slideData.implicationBody}</p>
-          </article>
+          <div className="fs-col fs-col--inline">
+            <div className="fs-section">
+              <div className="fs-section-header">{slideData.implicationTitle}</div>
+              <div className="fs-callout-body">
+                <span className="fs-callout-text">{slideData.implicationBody}</span>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
 

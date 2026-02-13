@@ -5,12 +5,7 @@ import { Slide01Title } from "@/components/slides/01-title";
 import { Slide02AgendaJourney } from "@/components/slides/02-agenda-journey";
 import { Slide02FundStructureDivider } from "@/components/slides/02-fund-structure-divider";
 import { Slide02Leadership } from "@/components/slides/02-leadership";
-import { Slide03CapitalSplit } from "@/components/slides/03-capital-split";
-import { Slide03RealEstateFoundationDivider } from "@/components/slides/03-real-estate-foundation-divider";
 import { Slide04LongStructurePortfolioSleeveDivider } from "@/components/slides/04-long-structure-portfolio-sleeve-divider";
-import { Slide04CapitalWaterfall } from "@/components/slides/04-capital-waterfall";
-import { Slide05NnnOpportunities } from "@/components/slides/05-nnn-opportunities";
-import { Slide06NnnStructure } from "@/components/slides/06-nnn-structure";
 import { Slide07ExecutiveSummary } from "@/components/slides/07-executive-summary";
 import { Slide08ScenarioMatrix } from "@/components/slides/08-scenario-matrix";
 import { Slide08MacroShiftDivider } from "@/components/slides/08-macro-shift-divider";
@@ -54,10 +49,8 @@ import { Slide45FinancialRepression } from "@/components/slides/45-financial-rep
 import { Slide46PortfolioConstructionDivider } from "@/components/slides/46-portfolio-construction-divider";
 import { Slide47ResearchInfrastructure } from "@/components/slides/47-research-infrastructure";
 import { Slide48LeadingIndicators } from "@/components/slides/48-leading-indicators";
-import { Slide49FundTermsDivider } from "@/components/slides/49-fund-terms-divider";
 import { Slide50ScenarioAnalysis, Slide50ScenarioAnalysisInternal } from "@/components/slides/50-scenario-analysis";
 import { Slide51TermsAtAGlance } from "@/components/slides/51-terms-at-a-glance";
-import { Slide52RiskArchitecture } from "@/components/slides/52-risk-architecture";
 import { Slide53PortfolioRegimeShift } from "@/components/slides/53-portfolio-regime-shift";
 import { Slide54ClosingQuestion } from "@/components/slides/54-closing-question";
 import { Slide55AppendixDivider } from "@/components/slides/55-appendix-divider";
@@ -71,10 +64,6 @@ const migratedSlides: Record<number, ComponentType> = {
   1: Slide01Title,
   2: Slide02AgendaJourney,
   3: Slide02Leadership,
-  4: Slide03CapitalSplit,
-  5: Slide04CapitalWaterfall,
-  6: Slide06NnnStructure,
-  7: Slide05NnnOpportunities,
   8: Slide07ExecutiveSummary,
   9: Slide08ScenarioMatrix,
   10: Slide08MacroShiftDivider,
@@ -118,10 +107,8 @@ const migratedSlides: Record<number, ComponentType> = {
   48: Slide46PortfolioConstructionDivider,
   49: Slide47ResearchInfrastructure,
   50: Slide48LeadingIndicators,
-  51: Slide49FundTermsDivider,
   52: Slide50ScenarioAnalysis,
   53: Slide51TermsAtAGlance,
-  54: Slide52RiskArchitecture,
   55: Slide53PortfolioRegimeShift,
   56: Slide54ClosingQuestion,
   57: Slide55AppendixDivider,
@@ -133,15 +120,14 @@ const migratedSlides: Record<number, ComponentType> = {
 };
 
 export const deckSections: DeckSection[] = [
-  { from: 1, to: 3, label: "Overview" },
-  { from: 4, to: 6, label: "Fund Structure" },
-  { from: 7, to: 9, label: "Real Estate Foundation" },
-  { from: 10, to: 12, label: "Long Structure Portfolio Sleeve" },
+  { from: 1, to: 4, label: "Overview" },
+  { from: 5, to: 8, label: "Fund Structure" },
+  { from: 9, to: 12, label: "Investment Strategy" },
   { from: 13, to: 30, label: "Macro Thesis" },
   { from: 32, to: 47, label: "AI Infrastructure" },
   { from: 51, to: 53, label: "How We Underwrite" },
   { from: 54, to: 59, label: "What We Expect & Fund Terms" },
-  { from: 60, to: 67, label: "Appendix" }
+  { from: 60, to: 68, label: "Appendix" }
 ];
 
 function sectionLabelForSlide(slideNumber: number) {
@@ -174,7 +160,7 @@ function buildPendingSlide(slideNumber: number, slideTitle: string, manifestEntr
 }
 
 // Slides removed from the deck by original deck IDs (stable even after reordering).
-const deletedSlides = new Set([13, 17, 21, 23, 28, 34, 36, 38, 41, 46, 48, 61, 62, 65]);
+const deletedSlides = new Set([5, 6, 7, 8, 13, 17, 21, 23, 27, 28, 34, 36, 38, 41, 46, 48, 52, 55, 61, 62, 65]);
 
 // Build the full deck: slide 1 from manifest, insert Leadership (2),
 // Agenda (3), Fund Structure divider (4), Scenario Matrix (10),
@@ -301,8 +287,9 @@ function applyManualOrdering(slides: DeckSlide[]): DeckSlide[] {
     });
   };
 
-  // Insert Real Estate Foundation divider at slide 7 and shift subsequent slides by +1.
-  const withRealEstateDivider = slides.map((slide) => {
+  // Preserve the +1 shift at slide 7 to keep downstream numbering stable
+  // (the Real Estate Foundation divider was removed but gap keeps numbering consistent).
+  const withGapShift = slides.map((slide) => {
     if (slide.number < 7) {
       return slide;
     }
@@ -314,16 +301,8 @@ function applyManualOrdering(slides: DeckSlide[]): DeckSlide[] {
     };
   });
 
-  withRealEstateDivider.push({
-    number: 7,
-    title: "Real Estate Foundation",
-    sectionLabel: sectionLabelForSlide(7),
-    migrationStatus: "migrated",
-    content: <Slide03RealEstateFoundationDivider />
-  });
-
   // Insert Long Structure Portfolio Sleeve divider at slide 10 and shift subsequent slides by +1.
-  const withLongStructureDivider = withRealEstateDivider.map((slide) => {
+  const withLongStructureDivider = withGapShift.map((slide) => {
     if (slide.number < 10) {
       return slide;
     }
@@ -370,9 +349,8 @@ function applyManualOrdering(slides: DeckSlide[]): DeckSlide[] {
   // 10 divider, 11 portfolio-regime (kappa), 12 foundational macro views.
   // Keep global numbering stable by cycling only these slots.
   const longStructureRemap = new Map<number, number>([
-    [11, 12], // Two foundational macro views -> second slide in block
     [12, 58], // Scenario Matrix moved out
-    [58, 11] // Portfolio regime (kappa) -> first slide after divider
+    [58, 12] // Portfolio regime (kappa) -> second slide in block
   ]);
 
   const withLongStructureOrder = annexRemapped.map((slide) => {
@@ -392,7 +370,8 @@ function applyManualOrdering(slides: DeckSlide[]): DeckSlide[] {
   // debt -> interest burden -> term premium -> inflation -> policy uncertainty
   // -> global context -> US relative strength -> gold/real assets chain.
   const macroThesisRemap = new Map<number, number>([
-    [20, 18], // Inflation
+    [17, 18], // Term premium -> after inflation
+    [20, 17], // Inflation -> before term premium
     [21, 19], // Policy uncertainty
     [18, 20] // This is not just the US
   ]);
@@ -442,11 +421,10 @@ function applyManualOrdering(slides: DeckSlide[]): DeckSlide[] {
   );
 
   // Fund terms ordering:
-  // Terms at a glance -> Risk architecture -> Scenario analysis -> Scenario matrix -> Closing.
+  // Terms at a glance -> Scenario matrix -> Closing. Scenario analysis moved to appendix.
   const fundTermsRemap = new Map<number, number>([
     [56, 55], // Terms at a glance
-    [57, 56], // Risk architecture
-    [55, 57] // Scenario analysis
+    [55, 68] // Scenario analysis -> appendix
   ]);
 
   const withFundTermsOrder = withoutForcesDivider.map((slide) => {
@@ -462,8 +440,16 @@ function applyManualOrdering(slides: DeckSlide[]): DeckSlide[] {
     };
   });
 
-  withFundTermsOrder.sort((a, b) => a.number - b.number);
-  return withFundTermsOrder;
+  // Move Terms at a Glance to Fund Structure section (position 5, right after divider).
+  const withFundStructureContent = withFundTermsOrder.map((slide) => {
+    if (slide.number === 55) {
+      return { ...slide, number: 5, sectionLabel: sectionLabelForSlide(5) };
+    }
+    return slide;
+  });
+
+  withFundStructureContent.sort((a, b) => a.number - b.number);
+  return withFundStructureContent;
 }
 
 export const deckSlides = applyManualOrdering(slidesFromManifest);

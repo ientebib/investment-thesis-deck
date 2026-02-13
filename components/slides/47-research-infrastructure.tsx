@@ -1,4 +1,8 @@
+"use client";
+
+import { useState } from "react";
 import { SectionHeader, SourceLine } from "@/components/ui";
+import { MathewTerminal } from "@/components/ui/MathewTerminal";
 import { slide47ResearchInfrastructureData } from "@/lib/data/slides";
 
 const slideData = slide47ResearchInfrastructureData;
@@ -66,6 +70,8 @@ function BiConnector() {
 }
 
 export function Slide47ResearchInfrastructure() {
+  const [showMathew, setShowMathew] = useState(false);
+
   return (
     <>
       <SectionHeader sectionLabel={slideData.sectionLabel} title={slideData.title} subtitle={slideData.subtitle} />
@@ -106,6 +112,15 @@ export function Slide47ResearchInfrastructure() {
                 <span key={tool} className="ra-tool-chip">{tool}()</span>
               ))}
             </div>
+            <button
+              className="ra-demo-btn"
+              onClick={() => setShowMathew(true)}
+              type="button"
+            >
+              <span className="ra-demo-dot" />
+              <span>Launch Mathew Demo</span>
+              <span className="ra-demo-arrow">&rarr;</span>
+            </button>
           </div>
         </div>
 
@@ -135,6 +150,8 @@ export function Slide47ResearchInfrastructure() {
       </div>
 
       <SourceLine text={slideData.sourceLine} />
+
+      {showMathew && <MathewTerminal onClose={() => setShowMathew(false)} />}
     </>
   );
 }

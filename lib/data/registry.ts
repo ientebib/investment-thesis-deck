@@ -12,10 +12,6 @@ export type SlideDataSource = {
 const reactDatasetSources: Record<number, string[]> = {
   1: ["lib/data/slides/slide01.ts"],
   2: ["lib/data/slides/slide02.ts"],
-  3: ["lib/data/slides/slide03.ts"],
-  4: ["lib/data/slides/slide04.ts"],
-  5: ["lib/data/slides/slide05.ts"],
-  6: ["lib/data/slides/slide06.ts"],
   7: ["lib/data/slides/slide07.ts"],
   8: ["lib/data/slides/slide08.ts"],
   9: ["lib/data/slides/slide09.ts"],

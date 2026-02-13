@@ -235,15 +235,15 @@ export function Slide15PriceChanges() {
       />
       <div className="slide-combo-layout">
         <section className="slide-combo-panel">
-          <div className="slide-combo-label">Cumulative price change by category</div>
-          <div className="chart-area slide-combo-chart">
-            <BarChart data={priceChangeChartData} options={priceChangeChartOptions} />
-          </div>
-        </section>
-        <section className="slide-combo-panel">
           <div className="slide-combo-label">Core inflation across major DM economies</div>
           <div className="chart-area slide-combo-chart">
             <LineChart data={coreInflationChartData} options={coreInflationChartOptions} />
+          </div>
+        </section>
+        <section className="slide-combo-panel">
+          <div className="slide-combo-label">Cumulative price change by category</div>
+          <div className="chart-area slide-combo-chart">
+            <BarChart data={priceChangeChartData} options={priceChangeChartOptions} />
           </div>
         </section>
       </div>

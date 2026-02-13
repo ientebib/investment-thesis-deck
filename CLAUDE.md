@@ -12,7 +12,7 @@ Theme tokens: `lib/theme.ts`. CSS variables: `app/globals.css` `:root`.
 ## Key Architecture Decisions
 - **Light mode** is active (`NEXT_PUBLIC_THEME_MODE=light` or default). All colors use Vivid Strata / Cool White palette.
 - **Lazy-mount slides**: DeckPlayer only renders slide content when the slide is first visited. This prevents Chart.js from rendering at zero dimensions inside hidden (`display:none`) slides.
-- **Global CSS preferred**: Slide styles go in `app/globals.css` with prefixed class names (e.g., `nnn-structure-*`). CSS modules don't reliably load in this project — avoid them.
+- **Global CSS preferred**: Slide styles go in `app/globals.css` with prefixed class names (e.g., `exec-summary-*`). CSS modules don't reliably load in this project — avoid them.
 - **Resize event**: DeckPlayer dispatches `window.resize` 80ms after each slide change to help Chart.js recalculate.
 - **Slide numbering**: Slide 2 (Leadership) was inserted after legacy slide 1. All subsequent legacy slides shift +1 (legacy slide N = deck slide N+1).
 
@@ -37,10 +37,7 @@ When reviewing a slide, verify:
 |-------|-------|--------|-------|
 | 1 | Title / Cover (Stack Holdings) | PASS | Centered layout, green underline, confidential line. Clean. |
 | 2 | Leadership (Managing Partners) | PASS | Two partner cards with green/blue left accents. Bios readable. Footer present. |
-| 3 | Capital Split (Anchored in real assets) | PASS | Two thesis panels (green/blue) + donut chart. $20M center label. Legend below. |
-| 4 | Capital Waterfall (How capital flows) | PASS | 5-bar waterfall with annotations. Green increase, red decrease, blue total. |
-| 5 | NNN Opportunities (Illustrative NNN) | PASS | 3 property cards with images + data tables + 4-step process row. |
-| 6 | NNN Structure (Florida: structure/financing) | PASS | Two-column split. Left: asset desc + WHY FLORIDA table + migration bar chart. Right: debt profile table + NOI surplus chart with balloon line. |
+| 3-6 | Capital Split, Waterfall, NNN Opportunities, NNN Structure | REMOVED | Real estate content removed in hedge fund pivot. Archived on `archive/real-estate-strategy` branch. |
 | 7 | Executive Summary (Two macro views) | PASS | Converted CSS module to global (`exec-summary-*`). Increased body font to 13px, centered vertical layout, green-accented intersection card. |
 | 8 | Macro Shift (Section Divider) | PASS | Converted CSS module to global (`section-divider-*`). Removed duplicate SectionHeader. Clean divider: kicker + headline with green left border. |
 | 9 | Federal Debt (Structural, not cyclical) | PASS | Area chart with actual/projected split. Green series, dashed projection. Chart renders cleanly. |
@@ -78,7 +75,7 @@ These files are maintained by the design reviewer. The parallel migration agent 
 | Micro | 10px | Watermarks, page numbers |
 
 ## Known Fixes Applied
-- **CSS modules broken**: Slides 06, 07, 08 all used CSS modules that weren't loading. Converted to global CSS classes with prefixes (`nnn-structure-*`, `exec-summary-*`, `section-divider-*`).
+- **CSS modules broken**: Slides 07, 08 used CSS modules that weren't loading. Converted to global CSS classes with prefixes (`exec-summary-*`, `section-divider-*`). NNN styles removed in hedge fund pivot.
 - **Chart.js zero-dimension render**: Added lazy-mount in DeckPlayer — slides only render content on first visit. Prevents Chart.js from caching zero-width layouts.
 - **Slide padding**: `12px 32px 24px 32px` (top right bottom left). Responsive: `8px 24px 20px 24px` below 800px height.
 - **Section divider duplicate content**: Slide 08 had both SectionHeader and a custom block rendering the same text. Removed SectionHeader for section dividers.

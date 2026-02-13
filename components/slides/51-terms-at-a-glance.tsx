@@ -1,52 +1,35 @@
 import { SectionHeader, SourceLine } from "@/components/ui";
-import { slide51TermsAtGlanceData } from "@/lib/data/slides";
+import { slide51FundStructureData } from "@/lib/data/slides";
+import type { FundStructureSection } from "@/lib/data/types";
 
-const slideData = slide51TermsAtGlanceData;
-
-export function Slide51TermsAtAGlance() {
+function TermColumn({ sections }: { sections: FundStructureSection[] }) {
   return (
-    <>
-      <SectionHeader sectionLabel={slideData.sectionLabel} title={slideData.title} subtitle={slideData.subtitle} />
-
-      <div className="terms-layout terms-layout--at-glance">
-        <div className="terms-panel-grid">
-          {slideData.panels.map((panel) => (
-            <article key={panel.title} className="terms-panel-card">
-              <h3 className="terms-panel-title">{panel.title}</h3>
-              <table className="thesis-table">
-                <tbody>
-                  {panel.rows.map((row) => (
-                    <tr key={row.label}>
-                      <th>{row.label}</th>
-                      <td>{row.value}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </article>
+    <div className="fs-col">
+      {sections.map((section) => (
+        <div key={section.title} className="fs-section">
+          <div className="fs-section-header">{section.title}</div>
+          {section.rows.map((row) => (
+            <div key={row.label} className="fs-row">
+              <span className="fs-term">{row.label}</span>
+              <span className="fs-def">{row.value}</span>
+            </div>
           ))}
         </div>
+      ))}
+    </div>
+  );
+}
 
-        <section className="terms-lifecycle-wrap">
-          <h3 className="adoption-row-label">{slideData.lifecycleTitle}</h3>
-          <div className="terms-lifecycle-bar">
-            {slideData.lifecycleSegments.map((segment) => (
-              <div
-                key={segment.label}
-                className={`terms-lifecycle-segment terms-lifecycle-segment--${segment.tone}`}
-              >
-                {segment.label}
-              </div>
-            ))}
-          </div>
-          <div className="terms-lifecycle-notes">
-            <span>{slideData.lifecycleNotes[0]}</span>
-            <span>{slideData.lifecycleNotes[1]}</span>
-          </div>
-        </section>
+export function Slide51TermsAtAGlance() {
+  const data = slide51FundStructureData;
+  return (
+    <>
+      <SectionHeader sectionLabel={data.sectionLabel} title={data.title} subtitle={data.subtitle} />
+      <div className="fs-table">
+        <TermColumn sections={data.leftSections} />
+        <TermColumn sections={data.rightSections} />
       </div>
-
-      <SourceLine text={slideData.sourceLine} />
+      <SourceLine text={data.sourceLine} />
     </>
   );
 }

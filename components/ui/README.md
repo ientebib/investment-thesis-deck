@@ -4,7 +4,6 @@ Implemented shared components:
 - `SectionHeader` — standard section label + title + subtitle block.
 - `SourceLine` — standardized source/footnote line with optional `tight` spacing.
 - `ThesisPanelCard` — consistent thesis panel card + key/value table (slide 2 style).
-- `NnnPropertyCard` — consistent NNN property card (image + data table).
 
 Use these components in migrated slides instead of duplicating markup.
 

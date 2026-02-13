@@ -3,40 +3,13 @@ import type { Slide50ScenarioAnalysisData } from "@/lib/data/types";
 export const slide50ScenarioAnalysisData: Slide50ScenarioAnalysisData = {
   sectionLabel: "WHAT WE EXPECT & FUND TERMS",
   title: "Scenario analysis",
-  subtitle: "Adjust assumptions to model projected returns. NOI escalates 2% annually. 10-year fund life",
+  subtitle: "Adjust assumptions to model projected returns. 10-year fund life",
   controls: [
     {
-      id: "entryCapRatePct",
-      label: "Entry Cap Rate",
-      min: 3,
-      max: 9,
-      step: 0.25,
-      defaultValue: 6,
-      format: "percent_1"
-    },
-    {
-      id: "exitCapRatePct",
-      label: "Exit Cap Rate (Yr 10)",
-      min: 4,
-      max: 10,
-      step: 0.25,
-      defaultValue: 6,
-      format: "percent_1"
-    },
-    {
-      id: "loanRatePct",
-      label: "Loan Rate",
-      min: 3,
-      max: 9,
-      step: 0.25,
-      defaultValue: 5.5,
-      format: "percent_1"
-    },
-    {
-      id: "structuralLongReturnPct",
-      label: "Structural Long Portfolio Return",
-      min: -100,
-      max: 100,
+      id: "annualReturnPct",
+      label: "Expected Annual Return",
+      min: -30,
+      max: 50,
       step: 1,
       defaultValue: 25,
       format: "percent_1"

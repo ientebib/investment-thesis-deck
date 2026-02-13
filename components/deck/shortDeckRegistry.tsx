@@ -2,9 +2,6 @@ import type { DeckSection, DeckSlide } from "@/components/deck/types";
 import { Slide01Title } from "@/components/slides/01-title";
 import { Slide02Leadership } from "@/components/slides/02-leadership";
 import { Slide02AgendaJourney } from "@/components/slides/02-agenda-journey";
-import { Slide03CapitalSplit } from "@/components/slides/03-capital-split";
-import { Slide06NnnStructure } from "@/components/slides/06-nnn-structure";
-import { Slide05NnnOpportunities } from "@/components/slides/05-nnn-opportunities";
 import { Slide07ExecutiveSummary } from "@/components/slides/07-executive-summary";
 import { Slide08bShortThesisMacroProof } from "@/components/slides/08b-short-thesis-macro-proof";
 import { Slide08cShortThesisMacroProof2 } from "@/components/slides/08c-short-thesis-macro-proof-2";
@@ -17,10 +14,10 @@ import { Slide55ClosingThankYou } from "@/components/slides/55-closing-thank-you
 
 export const shortDeckSections: DeckSection[] = [
   { from: 1, to: 3, label: "Overview" },
-  { from: 4, to: 7, label: "Fund Structure" },
-  { from: 8, to: 12, label: "Core Thesis" },
-  { from: 13, to: 14, label: "Terms & Returns" },
-  { from: 15, to: 15, label: "Closing" }
+  { from: 4, to: 4, label: "Investment Thesis" },
+  { from: 5, to: 9, label: "Core Thesis" },
+  { from: 10, to: 11, label: "Terms & Returns" },
+  { from: 12, to: 12, label: "Closing" }
 ];
 
 export const shortDeckSlides: DeckSlide[] = [
@@ -47,83 +44,62 @@ export const shortDeckSlides: DeckSlide[] = [
   },
   {
     number: 4,
-    title: "Estructura del Fondo",
-    sectionLabel: "FUND STRUCTURE",
-    migrationStatus: "migrated",
-    content: <Slide03CapitalSplit />
-  },
-  {
-    number: 5,
-    title: "Real Estate",
-    sectionLabel: "FUND STRUCTURE",
-    migrationStatus: "migrated",
-    content: <Slide06NnnStructure />
-  },
-  {
-    number: 6,
-    title: "Real Estate Illustrativo",
-    sectionLabel: "FUND STRUCTURE",
-    migrationStatus: "migrated",
-    content: <Slide05NnnOpportunities />
-  },
-  {
-    number: 7,
-    title: "Long Structural Portfolio",
-    sectionLabel: "FUND STRUCTURE",
+    title: "Investment Thesis",
+    sectionLabel: "INVESTMENT THESIS",
     migrationStatus: "migrated",
     content: <Slide07ExecutiveSummary />
   },
   {
-    number: 8,
+    number: 5,
     title: "Fiscal Constraint Regime",
     sectionLabel: "CORE THESIS",
     migrationStatus: "migrated",
     content: <Slide08bShortThesisMacroProof />
   },
   {
-    number: 9,
+    number: 6,
     title: "Real-Asset Repricing",
     sectionLabel: "CORE THESIS",
     migrationStatus: "migrated",
     content: <Slide08cShortThesisMacroProof2 />
   },
   {
-    number: 10,
+    number: 7,
     title: "Capability and Adoption",
     sectionLabel: "CORE THESIS",
     migrationStatus: "migrated",
     content: <Slide09bShortThesisAiProof />
   },
   {
-    number: 11,
+    number: 8,
     title: "Physical Infrastructure Buildout",
     sectionLabel: "CORE THESIS",
     migrationStatus: "migrated",
     content: <Slide09cShortThesisAiProof2 />
   },
   {
-    number: 12,
-    title: "The US still grows. Most developed economies don't",
+    number: 9,
+    title: "US Structural Advantage",
     sectionLabel: "CORE THESIS",
     migrationStatus: "migrated",
     content: <Slide17UsStructuralAdvantage />
   },
   {
-    number: 13,
+    number: 10,
     title: "Fund Terms",
     sectionLabel: "TERMS & RETURNS",
     migrationStatus: "migrated",
     content: <Slide51TermsAtAGlance />
   },
   {
-    number: 14,
-    title: "Dashboard de Expected Returns",
+    number: 11,
+    title: "Scenario Analysis",
     sectionLabel: "TERMS & RETURNS",
     migrationStatus: "migrated",
     content: <Slide50ScenarioAnalysis />
   },
   {
-    number: 15,
+    number: 12,
     title: "Closing",
     sectionLabel: "CLOSING",
     migrationStatus: "migrated",

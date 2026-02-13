@@ -1,9 +1,5 @@
 export { slide01TitleData } from "@/lib/data/slides/slide01";
 export { slide02LeadershipData } from "@/lib/data/slides/slide02";
-export { slide03CapitalSplitData } from "@/lib/data/slides/slide03";
-export { slide04CapitalWaterfallData } from "@/lib/data/slides/slide04";
-export { slide05NnnOpportunitiesData } from "@/lib/data/slides/slide05";
-export { slide06NnnStructureData } from "@/lib/data/slides/slide06";
 export { slide07ExecutiveSummaryData } from "@/lib/data/slides/slide07";
 export { slide08ConvexityData } from "@/lib/data/slides/slide08-convexity";
 export { slide08MacroShiftDividerData } from "@/lib/data/slides/slide08";
@@ -49,7 +45,7 @@ export { slide47ResearchInfrastructureData } from "@/lib/data/slides/slide47";
 export { slide48LeadingIndicatorsData } from "@/lib/data/slides/slide48";
 export { slide49FundTermsDividerData } from "@/lib/data/slides/slide49";
 export { slide50ScenarioAnalysisData } from "@/lib/data/slides/slide50";
-export { slide51TermsAtGlanceData } from "@/lib/data/slides/slide51";
+export { slide51FundStructureData } from "@/lib/data/slides/slide51";
 export { slide52RiskArchitectureData } from "@/lib/data/slides/slide52";
 export { slide53RegimeShiftData } from "@/lib/data/slides/slide53";
 export { slide54ClosingData } from "@/lib/data/slides/slide54";

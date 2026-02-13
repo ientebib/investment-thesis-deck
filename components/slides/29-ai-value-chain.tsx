@@ -1,9 +1,19 @@
+"use client";
+
+import { useMemo, useState } from "react";
 import { SectionHeader, SourceLine } from "@/components/ui";
 import { slide29ValueChainData } from "@/lib/data/slides";
 
 const slideData = slide29ValueChainData;
 
 export function Slide29AiValueChain() {
+  const [activeLayerId, setActiveLayerId] = useState(0);
+
+  const activeLayer = useMemo(
+    () => slideData.layers[activeLayerId],
+    [activeLayerId]
+  );
+
   return (
     <>
       <SectionHeader
@@ -12,34 +22,40 @@ export function Slide29AiValueChain() {
         subtitle={slideData.subtitle}
       />
 
-      <div className="ai-value-chain-layout">
-        <div className="ai-value-chain-flow">
-          {slideData.flowLabels.map((label) => (
-            <div key={label} className="ai-value-chain-flow-pill">
-              {label}
-            </div>
+      <div className="ai-vc-container">
+        <nav className="ai-vc-sidebar">
+          {slideData.layers.map((layer) => (
+            <button
+              key={layer.id}
+              type="button"
+              className={`ai-vc-sidebar-item${layer.id === activeLayerId ? " is-active" : ""}`}
+              onClick={() => setActiveLayerId(layer.id)}
+            >
+              <span className="ai-vc-sidebar-num">{layer.id + 1}</span>
+              <span className="ai-vc-sidebar-label">{layer.shortName}</span>
+              <span className="ai-vc-sidebar-badge">{layer.nodes.length}</span>
+            </button>
           ))}
-        </div>
+        </nav>
 
-        <div className="ai-value-chain-phases">
-          {slideData.phases.map((phase) => (
-            <section key={phase.phaseTitle} className="ai-value-chain-phase">
-              <aside className="ai-value-chain-phase-meta">
-                <h3 className="ai-value-chain-phase-title">{phase.phaseTitle}</h3>
-                <p className="ai-value-chain-phase-description">{phase.phaseDescription}</p>
-              </aside>
+        <div className="ai-vc-main">
+          <header className="ai-vc-layer-header">
+            <h3 className="ai-vc-layer-title">{activeLayer.name}</h3>
+            <p className="ai-vc-layer-desc">{activeLayer.description}</p>
+          </header>
 
-              <div className="ai-value-chain-node-row">
-                {phase.nodes.map((node) => (
-                  <article key={node.title} className="ai-value-chain-node">
-                    <h4 className="ai-value-chain-node-title">{node.title}</h4>
-                    <p className="ai-value-chain-node-subtitle">{node.subtitle}</p>
-                    <p className="ai-value-chain-node-evidence">{node.evidence}</p>
-                  </article>
-                ))}
+          <div className="ai-vc-node-grid">
+            {activeLayer.nodes.map((node) => (
+              <div key={node.id} className="ai-vc-node-card">
+                <span className="ai-vc-node-id">{node.id}</span>
+                <span className="ai-vc-node-title">{node.title}</span>
+                <span className="ai-vc-node-subtitle">{node.subtitle}</span>
+                {node.keyPlayers && (
+                  <span className="ai-vc-node-players">{node.keyPlayers}</span>
+                )}
               </div>
-            </section>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 

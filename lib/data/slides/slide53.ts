@@ -11,8 +11,8 @@ const rows = bucketSeries as Array<{
 
 export const slide53RegimeShiftData: Slide53RegimeShiftData = {
   sectionLabel: "LONG STRUCTURE PORTFOLIO SLEEVE",
-  title: "Traditional portfolio construction was designed for a regime that no longer exists",
-  subtitle: "At current starting valuations, historical forward real return base rates for broad equity beta are materially compressed",
+  title: "Passive equity is no longer the core return driver",
+  subtitle: "In high valuation regimes, alpha matters more than allocation",
   chartLabel: "Historical base rates by starting CAPE",
   buckets: rows.map((row) => ({
     bucket: row.bucket,
@@ -26,8 +26,7 @@ export const slide53RegimeShiftData: Slide53RegimeShiftData = {
   snapshotRows: [
     { metric: "Shiller CAPE", current: "40.38", longRunMean: "17.33", signal: "98.8th percentile", tone: "negative" },
     { metric: "Trailing P/E", current: "29.75", longRunMean: "16.19", signal: "+84%", tone: "negative" },
-    { metric: "Earnings Yield", current: "3.36%", longRunMean: "7.21%", signal: "-53%", tone: "negative" },
-    { metric: "Dividend Yield", current: "1.13%", longRunMean: "4.22%", signal: "-73%", tone: "negative" }
+{ metric: "Dividend Yield", current: "1.13%", longRunMean: "4.22%", signal: "-73%", tone: "negative" }
   ],
   whereWeAreTitle: "Where we are now",
   whereWeAreMetric: "CAPE 40.38",
