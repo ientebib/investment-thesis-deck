@@ -1,0 +1,12 @@
+year_end,total_active_capacity_gw,generation_gw,storage_gw,solar_gw,wind_gw,gas_gw,completion_rate_pct,median_wait_years,new_requests_gw,source
+2014,350,320,30,,,,,,,"LBNL Queued Up; estimated from historical trend before rapid growth era"
+2015,380,345,35,,,,,,,"LBNL Queued Up; estimated from pre-surge baseline"
+2016,420,380,40,,,,,,,"LBNL Queued Up; estimated from pre-surge baseline"
+2017,480,430,50,,,,,,,"LBNL Queued Up; estimated; PJM queue capacity began to grow"
+2018,570,500,70,,,,,,,"LBNL Queued Up; estimated; interconnection requests rising"
+2019,700,600,100,,,,,,,"LBNL Queued Up; estimated; rapid growth beginning"
+2020,950,750,200,,,,19,2,,"LBNL Queued Up 2021 edition; 750 GW generation + ~200 GW storage"
+2021,1400,1100,300,,,,,,561,"LBNL Queued Up 2022 edition; ~1400 GW total; 561 GW new requests"
+2022,2000,1350,680,,,,,,759,"LBNL Queued Up 2023 edition; 40% YoY growth; 95%+ zero-carbon"
+2023,2600,1570,1030,1086,366,,14,,908,"LBNL Queued Up 2024 edition; 27% YoY growth; 908 GW new requests"
+2024,2300,1400,890,956,271,136,13,4,,"LBNL Queued Up 2025 edition; 12% decrease YoY; first decline; gas +72%"

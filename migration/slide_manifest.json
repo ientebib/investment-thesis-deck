@@ -1,0 +1,705 @@
+{
+  "source": "migration snapshot (legacy HTML retired)",
+  "slideCount": 61,
+  "chartCount": 46,
+  "generatedAt": "2026-02-09",
+  "slides": [
+    {
+      "slide": 1,
+      "startLine": 563,
+      "endLine": 570,
+      "title": "STACK HOLDINGS",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": false
+    },
+    {
+      "slide": 2,
+      "startLine": 571,
+      "endLine": 604,
+      "title": "Anchored in real assets. Driven by structural conviction.",
+      "chartCanvasIds": [
+        "chart-capital-split"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 11,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 3,
+      "startLine": 605,
+      "endLine": 612,
+      "title": "How capital flows through the structure",
+      "chartCanvasIds": [
+        "chart-capital-waterfall"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 4,
+      "startLine": 613,
+      "endLine": 703,
+      "title": "Illustrative NNN lease opportunities",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 93,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 5,
+      "startLine": 704,
+      "endLine": 796,
+      "title": "NNN leases in Florida: structure and financing",
+      "chartCanvasIds": [
+        "floridaMigrationChart",
+        "noiDebtChart"
+      ],
+      "chartCount": 2,
+      "inlineStyleAttrCount": 49,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 6,
+      "startLine": 797,
+      "endLine": 821,
+      "title": "Two foundational macro views.",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 12,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 7,
+      "startLine": 822,
+      "endLine": 828,
+      "title": "MACRO SHIFT",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": false
+    },
+    {
+      "slide": 8,
+      "startLine": 829,
+      "endLine": 839,
+      "title": "Federal debt is no longer cyclical. It's structural.",
+      "chartCanvasIds": [
+        "debtChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 9,
+      "startLine": 840,
+      "endLine": 850,
+      "title": "Interest expense is now a major budget item",
+      "chartCanvasIds": [
+        "spendingChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 10,
+      "startLine": 851,
+      "endLine": 861,
+      "title": "For every $5 the government collects, $1 goes to interest",
+      "chartCanvasIds": [
+        "interestChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 11,
+      "startLine": 862,
+      "endLine": 872,
+      "title": "The term premium is back",
+      "chartCanvasIds": [
+        "termPremiumChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 12,
+      "startLine": 873,
+      "endLine": 890,
+      "title": "This is not just the US",
+      "chartCanvasIds": [
+        "japanChart",
+        "ukChart"
+      ],
+      "chartCount": 2,
+      "inlineStyleAttrCount": 7,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 13,
+      "startLine": 891,
+      "endLine": 901,
+      "title": "Core inflation has settled higher than pre-2020 across every major DM economy",
+      "chartCanvasIds": [
+        "inflationChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 14,
+      "startLine": 902,
+      "endLine": 913,
+      "title": "Inflation concentrates where supply can't scale",
+      "chartCanvasIds": [
+        "priceChangesChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 15,
+      "startLine": 914,
+      "endLine": 960,
+      "title": "Policy uncertainty is structural, not episodic",
+      "chartCanvasIds": [
+        "tpuChart",
+        "gprChart",
+        "fiscalChart",
+        "vixChart"
+      ],
+      "chartCount": 4,
+      "inlineStyleAttrCount": 25,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 16,
+      "startLine": 961,
+      "endLine": 1031,
+      "title": "The US still grows. Most developed economies don\u2019t.",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 44,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 17,
+      "startLine": 1032,
+      "endLine": 1038,
+      "title": "THE CASE FOR REAL ASSETS",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": false
+    },
+    {
+      "slide": 18,
+      "startLine": 1039,
+      "endLine": 1049,
+      "title": "Gold has overtaken Treasuries in central bank reserves",
+      "chartCanvasIds": [
+        "goldTreasuriesChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 19,
+      "startLine": 1050,
+      "endLine": 1061,
+      "title": "Central-bank buying stayed elevated in 2025 after three 1,000t+ years",
+      "chartCanvasIds": [
+        "cbGoldChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 20,
+      "startLine": 1062,
+      "endLine": 1072,
+      "title": "Priced in gold, US equities have made no progress since the GFC",
+      "chartCanvasIds": [
+        "spGoldChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 21,
+      "startLine": 1073,
+      "endLine": 1083,
+      "title": "The gold-real yield relationship broke in 2022",
+      "chartCanvasIds": [
+        "goldYieldChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 22,
+      "startLine": 1084,
+      "endLine": 1091,
+      "title": "Mine development timelines have tripled in three decades",
+      "chartCanvasIds": [
+        "chart-mine-lead"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 23,
+      "startLine": 1092,
+      "endLine": 1102,
+      "title": "China refines 19 of the 20 strategic minerals the IEA tracks",
+      "chartCanvasIds": [
+        "mineralsChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 24,
+      "startLine": 1103,
+      "endLine": 1114,
+      "title": "Critical mineral demand is accelerating across the board",
+      "chartCanvasIds": [
+        "mineralDemandChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 25,
+      "startLine": 1115,
+      "endLine": 1268,
+      "title": "Beyond gold: silver, copper, and uranium are repricing on structural demand",
+      "chartCanvasIds": [
+        "metalPricesChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 21,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 26,
+      "startLine": 1269,
+      "endLine": 1276,
+      "title": "THE AI BUILDOUT",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": false
+    },
+    {
+      "slide": 27,
+      "startLine": 1277,
+      "endLine": 1464,
+      "title": "Why AI matters for this portfolio",
+      "chartCanvasIds": [
+        "chart-electricity-gen"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 16,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 28,
+      "startLine": 1465,
+      "endLine": 1569,
+      "title": "AI Value Chain: Constraint to Cash-Flow Map",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 72,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 29,
+      "startLine": 1570,
+      "endLine": 1577,
+      "title": "Harder benchmarks show capabilities still climbing steeply",
+      "chartCanvasIds": [
+        "chart-eci"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 30,
+      "startLine": 1578,
+      "endLine": 1585,
+      "title": "The task horizon is doubling every 4.3 months",
+      "chartCanvasIds": [
+        "chart-metr"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 31,
+      "startLine": 1586,
+      "endLine": 1601,
+      "title": "AI adoption is unprecedented \u2014 consumer and enterprise",
+      "chartCanvasIds": [
+        "chart-ai-usage"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 5,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 32,
+      "startLine": 1602,
+      "endLine": 1609,
+      "title": "Revenue is already materializing \u2014 faster than any prior technology wave",
+      "chartCanvasIds": [
+        "chart-ai-revenue"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 33,
+      "startLine": 1610,
+      "endLine": 1617,
+      "title": "Training compute has grown 5 orders of magnitude since 2017",
+      "chartCanvasIds": [
+        "chart-training-compute"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 34,
+      "startLine": 1618,
+      "endLine": 1626,
+      "title": "Training costs have crossed $500M \u2014 approaching $1B per run",
+      "chartCanvasIds": [
+        "chart-training-cost"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 35,
+      "startLine": 1627,
+      "endLine": 1650,
+      "title": "32\u00d7 more chips shipped in three years",
+      "chartCanvasIds": [
+        "hardwareChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 3,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 36,
+      "startLine": 1651,
+      "endLine": 1659,
+      "title": "Hyperscaler capex is entering escape velocity",
+      "chartCanvasIds": [
+        "chart-hyperscaler-capex"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 37,
+      "startLine": 1660,
+      "endLine": 1675,
+      "title": "The datacenter buildout is at megaproject scale",
+      "chartCanvasIds": [
+        "frontierPowerChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 1,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 38,
+      "startLine": 1676,
+      "endLine": 1685,
+      "title": "US datacenter load doubles to 130 GW by 2030",
+      "chartCanvasIds": [
+        "datacenterCapacityChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 39,
+      "startLine": 1686,
+      "endLine": 1697,
+      "title": "Inference is 45% of compute spend and growing",
+      "chartCanvasIds": [
+        "trainingInferenceChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 1,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 40,
+      "startLine": 1698,
+      "endLine": 1704,
+      "title": "WHY THESE FORCES COMPOUND",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": false
+    },
+    {
+      "slide": 41,
+      "startLine": 1705,
+      "endLine": 1715,
+      "title": "AI is deflationary in cognition. Inflationary in everything it needs to run.",
+      "chartCanvasIds": [
+        "aiDemandChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 1,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 42,
+      "startLine": 1716,
+      "endLine": 1729,
+      "title": "Labor exposure is broad and automation plans are accelerating",
+      "chartCanvasIds": [
+        "laborSignalsChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 3,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 43,
+      "startLine": 1730,
+      "endLine": 1777,
+      "title": "There is no fiscally neutral path through AI displacement",
+      "chartCanvasIds": [
+        "fiscalALMPChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 29,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 44,
+      "startLine": 1778,
+      "endLine": 1822,
+      "title": "Financial repression is the proven playbook for sovereign deleveraging",
+      "chartCanvasIds": [
+        "repressionChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 22,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 45,
+      "startLine": 1823,
+      "endLine": 1829,
+      "title": "PORTFOLIO CONSTRUCTION",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": false
+    },
+    {
+      "slide": 46,
+      "startLine": 1830,
+      "endLine": 1838,
+      "title": "Proprietary research system powered by a long-horizon AI agent",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 2,
+      "hasSourceLine": false
+    },
+    {
+      "slide": 47,
+      "startLine": 1839,
+      "endLine": 1942,
+      "title": "What we track",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 81,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 48,
+      "startLine": 1943,
+      "endLine": 1949,
+      "title": "FUND TERMS",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": false
+    },
+    {
+      "slide": 49,
+      "startLine": 1950,
+      "endLine": 2005,
+      "title": "Scenario analysis",
+      "chartCanvasIds": [
+        "chart-scenario-nav"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 14,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 50,
+      "startLine": 2006,
+      "endLine": 2072,
+      "title": "Terms at a glance",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 51,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 51,
+      "startLine": 2073,
+      "endLine": 2125,
+      "title": "Risk architecture",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 35,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 52,
+      "startLine": 2126,
+      "endLine": 2193,
+      "title": "Traditional portfolio construction was designed for a regime that no longer exists.",
+      "chartCanvasIds": [
+        "sp500ValuationBucketsChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 44,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 53,
+      "startLine": 2194,
+      "endLine": 2201,
+      "title": "",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 3,
+      "hasSourceLine": false
+    },
+    {
+      "slide": 54,
+      "startLine": 2202,
+      "endLine": 2208,
+      "title": "APPENDIX",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": false
+    },
+    {
+      "slide": 55,
+      "startLine": 2209,
+      "endLine": 2216,
+      "title": "Each GPU generation unlocks a new frontier of training scale",
+      "chartCanvasIds": [
+        "chart-gpu-generations"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 56,
+      "startLine": 2217,
+      "endLine": 2227,
+      "title": "Interconnection queues stretch 5\u20137 years",
+      "chartCanvasIds": [
+        "interconnectionChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 57,
+      "startLine": 2228,
+      "endLine": 2307,
+      "title": "GPU supply is a packaging story, not just a wafer story",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 49,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 58,
+      "startLine": 2308,
+      "endLine": 2368,
+      "title": "How large language models work",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 34,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 59,
+      "startLine": 2369,
+      "endLine": 2376,
+      "title": "AI lab compute spend is doubling every year",
+      "chartCanvasIds": [
+        "chart-ai-compute-spend"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 60,
+      "startLine": 2377,
+      "endLine": 2386,
+      "title": "Even if every announced project proceeds, copper faces a ~27% supply deficit by 2035",
+      "chartCanvasIds": [
+        "copperChart"
+      ],
+      "chartCount": 1,
+      "inlineStyleAttrCount": 0,
+      "hasSourceLine": true
+    },
+    {
+      "slide": 61,
+      "startLine": 2387,
+      "endLine": 6842,
+      "title": "How we underwrite",
+      "chartCanvasIds": [],
+      "chartCount": 0,
+      "inlineStyleAttrCount": 33,
+      "hasSourceLine": true
+    }
+  ]
+}

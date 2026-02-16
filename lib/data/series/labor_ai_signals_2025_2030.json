@@ -1,0 +1,32 @@
+[
+  {
+    "metric": "ILO 2025: Global jobs exposed",
+    "value_pct": 25,
+    "source_note": "ILO-NASK Generative AI and Jobs Index (2025)",
+    "group": "exposure"
+  },
+  {
+    "metric": "ILO 2025: High-income jobs exposed",
+    "value_pct": 34,
+    "source_note": "ILO-NASK Generative AI and Jobs Index (2025)",
+    "group": "exposure"
+  },
+  {
+    "metric": "ILO 2025: Low-income jobs exposed",
+    "value_pct": 11,
+    "source_note": "ILO-NASK Generative AI and Jobs Index (2025)",
+    "group": "exposure"
+  },
+  {
+    "metric": "WEF 2030: Employers planning task automation",
+    "value_pct": 73,
+    "source_note": "WEF Future of Jobs Report 2025 (2030 survey endpoint)",
+    "group": "employer"
+  },
+  {
+    "metric": "WEF 2030: Employers expecting workforce reduction",
+    "value_pct": 41,
+    "source_note": "WEF Future of Jobs Report 2025 (2030 survey endpoint)",
+    "group": "employer"
+  }
+]

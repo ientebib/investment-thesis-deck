@@ -1,0 +1,51 @@
+[
+  {
+    "bucket": "Below 10",
+    "median_pct": 10.99,
+    "p25_pct": 8.54,
+    "p75_pct": 13.67,
+    "observations": 229
+  },
+  {
+    "bucket": "10-15",
+    "median_pct": 7.83,
+    "p25_pct": 3.58,
+    "p75_pct": 11.8,
+    "observations": 461
+  },
+  {
+    "bucket": "15-20",
+    "median_pct": 6.21,
+    "p25_pct": 3.38,
+    "p75_pct": 8.8,
+    "observations": 514
+  },
+  {
+    "bucket": "20-25",
+    "median_pct": 4.71,
+    "p25_pct": -0.07,
+    "p75_pct": 7.85,
+    "observations": 249
+  },
+  {
+    "bucket": "25-30",
+    "median_pct": 5.23,
+    "p25_pct": 4.49,
+    "p75_pct": 5.69,
+    "observations": 83
+  },
+  {
+    "bucket": "30-40",
+    "median_pct": 0.45,
+    "p25_pct": -0.62,
+    "p75_pct": 1.41,
+    "observations": 36
+  },
+  {
+    "bucket": "40+",
+    "median_pct": -3.45,
+    "p25_pct": -4.41,
+    "p75_pct": -3.03,
+    "observations": 21
+  }
+]

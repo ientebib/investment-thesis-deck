@@ -1,0 +1,52 @@
+[
+  {
+    "year": "2020",
+    "actual_gw": 0.4,
+    "projected_gw": null
+  },
+  {
+    "year": "2021",
+    "actual_gw": 0.8,
+    "projected_gw": null
+  },
+  {
+    "year": "2022",
+    "actual_gw": 1.8,
+    "projected_gw": null
+  },
+  {
+    "year": "2023",
+    "actual_gw": 4.3,
+    "projected_gw": null
+  },
+  {
+    "year": "2024",
+    "actual_gw": 11,
+    "projected_gw": null
+  },
+  {
+    "year": "2025",
+    "actual_gw": 21,
+    "projected_gw": 21
+  },
+  {
+    "year": "2026",
+    "actual_gw": null,
+    "projected_gw": 40
+  },
+  {
+    "year": "2027",
+    "actual_gw": null,
+    "projected_gw": 68
+  },
+  {
+    "year": "2028",
+    "actual_gw": null,
+    "projected_gw": 90
+  },
+  {
+    "year": "2029",
+    "actual_gw": null,
+    "projected_gw": 120
+  }
+]

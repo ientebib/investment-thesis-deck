@@ -1,0 +1,57 @@
+[
+  {
+    "model": "GPT-4 (Mar 2023)",
+    "cluster_size": 25000,
+    "generation": "A100"
+  },
+  {
+    "model": "Claude 3 Opus (Mar 2024)",
+    "cluster_size": 20000,
+    "generation": "A100"
+  },
+  {
+    "model": "Gemini Ultra (Dec 2023)",
+    "cluster_size": 26000,
+    "generation": "TPUv4"
+  },
+  {
+    "model": "Llama 3.1-405B (Jul 2024)",
+    "cluster_size": 30000,
+    "generation": "H100"
+  },
+  {
+    "model": "Grok-3 (Feb 2025)",
+    "cluster_size": 200000,
+    "generation": "H100"
+  },
+  {
+    "model": "GPT-5 (Jun 2025)",
+    "cluster_size": 80000,
+    "generation": "H100"
+  },
+  {
+    "model": "Claude Opus 4 (Jun 2025)",
+    "cluster_size": 50000,
+    "generation": "H100"
+  },
+  {
+    "model": "GPT-5.2 (Sep 2025)",
+    "cluster_size": 100000,
+    "generation": "H100/GB200"
+  },
+  {
+    "model": "Gemini 2.5 Pro (Mar 2025)",
+    "cluster_size": 50000,
+    "generation": "TPUv5"
+  },
+  {
+    "model": "Claude Opus 4.5 (Dec 2025)",
+    "cluster_size": 60000,
+    "generation": "H100"
+  },
+  {
+    "model": "GPT-5.3-Codex (Feb 2026)",
+    "cluster_size": 300000,
+    "generation": "GB200"
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "group": "sota",
+    "x_month": 1.0,
+    "horizon_hours": 0.001,
+    "label": "GPT-2",
+    "ci_low_hours": 3e-05,
+    "ci_high_hours": 0.002
+  },
+  {
+    "group": "sota",
+    "x_month": 16.0,
+    "horizon_hours": 0.003,
+    "label": null,
+    "ci_low_hours": 0.001,
+    "ci_high_hours": 0.004
+  },
+  {
+    "group": "sota",
+    "x_month": 38.0,
+    "horizon_hours": 0.01,
+    "label": "GPT-3.5",
+    "ci_low_hours": 0.004,
+    "ci_high_hours": 0.017
+  },
+  {
+    "group": "sota",
+    "x_month": 50.0,
+    "horizon_hours": 0.059,
+    "label": "GPT-4",
+    "ci_low_hours": 0.026,
+    "ci_high_hours": 0.113
+  },
+  {
+    "group": "sota",
+    "x_month": 56.0,
+    "horizon_hours": 0.06,
+    "label": null,
+    "ci_low_hours": 0.027,
+    "ci_high_hours": 0.12
+  },
+  {
+    "group": "sota",
+    "x_month": 64.0,
+    "horizon_hours": 0.107,
+    "label": "GPT-4o",
+    "ci_low_hours": 0.059,
+    "ci_high_hours": 0.2
+  },
+  {
+    "group": "sota",
+    "x_month": 65.0,
+    "horizon_hours": 0.18,
+    "label": "Sonnet 3.5",
+    "ci_low_hours": 0.079,
+    "ci_high_hours": 0.348
+  },
+  {
+    "group": "sota",
+    "x_month": 68.0,
+    "horizon_hours": 0.323,
+    "label": "o1-preview",
+    "ci_low_hours": 0.186,
+    "ci_high_hours": 0.546
+  },
+  {
+    "group": "sota",
+    "x_month": 69.0,
+    "horizon_hours": 0.33,
+    "label": null,
+    "ci_low_hours": 0.161,
+    "ci_high_hours": 0.67
+  },
+  {
+    "group": "sota",
+    "x_month": 71.0,
+    "horizon_hours": 0.632,
+    "label": "o1",
+    "ci_low_hours": 0.346,
+    "ci_high_hours": 1.096
+  },
+  {
+    "group": "sota",
+    "x_month": 73.0,
+    "horizon_hours": 0.996,
+    "label": "Sonnet 3.7",
+    "ci_low_hours": 0.542,
+    "ci_high_hours": 1.719
+  },
+  {
+    "group": "sota",
+    "x_month": 75.0,
+    "horizon_hours": 2.012,
+    "label": "o3",
+    "ci_low_hours": 1.219,
+    "ci_high_hours": 3.356
+  },
+  {
+    "group": "sota",
+    "x_month": 79.0,
+    "horizon_hours": 3.566,
+    "label": "GPT-5",
+    "ci_low_hours": 1.959,
+    "ci_high_hours": 7.998
+  },
+  {
+    "group": "sota",
+    "x_month": 82.0,
+    "horizon_hours": 3.944,
+    "label": "Gemini 3 Pro",
+    "ci_low_hours": 2.313,
+    "ci_high_hours": 7.377
+  },
+  {
+    "group": "sota",
+    "x_month": 82.0,
+    "horizon_hours": 5.34,
+    "label": "Opus 4.5",
+    "ci_low_hours": 2.883,
+    "ci_high_hours": 12.235
+  },
+  {
+    "group": "sota",
+    "x_month": 83.0,
+    "horizon_hours": 6.573,
+    "label": "GPT-5.2",
+    "ci_low_hours": 3.3,
+    "ci_high_hours": 17.376
+  },
+  {
+    "group": "non_sota",
+    "x_month": 62.0,
+    "horizon_hours": 0.06,
+    "label": "Claude 3 Opus",
+    "ci_low_hours": null,
+    "ci_high_hours": null
+  },
+  {
+    "group": "non_sota",
+    "x_month": 63.0,
+    "horizon_hours": 0.054,
+    "label": "GPT-4 Turbo",
+    "ci_low_hours": null,
+    "ci_high_hours": null
+  },
+  {
+    "group": "non_sota",
+    "x_month": 76.0,
+    "horizon_hours": 1.687,
+    "label": "Claude 4 Opus",
+    "ci_low_hours": null,
+    "ci_high_hours": null
+  },
+  {
+    "group": "non_sota",
+    "x_month": 79.0,
+    "horizon_hours": 1.681,
+    "label": "Claude 4.1 Opus",
+    "ci_low_hours": null,
+    "ci_high_hours": null
+  },
+  {
+    "group": "non_sota",
+    "x_month": 82.0,
+    "horizon_hours": 3.943,
+    "label": "GPT-5.1 Codex",
+    "ci_low_hours": null,
+    "ci_high_hours": null
+  }
+]

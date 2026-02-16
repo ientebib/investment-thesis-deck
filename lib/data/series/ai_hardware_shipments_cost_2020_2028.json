@@ -1,0 +1,47 @@
+[
+  {
+    "year": "2020",
+    "shipments_million_h100_equiv": 0.05,
+    "cost_usd_billions": 2
+  },
+  {
+    "year": "2021",
+    "shipments_million_h100_equiv": 0.12,
+    "cost_usd_billions": 5
+  },
+  {
+    "year": "2022",
+    "shipments_million_h100_equiv": 0.31,
+    "cost_usd_billions": 11
+  },
+  {
+    "year": "2023",
+    "shipments_million_h100_equiv": 1.4,
+    "cost_usd_billions": 37
+  },
+  {
+    "year": "2024",
+    "shipments_million_h100_equiv": 5.5,
+    "cost_usd_billions": 113
+  },
+  {
+    "year": "2025",
+    "shipments_million_h100_equiv": 10,
+    "cost_usd_billions": 143
+  },
+  {
+    "year": "2026",
+    "shipments_million_h100_equiv": 16,
+    "cost_usd_billions": 190
+  },
+  {
+    "year": "2027",
+    "shipments_million_h100_equiv": 24,
+    "cost_usd_billions": 260
+  },
+  {
+    "year": "2028",
+    "shipments_million_h100_equiv": 35,
+    "cost_usd_billions": 350
+  }
+]

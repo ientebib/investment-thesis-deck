@@ -1,0 +1,22 @@
+[
+  {
+    "period": "1990-1999",
+    "years": 6,
+    "category": "operating"
+  },
+  {
+    "period": "2005-2009",
+    "years": 12.7,
+    "category": "operating"
+  },
+  {
+    "period": "2020-2024",
+    "years": 17.9,
+    "category": "operating"
+  },
+  {
+    "period": "Non-Operating (Projected)",
+    "years": 28,
+    "category": "projected"
+  }
+]

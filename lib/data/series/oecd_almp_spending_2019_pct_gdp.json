@@ -1,0 +1,62 @@
+[
+  {
+    "country": "United States",
+    "pct_gdp": 0.1,
+    "is_us": true
+  },
+  {
+    "country": "Japan",
+    "pct_gdp": 0.15,
+    "is_us": false
+  },
+  {
+    "country": "United Kingdom",
+    "pct_gdp": 0.15,
+    "is_us": false
+  },
+  {
+    "country": "South Korea",
+    "pct_gdp": 0.35,
+    "is_us": false
+  },
+  {
+    "country": "Canada",
+    "pct_gdp": 0.41,
+    "is_us": false
+  },
+  {
+    "country": "Netherlands",
+    "pct_gdp": 0.55,
+    "is_us": false
+  },
+  {
+    "country": "Germany",
+    "pct_gdp": 0.58,
+    "is_us": false
+  },
+  {
+    "country": "France",
+    "pct_gdp": 0.7,
+    "is_us": false
+  },
+  {
+    "country": "Austria",
+    "pct_gdp": 0.7,
+    "is_us": false
+  },
+  {
+    "country": "Finland",
+    "pct_gdp": 0.92,
+    "is_us": false
+  },
+  {
+    "country": "Sweden",
+    "pct_gdp": 1.04,
+    "is_us": false
+  },
+  {
+    "country": "Denmark",
+    "pct_gdp": 1.89,
+    "is_us": false
+  }
+]

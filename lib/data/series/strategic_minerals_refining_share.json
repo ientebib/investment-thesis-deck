@@ -1,0 +1,22 @@
+[
+  { "mineral": "Cesium", "share_pct": 100 },
+  { "mineral": "Rubidium", "share_pct": 100 },
+  { "mineral": "Scandium", "share_pct": 100 },
+  { "mineral": "Graphite", "share_pct": 100 },
+  { "mineral": "Manganese", "share_pct": 100 },
+  { "mineral": "Niobium", "share_pct": 100 },
+  { "mineral": "Tantalum", "share_pct": 100 },
+  { "mineral": "Gallium", "share_pct": 100 },
+  { "mineral": "Indium", "share_pct": 100 },
+  { "mineral": "Yttrium", "share_pct": 100 },
+  { "mineral": "Chromium", "share_pct": 100 },
+  { "mineral": "Fluorspar", "share_pct": 100 },
+  { "mineral": "Titanium Sponge", "share_pct": 95 },
+  { "mineral": "Dysprosium", "share_pct": 95 },
+  { "mineral": "Germanium", "share_pct": 90 },
+  { "mineral": "Al. Oxide Abrasives", "share_pct": 95 },
+  { "mineral": "Ti. Concentrates", "share_pct": 85 },
+  { "mineral": "Bismuth", "share_pct": 89 },
+  { "mineral": "Antimony", "share_pct": 80 },
+  { "mineral": "Cobalt", "share_pct": 75 }
+]

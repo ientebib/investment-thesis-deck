@@ -1,0 +1,46 @@
+[
+  {
+    "year": 2014,
+    "active_queue_gw": 350
+  },
+  {
+    "year": 2015,
+    "active_queue_gw": 380
+  },
+  {
+    "year": 2016,
+    "active_queue_gw": 420
+  },
+  {
+    "year": 2017,
+    "active_queue_gw": 480
+  },
+  {
+    "year": 2018,
+    "active_queue_gw": 570
+  },
+  {
+    "year": 2019,
+    "active_queue_gw": 700
+  },
+  {
+    "year": 2020,
+    "active_queue_gw": 950
+  },
+  {
+    "year": 2021,
+    "active_queue_gw": 1400
+  },
+  {
+    "year": 2022,
+    "active_queue_gw": 2000
+  },
+  {
+    "year": 2023,
+    "active_queue_gw": 2600
+  },
+  {
+    "year": 2024,
+    "active_queue_gw": 2300
+  }
+]

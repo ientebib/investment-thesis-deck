@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MI Capital Partners — Chart Export</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.1.0/dist/chartjs-plugin-annotation.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #e8ecef;
+    color: #0d2137;
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #2a7a8c;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .page-sub {
+    text-align: center;
+    font-size: 12px;
+    color: #8a96a0;
+    margin-bottom: 40px;
+  }
+
+  .chart-label {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #5a6a78;
+    margin-bottom: 8px;
+    margin-top: 48px;
+  }
+  .chart-label:first-of-type { margin-top: 0; }
+
+  /*
+   * THE CHART BOX — all charts render at exactly this size.
+   * 820 × 380px maps well to a standard 16:9 PPT chart placeholder.
+   * Screenshot this box and paste into your slide.
+   */
+  .chart-box {
+    width: 820px;
+    height: 380px;
+    margin: 0 auto 12px auto;
+    background: #ffffff;
+    border-radius: 3px;
+    padding: 24px 28px 20px 28px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+
+  .chart-box canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .chart-box .chart-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .chart-source-line {
+    width: 820px;
+    margin: 0 auto 0 auto;
+    font-size: 9.5px;
+    color: #a0a8b0;
+    font-style: italic;
+    padding: 0 4px;
+  }
+
+  .instructions {
+    width: 820px;
+    margin: 48px auto 0 auto;
+    background: #f0f4f6;
+    border-radius: 4px;
+    padding: 20px 24px;
+    font-size: 12px;
+    color: #5a6a78;
+    line-height: 1.7;
+  }
+  .instructions strong { color: #0d2137; }
+</style>
+</head>
+<body>
+
+<h1>MI Capital Partners</h1>
+<p class="page-sub">Chart exports &mdash; screenshot each box and paste into your slide template</p>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- CHART 1: Term Premium                      -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="chart-label">Chart 1 &mdash; Term Premium (Slide 7)</div>
+<div class="chart-box" id="box1">
+  <div class="chart-inner">
+    <canvas id="termPremiumChart"></canvas>
+  </div>
+</div>
+<div class="chart-source-line">Source: Federal Reserve via FRED &nbsp;|&nbsp; Instantaneous Forward Term Premium, 10 Years Hence &nbsp;|&nbsp; Shaded = U.S. recessions</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- CHART 2: Central Bank Gold Purchases       -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="chart-label">Chart 2 &mdash; Central Bank Gold Purchases (Slide 14)</div>
+<div class="chart-box" id="box2">
+  <div class="chart-inner">
+    <canvas id="goldChart"></canvas>
+  </div>
+</div>
+<div class="chart-source-line">Source: World Gold Council, Gold Demand Trends FY2025 &nbsp;|&nbsp; Net purchases include reported + estimated unreported activity</div>
+
+<div class="instructions">
+  <strong>How to use:</strong><br>
+  1. Each white chart box is exactly <strong>820 &times; 380px</strong> (consistent across all charts).<br>
+  2. On Mac: <strong>Cmd+Shift+4</strong>, then drag to select just the white box. Paste into your PPT slide.<br>
+  3. To edit data: open this file in a text editor, change the numbers, refresh browser.<br>
+  4. All charts share the same palette, font, and proportions &mdash; they'll look uniform in your deck.
+</div>
+
+<script>
+// ── Palette ──
+const NAVY       = '#0d2137';
+const TEAL       = '#2a7a8c';
+const TEAL_LIGHT = 'rgba(42, 122, 140, 0.08)';
+const GRID       = 'rgba(0, 0, 0, 0.045)';
+const RECESSION  = 'rgba(42, 122, 140, 0.06)';
+
+Chart.defaults.font.family = "'Inter', -apple-system, sans-serif";
+Chart.defaults.font.size = 11;
+Chart.defaults.color = '#6a7a88';
+
+// ══════════════════════════════════════
+// CHART 1: Term Premium
+// ══════════════════════════════════════
+
+const termData = [
+  ['2000-01',1.6246],['2000-02',1.5368],['2000-03',1.3973],['2000-04',1.2581],['2000-05',1.4373],['2000-06',1.2737],
+  ['2000-07',1.1886],['2000-08',1.0665],['2000-09',1.0635],['2000-10',0.9808],['2000-11',0.9407],['2000-12',0.7762],
+  ['2001-01',0.8731],['2001-02',0.9315],['2001-03',0.9222],['2001-04',1.1409],['2001-05',1.3282],['2001-06',1.3201],
+  ['2001-07',1.2849],['2001-08',1.1985],['2001-09',1.2002],['2001-10',1.222],['2001-11',1.3372],['2001-12',1.6529],
+  ['2002-01',1.626],['2002-02',1.5514],['2002-03',1.7344],['2002-04',1.6933],['2002-05',1.6379],['2002-06',1.4987],
+  ['2002-07',1.3467],['2002-08',1.1278],['2002-09',0.9052],['2002-10',0.9421],['2002-11',1.0708],['2002-12',1.0772],
+  ['2003-01',1.0733],['2003-02',0.9915],['2003-03',0.9308],['2003-04',1.0097],['2003-05',0.7824],['2003-06',0.6613],
+  ['2003-07',1.0156],['2003-08',1.3159],['2003-09',1.2096],['2003-10',1.2033],['2003-11',1.2234],['2003-12',1.2105],
+  ['2004-01',1.1353],['2004-02',1.0965],['2004-03',0.94],['2004-04',1.2435],['2004-05',1.452],['2004-06',1.4044],
+  ['2004-07',1.2448],['2004-08',1.1007],['2004-09',0.9661],['2004-10',0.923],['2004-11',0.9157],['2004-12',0.8994],
+  ['2005-01',0.8722],['2005-02',0.8068],['2005-03',0.9567],['2005-04',0.8538],['2005-05',0.7343],['2005-06',0.6378],
+  ['2005-07',0.679],['2005-08',0.6847],['2005-09',0.6396],['2005-10',0.735],['2005-11',0.7542],['2005-12',0.7046],
+  ['2006-01',0.6126],['2006-02',0.6686],['2006-03',0.7262],['2006-04',0.8297],['2006-05',0.8666],['2006-06',0.8448],
+  ['2006-07',0.7989],['2006-08',0.6892],['2006-09',0.6345],['2006-10',0.6239],['2006-11',0.5441],['2006-12',0.5393],
+  ['2007-01',0.6331],['2007-02',0.6106],['2007-03',0.5261],['2007-04',0.6041],['2007-05',0.6543],['2007-06',0.8777],
+  ['2007-07',0.7921],['2007-08',0.7279],['2007-09',0.6958],['2007-10',0.7072],['2007-11',0.6276],['2007-12',0.6524],
+  ['2008-01',0.5028],['2008-02',0.6598],['2008-03',0.676],['2008-04',0.7918],['2008-05',0.8623],['2008-06',0.9536],
+  ['2008-07',0.9157],['2008-08',0.829],['2008-09',0.8035],['2008-10',1.0292],['2008-11',0.998],['2008-12',0.496],
+  ['2009-01',0.5336],['2009-02',0.6958],['2009-03',0.6442],['2009-04',0.6536],['2009-05',0.8529],['2009-06',1.1386],
+  ['2009-07',1.0274],['2009-08',1.0586],['2009-09',0.9523],['2009-10',0.9302],['2009-11',0.9195],['2009-12',0.9812],
+  ['2010-01',1.0681],['2010-02',1.0207],['2010-03',1.0244],['2010-04',1.0862],['2010-05',0.8671],['2010-06',0.7559],
+  ['2010-07',0.6147],['2010-08',0.4225],['2010-09',0.3939],['2010-10',0.2986],['2010-11',0.3972],['2010-12',0.7314],
+  ['2011-01',0.7807],['2011-02',0.9066],['2011-03',0.8249],['2011-04',0.8658],['2011-05',0.6912],['2011-06',0.5593],
+  ['2011-07',0.5623],['2011-08',0.1898],['2011-09',0.0428],['2011-10',0.1371],['2011-11',0.0541],['2011-12',0.0323],
+  ['2012-01',0.0091],['2012-02',-0.0135],['2012-03',0.1055],['2012-04',0.0377],['2012-05',-0.09],['2012-06',-0.1712],
+  ['2012-07',-0.2278],['2012-08',-0.1485],['2012-09',-0.1494],['2012-10',-0.138],['2012-11',-0.1753],['2012-12',-0.1455],
+  ['2013-01',-0.0487],['2013-02',-0.011],['2013-03',-0.0265],['2013-04',-0.1227],['2013-05',-0.033],['2013-06',0.1951],
+  ['2013-07',0.3589],['2013-08',0.4489],['2013-09',0.5016],['2013-10',0.3691],['2013-11',0.4011],['2013-12',0.515],
+  ['2014-01',0.5288],['2014-02',0.4406],['2014-03',0.4711],['2014-04',0.489],['2014-05',0.4079],['2014-06',0.4374],
+  ['2014-07',0.4241],['2014-08',0.3742],['2014-09',0.4464],['2014-10',0.3189],['2014-11',0.3403],['2014-12',0.289],
+  ['2015-01',0.1211],['2015-02',0.1751],['2015-03',0.2042],['2015-04',0.1249],['2015-05',0.2687],['2015-06',0.3567],
+  ['2015-07',0.3238],['2015-08',0.23],['2015-09',0.2321],['2015-10',0.1763],['2015-11',0.2804],['2015-12',0.2432],
+  ['2016-01',0.1491],['2016-02',-0.0309],['2016-03',0.0375],['2016-04',-0.0104],['2016-05',-0.0064],['2016-06',-0.0944],
+  ['2016-07',-0.1741],['2016-08',-0.1441],['2016-09',-0.1075],['2016-10',-0.0476],['2016-11',0.1415],['2016-12',0.3425],
+  ['2017-01',0.3067],['2017-02',0.2961],['2017-03',0.2867],['2017-04',0.1594],['2017-05',0.1426],['2017-06',0.0562],
+  ['2017-07',0.1111],['2017-08',0.0598],['2017-09',0.0488],['2017-10',0.1264],['2017-11',0.1068],['2017-12',0.1265],
+  ['2018-01',0.2006],['2018-02',0.321],['2018-03',0.2883],['2018-04',0.2883],['2018-05',0.3344],['2018-06',0.2913],
+  ['2018-07',0.2672],['2018-08',0.2471],['2018-09',0.2857],['2018-10',0.3363],['2018-11',0.2966],['2018-12',0.1312],
+  ['2019-01',0.0547],['2019-02',0.0348],['2019-03',-0.0232],['2019-04',-0.0412],['2019-05',-0.1061],['2019-06',-0.2489],
+  ['2019-07',-0.2398],['2019-08',-0.4218],['2019-09',-0.3743],['2019-10',-0.3275],['2019-11',-0.2368],['2019-12',-0.2076],
+  ['2020-01',-0.2654],['2020-02',-0.4037],['2020-03',-0.473],['2020-04',-0.5591],['2020-05',-0.5735],['2020-06',-0.5666],
+  ['2020-07',-0.6144],['2020-08',-0.6078],['2020-09',-0.5979],['2020-10',-0.5468],['2020-11',-0.499],['2020-12',-0.4785],
+  ['2021-01',-0.4149],['2021-02',-0.3209],['2021-03',-0.1092],['2021-04',-0.0843],['2021-05',-0.0983],['2021-06',-0.1325],
+  ['2021-07',-0.227],['2021-08',-0.2438],['2021-09',-0.1927],['2021-10',-0.0596],['2021-11',-0.0406],['2021-12',-0.0761],
+  ['2022-01',0.0668],['2022-02',0.1254],['2022-03',0.2098],['2022-04',0.4809],['2022-05',0.5111],['2022-06',0.5321],
+  ['2022-07',0.2274],['2022-08',0.1421],['2022-09',0.3781],['2022-10',0.515],['2022-11',0.3666],['2022-12',0.1521],
+  ['2023-01',0.0487],['2023-02',0.1462],['2023-03',0.1191],['2023-04',-0.0472],['2023-05',-0.0507],['2023-06',0.0467],
+  ['2023-07',0.1139],['2023-08',0.2371],['2023-09',0.3515],['2023-10',0.5765],['2023-11',0.4384],['2023-12',0.1798],
+  ['2024-01',0.191],['2024-02',0.2799],['2024-03',0.2741],['2024-04',0.4475],['2024-05',0.416],['2024-06',0.3168],
+  ['2024-07',0.2892],['2024-08',0.1199],['2024-09',0.1007],['2024-10',0.3608],['2024-11',0.5358],['2024-12',0.5759],
+  ['2025-01',0.723],['2025-02',0.6216],['2025-03',0.5254],['2025-04',0.5088],['2025-05',0.5683],['2025-06',0.538],
+  ['2025-07',0.5328],['2025-08',0.489],['2025-09',0.4615],['2025-10',0.4642],['2025-11',0.485],['2025-12',0.5498],
+  ['2026-01',0.6011]
+];
+
+const recessions = [
+  { start: '2001-03', end: '2001-11' },
+  { start: '2007-12', end: '2009-06' },
+  { start: '2020-02', end: '2020-04' },
+];
+
+const termLabels = termData.map(d => d[0]);
+const termValues = termData.map(d => d[1]);
+
+function getRecessionAnnotations() {
+  const a = {};
+  recessions.forEach((r, i) => {
+    a['r' + i] = {
+      type: 'box', xMin: r.start, xMax: r.end,
+      backgroundColor: RECESSION, borderWidth: 0, drawTime: 'beforeDatasetsDraw',
+    };
+  });
+  a['zero'] = {
+    type: 'line', yMin: 0, yMax: 0,
+    borderColor: NAVY, borderWidth: 1.2, drawTime: 'beforeDatasetsDraw',
+  };
+  return a;
+}
+
+const ctx1 = document.getElementById('termPremiumChart').getContext('2d');
+
+new Chart(ctx1, {
+  type: 'line',
+  data: {
+    labels: termLabels,
+    datasets: [{
+      data: termValues,
+      borderColor: TEAL,
+      borderWidth: 1.6,
+      pointRadius: 0,
+      pointHoverRadius: 3.5,
+      pointHoverBackgroundColor: TEAL,
+      tension: 0.15,
+      fill: {
+        target: { value: 0 },
+        above: 'rgba(42, 122, 140, 0.08)',
+        below: 'rgba(180, 80, 80, 0.06)',
+      },
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: NAVY,
+        titleFont: { size: 11, weight: '600' },
+        bodyFont: { size: 11 },
+        padding: 10,
+        cornerRadius: 3,
+        displayColors: false,
+        callbacks: {
+          title: (items) => {
+            const [y, m] = items[0].label.split('-');
+            return ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+m-1] + ' ' + y;
+          },
+          label: (item) => item.parsed.y.toFixed(2) + '%',
+        }
+      },
+      annotation: { annotations: getRecessionAnnotations() }
+    },
+    scales: {
+      x: {
+        grid: { display: false },
+        border: { color: '#d4dae0' },
+        ticks: {
+          maxRotation: 0, autoSkip: true, maxTicksLimit: 14,
+          callback: function(v, i) {
+            const l = this.getLabelForValue(v);
+            return l && l.endsWith('-01') ? l.split('-')[0] : null;
+          },
+          font: { size: 10 }, color: '#8a96a0',
+        }
+      },
+      y: {
+        grid: { color: (ctx) => ctx.tick.value === 0 ? 'transparent' : GRID, lineWidth: 1 },
+        border: { display: false },
+        ticks: {
+          callback: (v) => v.toFixed(1) + '%',
+          font: { size: 10 }, color: '#8a96a0', padding: 8,
+          stepSize: 0.5,
+        },
+        min: -1.0, max: 2.0,
+      }
+    },
+    layout: { padding: { top: 4, right: 12, bottom: 0, left: 0 } }
+  }
+});
+
+// ══════════════════════════════════════
+// CHART 2: Gold Purchases
+// ══════════════════════════════════════
+
+const goldYears = [
+  '2000','2001','2002','2003','2004','2005','2006','2007','2008','2009',
+  '2010','2011','2012','2013','2014','2015','2016','2017','2018','2019',
+  '2020','2021','2022','2023','2024','2025'
+];
+
+const goldValues = [
+  -478,-520,-547,-617,-479,-663,-365,-484,-236,-34,
+   77, 457, 544, 409, 584, 577, 416, 375, 656, 650,
+  255, 463,1136,1037,1045, 863
+];
+
+const goldColors = goldValues.map(v => v >= 0 ? TEAL : 'rgba(42, 122, 140, 0.35)');
+
+const ctx2 = document.getElementById('goldChart').getContext('2d');
+
+new Chart(ctx2, {
+  type: 'bar',
+  data: {
+    labels: goldYears,
+    datasets: [{
+      data: goldValues,
+      backgroundColor: goldColors,
+      borderRadius: 2,
+      borderSkipped: false,
+      barPercentage: 0.7,
+      categoryPercentage: 0.82,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: NAVY,
+        titleFont: { size: 11, weight: '600' },
+        bodyFont: { size: 11 },
+        padding: 10, cornerRadius: 3, displayColors: false,
+        callbacks: {
+          label: (item) => {
+            const v = item.parsed.x;
+            return (v >= 0 ? '+' : '') + v.toLocaleString() + ' tonnes';
+          }
+        }
+      },
+      annotation: {
+        annotations: {
+          zero: { type: 'line', xMin: 0, xMax: 0, borderColor: NAVY, borderWidth: 1 },
+          threshold: {
+            type: 'line', xMin: 1000, xMax: 1000,
+            borderColor: 'rgba(42, 122, 140, 0.2)', borderWidth: 1, borderDash: [4, 4],
+            label: {
+              display: true, content: '1,000t', position: 'start',
+              backgroundColor: 'transparent', color: '#8a96a0',
+              font: { size: 9, style: 'italic' }, padding: 3,
+            }
+          }
+        }
+      }
+    },
+    scales: {
+      x: {
+        grid: { color: GRID, lineWidth: 1 },
+        border: { display: false },
+        ticks: {
+          callback: (v) => v === 0 ? '0' : v.toLocaleString(),
+          font: { size: 10 }, color: '#8a96a0', padding: 4,
+        },
+        min: -800, max: 1200,
+      },
+      y: {
+        grid: { display: false },
+        border: { color: 'transparent' },
+        ticks: {
+          font: { size: 10, weight: (ctx) => ['2022','2023','2024'].includes(goldYears[ctx.index]) ? '600' : '400' },
+          color: (ctx) => ['2022','2023','2024'].includes(goldYears[ctx.index]) ? NAVY : '#8a96a0',
+          padding: 6,
+        }
+      }
+    },
+    layout: { padding: { top: 4, right: 20, bottom: 0, left: 0 } }
+  }
+});
+</script>
+</body>
+</html>

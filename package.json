@@ -1,0 +1,33 @@
+{
+  "name": "chart-creator",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "dev:doctor": "bash scripts/dev_server.sh doctor",
+    "dev:restart": "bash scripts/dev_server.sh restart",
+    "dev:status": "bash scripts/dev_server.sh status",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "validate:design": "node scripts/validate_design_system.mjs",
+    "export:pdf:react": "bash scripts/export_react_pdf.sh"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.1",
+    "chartjs-plugin-annotation": "^3.0.1",
+    "next": "15.5.12",
+    "react": "19.1.1",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.5.2",
+    "@types/react": "19.1.13",
+    "@types/react-dom": "19.1.9",
+    "eslint": "9.36.0",
+    "eslint-config-next": "15.5.12",
+    "typescript": "5.9.2"
+  }
+}

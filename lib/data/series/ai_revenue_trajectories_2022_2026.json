@@ -1,0 +1,117 @@
+[
+  {
+    "company": "OpenAI",
+    "x_month": 11.0,
+    "arr_usd_billions": 0.028
+  },
+  {
+    "company": "OpenAI",
+    "x_month": 14.0,
+    "arr_usd_billions": 0.2
+  },
+  {
+    "company": "OpenAI",
+    "x_month": 19.0,
+    "arr_usd_billions": 1.0
+  },
+  {
+    "company": "OpenAI",
+    "x_month": 21.0,
+    "arr_usd_billions": 1.3
+  },
+  {
+    "company": "OpenAI",
+    "x_month": 23.0,
+    "arr_usd_billions": 2.0
+  },
+  {
+    "company": "OpenAI",
+    "x_month": 29.0,
+    "arr_usd_billions": 3.4
+  },
+  {
+    "company": "OpenAI",
+    "x_month": 32.0,
+    "arr_usd_billions": 4.0
+  },
+  {
+    "company": "OpenAI",
+    "x_month": 35.0,
+    "arr_usd_billions": 5.5
+  },
+  {
+    "company": "OpenAI",
+    "x_month": 41.0,
+    "arr_usd_billions": 10.0
+  },
+  {
+    "company": "OpenAI",
+    "x_month": 42.0,
+    "arr_usd_billions": 12.0
+  },
+  {
+    "company": "OpenAI",
+    "x_month": 47.0,
+    "arr_usd_billions": 20.0
+  },
+  {
+    "company": "Anthropic",
+    "x_month": 21.0,
+    "arr_usd_billions": 0.1
+  },
+  {
+    "company": "Anthropic",
+    "x_month": 24.0,
+    "arr_usd_billions": 0.087
+  },
+  {
+    "company": "Anthropic",
+    "x_month": 35.0,
+    "arr_usd_billions": 1.0
+  },
+  {
+    "company": "Anthropic",
+    "x_month": 38.0,
+    "arr_usd_billions": 2.0
+  },
+  {
+    "company": "Anthropic",
+    "x_month": 40.0,
+    "arr_usd_billions": 3.0
+  },
+  {
+    "company": "Anthropic",
+    "x_month": 42.0,
+    "arr_usd_billions": 5.0
+  },
+  {
+    "company": "Anthropic",
+    "x_month": 45.0,
+    "arr_usd_billions": 7.0
+  },
+  {
+    "company": "Anthropic",
+    "x_month": 47.0,
+    "arr_usd_billions": 9.0
+  },
+  {
+    "company": "xAI",
+    "x_month": 34.0,
+    "arr_usd_billions": 0.1
+  },
+  {
+    "company": "xAI",
+    "x_month": 37.0,
+    "arr_usd_billions": 0.172
+  },
+  {
+    "company": "xAI",
+    "x_month": 40.0,
+    "arr_usd_billions": 0.236
+  },
+  {
+    "company": "xAI",
+    "x_month": 43.0,
+    "arr_usd_billions": 0.428
+  }
+]

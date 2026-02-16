@@ -1,0 +1,11 @@
+analyst,current_gw,current_year,projected_gw,projected_year,scope,source_note
+IEA,100,2025,200,2030,global,"IEA says global DC capacity has almost reached 100 GW; electricity demand to more than double by 2030"
+Goldman Sachs,59,2024,122,2030,global,"GS estimates ~59 GW current capacity; 122 GW by end of 2030; 175% power demand growth vs 2023"
+McKinsey,80,2024,220,2030,global,"McKinsey estimates US at 25 GW in 2024 tripling to 80 GW; global demand ~220 GW by 2030"
+Morgan Stanley,80,2024,230,2030,us_focused,"MS sees ~150 GW new additions by 2030 (US); DC share of US electricity tripling from 6% to 18%"
+Bain,82,2024,163,2030,global,"Bain baseline forecast: global DC capacity demand reaches 163 GW by 2030; twice today's demand"
+BCG,80,2024,170,2030,us_focused,"BCG projects 60-90 GW new DC demand in US 2023-2030; midpoint ~75 GW additions"
+BloombergNEF,50,2024,106,2035,us_only,"BNEF projects US DC power demand of 106 GW by 2035; 36% higher than previous forecast; conservative"
+JLL,103,2025,200,2030,global,"JLL estimates global DC capacity at ~103 GW today; nearly doubling to 200 GW by 2030"
+Macquarie,81,2024,222,2030,global,"Macquarie: DC power grew from 26 GW (2015) to 81 GW (2024); projected 222 GW by 2030 at 18% CAGR"
+S&P Global/451 Research,62,2025,134,2030,us_excl_enterprise,"451 Research: US utility power to hyperscale/leased DCs rises to 62 GW (2025) to 134 GW (2030)"

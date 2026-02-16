@@ -1,0 +1,79 @@
+[
+  {
+    "year": "2016",
+    "amazon_capex_usd_billions": 12.4,
+    "alphabet_capex_usd_billions": 10.9,
+    "meta_capex_usd_billions": 4.5,
+    "microsoft_capex_usd_billions": 8.3
+  },
+  {
+    "year": "2017",
+    "amazon_capex_usd_billions": 19.7,
+    "alphabet_capex_usd_billions": 13.2,
+    "meta_capex_usd_billions": 6.7,
+    "microsoft_capex_usd_billions": 8.7
+  },
+  {
+    "year": "2018",
+    "amazon_capex_usd_billions": 27.8,
+    "alphabet_capex_usd_billions": 25.1,
+    "meta_capex_usd_billions": 13.9,
+    "microsoft_capex_usd_billions": 11.6
+  },
+  {
+    "year": "2019",
+    "amazon_capex_usd_billions": 32.0,
+    "alphabet_capex_usd_billions": 23.5,
+    "meta_capex_usd_billions": 15.1,
+    "microsoft_capex_usd_billions": 13.9
+  },
+  {
+    "year": "2020",
+    "amazon_capex_usd_billions": 54.0,
+    "alphabet_capex_usd_billions": 22.3,
+    "meta_capex_usd_billions": 15.7,
+    "microsoft_capex_usd_billions": 15.4
+  },
+  {
+    "year": "2021",
+    "amazon_capex_usd_billions": 68.1,
+    "alphabet_capex_usd_billions": 24.6,
+    "meta_capex_usd_billions": 19.2,
+    "microsoft_capex_usd_billions": 20.6
+  },
+  {
+    "year": "2022",
+    "amazon_capex_usd_billions": 63.6,
+    "alphabet_capex_usd_billions": 31.5,
+    "meta_capex_usd_billions": 31.4,
+    "microsoft_capex_usd_billions": 23.9
+  },
+  {
+    "year": "2023",
+    "amazon_capex_usd_billions": 52.7,
+    "alphabet_capex_usd_billions": 32.3,
+    "meta_capex_usd_billions": 27.3,
+    "microsoft_capex_usd_billions": 28.1
+  },
+  {
+    "year": "2024",
+    "amazon_capex_usd_billions": 83.9,
+    "alphabet_capex_usd_billions": 52.5,
+    "meta_capex_usd_billions": 37.3,
+    "microsoft_capex_usd_billions": 44.5
+  },
+  {
+    "year": "2025",
+    "amazon_capex_usd_billions": 131.8,
+    "alphabet_capex_usd_billions": 91.4,
+    "meta_capex_usd_billions": 72.2,
+    "microsoft_capex_usd_billions": 64.6
+  },
+  {
+    "year": "2026E",
+    "amazon_capex_usd_billions": 200,
+    "alphabet_capex_usd_billions": 180,
+    "meta_capex_usd_billions": 125,
+    "microsoft_capex_usd_billions": 100
+  }
+]

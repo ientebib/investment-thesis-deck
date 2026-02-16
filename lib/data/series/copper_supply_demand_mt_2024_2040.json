@@ -1,0 +1,87 @@
+[
+  {
+    "year": 2024,
+    "supply_mt": 27.0,
+    "demand_mt": 27.0
+  },
+  {
+    "year": 2025,
+    "supply_mt": 27.2,
+    "demand_mt": 27.5
+  },
+  {
+    "year": 2026,
+    "supply_mt": 27.3,
+    "demand_mt": 28.0
+  },
+  {
+    "year": 2027,
+    "supply_mt": 27.5,
+    "demand_mt": 28.6
+  },
+  {
+    "year": 2028,
+    "supply_mt": 27.6,
+    "demand_mt": 29.2
+  },
+  {
+    "year": 2029,
+    "supply_mt": 27.4,
+    "demand_mt": 29.8
+  },
+  {
+    "year": 2030,
+    "supply_mt": 27.0,
+    "demand_mt": 31.3
+  },
+  {
+    "year": 2031,
+    "supply_mt": 26.4,
+    "demand_mt": 31.7
+  },
+  {
+    "year": 2032,
+    "supply_mt": 25.8,
+    "demand_mt": 32.0
+  },
+  {
+    "year": 2033,
+    "supply_mt": 25.2,
+    "demand_mt": 32.3
+  },
+  {
+    "year": 2034,
+    "supply_mt": 24.6,
+    "demand_mt": 32.7
+  },
+  {
+    "year": 2035,
+    "supply_mt": 24.0,
+    "demand_mt": 33.0
+  },
+  {
+    "year": 2036,
+    "supply_mt": 23.5,
+    "demand_mt": 33.3
+  },
+  {
+    "year": 2037,
+    "supply_mt": 23.0,
+    "demand_mt": 33.5
+  },
+  {
+    "year": 2038,
+    "supply_mt": 22.6,
+    "demand_mt": 33.7
+  },
+  {
+    "year": 2039,
+    "supply_mt": 22.3,
+    "demand_mt": 33.9
+  },
+  {
+    "year": 2040,
+    "supply_mt": 22.0,
+    "demand_mt": 34.1
+  }
+]

@@ -1,0 +1,34 @@
+date,power_mw,facility,company,type,source_note
+2017-01-01,10,Saturn V (early),Google,operational,Epoch AI GPU clusters dataset; early AI training clusters were small
+2018-06-01,13,Summit,DOE/Oak Ridge,operational,Epoch AI; Summit was largest AI supercomputer at 13 MW
+2019-01-01,13,Summit,DOE/Oak Ridge,operational,Epoch AI; Summit remained largest AI supercomputer
+2019-06-01,10,Sierra,DOE/LLNL,operational,Epoch AI; Sierra ~10 MW AI supercomputer
+2020-06-01,15,Selene,NVIDIA,operational,NVIDIA Selene DGX A100 cluster; ~280 DGX A100 nodes
+2020-09-01,30,Fugaku,RIKEN/Fujitsu,operational,Fugaku supercomputer ~30 MW peak
+2021-06-01,25,Various AI clusters,Multiple,operational,Estimated from Epoch AI trend: 1.9x/year growth from 13 MW base
+2022-05-01,30,Frontier,DOE/Oak Ridge,operational,Frontier exascale supercomputer ~21-30 MW
+2022-06-01,40,AI training clusters,Meta/Google,operational,Estimated from Epoch AI trend; Meta RSC and Google TPU v4 pods
+2023-01-01,50,Various,Multiple,operational,Epoch AI trend; multiple 50+ MW AI clusters coming online
+2023-06-01,65,Eos,NVIDIA,operational,NVIDIA Eos H100 SuperPOD cluster; estimated ~60-70 MW
+2023-12-01,80,Various,Multiple,operational,Epoch AI trend; growing cluster sizes with H100 deployments
+2024-03-01,100,Various,Multiple,operational,Epoch AI; multiple frontier clusters approaching 100 MW
+2024-06-01,150,Colossus 1 (initial),xAI,operational,Epoch AI; Colossus 1 launched with 100k H100s at ~150 MW
+2024-09-01,250,Colossus 1 (expanded),xAI,operational,Epoch AI; Colossus expanded to 200k GPUs at ~250 MW
+2024-12-01,300,Colossus 1,xAI,operational,Epoch AI; Colossus at ~300 MW with 200k+ GPUs
+2025-01-01,174,Stargate,OpenAI,operational,Epoch AI tracker; OpenAI starts 2025 at ~174 MW
+2025-01-01,696,Multiple campuses,Google,operational,Epoch AI; Google held ~696 MW of tracked AI DC capacity
+2025-01-01,249,Prometheus (early),Meta,operational,Epoch AI; Meta at ~249 MW tracked capacity early 2025
+2025-02-01,319,Prometheus,Meta,operational,Epoch AI; Meta Prometheus at ~319 MW Feb 2025
+2025-03-01,300,Colossus,xAI,operational,Epoch AI; Colossus at ~300 MW as of March 2025
+2025-06-01,350,Project Rainier (phase 1),Amazon/Anthropic,operational,Epoch AI; Rainier with ~500k Trainium2 chips at ~350 MW
+2025-12-01,1000,Stargate campus,OpenAI,operational,Epoch AI; OpenAI ends 2025 at nearly 1 GW
+2026-01-01,1000,Colossus 2 (phase 1),xAI,planned,Epoch AI; full 1 GW targeted by Jan 2026
+2026-03-01,1000,Fairwater (phase 1),Microsoft,planned,Epoch AI; first phase of Fairwater operational March 2026
+2026-06-01,1000,Stargate (8 buildings),OpenAI,planned,Epoch AI; 8 buildings at ~147 MW each completed mid-2026
+2026-10-01,1360,Prometheus,Meta,planned,Epoch AI; Meta Prometheus reaches 1360 MW by Oct 2026
+2026-12-01,2000,Colossus 2 (expanded),xAI,planned,Epoch AI/SemiAnalysis; Colossus site expanding to ~2 GW
+2027-06-01,2200,Project Rainier (full),Amazon/Anthropic,planned,Epoch AI; Rainier full buildout >2.2 GW
+2027-09-01,3300,Fairwater (full),Microsoft,planned,Epoch AI; Fairwater 4 buildings totaling 3.3 GW by late 2027
+2028-01-01,2000,Hyperion (phase 1),Meta,planned,Epoch AI; Hyperion first phase operational Jan 2028
+2028-12-01,5000,Multiple GW-scale sites,Multiple,planned,Epoch AI projections; multiple 1+ GW sites fully operational
+2029-12-01,5000,Next-gen facilities,Multiple,planned,Epoch AI trend extrapolation; continued 1.9x/year growth

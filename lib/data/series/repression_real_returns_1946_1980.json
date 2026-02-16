@@ -1,0 +1,22 @@
+[
+  {
+    "asset": "Long-Term Treasuries",
+    "real_return_pct": -2
+  },
+  {
+    "asset": "Cash (T-Bills)",
+    "real_return_pct": -0.8
+  },
+  {
+    "asset": "US Equities (S&P 500)",
+    "real_return_pct": 6.8
+  },
+  {
+    "asset": "Real Estate",
+    "real_return_pct": 3.5
+  },
+  {
+    "asset": "Commodities",
+    "real_return_pct": 2.8
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "analyst": "IEA",
+    "current_gw_2024_25": 100,
+    "projected_gw_2030_35": 200
+  },
+  {
+    "analyst": "Goldman Sachs",
+    "current_gw_2024_25": 59,
+    "projected_gw_2030_35": 122
+  },
+  {
+    "analyst": "McKinsey",
+    "current_gw_2024_25": 80,
+    "projected_gw_2030_35": 220
+  },
+  {
+    "analyst": "Morgan Stanley",
+    "current_gw_2024_25": 80,
+    "projected_gw_2030_35": 230
+  },
+  {
+    "analyst": "Bain",
+    "current_gw_2024_25": 82,
+    "projected_gw_2030_35": 163
+  },
+  {
+    "analyst": "BCG",
+    "current_gw_2024_25": 80,
+    "projected_gw_2030_35": 170
+  },
+  {
+    "analyst": "BloombergNEF",
+    "current_gw_2024_25": 50,
+    "projected_gw_2030_35": 106
+  },
+  {
+    "analyst": "JLL",
+    "current_gw_2024_25": 103,
+    "projected_gw_2030_35": 200
+  },
+  {
+    "analyst": "Macquarie",
+    "current_gw_2024_25": 81,
+    "projected_gw_2030_35": 222
+  },
+  {
+    "analyst": "S&P Global",
+    "current_gw_2024_25": 62,
+    "projected_gw_2030_35": 134
+  }
+]

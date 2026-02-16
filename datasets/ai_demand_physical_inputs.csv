@@ -1,0 +1,7 @@
+input,demand_2024,demand_2030_projected,unit,growth_pct
+Electricity (Data Centers),415,945,TWh,128
+Copper (Data Centers),250,572,thousand tonnes,129
+Natural Gas (DC Power Gen),3,8,Bcf/d (US),167
+Aluminum (DC Structural),400,1100,thousand tonnes,175
+Rare Earths (DC Electronics),8.5,15,thousand tonnes,76
+Gallium (AI Chips),0.3,0.7,thousand tonnes,133

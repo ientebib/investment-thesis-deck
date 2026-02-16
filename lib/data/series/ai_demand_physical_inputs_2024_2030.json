@@ -1,0 +1,44 @@
+[
+  {
+    "input": "Electricity",
+    "unit": "TWh",
+    "growth_pct": 128,
+    "value_2024": 415,
+    "value_2030": 945
+  },
+  {
+    "input": "Copper",
+    "unit": "kt",
+    "growth_pct": 129,
+    "value_2024": 250,
+    "value_2030": 572
+  },
+  {
+    "input": "Natural Gas",
+    "unit": "Bcf/d",
+    "growth_pct": 167,
+    "value_2024": 3,
+    "value_2030": 8
+  },
+  {
+    "input": "Aluminum",
+    "unit": "kt",
+    "growth_pct": 175,
+    "value_2024": 400,
+    "value_2030": 1100
+  },
+  {
+    "input": "Rare Earths",
+    "unit": "kt",
+    "growth_pct": 76,
+    "value_2024": 8.5,
+    "value_2030": 15
+  },
+  {
+    "input": "Gallium",
+    "unit": "kt",
+    "growth_pct": 133,
+    "value_2024": 0.3,
+    "value_2030": 0.7
+  }
+]

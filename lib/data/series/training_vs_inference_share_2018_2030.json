@@ -1,0 +1,67 @@
+[
+  {
+    "year": 2018,
+    "training_pct": 90,
+    "inference_pct": 10
+  },
+  {
+    "year": 2019,
+    "training_pct": 85,
+    "inference_pct": 15
+  },
+  {
+    "year": 2020,
+    "training_pct": 80,
+    "inference_pct": 20
+  },
+  {
+    "year": 2021,
+    "training_pct": 75,
+    "inference_pct": 25
+  },
+  {
+    "year": 2022,
+    "training_pct": 67,
+    "inference_pct": 33
+  },
+  {
+    "year": 2023,
+    "training_pct": 67,
+    "inference_pct": 33
+  },
+  {
+    "year": 2024,
+    "training_pct": 55,
+    "inference_pct": 45
+  },
+  {
+    "year": 2025,
+    "training_pct": 50,
+    "inference_pct": 50
+  },
+  {
+    "year": 2026,
+    "training_pct": 33,
+    "inference_pct": 67
+  },
+  {
+    "year": 2027,
+    "training_pct": 30,
+    "inference_pct": 70
+  },
+  {
+    "year": 2028,
+    "training_pct": 28,
+    "inference_pct": 72
+  },
+  {
+    "year": 2029,
+    "training_pct": 25,
+    "inference_pct": 75
+  },
+  {
+    "year": 2030,
+    "training_pct": 30,
+    "inference_pct": 70
+  }
+]

@@ -1,0 +1,233 @@
+[
+  {
+    "date": "Jun 23",
+    "weirdml": 0.1244,
+    "simplebench": null,
+    "frontiermath": null,
+    "swe_bench_verified": null
+  },
+  {
+    "date": "Jul 23",
+    "weirdml": 0.1244,
+    "simplebench": null,
+    "frontiermath": null,
+    "swe_bench_verified": null
+  },
+  {
+    "date": "Aug 23",
+    "weirdml": 0.1244,
+    "simplebench": null,
+    "frontiermath": null,
+    "swe_bench_verified": null
+  },
+  {
+    "date": "Sep 23",
+    "weirdml": 0.1244,
+    "simplebench": null,
+    "frontiermath": null,
+    "swe_bench_verified": null
+  },
+  {
+    "date": "Oct 23",
+    "weirdml": 0.1244,
+    "simplebench": null,
+    "frontiermath": null,
+    "swe_bench_verified": null
+  },
+  {
+    "date": "Nov 23",
+    "weirdml": 0.1244,
+    "simplebench": null,
+    "frontiermath": null,
+    "swe_bench_verified": null
+  },
+  {
+    "date": "Dec 23",
+    "weirdml": 0.1244,
+    "simplebench": null,
+    "frontiermath": null,
+    "swe_bench_verified": null
+  },
+  {
+    "date": "Jan 24",
+    "weirdml": 0.1244,
+    "simplebench": null,
+    "frontiermath": null,
+    "swe_bench_verified": null
+  },
+  {
+    "date": "Feb 24",
+    "weirdml": 0.2318,
+    "simplebench": 0.082,
+    "frontiermath": null,
+    "swe_bench_verified": null
+  },
+  {
+    "date": "Mar 24",
+    "weirdml": 0.2318,
+    "simplebench": 0.082,
+    "frontiermath": null,
+    "swe_bench_verified": null
+  },
+  {
+    "date": "Apr 24",
+    "weirdml": 0.2318,
+    "simplebench": 0.1012,
+    "frontiermath": null,
+    "swe_bench_verified": null
+  },
+  {
+    "date": "May 24",
+    "weirdml": 0.2318,
+    "simplebench": 0.1012,
+    "frontiermath": null,
+    "swe_bench_verified": null
+  },
+  {
+    "date": "Jun 24",
+    "weirdml": 0.3097,
+    "simplebench": 0.13,
+    "frontiermath": 0.0103,
+    "swe_bench_verified": null
+  },
+  {
+    "date": "Jul 24",
+    "weirdml": 0.3097,
+    "simplebench": 0.13,
+    "frontiermath": 0.0103,
+    "swe_bench_verified": null
+  },
+  {
+    "date": "Aug 24",
+    "weirdml": 0.3097,
+    "simplebench": 0.13,
+    "frontiermath": 0.0103,
+    "swe_bench_verified": null
+  },
+  {
+    "date": "Sep 24",
+    "weirdml": 0.4756,
+    "simplebench": 0.3004,
+    "frontiermath": 0.0172,
+    "swe_bench_verified": null
+  },
+  {
+    "date": "Oct 24",
+    "weirdml": 0.4756,
+    "simplebench": 0.3004,
+    "frontiermath": 0.0207,
+    "swe_bench_verified": null
+  },
+  {
+    "date": "Nov 24",
+    "weirdml": 0.4756,
+    "simplebench": 0.3004,
+    "frontiermath": 0.0207,
+    "swe_bench_verified": 0.2162
+  },
+  {
+    "date": "Dec 24",
+    "weirdml": 0.4756,
+    "simplebench": 0.3004,
+    "frontiermath": 0.0931,
+    "swe_bench_verified": 0.2162
+  },
+  {
+    "date": "Jan 25",
+    "weirdml": 0.4756,
+    "simplebench": 0.3004,
+    "frontiermath": 0.1241,
+    "swe_bench_verified": 0.2162
+  },
+  {
+    "date": "Feb 25",
+    "weirdml": 0.4756,
+    "simplebench": 0.3568,
+    "frontiermath": 0.1241,
+    "swe_bench_verified": 0.528
+  },
+  {
+    "date": "Mar 25",
+    "weirdml": 0.4756,
+    "simplebench": 0.4192,
+    "frontiermath": 0.1241,
+    "swe_bench_verified": 0.528
+  },
+  {
+    "date": "Apr 25",
+    "weirdml": 0.5256,
+    "simplebench": 0.4372,
+    "frontiermath": 0.2483,
+    "swe_bench_verified": 0.691
+  },
+  {
+    "date": "May 25",
+    "weirdml": 0.5256,
+    "simplebench": 0.5056,
+    "frontiermath": 0.2483,
+    "swe_bench_verified": 0.725
+  },
+  {
+    "date": "Jun 25",
+    "weirdml": 0.5821,
+    "simplebench": 0.5488,
+    "frontiermath": 0.2483,
+    "swe_bench_verified": 0.725
+  },
+  {
+    "date": "Jul 25",
+    "weirdml": 0.5821,
+    "simplebench": 0.5488,
+    "frontiermath": 0.2483,
+    "swe_bench_verified": 0.725
+  },
+  {
+    "date": "Aug 25",
+    "weirdml": 0.607,
+    "simplebench": 0.5488,
+    "frontiermath": 0.3241,
+    "swe_bench_verified": 0.749
+  },
+  {
+    "date": "Sep 25",
+    "weirdml": 0.607,
+    "simplebench": 0.5488,
+    "frontiermath": 0.3241,
+    "swe_bench_verified": 0.772
+  },
+  {
+    "date": "Oct 25",
+    "weirdml": 0.607,
+    "simplebench": 0.5488,
+    "frontiermath": 0.3241,
+    "swe_bench_verified": 0.772
+  },
+  {
+    "date": "Nov 25",
+    "weirdml": 0.6993,
+    "simplebench": 0.7168,
+    "frontiermath": 0.376,
+    "swe_bench_verified": 0.809
+  },
+  {
+    "date": "Dec 25",
+    "weirdml": 0.722,
+    "simplebench": 0.7168,
+    "frontiermath": 0.407,
+    "swe_bench_verified": 0.809
+  },
+  {
+    "date": "Jan 26",
+    "weirdml": 0.722,
+    "simplebench": 0.7168,
+    "frontiermath": 0.407,
+    "swe_bench_verified": 0.809
+  },
+  {
+    "date": "Feb 26",
+    "weirdml": 0.722,
+    "simplebench": 0.7168,
+    "frontiermath": 0.407,
+    "swe_bench_verified": 0.809
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "year": 2000,
+    "china_twh": 1356,
+    "us_twh": 3802
+  },
+  {
+    "year": 2001,
+    "china_twh": 1481,
+    "us_twh": 3737
+  },
+  {
+    "year": 2002,
+    "china_twh": 1654,
+    "us_twh": 3858
+  },
+  {
+    "year": 2003,
+    "china_twh": 1911,
+    "us_twh": 3883
+  },
+  {
+    "year": 2004,
+    "china_twh": 2204,
+    "us_twh": 3971
+  },
+  {
+    "year": 2005,
+    "china_twh": 2500,
+    "us_twh": 4055
+  },
+  {
+    "year": 2006,
+    "china_twh": 2866,
+    "us_twh": 4065
+  },
+  {
+    "year": 2007,
+    "china_twh": 3282,
+    "us_twh": 4157
+  },
+  {
+    "year": 2008,
+    "china_twh": 3467,
+    "us_twh": 4119
+  },
+  {
+    "year": 2009,
+    "china_twh": 3715,
+    "us_twh": 3950
+  },
+  {
+    "year": 2010,
+    "china_twh": 4208,
+    "us_twh": 4125
+  },
+  {
+    "year": 2011,
+    "china_twh": 4716,
+    "us_twh": 4105
+  },
+  {
+    "year": 2012,
+    "china_twh": 4994,
+    "us_twh": 4048
+  },
+  {
+    "year": 2013,
+    "china_twh": 5447,
+    "us_twh": 4066
+  },
+  {
+    "year": 2014,
+    "china_twh": 5679,
+    "us_twh": 4093
+  },
+  {
+    "year": 2015,
+    "china_twh": 5860,
+    "us_twh": 4077
+  },
+  {
+    "year": 2016,
+    "china_twh": 6218,
+    "us_twh": 4077
+  },
+  {
+    "year": 2017,
+    "china_twh": 6635,
+    "us_twh": 4015
+  },
+  {
+    "year": 2018,
+    "china_twh": 7182,
+    "us_twh": 4178
+  },
+  {
+    "year": 2019,
+    "china_twh": 7119,
+    "us_twh": 4127
+  },
+  {
+    "year": 2020,
+    "china_twh": 7371,
+    "us_twh": 4007
+  },
+  {
+    "year": 2021,
+    "china_twh": 8161,
+    "us_twh": 4096
+  },
+  {
+    "year": 2022,
+    "china_twh": 8502,
+    "us_twh": 4231
+  },
+  {
+    "year": 2023,
+    "china_twh": 9058,
+    "us_twh": 4178
+  },
+  {
+    "year": 2024,
+    "china_twh": 10038,
+    "us_twh": 4200
+  },
+  {
+    "year": 2025,
+    "china_twh": 10400,
+    "us_twh": 4260
+  }
+]

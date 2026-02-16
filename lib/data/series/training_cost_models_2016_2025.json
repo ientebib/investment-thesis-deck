@@ -1,0 +1,242 @@
+[
+  {
+    "publication_year": 2016.07,
+    "training_cost_2023_usd": 22207.0,
+    "label": "AlphaGo Lee"
+  },
+  {
+    "publication_year": 2016.74,
+    "training_cost_2023_usd": 201332.0,
+    "label": "GNMT"
+  },
+  {
+    "publication_year": 2017.8,
+    "training_cost_2023_usd": 471445.0,
+    "label": "AlphaGo Master"
+  },
+  {
+    "publication_year": 2017.93,
+    "training_cost_2023_usd": 229919.0,
+    "label": "AlphaZero"
+  },
+  {
+    "publication_year": 2018.34,
+    "training_cost_2023_usd": 134077.0,
+    "label": "ResNeXt-101"
+  },
+  {
+    "publication_year": 2018.78,
+    "training_cost_2023_usd": 1751.0,
+    "label": "BERT-Large"
+  },
+  {
+    "publication_year": 2019.12,
+    "training_cost_2023_usd": 4348.0,
+    "label": "GPT-2"
+  },
+  {
+    "publication_year": 2019.5,
+    "training_cost_2023_usd": 85350.0,
+    "label": "RoBERTa"
+  },
+  {
+    "publication_year": 2019.71,
+    "training_cost_2023_usd": 171819.0,
+    "label": "Megatron-BERT"
+  },
+  {
+    "publication_year": 2019.81,
+    "training_cost_2023_usd": 78465.0,
+    "label": "T5-11B"
+  },
+  {
+    "publication_year": 2019.83,
+    "training_cost_2023_usd": 130654.0,
+    "label": "AlphaStar"
+  },
+  {
+    "publication_year": 2019.95,
+    "training_cost_2023_usd": 4328311.0,
+    "label": "OpenAI Five"
+  },
+  {
+    "publication_year": 2020.07,
+    "training_cost_2023_usd": 214810.0,
+    "label": "Meena"
+  },
+  {
+    "publication_year": 2020.41,
+    "training_cost_2023_usd": 2116866.0,
+    "label": "GPT-3"
+  },
+  {
+    "publication_year": 2020.5,
+    "training_cost_2023_usd": 266200.0,
+    "label": "GShard"
+  },
+  {
+    "publication_year": 2020.81,
+    "training_cost_2023_usd": 6724.0,
+    "label": "ViT-Huge"
+  },
+  {
+    "publication_year": 2020.91,
+    "training_cost_2023_usd": 3842.0,
+    "label": "AlphaFold 2"
+  },
+  {
+    "publication_year": 2021.01,
+    "training_cost_2023_usd": 125819.0,
+    "label": "DALL-E"
+  },
+  {
+    "publication_year": 2021.03,
+    "training_cost_2023_usd": 145101.0,
+    "label": "Switch"
+  },
+  {
+    "publication_year": 2021.61,
+    "training_cost_2023_usd": 836700.0,
+    "label": "Jurassic-1"
+  },
+  {
+    "publication_year": 2021.69,
+    "training_cost_2023_usd": 441770.0,
+    "label": "HyperCLOVA"
+  },
+  {
+    "publication_year": 2021.78,
+    "training_cost_2023_usd": 3848506.0,
+    "label": "MT-NLG 530B"
+  },
+  {
+    "publication_year": 2021.94,
+    "training_cost_2023_usd": 640617.0,
+    "label": "Gopher"
+  },
+  {
+    "publication_year": 2021.95,
+    "training_cost_2023_usd": 541437.0,
+    "label": "GLaM"
+  },
+  {
+    "publication_year": 2022.11,
+    "training_cost_2023_usd": 229950.0,
+    "label": "LaMDA"
+  },
+  {
+    "publication_year": 2022.26,
+    "training_cost_2023_usd": 3060365.0,
+    "label": "PaLM"
+  },
+  {
+    "publication_year": 2022.34,
+    "training_cost_2023_usd": 733635.0,
+    "label": "OPT-175B"
+  },
+  {
+    "publication_year": 2022.53,
+    "training_cost_2023_usd": 995819.0,
+    "label": "BLOOM-176B"
+  },
+  {
+    "publication_year": 2022.91,
+    "training_cost_2023_usd": 7466801.0,
+    "label": "GPT-3.5"
+  },
+  {
+    "publication_year": 2023.15,
+    "training_cost_2023_usd": 578026.0,
+    "label": "LLaMA-65B"
+  },
+  {
+    "publication_year": 2023.21,
+    "training_cost_2023_usd": 68783538.0,
+    "label": "GPT-4"
+  },
+  {
+    "publication_year": 2023.36,
+    "training_cost_2023_usd": 5014267.0,
+    "label": "PaLM 2"
+  },
+  {
+    "publication_year": 2023.53,
+    "training_cost_2023_usd": 4902644.0,
+    "label": "Claude 2"
+  },
+  {
+    "publication_year": 2023.55,
+    "training_cost_2023_usd": 1102561.0,
+    "label": "Llama 2-70B"
+  },
+  {
+    "publication_year": 2023.68,
+    "training_cost_2023_usd": 10743501.0,
+    "label": "Falcon-180B"
+  },
+  {
+    "publication_year": 2023.89,
+    "training_cost_2023_usd": 13461144.0,
+    "label": "Inflection-2"
+  },
+  {
+    "publication_year": 2023.93,
+    "training_cost_2023_usd": 30719420.0,
+    "label": "Gemini Ultra"
+  },
+  {
+    "publication_year": 2024.12,
+    "training_cost_2023_usd": 16760813.0,
+    "label": "Gemini 1.5 Pro"
+  },
+  {
+    "publication_year": 2024.15,
+    "training_cost_2023_usd": 14110112.0,
+    "label": "Mistral Large"
+  },
+  {
+    "publication_year": 2024.47,
+    "training_cost_2023_usd": 25870993.0,
+    "label": "Claude 3.5 Sonnet"
+  },
+  {
+    "publication_year": 2024.56,
+    "training_cost_2023_usd": 52885434.0,
+    "label": "Llama 3.1-405B"
+  },
+  {
+    "publication_year": 2024.62,
+    "training_cost_2023_usd": 31602311.0,
+    "label": "Grok-2"
+  },
+  {
+    "publication_year": 2024.98,
+    "training_cost_2023_usd": 5390000.0,
+    "label": "DeepSeek-V3"
+  },
+  {
+    "publication_year": 2025.05,
+    "training_cost_2023_usd": 6770000.0,
+    "label": "DeepSeek-R1"
+  },
+  {
+    "publication_year": 2025.13,
+    "training_cost_2023_usd": 507476933.0,
+    "label": "Grok 3"
+  },
+  {
+    "publication_year": 2025.16,
+    "training_cost_2023_usd": 339957480.0,
+    "label": "GPT-4.5"
+  },
+  {
+    "publication_year": 2025.26,
+    "training_cost_2023_usd": 44588964.0,
+    "label": "Llama 4 Behemoth"
+  },
+  {
+    "publication_year": 2025.52,
+    "training_cost_2023_usd": 387842678.0,
+    "label": "Grok 4"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "period": "Mar 23",
+    "weekly_users_millions": 50
+  },
+  {
+    "period": "Sep 23",
+    "weekly_users_millions": 80
+  },
+  {
+    "period": "Mar 24",
+    "weekly_users_millions": 125
+  },
+  {
+    "period": "Sep 24",
+    "weekly_users_millions": 240
+  },
+  {
+    "period": "Dec 24",
+    "weekly_users_millions": 300
+  },
+  {
+    "period": "Mar 25",
+    "weekly_users_millions": 430
+  },
+  {
+    "period": "Aug 25",
+    "weekly_users_millions": 700
+  },
+  {
+    "period": "Oct 25",
+    "weekly_users_millions": 800
+  },
+  {
+    "period": "Dec 25",
+    "weekly_users_millions": 900
+  }
+]

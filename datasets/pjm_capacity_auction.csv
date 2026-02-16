@@ -1,0 +1,9 @@
+delivery_year,clearing_price_usd_per_mw_day,cleared_capacity_mw,total_cost_to_load_billion,source
+2020/2021,76.53,165109,7.0,"PJM Base Residual Auction official report"
+2021/2022,140.00,163627,9.3,"PJM Base Residual Auction official report"
+2022/2023,50.00,144477,3.9,"PJM Base Residual Auction official report"
+2023/2024,34.13,144871,2.2,"PJM Base Residual Auction official report"
+2024/2025,28.92,147479,2.2,"PJM Base Residual Auction official report"
+2025/2026,269.92,135684,14.7,"PJM Base Residual Auction official report; record high driven by DC growth and retirements"
+2026/2027,329.17,134205,16.1,"PJM Base Residual Auction; hit FERC-approved price cap"
+2027/2028,333.44,134479,16.4,"PJM Base Residual Auction; highest in PJM history; price cap binding; without cap would be ~$530/MW-day"

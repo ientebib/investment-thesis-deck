@@ -1,0 +1,368 @@
+[
+  {
+    "date": "2021-02",
+    "silver_index": 100.0,
+    "copper_index": 100.0,
+    "uranium_index": 100.0
+  },
+  {
+    "date": "2021-03",
+    "silver_index": 92.86,
+    "copper_index": 97.77,
+    "uranium_index": 98.86
+  },
+  {
+    "date": "2021-04",
+    "silver_index": 97.92,
+    "copper_index": 109.39,
+    "uranium_index": 103.8
+  },
+  {
+    "date": "2021-05",
+    "silver_index": 106.03,
+    "copper_index": 114.36,
+    "uranium_index": 105.56
+  },
+  {
+    "date": "2021-06",
+    "silver_index": 99.1,
+    "copper_index": 104.93,
+    "uranium_index": 112.14
+  },
+  {
+    "date": "2021-07",
+    "silver_index": 96.69,
+    "copper_index": 109.43,
+    "uranium_index": 112.83
+  },
+  {
+    "date": "2021-08",
+    "silver_index": 90.75,
+    "copper_index": 106.48,
+    "uranium_index": 112.16
+  },
+  {
+    "date": "2021-09",
+    "silver_index": 83.41,
+    "copper_index": 99.89,
+    "uranium_index": 157.27
+  },
+  {
+    "date": "2021-10",
+    "silver_index": 90.69,
+    "copper_index": 106.86,
+    "uranium_index": 134.24
+  },
+  {
+    "date": "2021-11",
+    "silver_index": 86.22,
+    "copper_index": 104.48,
+    "uranium_index": 108.5
+  },
+  {
+    "date": "2021-12",
+    "silver_index": 88.36,
+    "copper_index": 108.8,
+    "uranium_index": 126.05
+  },
+  {
+    "date": "2022-01",
+    "silver_index": 84.82,
+    "copper_index": 105.46,
+    "uranium_index": 128.65
+  },
+  {
+    "date": "2022-02",
+    "silver_index": 92.27,
+    "copper_index": 108.55,
+    "uranium_index": 125.01
+  },
+  {
+    "date": "2022-03",
+    "silver_index": 95.15,
+    "copper_index": 115.84,
+    "uranium_index": 158.8
+  },
+  {
+    "date": "2022-04",
+    "silver_index": 87.27,
+    "copper_index": 107.34,
+    "uranium_index": 169.92
+  },
+  {
+    "date": "2022-05",
+    "silver_index": 82.01,
+    "copper_index": 104.9,
+    "uranium_index": 142.67
+  },
+  {
+    "date": "2022-06",
+    "silver_index": 76.82,
+    "copper_index": 90.72,
+    "uranium_index": 140.71
+  },
+  {
+    "date": "2022-07",
+    "silver_index": 76.34,
+    "copper_index": 87.53,
+    "uranium_index": 135.85
+  },
+  {
+    "date": "2022-08",
+    "silver_index": 67.28,
+    "copper_index": 85.93,
+    "uranium_index": 138.87
+  },
+  {
+    "date": "2022-09",
+    "silver_index": 71.81,
+    "copper_index": 84.06,
+    "uranium_index": 142.87
+  },
+  {
+    "date": "2022-10",
+    "silver_index": 72.44,
+    "copper_index": 83.37,
+    "uranium_index": 144.1
+  },
+  {
+    "date": "2022-11",
+    "silver_index": 81.62,
+    "copper_index": 91.09,
+    "uranium_index": 142.88
+  },
+  {
+    "date": "2022-12",
+    "silver_index": 90.38,
+    "copper_index": 92.94,
+    "uranium_index": 136.69
+  },
+  {
+    "date": "2023-01",
+    "silver_index": 89.95,
+    "copper_index": 103.27,
+    "uranium_index": 139.78
+  },
+  {
+    "date": "2023-02",
+    "silver_index": 79.39,
+    "copper_index": 100.07,
+    "uranium_index": 144.14
+  },
+  {
+    "date": "2023-03",
+    "silver_index": 91.19,
+    "copper_index": 100.24,
+    "uranium_index": 142.14
+  },
+  {
+    "date": "2023-04",
+    "silver_index": 94.69,
+    "copper_index": 94.52,
+    "uranium_index": 145.7
+  },
+  {
+    "date": "2023-05",
+    "silver_index": 88.91,
+    "copper_index": 88.68,
+    "uranium_index": 151.64
+  },
+  {
+    "date": "2023-06",
+    "silver_index": 86.39,
+    "copper_index": 91.37,
+    "uranium_index": 159.44
+  },
+  {
+    "date": "2023-07",
+    "silver_index": 94.14,
+    "copper_index": 97.56,
+    "uranium_index": 157.86
+  },
+  {
+    "date": "2023-08",
+    "silver_index": 92.69,
+    "copper_index": 92.14,
+    "uranium_index": 161.8
+  },
+  {
+    "date": "2023-09",
+    "silver_index": 84.22,
+    "copper_index": 91.0,
+    "uranium_index": 185.62
+  },
+  {
+    "date": "2023-10",
+    "silver_index": 86.51,
+    "copper_index": 88.94,
+    "uranium_index": 201.12
+  },
+  {
+    "date": "2023-11",
+    "silver_index": 95.8,
+    "copper_index": 93.52,
+    "uranium_index": 217.31
+  },
+  {
+    "date": "2023-12",
+    "silver_index": 90.35,
+    "copper_index": 94.77,
+    "uranium_index": 244.43
+  },
+  {
+    "date": "2024-01",
+    "silver_index": 87.31,
+    "copper_index": 95.31,
+    "uranium_index": 280.38
+  },
+  {
+    "date": "2024-02",
+    "silver_index": 85.85,
+    "copper_index": 93.65,
+    "uranium_index": 283.71
+  },
+  {
+    "date": "2024-03",
+    "silver_index": 93.92,
+    "copper_index": 97.78,
+    "uranium_index": 250.55
+  },
+  {
+    "date": "2024-04",
+    "silver_index": 99.96,
+    "copper_index": 111.48,
+    "uranium_index": 249.94
+  },
+  {
+    "date": "2024-05",
+    "silver_index": 114.75,
+    "copper_index": 112.59,
+    "uranium_index": 258.0
+  },
+  {
+    "date": "2024-06",
+    "silver_index": 110.74,
+    "copper_index": 107.23,
+    "uranium_index": 241.39
+  },
+  {
+    "date": "2024-07",
+    "silver_index": 109.0,
+    "copper_index": 101.6,
+    "uranium_index": 238.12
+  },
+  {
+    "date": "2024-08",
+    "silver_index": 108.82,
+    "copper_index": 101.23,
+    "uranium_index": 227.78
+  },
+  {
+    "date": "2024-09",
+    "silver_index": 118.04,
+    "copper_index": 109.81,
+    "uranium_index": 225.49
+  },
+  {
+    "date": "2024-10",
+    "silver_index": 123.68,
+    "copper_index": 105.35,
+    "uranium_index": 232.05
+  },
+  {
+    "date": "2024-11",
+    "silver_index": 116.22,
+    "copper_index": 99.66,
+    "uranium_index": 220.35
+  },
+  {
+    "date": "2024-12",
+    "silver_index": 109.61,
+    "copper_index": 97.35,
+    "uranium_index": 210.1
+  },
+  {
+    "date": "2025-01",
+    "silver_index": 121.69,
+    "copper_index": 104.09,
+    "uranium_index": 205.7
+  },
+  {
+    "date": "2025-02",
+    "silver_index": 118.24,
+    "copper_index": 110.26,
+    "uranium_index": 189.5
+  },
+  {
+    "date": "2025-03",
+    "silver_index": 130.51,
+    "copper_index": 122.6,
+    "uranium_index": 180.85
+  },
+  {
+    "date": "2025-04",
+    "silver_index": 123.21,
+    "copper_index": 111.37,
+    "uranium_index": 183.81
+  },
+  {
+    "date": "2025-05",
+    "silver_index": 124.58,
+    "copper_index": 113.63,
+    "uranium_index": 199.93
+  },
+  {
+    "date": "2025-06",
+    "silver_index": 135.79,
+    "copper_index": 122.85,
+    "uranium_index": 207.86
+  },
+  {
+    "date": "2025-07",
+    "silver_index": 138.44,
+    "copper_index": 105.76,
+    "uranium_index": 205.66
+  },
+  {
+    "date": "2025-08",
+    "silver_index": 152.26,
+    "copper_index": 110.36,
+    "uranium_index": 205.73
+  },
+  {
+    "date": "2025-09",
+    "silver_index": 175.19,
+    "copper_index": 117.35,
+    "uranium_index": 219.36
+  },
+  {
+    "date": "2025-10",
+    "silver_index": 181.78,
+    "copper_index": 123.71,
+    "uranium_index": 223.14
+  },
+  {
+    "date": "2025-11",
+    "silver_index": 213.79,
+    "copper_index": 126.65,
+    "uranium_index": 217.15
+  },
+  {
+    "date": "2025-12",
+    "silver_index": 265.64,
+    "copper_index": 137.5,
+    "uranium_index": 221.59
+  },
+  {
+    "date": "2026-01",
+    "silver_index": 296.53,
+    "copper_index": 144.02,
+    "uranium_index": null
+  },
+  {
+    "date": "2026-02",
+    "silver_index": 299.41,
+    "copper_index": 143.56,
+    "uranium_index": null
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "group": "frontier",
+    "publication_year": 2019.42,
+    "training_flop": 6.19e+21,
+    "label": "XLNet"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2019.5,
+    "training_flop": 8.51e+21,
+    "label": "RoBERTa"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2019.71,
+    "training_flop": 2.2e+22,
+    "label": "Megatron-BERT"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2019.81,
+    "training_flop": 3.3e+22,
+    "label": "T5-11B"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2020.07,
+    "training_flop": 1.12e+23,
+    "label": "Meena"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2020.41,
+    "training_flop": 3.14e+23,
+    "label": "GPT-3"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2021.03,
+    "training_flop": 8.22e+22,
+    "label": "Switch"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2021.61,
+    "training_flop": 3.7e+23,
+    "label": "Jurassic-1"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2021.78,
+    "training_flop": 8.59e+23,
+    "label": "MT-NLG 530B"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2021.94,
+    "training_flop": 6.31e+23,
+    "label": "Gopher"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2021.98,
+    "training_flop": 1.04e+24,
+    "label": "ERNIE 3.0 Titan"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2022.26,
+    "training_flop": 2.53e+24,
+    "label": "PaLM"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2022.49,
+    "training_flop": 2.74e+24,
+    "label": "Minerva"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2022.91,
+    "training_flop": 2.58e+24,
+    "label": "GPT-3.5"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2023.21,
+    "training_flop": 2.1e+25,
+    "label": "GPT-4"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2023.36,
+    "training_flop": 7.34e+24,
+    "label": "PaLM 2"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2023.53,
+    "training_flop": 3.87e+24,
+    "label": "Claude 2"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2023.68,
+    "training_flop": 3.76e+24,
+    "label": "Falcon-180B"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2023.89,
+    "training_flop": 1e+25,
+    "label": "Inflection-2"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2023.93,
+    "training_flop": 5e+25,
+    "label": "Gemini Ultra"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2024.45,
+    "training_flop": 1.8e+25,
+    "label": "Nemotron-4 340B"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2024.47,
+    "training_flop": 2.7e+25,
+    "label": "Claude 3.5 Sonnet"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2024.56,
+    "training_flop": 3.8e+25,
+    "label": "Llama 3.1-405B"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2024.62,
+    "training_flop": 2.96e+25,
+    "label": "Grok-2"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2025.13,
+    "training_flop": 3.5e+26,
+    "label": "Grok 3"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2025.16,
+    "training_flop": 3.8e+26,
+    "label": "GPT-4.5"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2025.26,
+    "training_flop": 5.18e+25,
+    "label": "Llama 4 Behemoth"
+  },
+  {
+    "group": "frontier",
+    "publication_year": 2025.52,
+    "training_flop": 5e+26,
+    "label": "Grok 4"
+  },
+  {
+    "group": "other",
+    "publication_year": 2024.15,
+    "training_flop": 1.12e+25,
+    "label": "Mistral Large"
+  },
+  {
+    "group": "other",
+    "publication_year": 2024.18,
+    "training_flop": 8e+24,
+    "label": "Inflection-2.5"
+  },
+  {
+    "group": "other",
+    "publication_year": 2024.3,
+    "training_flop": 7.86e+24,
+    "label": "Llama 3-70B"
+  },
+  {
+    "group": "other",
+    "publication_year": 2024.56,
+    "training_flop": 2.13e+25,
+    "label": "Mistral Large 2"
+  },
+  {
+    "group": "other",
+    "publication_year": 2024.72,
+    "training_flop": 7.85e+24,
+    "label": "Qwen2.5-72B"
+  },
+  {
+    "group": "other",
+    "publication_year": 2024.82,
+    "training_flop": 2.5e+25,
+    "label": "Doubao-pro"
+  },
+  {
+    "group": "other",
+    "publication_year": 2024.98,
+    "training_flop": 3.41e+24,
+    "label": "DeepSeek-V3"
+  },
+  {
+    "group": "other",
+    "publication_year": 2025.05,
+    "training_flop": 3.5e+24,
+    "label": "DeepSeek-R1"
+  },
+  {
+    "group": "other",
+    "publication_year": 2025.15,
+    "training_flop": 3.35e+25,
+    "label": "Claude 3.7 Sonnet"
+  },
+  {
+    "group": "other",
+    "publication_year": 2025.33,
+    "training_flop": 4.75e+24,
+    "label": "Qwen3-235B"
+  },
+  {
+    "group": "other",
+    "publication_year": 2025.6,
+    "training_flop": 6.6e+25,
+    "label": "GPT-5"
+  },
+  {
+    "group": "other",
+    "publication_year": 2025.68,
+    "training_flop": 1.51e+25,
+    "label": "Qwen3-Max"
+  }
+]

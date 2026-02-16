@@ -1,0 +1,22 @@
+[
+  {
+    "year": "2022",
+    "openai_usd_billions": 0.4,
+    "anthropic_usd_billions": null
+  },
+  {
+    "year": "2023",
+    "openai_usd_billions": 1.0,
+    "anthropic_usd_billions": 0.3
+  },
+  {
+    "year": "2024",
+    "openai_usd_billions": 5.8,
+    "anthropic_usd_billions": 2.5
+  },
+  {
+    "year": "2025E",
+    "openai_usd_billions": 16.0,
+    "anthropic_usd_billions": 6.8
+  }
+]
