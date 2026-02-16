@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Stack Logo — Pure Grid</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #E8E8E8; font-family: 'Helvetica Neue', sans-serif; padding: 48px; }
+  h1 { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #888; margin-bottom: 8px; }
+  .sub { font-size: 10px; color: #aaa; margin-bottom: 48px; }
+  .row { display: flex; gap: 20px; margin-bottom: 28px; flex-wrap: wrap; }
+  .card {
+    background: #fff; padding: 48px 36px;
+    display: flex; flex-direction: column; align-items: center; gap: 14px;
+    flex: 1; min-width: 340px;
+  }
+  .label { font-size: 9px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: #aaa; }
+  .desc { font-size: 10.5px; color: #888; text-align: center; max-width: 380px; line-height: 1.6; }
+  .full { min-width: 100%; }
+  .dark { background: #080808; }
+  .dark .label, .dark .szl { color: #444; }
+  .sizes { display: flex; align-items: flex-end; gap: 36px; justify-content: center; flex-wrap: wrap; }
+  .sz { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .szl { font-size: 9px; color: #aaa; letter-spacing: 1px; font-family: monospace; }
+</style>
+</head>
+<body>
+
+<h1>Stack Logo — Pure grid, no extra lines</h1>
+<p class="sub">Grid density, weight, and warp ARE the character. Nothing else.</p>
+
+<div class="row">
+  <div class="card" style="max-width:220px;flex:0 0 220px">
+    <div class="label">Current</div>
+    <svg width="140" height="180" viewBox="0 0 180 220">
+      <polygon points="90,30 131,48 90,66 49,48" fill="none" stroke="#111" stroke-width="1.1"/>
+      <polygon points="90,70 136,90 90,110 44,90" fill="none" stroke="#111" stroke-width="1.1"/>
+      <polygon points="90,110 142,132 90,154 38,132" fill="none" stroke="#111" stroke-width="1.1"/>
+      <polygon points="90,150 148,174 90,198 32,174" fill="none" stroke="#111" stroke-width="1.1"/>
+    </svg>
+  </div>
+
+  <div class="card">
+    <div class="label">A — 6 Layers, Offset, Grid Ramp</div>
+    <svg width="400" height="420" viewBox="0 0 420 440" id="svgA"></svg>
+    <p class="desc">Grid goes from 4 sparse divisions (0.4px) to 20 dense divisions (0.9px). Warp increases. Offset for 3D. Solid base.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="card">
+    <div class="label">B — 5 Layers, Weight Contrast</div>
+    <svg width="380" height="380" viewBox="0 0 400 400" id="svgB"></svg>
+    <p class="desc">Top: 3 divisions at 0.5px. Bottom: 18 divisions at 1.0px. Maximum contrast in grid weight.</p>
+  </div>
+
+  <div class="card">
+    <div class="label">C — 4 Layers, All Open</div>
+    <svg width="360" height="360" viewBox="0 0 380 380" id="svgC"></svg>
+    <p class="desc">No solid base. Every layer is meshed. Grid weight and density tell the whole story.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="card">
+    <div class="label">D — Steep Angle</div>
+    <svg width="340" height="400" viewBox="0 0 360 420" id="svgD"></svg>
+    <p class="desc">Top-down view. Taller diamonds. Grid ramp from sparse/thin to dense/thick.</p>
+  </div>
+
+  <div class="card">
+    <div class="label">E — Wide Panoramic</div>
+    <svg width="420" height="310" viewBox="0 0 440 320" id="svgE"></svg>
+    <p class="desc">Ultra-wide flat planes. Grid density ramp across wide surfaces.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="card">
+    <div class="label">F — 7 Tight Layers</div>
+    <svg width="380" height="380" viewBox="0 0 400 400" id="svgF"></svg>
+    <p class="desc">7 layers packed tight. Each slightly denser and heavier than the last. Solid base.</p>
+  </div>
+
+  <div class="card">
+    <div class="label">G — Extreme Warp</div>
+    <svg width="380" height="400" viewBox="0 0 400 420" id="svgG"></svg>
+    <p class="desc">Same structure as A but with much heavier warp. Terrain-like distortion. Grid lines become topography.</p>
+  </div>
+</div>
+
+<!-- Sizes -->
+<div class="row">
+  <div class="card full">
+    <div class="label">A at sizes</div>
+    <div class="sizes">
+      <div class="sz"><svg width="36" height="38" viewBox="0 0 420 440" class="cp-a"></svg><span class="szl">36</span></div>
+      <div class="sz"><svg width="56" height="59" viewBox="0 0 420 440" class="cp-a"></svg><span class="szl">56</span></div>
+      <div class="sz"><svg width="80" height="84" viewBox="0 0 420 440" class="cp-a"></svg><span class="szl">80</span></div>
+      <div class="sz"><svg width="120" height="126" viewBox="0 0 420 440" class="cp-a"></svg><span class="szl">120</span></div>
+      <div class="sz"><svg width="200" height="210" viewBox="0 0 420 440" class="cp-a"></svg><span class="szl">200</span></div>
+      <div class="sz"><svg width="320" height="335" viewBox="0 0 420 440" class="cp-a"></svg><span class="szl">320</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="card full">
+    <div class="label">B, C, F at sizes</div>
+    <div class="sizes">
+      <div class="sz"><svg width="56" height="56" viewBox="0 0 400 400" class="cp-b"></svg><span class="szl">B 56</span></div>
+      <div class="sz"><svg width="120" height="120" viewBox="0 0 400 400" class="cp-b"></svg><span class="szl">B 120</span></div>
+      <div class="sz"><svg width="200" height="200" viewBox="0 0 400 400" class="cp-b"></svg><span class="szl">B 200</span></div>
+      <div class="sz"><svg width="56" height="56" viewBox="0 0 380 380" class="cp-c"></svg><span class="szl">C 56</span></div>
+      <div class="sz"><svg width="120" height="120" viewBox="0 0 380 380" class="cp-c"></svg><span class="szl">C 120</span></div>
+      <div class="sz"><svg width="56" height="56" viewBox="0 0 400 400" class="cp-f"></svg><span class="szl">F 56</span></div>
+      <div class="sz"><svg width="120" height="120" viewBox="0 0 400 400" class="cp-f"></svg><span class="szl">F 120</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Dark -->
+<div class="row">
+  <div class="card full dark">
+    <div class="label">Dark</div>
+    <div class="sizes">
+      <div class="sz"><svg width="200" height="210" viewBox="0 0 420 440" class="dk-a"></svg><span class="szl">A</span></div>
+      <div class="sz"><svg width="200" height="200" viewBox="0 0 400 400" class="dk-b"></svg><span class="szl">B</span></div>
+      <div class="sz"><svg width="200" height="200" viewBox="0 0 380 380" class="dk-c"></svg><span class="szl">C</span></div>
+      <div class="sz"><svg width="200" height="200" viewBox="0 0 400 400" class="dk-f"></svg><span class="szl">F</span></div>
+      <div class="sz"><svg width="200" height="210" viewBox="0 0 400 420" class="dk-g"></svg><span class="szl">G</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─── NOISE ──────────────────────────────────────────────────────
+function hash(x,y){const n=Math.sin(x*127.1+y*311.7)*43758.5453;return n-Math.floor(n)}
+function smooth(x,y){
+  const ix=Math.floor(x),iy=Math.floor(y),fx=x-ix,fy=y-iy;
+  const sx=fx*fx*(3-2*fx),sy=fy*fy*(3-2*fy);
+  return(hash(ix,iy)*(1-sx)+hash(ix+1,iy)*sx)*(1-sy)+(hash(ix,iy+1)*(1-sx)+hash(ix+1,iy+1)*sx)*sy;
+}
+function fbm(x,y){return smooth(x,y)*0.55+smooth(x*2.1,y*2.1)*0.3+smooth(x*4.3,y*4.3)*0.15}
+
+// ─── SVG ────────────────────────────────────────────────────────
+function el(t,a){const e=document.createElementNS('http://www.w3.org/2000/svg',t);for(const[k,v]of Object.entries(a))e.setAttribute(k,String(v));return e}
+function dPts(cx,cy,hw,hh){return`${cx-hw},${cy} ${cx},${cy-hh} ${cx+hw},${cy} ${cx},${cy+hh}`}
+function diamond(p,cx,cy,hw,hh,fill,stroke,sw){
+  p.appendChild(el('polygon',{points:dPts(cx,cy,hw,hh),fill,stroke,'stroke-width':sw,'stroke-linejoin':'miter'}))
+}
+function clipD(defs,id,cx,cy,hw,hh){
+  const c=el('clipPath',{id});c.appendChild(el('polygon',{points:dPts(cx,cy,hw,hh)}));defs.appendChild(c)
+}
+function dpt(cx,cy,hw,hh,u,v){
+  const L=[cx-hw,cy],T=[cx,cy-hh],R=[cx+hw,cy],B=[cx,cy+hh];
+  return[(1-u)*(1-v)*L[0]+u*(1-v)*T[0]+(1-u)*v*B[0]+u*v*R[0],
+         (1-u)*(1-v)*L[1]+u*(1-v)*T[1]+(1-u)*v*B[1]+u*v*R[1]]
+}
+
+function makeMesh(cx,cy,hw,hh,divs,warp,seed){
+  const pts=[];
+  for(let i=0;i<=divs;i++){const row=[];for(let j=0;j<=divs;j++){
+    const u=i/divs,v=j/divs;const[x,y]=dpt(cx,cy,hw,hh,u,v);
+    const edge=Math.min(u,1-u,v,1-v)*4;const fade=Math.min(edge,1);
+    const w=warp>0?(fbm(u*3.5+seed,v*3.5+seed*0.7)-0.5)*2*warp*fade:0;
+    row.push([x,y+w])};pts.push(row)}return pts
+}
+
+function drawMesh(parent,m,stroke,sw){
+  const n=m.length-1;
+  for(let i=0;i<=n;i++){let d='';for(let j=0;j<=n;j++)d+=(j?'L':'M')+m[i][j][0].toFixed(1)+','+m[i][j][1].toFixed(1);
+    parent.appendChild(el('path',{d,fill:'none',stroke,'stroke-width':sw}))}
+  for(let j=0;j<=n;j++){let d='';for(let i=0;i<=n;i++)d+=(i?'L':'M')+m[i][j][0].toFixed(1)+','+m[i][j][1].toFixed(1);
+    parent.appendChild(el('path',{d,fill:'none',stroke,'stroke-width':sw}))}
+}
+
+let cc=0;function cid(){return'k'+(cc++)}
+
+// Build one mesh layer — grid only, no curves
+function layer(svg, defs, cx, cy, hw, hh, cfg, dark) {
+  const kf=dark?'210,210,210':'0,0,0';
+  const k=dark?'#ccc':'#000';
+  const g=el('g',{});
+  if(cfg.fillA>0) diamond(g,cx,cy,hw,hh,`rgba(${kf},${cfg.fillA})`,'none',0);
+  const id=cid(); clipD(defs,id,cx,cy,hw,hh);
+  const inner=el('g',{'clip-path':`url(#${id})`});
+  drawMesh(inner, makeMesh(cx,cy,hw,hh,cfg.divs,cfg.warp||0,cfg.seed||0),
+    `rgba(${kf},${cfg.gridA})`, cfg.gridSw);
+  g.appendChild(inner);
+  diamond(g,cx,cy,hw,hh,'none',`rgba(${kf},${cfg.outA||0.92})`,cfg.outSw);
+  svg.appendChild(g);
+}
+
+function solid(svg,cx,cy,hw,hh,dark){
+  const kf=dark?'210,210,210':'0,0,0';
+  diamond(svg,cx,cy,hw,hh,`rgba(${kf},0.95)`,`rgba(${kf},0.98)`,2.2);
+}
+
+
+// ─── A: 6 LAYERS, OFFSET, GRID RAMP ────────────────────────────
+// Grid: 4→8→12→16→20 divisions
+// Weight: 0.4→0.55→0.7→0.85→1.0 px
+// Warp: 0→5→10→16→22
+function buildA(svg, dark) {
+  const defs=el('defs',{});svg.appendChild(defs);
+  const hw=130,hh=32;
+  const ls=[
+    {cx:250,cy:44},  {cx:242,cy:108}, {cx:234,cy:172},
+    {cx:226,cy:240}, {cx:218,cy:312}, {cx:210,cy:388}
+  ];
+
+  layer(svg,defs,ls[0].cx,ls[0].cy,hw,hh,{divs:4, warp:0,  seed:0,    gridA:0.50, gridSw:0.45, outSw:1.6, outA:0.88, fillA:0},dark);
+  layer(svg,defs,ls[1].cx,ls[1].cy,hw,hh,{divs:8, warp:5,  seed:4.2,  gridA:0.46, gridSw:0.55, outSw:1.7, outA:0.90, fillA:0.02},dark);
+  layer(svg,defs,ls[2].cx,ls[2].cy,hw,hh,{divs:12,warp:10, seed:9.7,  gridA:0.42, gridSw:0.65, outSw:1.9, outA:0.92, fillA:0.04},dark);
+  layer(svg,defs,ls[3].cx,ls[3].cy,hw,hh,{divs:16,warp:16, seed:15.3, gridA:0.38, gridSw:0.78, outSw:2.0, outA:0.93, fillA:0.06},dark);
+  layer(svg,defs,ls[4].cx,ls[4].cy,hw,hh,{divs:20,warp:22, seed:22.1, gridA:0.34, gridSw:0.90, outSw:2.2, outA:0.94, fillA:0.10},dark);
+  solid(svg,ls[5].cx,ls[5].cy,hw,hh,dark);
+}
+
+
+// ─── B: 5 LAYERS, MAXIMUM WEIGHT CONTRAST ──────────────────────
+// Top: 3 divs at 0.5px thick lines. Bottom: 18 divs at 1.1px.
+function buildB(svg, dark) {
+  const defs=el('defs',{});svg.appendChild(defs);
+  const hw=125,hh=30;
+  const ls=[
+    {cx:232,cy:46}, {cx:226,cy:116}, {cx:220,cy:190},
+    {cx:214,cy:268}, {cx:208,cy:350}
+  ];
+
+  layer(svg,defs,ls[0].cx,ls[0].cy,hw,hh,{divs:3,  warp:0,  seed:0,    gridA:0.55, gridSw:0.50, outSw:1.5, outA:0.85, fillA:0},dark);
+  layer(svg,defs,ls[1].cx,ls[1].cy,hw,hh,{divs:6,  warp:4,  seed:5.0,  gridA:0.48, gridSw:0.65, outSw:1.7, outA:0.88, fillA:0.02},dark);
+  layer(svg,defs,ls[2].cx,ls[2].cy,hw,hh,{divs:10, warp:10, seed:10.5, gridA:0.42, gridSw:0.80, outSw:1.9, outA:0.91, fillA:0.04},dark);
+  layer(svg,defs,ls[3].cx,ls[3].cy,hw,hh,{divs:18, warp:18, seed:17.8, gridA:0.35, gridSw:1.10, outSw:2.2, outA:0.94, fillA:0.08},dark);
+  solid(svg,ls[4].cx,ls[4].cy,hw,hh,dark);
+}
+
+
+// ─── C: 4 LAYERS ALL OPEN (no solid base) ──────────────────────
+function buildC(svg, dark) {
+  const defs=el('defs',{});svg.appendChild(defs);
+  const hw=120,hh=30;
+  const ls=[
+    {cx:222,cy:48}, {cx:216,cy:132}, {cx:210,cy:222}, {cx:204,cy:316}
+  ];
+
+  layer(svg,defs,ls[0].cx,ls[0].cy,hw,hh,{divs:4,  warp:0,  seed:0,    gridA:0.50, gridSw:0.45, outSw:1.5, outA:0.85, fillA:0},dark);
+  layer(svg,defs,ls[1].cx,ls[1].cy,hw,hh,{divs:8,  warp:6,  seed:5.5,  gridA:0.45, gridSw:0.60, outSw:1.7, outA:0.88, fillA:0.02},dark);
+  layer(svg,defs,ls[2].cx,ls[2].cy,hw,hh,{divs:14, warp:14, seed:12.0, gridA:0.38, gridSw:0.80, outSw:2.0, outA:0.92, fillA:0.05},dark);
+  layer(svg,defs,ls[3].cx,ls[3].cy,hw,hh,{divs:20, warp:24, seed:19.5, gridA:0.32, gridSw:1.00, outSw:2.3, outA:0.94, fillA:0.10},dark);
+}
+
+
+// ─── D: STEEP ANGLE ─────────────────────────────────────────────
+function buildD(svg, dark) {
+  const defs=el('defs',{});svg.appendChild(defs);
+  const hw=105,hh=48;
+  const ls=[
+    {cx:218,cy:56}, {cx:211,cy:142}, {cx:204,cy:234},
+    {cx:197,cy:332}, {cx:190,cy:400}
+  ];
+
+  layer(svg,defs,ls[0].cx,ls[0].cy,hw,hh,{divs:4,  warp:0,  seed:0,    gridA:0.48, gridSw:0.45, outSw:1.5, fillA:0},dark);
+  layer(svg,defs,ls[1].cx,ls[1].cy,hw,hh,{divs:8,  warp:8,  seed:5.8,  gridA:0.42, gridSw:0.60, outSw:1.7, fillA:0.02},dark);
+  layer(svg,defs,ls[2].cx,ls[2].cy,hw,hh,{divs:13, warp:16, seed:12.5, gridA:0.36, gridSw:0.78, outSw:2.0, fillA:0.05},dark);
+  layer(svg,defs,ls[3].cx,ls[3].cy,hw,hh,{divs:18, warp:26, seed:19.8, gridA:0.30, gridSw:0.95, outSw:2.2, fillA:0.08},dark);
+  solid(svg,ls[4].cx,ls[4].cy,hw,hh,dark);
+}
+
+
+// ─── E: WIDE PANORAMIC ──────────────────────────────────────────
+function buildE(svg, dark) {
+  const defs=el('defs',{});svg.appendChild(defs);
+  const hw=160,hh=20;
+  const ls=[
+    {cx:262,cy:34}, {cx:254,cy:92}, {cx:246,cy:154},
+    {cx:238,cy:220}, {cx:230,cy:290}
+  ];
+
+  layer(svg,defs,ls[0].cx,ls[0].cy,hw,hh,{divs:5,  warp:0, seed:0,    gridA:0.48, gridSw:0.40, outSw:1.4, fillA:0},dark);
+  layer(svg,defs,ls[1].cx,ls[1].cy,hw,hh,{divs:9,  warp:4, seed:4.5,  gridA:0.42, gridSw:0.55, outSw:1.6, fillA:0.02},dark);
+  layer(svg,defs,ls[2].cx,ls[2].cy,hw,hh,{divs:14, warp:8, seed:10.2, gridA:0.36, gridSw:0.70, outSw:1.9, fillA:0.04},dark);
+  layer(svg,defs,ls[3].cx,ls[3].cy,hw,hh,{divs:20, warp:12,seed:17.0, gridA:0.30, gridSw:0.85, outSw:2.1, fillA:0.07},dark);
+  solid(svg,ls[4].cx,ls[4].cy,hw,hh,dark);
+}
+
+
+// ─── F: 7 TIGHT LAYERS ─────────────────────────────────────────
+function buildF(svg, dark) {
+  const defs=el('defs',{});svg.appendChild(defs);
+  const hw=118,hh=26;
+  const ls=[
+    {cx:236,cy:30}, {cx:232,cy:78}, {cx:228,cy:128},
+    {cx:224,cy:182}, {cx:220,cy:238}, {cx:216,cy:298},
+    {cx:212,cy:362}
+  ];
+
+  layer(svg,defs,ls[0].cx,ls[0].cy,hw,hh,{divs:3,  warp:0,  seed:0,    gridA:0.50, gridSw:0.40, outSw:1.3, fillA:0},dark);
+  layer(svg,defs,ls[1].cx,ls[1].cy,hw,hh,{divs:5,  warp:2,  seed:2.8,  gridA:0.47, gridSw:0.48, outSw:1.4, fillA:0.01},dark);
+  layer(svg,defs,ls[2].cx,ls[2].cy,hw,hh,{divs:7,  warp:5,  seed:6.1,  gridA:0.44, gridSw:0.56, outSw:1.5, fillA:0.02},dark);
+  layer(svg,defs,ls[3].cx,ls[3].cy,hw,hh,{divs:10, warp:9,  seed:10.5, gridA:0.40, gridSw:0.65, outSw:1.7, fillA:0.04},dark);
+  layer(svg,defs,ls[4].cx,ls[4].cy,hw,hh,{divs:14, warp:14, seed:15.8, gridA:0.36, gridSw:0.76, outSw:1.9, fillA:0.06},dark);
+  layer(svg,defs,ls[5].cx,ls[5].cy,hw,hh,{divs:18, warp:20, seed:21.4, gridA:0.32, gridSw:0.88, outSw:2.1, fillA:0.09},dark);
+  solid(svg,ls[6].cx,ls[6].cy,hw,hh,dark);
+}
+
+
+// ─── G: EXTREME WARP ───────────────────────────────────────────
+function buildG(svg, dark) {
+  const defs=el('defs',{});svg.appendChild(defs);
+  const hw=130,hh=32;
+  const ls=[
+    {cx:248,cy:44},  {cx:240,cy:108}, {cx:232,cy:172},
+    {cx:224,cy:240}, {cx:216,cy:312}, {cx:208,cy:388}
+  ];
+
+  layer(svg,defs,ls[0].cx,ls[0].cy,hw,hh,{divs:5,  warp:0,  seed:0,    gridA:0.48, gridSw:0.45, outSw:1.6, fillA:0},dark);
+  layer(svg,defs,ls[1].cx,ls[1].cy,hw,hh,{divs:8,  warp:10, seed:4.2,  gridA:0.44, gridSw:0.55, outSw:1.7, fillA:0.02},dark);
+  layer(svg,defs,ls[2].cx,ls[2].cy,hw,hh,{divs:12, warp:20, seed:9.7,  gridA:0.40, gridSw:0.68, outSw:1.9, fillA:0.04},dark);
+  layer(svg,defs,ls[3].cx,ls[3].cy,hw,hh,{divs:16, warp:32, seed:15.3, gridA:0.36, gridSw:0.82, outSw:2.1, fillA:0.07},dark);
+  layer(svg,defs,ls[4].cx,ls[4].cy,hw,hh,{divs:20, warp:42, seed:22.1, gridA:0.32, gridSw:0.95, outSw:2.3, fillA:0.12},dark);
+  solid(svg,ls[5].cx,ls[5].cy,hw,hh,dark);
+}
+
+
+// ─── BUILD ──────────────────────────────────────────────────────
+buildA(document.getElementById('svgA'),false);
+buildB(document.getElementById('svgB'),false);
+buildC(document.getElementById('svgC'),false);
+buildD(document.getElementById('svgD'),false);
+buildE(document.getElementById('svgE'),false);
+buildF(document.getElementById('svgF'),false);
+buildG(document.getElementById('svgG'),false);
+
+document.querySelectorAll('.cp-a').forEach(s=>buildA(s,false));
+document.querySelectorAll('.cp-b').forEach(s=>buildB(s,false));
+document.querySelectorAll('.cp-c').forEach(s=>buildC(s,false));
+document.querySelectorAll('.cp-f').forEach(s=>buildF(s,false));
+document.querySelectorAll('.dk-a').forEach(s=>buildA(s,true));
+document.querySelectorAll('.dk-b').forEach(s=>buildB(s,true));
+document.querySelectorAll('.dk-c').forEach(s=>buildC(s,true));
+document.querySelectorAll('.dk-f').forEach(s=>buildF(s,true));
+document.querySelectorAll('.dk-g').forEach(s=>buildG(s,true));
+</script>
+</body>
+</html>

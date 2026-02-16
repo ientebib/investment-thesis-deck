@@ -65,6 +65,13 @@ export const slide51FundStructureData: Slide51FundStructureData = {
         { label: "Fee Timing", value: "Applied after performance fee, deducted from proceeds" },
       ],
     },
+    {
+      title: "Reporting",
+      rows: [
+        { label: "Quarterly", value: "Performance report with NAV, attribution, and commentary" },
+        { label: "Annual", value: "Annual letter from the Managing Partners" },
+      ],
+    },
   ],
   sourceLine: "",
 };

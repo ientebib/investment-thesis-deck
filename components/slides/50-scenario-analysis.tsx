@@ -16,6 +16,14 @@ const MANAGEMENT_FEE_RATE = 0.02;
 
 type ScenarioValues = Record<Slide50ScenarioControlId, number>;
 
+type HorizonReturn = {
+  years: number;
+  label: string;
+  annualizedReturn: number;
+  cumulativeReturn: number;
+  endingValue: number;
+};
+
 type ScenarioResult = {
   navSeries: number[];
   grossIrr: number;
@@ -24,6 +32,7 @@ type ScenarioResult = {
   lpNetMoic: number;
   lpNetProfit: number;
   gpCarry: number;
+  horizons: HorizonReturn[];
 };
 
 function defaultControls(): ScenarioValues {
@@ -54,8 +63,7 @@ function calculateScenario(values: ScenarioValues): ScenarioResult {
     portfolioValue = portfolioValue * (1 + annualReturn);
 
     // 2. Subtract management fee
-    const managementFee =
-      year <= 5 ? LP_CAPITAL_M * MANAGEMENT_FEE_RATE : Math.max(0, portfolioValue) * MANAGEMENT_FEE_RATE;
+    const managementFee = Math.max(0, portfolioValue) * MANAGEMENT_FEE_RATE;
     portfolioValue = Math.max(0, portfolioValue - managementFee);
 
     navSeries.push(portfolioValue);
@@ -64,7 +72,7 @@ function calculateScenario(values: ScenarioValues): ScenarioResult {
   const totalValue = Math.max(0, portfolioValue);
   const grossProfit = totalValue - LP_CAPITAL_M;
 
-  const preferredHurdle = LP_CAPITAL_M * (1.09 ** 10 - 1);
+  const preferredHurdle = LP_CAPITAL_M * (1.05 ** 10 - 1);
   let gpCarry = 0;
   if (grossProfit > preferredHurdle) {
     const excessProfit = grossProfit - preferredHurdle;
@@ -80,6 +88,23 @@ function calculateScenario(values: ScenarioValues): ScenarioResult {
   const lpNetMoic = lpDistribution / LP_CAPITAL_M;
   const lpNetIrr = (Math.max(0.01, lpDistribution) / LP_CAPITAL_M) ** 0.1 - 1;
 
+  // Compute horizon returns (after fees) at key intervals
+  const horizonYears = [1, 2, 3, 5, 7, 10];
+  const horizons: HorizonReturn[] = horizonYears
+    .filter((yr) => yr <= navSeries.length - 1)
+    .map((yr) => {
+      const endVal = navSeries[yr];
+      const cumReturn = (endVal - LP_CAPITAL_M) / LP_CAPITAL_M;
+      const annReturn = (Math.max(0.01, endVal) / LP_CAPITAL_M) ** (1 / yr) - 1;
+      return {
+        years: yr,
+        label: yr === 1 ? "1 Year" : `${yr} Years`,
+        annualizedReturn: annReturn,
+        cumulativeReturn: cumReturn,
+        endingValue: endVal
+      };
+    });
+
   return {
     navSeries,
     grossIrr,
@@ -87,7 +112,8 @@ function calculateScenario(values: ScenarioValues): ScenarioResult {
     lpNetIrr,
     lpNetMoic,
     lpNetProfit,
-    gpCarry
+    gpCarry,
+    horizons
   };
 }
 
@@ -261,12 +287,20 @@ export function Slide50ScenarioAnalysis() {
           <LineChart data={chartData} options={chartOptions} />
         </div>
 
-        <div className="scenario-metrics-grid">
-          {slideData.metrics.map((metric) => (
-            <article key={metric.key} className={`scenario-metric-card scenario-metric-card--${metric.tone}`}>
-              <div className="scenario-metric-value">{metricValue(scenarioResult, metric.key)}</div>
-              <div className="scenario-metric-label">{metric.label}</div>
-            </article>
+        <div className="scenario-horizons">
+          <div className="scenario-horizons-header">
+            <span className="scenario-horizons-col">Horizon</span>
+            <span className="scenario-horizons-col">Annual Return (net)</span>
+            <span className="scenario-horizons-col">Cumulative Return</span>
+            <span className="scenario-horizons-col">Ending Value</span>
+          </div>
+          {scenarioResult.horizons.map((h) => (
+            <div key={h.years} className="scenario-horizons-row">
+              <span className="scenario-horizons-col scenario-horizons-label">{h.label}</span>
+              <span className="scenario-horizons-col scenario-horizons-val">{formatPercent(h.annualizedReturn)}</span>
+              <span className="scenario-horizons-col scenario-horizons-val">{formatPercent(h.cumulativeReturn)}</span>
+              <span className="scenario-horizons-col scenario-horizons-val">{formatMoneyMillions(h.endingValue)}</span>
+            </div>
           ))}
         </div>
       </div>
@@ -489,7 +523,7 @@ export function Slide50ScenarioAnalysisInternal() {
       </div>
 
       <SourceLine
-        text="Internal model. Fee: Yr 1-5 on committed ($20M x 2%), Yr 6-10 on NAV. 9% pref, 20% carry w/ catch-up."
+        text="Internal model. 2% management fee on NAV. 20% performance fee above 5% hurdle with catch-up."
         tight
       />
     </>

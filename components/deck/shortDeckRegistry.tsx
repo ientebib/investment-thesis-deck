@@ -1,108 +1,175 @@
 import type { DeckSection, DeckSlide } from "@/components/deck/types";
 import { Slide01Title } from "@/components/slides/01-title";
-import { Slide02Leadership } from "@/components/slides/02-leadership";
-import { Slide02AgendaJourney } from "@/components/slides/02-agenda-journey";
-import { Slide07ExecutiveSummary } from "@/components/slides/07-executive-summary";
-import { Slide08bShortThesisMacroProof } from "@/components/slides/08b-short-thesis-macro-proof";
-import { Slide08cShortThesisMacroProof2 } from "@/components/slides/08c-short-thesis-macro-proof-2";
-import { Slide17UsStructuralAdvantage } from "@/components/slides/17-us-structural-advantage";
-import { Slide09bShortThesisAiProof } from "@/components/slides/09b-short-thesis-ai-proof";
-import { Slide09cShortThesisAiProof2 } from "@/components/slides/09c-short-thesis-ai-proof-2";
-import { Slide51TermsAtAGlance } from "@/components/slides/51-terms-at-a-glance";
+import { PitchSlide02Leadership } from "@/components/slides/pitch-02-leadership";
+import { PitchSlide03Thesis } from "@/components/slides/pitch-03-thesis";
+import { PitchSlide04Fiscal } from "@/components/slides/pitch-04-fiscal";
+import { PitchSlide05Scaling } from "@/components/slides/pitch-05-scaling";
+import { PitchSlide06AiDemand } from "@/components/slides/pitch-06-ai-demand";
+import { PitchSlide07Adoption } from "@/components/slides/pitch-07-adoption";
+import { PitchSlide08Supply } from "@/components/slides/pitch-08-supply";
+import { PitchSlide09Reserves } from "@/components/slides/pitch-09-reserves";
+import { PitchSlide11Cape } from "@/components/slides/pitch-11-cape";
+import { Slide08ScenarioMatrix } from "@/components/slides/08-scenario-matrix";
+import { PitchSlide13AssetClasses } from "@/components/slides/pitch-13-asset-classes";
+import { PitchSlide14Portfolio } from "@/components/slides/pitch-14-portfolio";
+import { Slide47ResearchInfrastructure } from "@/components/slides/47-research-infrastructure";
+import { Slide48LeadingIndicators } from "@/components/slides/48-leading-indicators";
+import { Slide29AiValueChain } from "@/components/slides/29-ai-value-chain";
 import { Slide50ScenarioAnalysis } from "@/components/slides/50-scenario-analysis";
-import { Slide55ClosingThankYou } from "@/components/slides/55-closing-thank-you";
+import { Slide51TermsAtAGlance } from "@/components/slides/51-terms-at-a-glance";
+import { PitchSlide19Legal } from "@/components/slides/pitch-19-legal";
+import { Slide54ClosingQuestion } from "@/components/slides/54-closing-question";
 
 export const shortDeckSections: DeckSection[] = [
-  { from: 1, to: 3, label: "Overview" },
-  { from: 4, to: 4, label: "Investment Thesis" },
-  { from: 5, to: 9, label: "Core Thesis" },
-  { from: 10, to: 11, label: "Terms & Returns" },
-  { from: 12, to: 12, label: "Closing" }
+  { from: 1, to: 2, label: "Overview" },
+  { from: 3, to: 3, label: "Thesis" },
+  { from: 4, to: 10, label: "Evidence" },
+  { from: 11, to: 12, label: "Scenarios" },
+  { from: 13, to: 17, label: "Fund" },
+  { from: 18, to: 18, label: "Terms" },
+  { from: 19, to: 19, label: "Legal" },
+  { from: 20, to: 20, label: "Closing" }
 ];
 
 export const shortDeckSlides: DeckSlide[] = [
   {
     number: 1,
-    title: "Portada",
+    title: "Cover",
     sectionLabel: "OVERVIEW",
     migrationStatus: "migrated",
     content: <Slide01Title />
   },
   {
     number: 2,
-    title: "Bios",
+    title: "Leadership & Fund",
     sectionLabel: "OVERVIEW",
     migrationStatus: "migrated",
-    content: <Slide02Leadership />
+    content: <PitchSlide02Leadership />
   },
   {
     number: 3,
-    title: "Agenda",
-    sectionLabel: "OVERVIEW",
+    title: "Thesis Visual",
+    sectionLabel: "THESIS",
     migrationStatus: "migrated",
-    content: <Slide02AgendaJourney />
+    content: <PitchSlide03Thesis />
   },
   {
     number: 4,
-    title: "Investment Thesis",
-    sectionLabel: "INVESTMENT THESIS",
+    title: "Fiscal Dominance",
+    sectionLabel: "EVIDENCE",
     migrationStatus: "migrated",
-    content: <Slide07ExecutiveSummary />
+    content: <PitchSlide04Fiscal />
   },
   {
     number: 5,
-    title: "Fiscal Constraint Regime",
-    sectionLabel: "CORE THESIS",
+    title: "Reserve Rotation",
+    sectionLabel: "EVIDENCE",
     migrationStatus: "migrated",
-    content: <Slide08bShortThesisMacroProof />
+    content: <PitchSlide09Reserves />
   },
   {
     number: 6,
-    title: "Real-Asset Repricing",
-    sectionLabel: "CORE THESIS",
+    title: "Scaling Laws",
+    sectionLabel: "EVIDENCE",
     migrationStatus: "migrated",
-    content: <Slide08cShortThesisMacroProof2 />
+    content: <PitchSlide05Scaling />
   },
   {
     number: 7,
-    title: "Capability and Adoption",
-    sectionLabel: "CORE THESIS",
+    title: "AI Physical Demand",
+    sectionLabel: "EVIDENCE",
     migrationStatus: "migrated",
-    content: <Slide09bShortThesisAiProof />
+    content: <PitchSlide06AiDemand />
   },
   {
     number: 8,
-    title: "Physical Infrastructure Buildout",
-    sectionLabel: "CORE THESIS",
+    title: "Adoption & Revenue",
+    sectionLabel: "EVIDENCE",
     migrationStatus: "migrated",
-    content: <Slide09cShortThesisAiProof2 />
+    content: <PitchSlide07Adoption />
   },
   {
     number: 9,
-    title: "US Structural Advantage",
-    sectionLabel: "CORE THESIS",
+    title: "Supply Constraints",
+    sectionLabel: "EVIDENCE",
     migrationStatus: "migrated",
-    content: <Slide17UsStructuralAdvantage />
+    content: <PitchSlide08Supply />
   },
   {
     number: 10,
-    title: "Fund Terms",
-    sectionLabel: "TERMS & RETURNS",
+    title: "Valuation Risk",
+    sectionLabel: "EVIDENCE",
     migrationStatus: "migrated",
-    content: <Slide51TermsAtAGlance />
+    content: <PitchSlide11Cape />
   },
   {
     number: 11,
-    title: "Scenario Analysis",
-    sectionLabel: "TERMS & RETURNS",
+    title: "Scenario Matrix",
+    sectionLabel: "SCENARIOS",
+    migrationStatus: "migrated",
+    content: <Slide08ScenarioMatrix />
+  },
+  {
+    number: 12,
+    title: "Asset Classes",
+    sectionLabel: "SCENARIOS",
+    migrationStatus: "migrated",
+    content: <PitchSlide13AssetClasses />
+  },
+  {
+    number: 13,
+    title: "Portfolio Construction",
+    sectionLabel: "FUND",
+    migrationStatus: "migrated",
+    content: <PitchSlide14Portfolio />
+  },
+  {
+    number: 14,
+    title: "Research Process",
+    sectionLabel: "FUND",
+    migrationStatus: "migrated",
+    content: <Slide47ResearchInfrastructure />
+  },
+  {
+    number: 15,
+    title: "Hypothesis Tracking",
+    sectionLabel: "FUND",
+    migrationStatus: "migrated",
+    content: <Slide48LeadingIndicators />
+  },
+  {
+    number: 16,
+    title: "AI Value Chain",
+    sectionLabel: "FUND",
+    migrationStatus: "migrated",
+    content: <Slide29AiValueChain />
+  },
+  {
+    number: 17,
+    title: "Return Modeling",
+    sectionLabel: "FUND",
     migrationStatus: "migrated",
     content: <Slide50ScenarioAnalysis />
   },
   {
-    number: 12,
-    title: "Closing",
+    number: 18,
+    title: "Fund Terms",
+    sectionLabel: "TERMS",
+    migrationStatus: "migrated",
+    content: <Slide51TermsAtAGlance />
+  },
+  {
+    number: 19,
+    title: "Legal Structure",
+    sectionLabel: "LEGAL",
+    migrationStatus: "migrated",
+    content: <PitchSlide19Legal />
+  },
+  {
+    number: 20,
+    title: "What If We Are Right",
     sectionLabel: "CLOSING",
     migrationStatus: "migrated",
-    content: <Slide55ClosingThankYou />
+    content: <Slide54ClosingQuestion />
   }
 ];

@@ -1,1193 +1,777 @@
-# Investment Thesis (Augmented, Slide-by-Slide)
+# Stack Capital — Investment Thesis
 
-Purpose: standalone thesis narrative that mirrors the deck while integrating the expanded model and data work.
+## What This Document Is
 
-Use this as the external AI-consumable version. It is intentionally not tied to repository internals.
+A self-contained explanation of the Stack Capital investment thesis with all supporting data embedded. A reader — human or AI — can understand the full strategy, verify every claim against the underlying evidence, and evaluate the fund mechanics without needing the presentation deck or any other source materials.
 
-## Thesis In One Page
+---
 
-- Core objective: pair downside-protective collateral with upside convexity in liquid structural themes.
-- Portfolio architecture: maintain a two-sleeve design where real estate is the cash-flow and collateral base, and the structural long sleeve is the growth engine.
-- Capital loop: raise LP equity, acquire stabilized NNN assets, refinance at conservative LTV (target ~55%), and redeploy net refinance proceeds into the structural long sleeve.
-- Why this is different: the fund does not rely on pure multiple expansion or unsecured leverage; it monetizes hard-asset collateral to finance liquid upside exposure.
-- Return engine: contractual rent and collateral stability from the NNN sleeve plus compounding from structural long exposures tied to macro repricing and AI buildout bottlenecks.
-- Target balance: in default underwriting, day-1 exposure is roughly balanced between real-estate equity (~$9.0M) and structural long deployment (~$9.805M), preserving the “half anchored, half convex” profile.
-- Primary risks: refinancing rates at year 10, property-level tenant/credit events, and volatility in structural-long positions.
-- Risk controls: conservative leverage, debt-service reserve logic, explicit underwriting gates, position sizing rules, and a preferred-return-first waterfall before carry.
+## 1. What Stack Capital Is
 
-## Slide 01
+Stack Capital is a liquid global macro fund. The strategy is quant and value-oriented, trading across equities, commodities, FX, bonds, crypto, and derivatives. Everything is fully liquid under normal market conditions.
 
-- Section: (none)
-- Title: STACK CAPITAL
-- Thesis: A long-term liquid portfolio collateralized with real estate
+The fund is built around a single conviction: two structural forces — fiscal dominance driving real-asset repricing, and AI infrastructure buildout consuming scarce physical resources — are compounding simultaneously, and the physical layer where they intersect offers durable, asymmetric returns.
 
-### What This Slide Adds
+This is not a technology bet. It is a physical infrastructure and macro regime bet. Every GPU cluster needs power, copper, and concrete. Every fiscal deficit erodes the purchasing power of nominal claims. The fund positions at the intersection.
 
-- A long-term liquid portfolio collateralized with real estate
+---
 
-## Slide 02
+## 2. The Macro Regime
 
-- Section: OVERVIEW
-- Title: Leadership
-- Thesis: Operators and allocators with direct experience building AI systems at scale and trading across global macro markets
+### 2.1 Federal Debt Is Structural, Not Cyclical
 
-### What This Slide Adds
+U.S. federal debt-to-GDP has risen relentlessly over more than a century, with step-ups after every major fiscal event and no sustained reversals. The trajectory is now politically locked in.
 
-- Oversaw AI automation and ML systems at Kavak, Latin America’s largest automotive marketplace. Worked at Angel Ventures, one of the most active venture capital firms in Latin America, investing across early- and growth-stage companies. Studied Finance at Tecnologico de Monterrey.
-- Traded global fixed income, FX, and commodities at Banco de Mexico, managing central bank international reserves. Worked at Seldon Capital, a macro quantitative hedge fund, on trading and research. Studied a Master’s in Finance at MIT Sloan and undergraduate Economics at ITAM.
+**Key data points from the CBO/GAO series (1900-2053):**
 
-### Source Note
+| Year | Debt/GDP | Context |
+|------|----------|---------|
+| 1900 | 10% | Baseline |
+| 1916 | 4% | All-time trough |
+| 1919 | 30% | Post-WWI peak |
+| 1929 | 15% | Pre-Depression |
+| 1945 | 104% | WWII peak |
+| 1946 | 106% | Post-war peak |
+| 1974 | 24% | Post-war trough |
+| 1993 | 49% | Reagan-era buildup |
+| 2000 | 35% | Pre-dot-com |
+| 2007 | 35% | Pre-GFC |
+| 2009 | 55% | Post-GFC |
+| 2019 | 79% | Pre-COVID |
+| 2020 | 100% | COVID step-up |
+| 2024 | 99% | Current |
+| 2026 | 102% | Projection begins |
+| 2035 | 120% | Mid-range projection |
+| 2045 | 147% | |
+| 2053 | 166% | Terminal projection |
 
-- Source: Internal team bios, Feb 2026
+Source: Congressional Budget Office data and GAO simulation.
 
-## Slide 03
+### 2.2 Interest Expense Is Crowding Out Fiscal Flexibility
 
-- Section: FUND STRUCTURE
-- Title: Capital Structure and Deployment Mix
-- Thesis: Stabilized NNN collateral base paired with a liquid structural sleeve for upside participation
+Debt service is now a major budget item and growing faster than revenue. Three series tell this story:
 
-### What This Slide Adds
+**Net interest, program spending, and revenue as % of GDP (2000-2053):**
 
-- The fund is intentionally split into two sleeves: a real-estate collateral base and a liquid structural long portfolio.
-- The real-estate sleeve is built around long-duration, investment-grade NNN leases designed to produce durable cash flow.
-- The structural sleeve concentrates on long-horizon themes in commodities, infrastructure, and technology where physical bottlenecks can drive repricing.
+| Year | Revenue % GDP | Program Spending % GDP | Net Interest % GDP |
+|------|---------------|------------------------|-------------------|
+| 2000 | 20.0% | 15.9% | 2.3% |
+| 2007 | 18.0% | 17.6% | 1.7% |
+| 2009 | 14.6% | 22.7% | 1.3% |
+| 2019 | 16.3% | 19.0% | 2.0% |
+| 2020 | 16.3% | 29.4% | 1.8% |
+| 2024 | 17.1% | 20.3% | 3.1% |
+| 2026 | 18.0% | 19.8% | 3.2% |
+| 2030 | 18.0% | 20.0% | 3.6% |
+| 2035 | 18.6% | 20.7% | 4.1% |
+| 2040 | 18.7% | 21.2% | 4.6% |
+| 2045 | 18.8% | 21.7% | 5.1% |
+| 2050 | 18.9% | 22.1% | 5.6% |
+| 2053 | 19.0% | 22.4% | 5.9% |
 
-### Evidence (Only What Matters)
+**Interest as % of federal revenue (1965-2035):**
 
-- The structure is designed so the collateral sleeve protects the downside while refinance-generated capital funds the upside sleeve.
+For every $5 the government collects, $1 now goes to interest. This ratio has moved from ~7.3% (mid-1960s) to ~18.1% (2024), with projections reaching ~22% by 2035. The long-run low was ~7.0% in the mid-1960s. Projection begins in 2026.
 
-### Source Note
+Key waypoints: 7.3% (1965), 17.5% (1985), 11.5% (2000), 7.2% (2015), 18.1% (2024), 22% (2035 projected).
 
-- Source: Internal fund construction model (target allocation and constraints), Feb 2026
+Source: U.S. Congressional Budget Office, Macrobond, Apollo Chief Economist.
 
-## Slide 04
+### 2.3 The Term Premium Is Back
 
-- Section: FUND STRUCTURE
-- Title: How capital flows through the structure
-- Thesis: 100% equity acquisition → 55% LTV cash-out refinance → structural long portfolio
+After a decade in negative territory, the 10-year term premium has returned to positive levels. Investors are again demanding compensation for holding long-duration government debt.
 
-### What This Slide Adds
+**ACM term premium series highlights:**
+- Peak: ~1.73% (2002)
+- Trough: ~-0.61% (2020)
+- Latest: ~0.60% (January 2026)
 
-- The fund starts by acquiring stabilized NNN property with LP equity.
-- After seasoning and financing optimization, the property is refinanced at target ~55% LTV.
-- Net refinance proceeds are deployed into the structural long portfolio while the property remains the collateral anchor.
-- This is the mechanism that creates a roughly balanced two-sleeve portfolio rather than a pure real-estate fund.
+Recession periods shaded: 2001 (Mar-Nov), 2007-2009 (Dec-Jun), 2020 (Feb-Apr).
 
-### Evidence (Only What Matters)
+Source: Board of Governors of the Federal Reserve System (US) via FRED.
 
-- Illustrative flow: $20.0M LP equity acquires the asset base, then a 55% LTV cash-out refinance releases ~$11.0M.
-- After formation, acquisition, and origination costs (~$0.82M), net redeployment to the structural long sleeve is about $10.18M.
-- In the default underwriting path, this creates near-parity between the real-estate equity base and the structural long sleeve at inception.
+### 2.4 This Is Global, Not Just American
 
-### Mechanics (If Material)
+Japan and the UK are repricing long-run fiscal and monetary constraints simultaneously:
 
-- Sequence is deterministic accounting, not narrative estimation: equity in, asset purchase, refinance proceeds, cost deductions, then long-sleeve deployment.
-- The property remains on balance sheet as collateral and rent engine while the long sleeve carries macro/AI convexity.
+**Japan:**
+- 10-year yield: moved from negative (~-0.28% in 2019) to ~2.21% (2026)
+- USD/JPY: rose from ~77 to ~157, a major yen repricing
+- YCC adjustment: December 2022
 
-### Source Note
+**United Kingdom:**
+- 10-year gilt yield: from ~0.21% (post-pandemic trough) to ~4.48%
+- GBP/USD: fell from ~1.55 to ~1.35, with a trough near 1.13
+- Key events: Brexit (June 2016), Truss mini-budget (September 2022)
+
+Source: FRED, Bank of Japan, Bank of England.
+
+### 2.5 Core Inflation Has Settled Above Target Everywhere
+
+Inflation has not returned to pre-COVID levels across any major developed economy. Every country in this sample sits above the 2% central-bank target:
 
-- Illustrative deployment · $20M LP capital · Upfront costs include formation, acquisition, and origination fees
+| Economy | Pre-COVID (approx) | Peak | Latest (approx) |
+|---------|-------------------|------|-----------------|
+| U.S. | ~2.0% | — | ~2.8% |
+| Euro Area | ~1.1% | ~5.7% (2023) | ~2.5% |
+| UK | ~1.8% | ~7.1% (2023) | ~2.6% |
+| Canada | ~1.9% | ~5.5% (2022) | ~2.5% |
+| Australia | ~1.7% | ~6.8% (late 2022) | ~2.7% |
 
-## Slide 05
+Projection horizon begins: October 2025.
 
-- Section: REAL ESTATE FOUNDATION
-- Title: Illustrative NNN lease opportunities
-- Thesis: The types of properties we target — investment-grade tenants, absolute NNN structure, long-duration cash flows
+Source: Goldman Sachs.
 
-### What This Slide Adds
+### 2.6 Inflation Concentrates Where Supply Cannot Scale
 
-- Typical financing posture is conservative: ~50-60% LTV, multi-year fixed window, and long amortization.
-- Operating plan is to collect rent, season assets, and optimize the debt profile before refinance windows.
-- Sourcing edge is relationship-driven across Florida, Texas, and the Southeast U.S.
-- Underwriting focuses on tenant credit, lease quality, location durability, and replacement-cost support.
+Cumulative price changes by category (2000-2025) show massive dispersion. The things the economy physically needs are the things getting most expensive:
 
-### Source Note
+| Category | Cumulative Change |
+|----------|------------------|
+| Hospital Services | +281.4% |
+| College Tuition | ~+180% |
+| College Textbooks | ~+160% |
+| Childcare | ~+140% |
+| Medical Care | ~+120% |
+| Avg Hourly Wages | ~+100% |
+| Housing | ~+90% |
+| Food & Beverages | ~+80% |
+| Overall CPI | ~+75% |
+| New Cars | ~+40% |
+| Home Furnishings | ~-10% |
+| Clothing | ~-10% |
+| Cell Phone Services | ~-50% |
+| Computer Software | ~-70% |
+| Toys | ~-75% |
+| TVs | -98.1% |
 
-- Illustrative opportunities only — not indicative of current fund holdings · Specific terms subject to negotiation and due diligence
+Dispersion between highest and lowest: 379.5 percentage points. Items where supply scales digitally (TVs, software, phones) have deflated. Items where supply is physically constrained (hospitals, housing, energy) have compounded upward.
 
-## Slide 06
+Source: Bureau of Labor Statistics.
 
-- Section: REAL ESTATE FOUNDATION
-- Title: NNN leases in Florida: structure and financing
-- Thesis: The asset, location edge, and debt profile
+### 2.7 Policy Uncertainty Is Structural, Not Episodic
 
-### What This Slide Adds
+Four independent uncertainty indicators all remain well above their long-run baselines:
 
-- Triple-net (NNN): the tenant pays property taxes, insurance, and maintenance. The landlord collects rent with low operating leakage.
-- Target tenants are investment-grade corporates on long-duration leases with built-in rent escalators.
-- The financing design explicitly plans for year-10 refinance/balloon risk instead of assuming frictionless exits.
-- The strategic purpose of the sleeve is stability: contractual rent and collateral value support the full portfolio through cycles.
+| Indicator | January 2026 Value | Baseline | Multiple of Baseline |
+|-----------|-------------------|----------|---------------------|
+| Trade Policy Uncertainty | 2,205 | 100 | 22.1x |
+| Fiscal Policy Uncertainty | 438 | 100 | 4.4x |
+| Geopolitical Risk Index | 164 | 100 | 1.6x |
+| CBOE VIX | 22 | 20 | 1.1x |
 
-### Evidence (Only What Matters)
+Source: Baker, Bloom & Davis (EPU, TPU, Fiscal); Caldara & Iacoviello (GPR); CBOE (VIX).
 
-- Florida net domestic migration in the sample rises from about 235k to about 380k, with a recent peak near 444k (2022) and trough near 210k (2020).
+### 2.8 The U.S. Still Grows — But Growth Alone Doesn't Solve the Problem
 
-### Mechanics (If Material)
+**Growth leadership:**
+- 2026 GDP: U.S. 2.4% vs Eurozone 1.3%, Japan 0.7%, UK 1.3%
+- Labor productivity: +4.9% annualized in Q3 2025
+- S&P 500 net margin: 13.2% in Q4 2025, fifth straight quarter of double-digit earnings growth
+- New business applications: 5.48M in 2023, 48% above pre-pandemic
+- VC deployed: $215B in 2024 (+29% YoY)
+- Household net worth: $173T, debt service at 11.3% of disposable income
+- R&D: $892B in 2022 (est. $940B in 2023), 3.43% of GDP
 
-- Baseline assumptions: $20M property value, 6.0% entry cap, 55% LTV, 5.5% loan rate, 30-year amortization, 10-year hold, 1.5% NOI growth.
-- Annual NOI and debt service are modeled year by year; surplus cash is tracked explicitly and compounded at a treasury proxy.
-- Balloon exposure is treated as a first-order risk variable, not a residual footnote.
-- Default-case reference outputs: annual debt service ~$0.749M, year-10 cumulative surplus ~$6.211M, year-10 balloon ~$9.08M.
+**Energy and AI capital dominance:**
+- LNG exports: 111 MMT in 2025, first above 100 MMT globally
+- Crude: 13.5M bbl/d, net energy export at record 7.8 quads
+- Private AI investment: $109B (2024) vs China's $9.3B
+- Notable AI models: U.S. produced 40 vs China's 15
+- CHIPS Act: $380B+ in private semiconductor commitments; TSMC Arizona 4nm in high-volume output
+- U.S. equities: 50.2% of global market cap; 63 of world's 100 largest public companies
 
-### Source Note
+**But the vulnerabilities are deep:**
+- 46 nonfuel minerals above 50% import reliance, 15 at 100%. China controls ~90% of rare-earth refining.
+- Taiwan holds ~92% of sub-10nm chip capacity. U.S. reshoring scales mostly in 2027-2031.
+- Only 16% of pharmaceutical API facilities are domestic (down from 28% in 2019).
+- Agriculture in persistent deficit (-$32B FY2024).
+- Infrastructure scored C overall in 2025; half of categories in D range with a $3.7T investment gap.
 
-- Source: U.S. Census Bureau; BEA; Florida Dept. of Revenue; market financing terms as of Q1 2026
+**Fiscal math is unforgiving:**
+- USD reserve share: declined to 58% from a 72% peak in 2001
+- All three agencies downgraded U.S. sovereign credit (S&P 2011, Fitch 2023, Moody's 2025) — no AAA remains
+- U.S. 1-year CDS reached ~52 bps in May 2025, briefly pricing near BBB+-style sovereign risk
+- Social Security and Medicare trust-fund depletion timelines both moved to 2033
+- BRICS: 11 members and 10 partners, 44% global GDP PPP
+- Inequality: Gini ~0.48, top 1% holding 30.5% of wealth vs 2.5% for bottom 50%
 
-## Slide 07
+**The tension:** The U.S. can still grow, but the growth path leans on fiscal expansion, AI-driven labor disruption, and commodity-intensive reindustrialization. That can raise GDP while also increasing deficits, inflation sensitivity, and policy-volatility beta. Growth alone is not a fiscal exit.
 
-- Section: LONG STRUCTURE PORTFOLIO SLEEVE
-- Title: Two foundational macro views for the long portfolio
-- Thesis: Two foundational macro views for the long portfolio
+Source: IMF WEO and COFER; BLS; Treasury TBAC; FactSet; Census; NCSES/NSF; Federal Reserve; NVCA; EIA; Stanford HAI; SIFMA; USGS; IEA; WGC; CBO; SSA; Pew; EIU (compiled Feb 2026).
 
-### What This Slide Adds
+---
 
-- AI displaces labor income that funds the majority of sovereign tax revenue, widening deficits through the political response.
-- The buildout consumes scarce physical resources inside a fiscal regime with shrinking capacity to absorb supply shocks.
-- The fund is positioned at this intersection: hard-asset demand driven by technological buildout compounding with hard-asset repricing driven by monetary erosion.
+## 3. The Case for Real Assets
 
-### Source Note
+### 3.1 Gold Has Overtaken Treasuries in Central Bank Reserves
 
-- Source: World Gold Council Gold Demand Trends FY2025; hyperscaler earnings/guidance (Q4 2025 to Q2 FY2026); S&P Global Market Intelligence (2024)
+Sovereign reserve managers are actively diversifying away from dollar-denominated debt. The crossover happened in the 2020-2025 window:
 
-## Slide 08
+- Central-bank gold holdings: ~$1.8T (2020) → ~$5.1T (late 2025)
+- Treasury holdings: ~$4.05T (2020) → ~$3.6T (late 2025)
 
-- Section: SECTION DIVIDER
-- Title: MACRO SHIFT
-- Thesis: The repricing of real assets
+Source: IMF, Department of Treasury.
 
-### What This Slide Adds
+### 3.2 Central Bank Gold Buying Is Structural
 
-- The repricing of real assets
+Annual net purchases exceeded 1,000 tonnes in three consecutive years (2022, 2023, 2024) and remained elevated at ~863 tonnes in 2025. Years 2022-2024 are the highlighted period. Net purchases include both reported and estimated unreported activity.
 
-## Slide 08 (convexity)
+Source: World Gold Council, Gold Demand Trends FY2025.
 
-- Section: WHAT WE EXPECT & FUND TERMS
-- Title: Scenario matrix
-- Thesis: How the portfolio performs across macro regimes
+### 3.3 The Gold-Rate Relationship Broke in 2022
 
-### What This Slide Adds
+Gold traditionally moved inversely with real yields. That relationship broke after January 2022. Gold reached new highs in the sample even as real 10-year yields repriced sharply higher from their 2021 lows. Gold is now priced as a hedge against institutional and sovereign risk, not against rate levels.
 
-- Capital controls, financial repression, and fiscal dominance converge. Governments direct credit and restrict cross-border flows. Hard assets become the only credible store of value as nominal instruments are subordinated to sovereign funding needs.
-- Hyperscaler capex floods into data centers, grid upgrades, and mineral supply chains. Physical bottlenecks — copper, transformers, cooling water — tighten even as productivity gains accelerate. Hard-asset holders benefit from both rising demand and scarcity premiums.
-- Supply chains re-shore and duplicate across blocs, multiplying demand for physical capacity. Mineral and energy bottlenecks reach their most acute levels as every region races to build parallel infrastructure simultaneously.
-- Yield-curve control pins rates below inflation, engineering negative real returns for savers. Capital migrates toward gold, farmland, and energy infrastructure — the only assets that preserve purchasing power when the sovereign deliberately debases its own currency.
+Source: Federal Reserve, Bloomberg.
 
-### Source Note
+### 3.4 Priced in Gold, U.S. Equities Have Made No Progress Since the GFC
 
-- Source: Stack Capital internal scenario analysis (February 2026)
+The S&P 500-to-gold ratio fell from ~100 to ~67 on the index basis (Q1 2006 = 100). Equities have kept pace with money supply growth but not with real store-of-value assets.
 
-## Slide 09
+Source: S&P Global, LBMA, IndexMundi.
 
-- Section: MACRO THESIS
-- Title: Federal debt is no longer cyclical it's structural
-- Thesis: Fiscal spending is politically driven and structurally uncontrolled, backstopped by a Federal Reserve balance sheet that has expanded 10x since 2008
+### 3.5 New Supply Cannot Respond for Decades
 
-### What This Slide Adds
+Mine development timelines have tripled in three decades. Even if demand signals are clear today, new supply is physically constrained:
 
-- Fiscal spending is politically driven and structurally uncontrolled, backstopped by a Federal Reserve balance sheet that has expanded 10x since 2008
+| Period | Years to Production | Category |
+|--------|-------------------|----------|
+| 1990s | ~6 years | Operating |
+| 2000s | ~10 years | Operating |
+| 2010s | ~15 years | Operating |
+| Recent operating | ~18 years | Operating |
+| Non-operating (projected) | ~28 years | Projected |
 
-### Evidence (Only What Matters)
+Study of 268 mines across 23 countries.
 
-- U.S. federal debt-to-GDP rises from ~10% (1900) to ~166% (2053 projection), with a post-2020 step-up and continued upward slope.
-- Historic trough in the long-run data: ~4% (1916).
-- Projection period begins in 2026.
+Source: S&P Global Market Intelligence (2024).
 
-### Mechanics (If Material)
+### 3.6 China Refines 19 of 20 Strategic Minerals
 
-- All forward values cited for this page begin with the 2026 projection horizon.
+China's refining share across IEA-tracked strategic minerals sits in the 75-100% band. Average market share: ~70%. Gallium: 98.7%. Magnesium: 95%. Rare earths: ~90%. Supply concentration is broad, not isolated to niche inputs.
 
-### Source Note
+Source: IEA Critical Minerals report.
 
-- Source: Congressional Budget Office data and GAO simulation
+### 3.7 Critical Mineral Demand Is Accelerating
 
-## Slide 10
+Under the IEA's Stated Policies (STEPS) scenario, every tracked mineral faces a supply gap:
 
-- Section: MACRO THESIS
-- Title: Interest expense is now a major budget item
-- Thesis: Debt service crowds out fiscal flexibility and narrows the policy toolkit. Deficits persist even in expansions
+**Demand index (2024 = 100):**
 
-### What This Slide Adds
+| Mineral | 2024 | 2030 | 2035 | 2040 |
+|---------|------|------|------|------|
+| Lithium | 100 | ~222 | ~340 | ~453 |
+| Cobalt | 100 | ~155 | ~210 | ~270 |
+| Nickel | 100 | ~145 | ~195 | ~250 |
+| Copper | 100 | ~117 | ~122 | ~128 |
 
-- Debt service crowds out fiscal flexibility and narrows the policy toolkit. Deficits persist even in expansions
+Copper is the largest tonnage bottleneck at ~26.7 Mt of 2024 demand. Lithium starts from a smaller base (~0.205 Mt) but grows fastest. Both growth rate and absolute scale matter for underwriting supply gaps.
 
-### Evidence (Only What Matters)
+**Copper supply-demand gap:** Demand rises from ~27 Mt (2024) to ~34.1 Mt (2040) while modeled supply declines toward ~22 Mt. By 2035, the implied deficit is ~27% — even if every announced project proceeds.
 
-- Net interest as % of GDP rises from ~2.3% (2000) to ~5.9% (2053 projection).
-- Program spending stays elevated and revenues remain relatively flat, which narrows fiscal room as interest grows.
-- Net interest rises from about 2.3% of GDP to about 5.9%.
-- Program spending rises from about 15.9% of GDP to about 22.4%.
-- Revenue in this path moves from about 20.0% of GDP to about 19.0%.
+Source: IEA Global Critical Minerals Outlook 2025 (STEPS scenario), BloombergNEF.
 
-### Mechanics (If Material)
+### 3.8 Silver, Copper, and Uranium Are Repricing on Structural Demand
 
-- All forward values cited for this page begin with the 2026 projection horizon.
+Since the 2022 trough, copper has rebounded to ~144 on the index basis while silver has risen toward ~299. The repricing is driven by converging demand from electrification, AI infrastructure, and reshoring:
 
-### Source Note
+- **Copper:** EVs, solar buildout, and AI data centers all push demand higher. Supply remains slow because major new mines take nearly two decades.
+- **Silver:** Industrial demand exceeds mine supply for the fourth consecutive year. Solar consumes ~20% of annual production while monetary demand rises.
+- **Uranium:** Nuclear capacity expansion and hyperscaler interest in baseload power increase long-cycle fuel demand after a decade of underinvestment.
 
-- Source: Congressional Budget Office data and GAO simulation
+U.S. industrial policy compounds pressure: $280B (CHIPS), $370B (IRA), and $1.2T (IIJA) in capex-heavy buildout. Trade policy and export controls amplify pressure on already tight commodity chains.
 
-## Slide 11
+Source: Yahoo Finance futures (SI=F, HG=F) through February 9, 2026; FRED PURANUSDM through December 2025.
 
-- Section: MACRO THESIS
-- Title: For every $5 the government collects, $1 goes to interest
-- Thesis: Interest expense now compounds the deficit through higher issuance and reduced fiscal flexibility
+---
 
-### What This Slide Adds
+## 4. The AI Infrastructure Buildout
 
-- Interest expense now compounds the deficit through higher issuance and reduced fiscal flexibility
+### 4.1 Why AI Matters for This Portfolio
 
-### Evidence (Only What Matters)
+AI is a demand driver for the same scarce physical resources the macro regime is already repricing:
 
-- Interest expense rises from ~7.3% of federal revenues (1960s) to ~22% (2035 projection).
-- Net interest also moves closer to core program spending levels, reinforcing crowd-out risk.
-- Long-run low in this federal-revenue ratio: ~7.0% (mid-1960s).
-- Projection period begins in 2026.
+| Metric | Value | Context |
+|--------|-------|---------|
+| Power demand | 120 GW | Projected U.S. data center load by 2029 (from 4.3 GW in 2023) |
+| Copper intensity | 5-10x | More copper per MW in data centers than traditional buildings |
+| Capex cycle | $600B+ | Big-4 hyperscaler 2026 capex guidance |
 
-### Mechanics (If Material)
+**Electricity consumption comparison (China vs U.S.):**
+- China: ~1,356 TWh (2000) → ~10,400 TWh (2025) — showing the scale of power demand that accompanies industrial buildout
+- U.S.: ~3,802 TWh (2000) → ~4,260 TWh (2025) — comparatively flat, which is why incremental AI load strains a slower-growing base system
 
-- All forward values cited for this page begin with the 2026 projection horizon.
+Source: IEA; Goldman Sachs; Ember; EIA; company earnings disclosures (2026).
 
-### Source Note
+### 4.2 The AI Value Chain: 12 Layers, 75+ Nodes
 
-- Source: U.S. Congressional Budget Office, Macrobond, Apollo Chief Economist
+The fund maps the full AI infrastructure stack from raw materials to end-user access. Investment framing: physical bottlenecks first, capability conversion second, recurring monetization last.
 
-## Slide 12
+| Layer | Name | Nodes | Key Insight |
+|-------|------|-------|-------------|
+| 0 | Raw Materials, Mining & Industrial Inputs | 13 | Hard assets and permitting cadence set the supply ceiling |
+| 1 | Semiconductor Equipment & Manufacturing Materials | 9 | Lithography, deposition, and wafer supply |
+| 2 | Chip Design & Semiconductor Manufacturing | 8 | TSMC, NVIDIA, AMD, Intel, Broadcom |
+| 3 | Passive Components, Substrates & Board-Level Supply | 4 | CoWoS, HBM, PCB |
+| 4 | Hardware Systems, Storage & Integration | 3 | Server assembly, storage, integration |
+| 5 | Datacenter Physical Infrastructure | 14 | Cooling, racks, UPS, fire suppression |
+| 6 | Power Generation, Grid & Energy Infrastructure | 9 | Gas turbines, nuclear, solar, transmission |
+| 7 | Fiber, Networking & Connectivity | 7 | Fiber, switches, subsea cables |
+| 8 | Base Software, AI Compute Platforms & Training Infra | 5 | Cloud, orchestration, frameworks |
+| 9 | Model Development, Data & AI Research | 3 | Labs, datasets, research |
+| 10 | AI Software, Applications & Deployment | 4 | Enterprise AI, vertical apps |
+| 11 | Distribution, Edge & End-User Access | 2 | Consumer devices, edge compute |
 
-- Section: MACRO THESIS
-- Title: The term premium is back
-- Thesis: After a decade of suppression, investors are again demanding compensation for holding long-duration government debt.
+Portfolio capture favors the constrained physical layers (0-6) before downstream software margins normalize.
 
-### What This Slide Adds
+Source: IEA Critical Minerals Outlook 2025; SEMI World Fab Forecast Q1 2026; TrendForce Q2 2025; public earnings (NVDA, TSMC, ASML, EQIX FY25-26).
 
-- After a decade of suppression, investors are again demanding compensation for holding long-duration government debt.
+### 4.3 Capability Is Still Compounding
 
-### Evidence (Only What Matters)
+AI capabilities are not plateauing — they're climbing steeply on harder benchmarks:
 
-- 10-year term premium moved from negative territory in 2020 to positive territory by 2026, indicating investors again demand duration compensation.
-- Term premium range in sample: peak ~1.73 (2002), trough ~-0.61 (2020).
-- Latest value in the series: ~0.60 (2026-01).
+- **ECI frontier benchmark score:** 0.124 (June 2023) → 0.722 (December 2025), about 5.8x in 30 months
+- **METR task horizon:** AI can now complete tasks that take humans ~6.5 hours (GPT-5.2). The horizon is doubling every 4.3 months. Median solvable task duration rose from ~0.001h to ~3.943h, with peak at ~6.573h.
 
-### Source Note
+Source: Epoch AI Capabilities Index; METR Horizon v1.1 benchmark.
 
-- Source: Board of Governors of the Federal Reserve System (US) via FRED. Shaded areas indicate U.S. recessions.
+### 4.4 Adoption Is Unprecedented
 
-## Slide 13
+**Consumer:**
+- ChatGPT weekly active users: ~50M (Mar 2023) → ~900M (Dec 2025)
 
-- Section: MACRO THESIS
-- Title: This is not just the US
-- Thesis: Japan and the UK are repricing long-run constraints
+**Enterprise:**
+- OpenAI: 1M+ business customers (from under 1K two years prior)
+- Anthropic: 300K+ business customers
+- Google Cloud: 65% of customers using AI
+- Cloud AI backlog: roughly doubled to ~$240B
 
-### What This Slide Adds
+Source: OpenAI (Nov 2025); Anthropic (Sep 2025); Google (Q4 2025 earnings); The Information (Dec 2025); Menlo Ventures.
 
-- Japan and the UK are repricing long-run constraints
+### 4.5 Revenue Is Materializing Faster Than Any Prior Technology Wave
 
-### Evidence (Only What Matters)
+| Company | Start ARR | Latest ARR | Timeframe |
+|---------|-----------|------------|-----------|
+| OpenAI | ~$28M | ~$20B | ~3 years |
+| Anthropic | ~$100M | ~$9B (est. low double-digit) | ~2 years |
+| xAI | ~$100M | ~$428M | ~1 year |
 
-- GBP/USD falls from about 1.55 to 1.35 in the period shown, with a post-Brexit/energy-shock trough near 1.13.
-- Japan 10-year yields move from sub-1% levels to about 2.21%, including a negative-rate trough near -0.28% (2019).
-- USD/JPY rises from roughly 77 to 157, showing a major yen repricing versus the dollar.
-- UK 10-year yields rise from about 2.11% to 4.48%, after a post-pandemic trough near 0.21%.
+Source: Epoch AI; company disclosures; The Information; Bloomberg; CNBC.
 
-### Source Note
+### 4.6 Training Compute and Cost Are Scaling Exponentially
 
-- Source: FRED, Bank of Japan, Bank of England
+**Training compute:** Has grown 5 orders of magnitude since 2017.
+- XLNet-era: ~6.19e21 FLOP
+- Recent frontier (GPT-4.5, Llama 4): ~1.51e25 FLOP
+- Top estimate (Grok 4): ~5.0e26 FLOP
 
-## Slide 14
+**Training cost (in 2023 USD):**
+- Early large models: ~$22K
+- Recent frontier: ~$388M
+- Peak estimate: ~$507M
 
-- Section: MACRO THESIS
-- Title: Core inflation has settled higher than pre-2020 across every major DM economy
-- Thesis: Inflation has not returned to pre-COVID levels. We appear to be entering a structurally higher regime above the target rate of most major central banks.
+Each generation requires substantially more compute — from roughly 10^21 to 5x10^26 FLOP in less than a decade. Frontier training is now megaproject-scale capex.
 
-### What This Slide Adds
+Highlighted models: GPT-2, GPT-3, GPT-3.5, GPT-4, GPT-4.5, GPT-5, Grok 2, Grok 3, Grok 4, Gemini Ultra, PaLM, PaLM 2, Llama 3.1-405B, Llama 4 Behemoth, Claude 2, Claude 3.5 Sonnet, Claude 3.7 Sonnet, DeepSeek-V3, DeepSeek-R1.
 
-- Inflation has not returned to pre-COVID levels. We appear to be entering a structurally higher regime above the target rate of most major central banks.
+Source: Epoch AI Notable AI Models database.
 
-### Evidence (Only What Matters)
+### 4.7 Hardware Shipments: 32x in Three Years
 
-- Australia core inflation: ~1.7% to ~2.7% (with a ~6.8% peak in late 2022).
-- Canada core inflation: ~1.9% to ~2.5% (with a ~5.5% peak in 2022).
-- Euro area core inflation: ~1.1% to ~2.5% (with a ~5.7% peak in 2023).
-- UK core inflation: ~1.8% to ~2.6% (with a ~7.1% peak in 2023).
+**Accelerator shipments and spend:**
 
-### Mechanics (If Material)
+| Year | Shipments (M units, H100-equiv) | Spend ($B) |
+|------|--------------------------------|------------|
+| 2020 | ~0.05 | ~$2 |
+| 2022 | 0.31 | $11 |
+| 2023 | 1.4 | $37 |
+| 2024 | 5.5 | $113 |
+| 2025 | 10+ | $143 |
+| 2028E | ~35 | ~$350 |
 
-- Central-bank inflation target reference used in this analysis: 2%.
+5.96 GW shipped chip power draw in 2025 (assuming ~600W per accelerator) — roughly six large nuclear plants.
 
-### Source Note
+Source: Company filings and SemiAnalysis estimates.
 
-- Source: Goldman Sachs. Dashed divider marks forecast horizon.
+### 4.8 Hyperscaler Capex Is in Escape Velocity
 
-## Slide 15
+**Big-4 hyperscaler capex ($B):**
 
-- Section: THESIS A - INFLATION REGIME
-- Title: Inflation concentrates where supply can't scale
-- Thesis: Cumulative price change by category, 2000-2025
+| Company | 2016 | 2020 | 2024 | 2025 | 2026E |
+|---------|------|------|------|------|-------|
+| Amazon | $12.4 | — | — | — | ~$200 |
+| Alphabet | $10.9 | — | — | — | ~$180 |
+| Meta | $4.5 | — | — | — | ~$125 |
+| Microsoft | $8.3 | — | — | — | ~$100 |
+| **Total** | **~$36** | — | — | — | **~$605** |
 
-### What This Slide Adds
+2026E = company guidance (META, GOOGL, AMZN) and Bloomberg consensus (MSFT).
 
-- Cumulative price change by category, 2000-2025
+Source: Company earnings (Q4 2025 / Q2 FY2026).
 
-### Evidence (Only What Matters)
+### 4.9 Datacenter Power: From Single-Digit to Triple-Digit GW
 
-- Cumulative category inflation (2000-2025) ranges from +281.4% (Hospital Services) to -98.1% (TVs), showing how inflation concentrates where supply is hardest to scale.
-- High end: Hospital Services +281.4% cumulative change.
-- Low end: TVs -98.1% cumulative change.
-- Dispersion between highest and lowest categories: 379.5 percentage points.
+**Operational AI datacenter power (GW):**
 
-### Source Note
+| Year | Actual GW | Projected GW |
+|------|-----------|-------------|
+| 2023 | 4.3 | — |
+| 2025 | 21 | — |
+| 2029 | — | 120 (projected) |
 
-- Source: Bureau of Labor Statistics
+**Analyst estimates for U.S. datacenter load:**
+- Current (2024-25): range ~50-103 GW across analyst set, midpoint ~62 GW
+- Projected (2030-35): range ~106-230 GW across analyst set
 
-## Slide 16
+Source: RAND / SemiAnalysis / Epoch AI; Energy Institute, JPMAM, PJM Interconnection.
 
-- Section: MACRO THESIS
-- Title: Policy uncertainty is structural, not episodic
-- Thesis: Tariffs, sanctions, and fiscal expansion create persistent repricing across asset classes
+### 4.10 Inference Is the Growing Share
 
-### What This Slide Adds
+Inference share of compute spend is rising from ~10% (2018) toward ~70% by 2030, while training falls from ~90% to ~30%. Models get cheaper per token, but usage grows faster. As workloads shift from single queries to autonomous multi-step agents, inference share compounds and keeps physical infrastructure demand structurally high.
 
-- Tariffs, sanctions, and fiscal expansion create persistent repricing across asset classes
+Source: SemiAnalysis, company disclosures, Epoch AI.
 
-### Evidence (Only What Matters)
+### 4.11 The Grid Cannot Keep Up
 
-- Four uncertainty indicators remain elevated versus long-run baselines, with especially large spikes in trade and fiscal policy uncertainty.
-- Trade Policy Uncertainty: 2,205 (Jan 2026, baseline 100).
-- Fiscal Policy Uncertainty: 438 (Jan 2026, baseline 100).
-- Geopolitical Risk Index: 164 (Jan 2026, baseline 100).
-- VIX: 22 (Jan 2026, baseline 20).
+U.S. interconnection queues: ~350 GW (2014) → ~2,300 GW (current), with a recent peak near 2,600 GW (2023). Average queue-to-commercial timelines stretch 5-7 years. The grid cannot accommodate projected demand without large new transmission investment.
 
-### Source Note
+Source: Lawrence Berkeley National Lab, PJM, EIA.
 
-- Source: Baker, Bloom & Davis (EPU, TPU, Fiscal); Caldara & Iacoviello (GPR); CBOE (VIX); policyuncertainty.com.
+### 4.12 GPU Supply Is a Packaging Story
 
-## Slide 17
+CoWoS advanced packaging and HBM memory are the second chokepoint after leading-edge silicon. Packaging and memory bottlenecks cap delivered compute even when wafer starts expand. HBM capacity per GPU increases with each generation. Capacity pricing power accrues to upstream physical suppliers.
 
-- Section: MACRO THESIS
-- Title: The US still grows. Most developed economies don't
-- Thesis: AI and reindustrialization can drive US GDP growth, but growth alone does not protect the dollar or reverse the fiscal trajectory.
+Source: TSMC earnings, SK Hynix disclosures, SemiAnalysis.
 
-### What This Slide Adds
+### 4.13 AI Lab Compute Spend Is Doubling Annually
 
-- IMF 2026 GDP forecast — roughly 2x the Eurozone and 3x Japan.
-- Most valuable companies globally are American; the US remains the largest oil producer (~13.5M bbl/d).
-- Strategic dependencies now extend beyond minerals into chips, pharma, shipping, and food systems.
-- The US can grow its way forward, but the path runs through fiscal expansion, AI-driven labor disruption, and commodity-intensive reindustrialization. GDP rises, while deficits and inflation pressure can rise with it.
+| Company | 2022 | 2023 | 2024 | 2025E |
+|---------|------|------|------|-------|
+| OpenAI | $0.4B | — | — | ~$16.0B |
+| Anthropic | — | $0.3B | — | ~$6.8B |
 
-### Source Note
+These are estimated compute spend (infrastructure/training/inference cost), not revenue run rate. Every dollar flows into chips, power, and cooling — the physical layer.
 
-- Source: IMF WEO Jan 2026; IMF COFER; EIA; USGS MCS 2025; Stanford HAI AI Index 2025; Pew Research; Census Bureau (compiled Feb 2026).
+Source: Epoch AI, The Information, company disclosures.
 
-## Slide 18
+---
 
-- Section: SECTION DIVIDER
-- Title: THE CASE FOR REAL ASSETS
-- Thesis: Scarcity plus credibility
+## 5. Where These Forces Intersect
 
-### What This Slide Adds
+### 5.1 AI Is Deflationary in Cognition, Inflationary in Everything It Needs
 
-- Scarcity plus credibility
+Physical input demand growth from 2024 to 2030:
 
-## Slide 19
+| Input | Unit | 2024 | 2030 | Growth |
+|-------|------|------|------|--------|
+| Electricity | TWh | 415 | 945 | +128% |
+| Copper | kt | — | — | +76-100% |
+| Aluminum | kt | 400 | 1,100 | +175% |
+| Rare Earths | kt | — | — | +76% |
+| Advanced Packaging | — | — | — | Bottlenecked |
+| Specialized Memory (HBM) | — | — | — | Bottlenecked |
 
-- Section: MACRO THESIS
-- Title: Gold has overtaken Treasuries in central bank reserves
-- Thesis: Sovereign reserve managers are diversifying away from dollar-denominated debt
+Electricity, copper, grid hardware, aluminum, advanced packaging, and specialized memory all face permitting, geopolitical, and supply-chain bottlenecks.
 
-### What This Slide Adds
+Source: IEA, McKinsey, Goldman Sachs commodity research.
 
-- Sovereign reserve managers are diversifying away from dollar-denominated debt
+### 5.2 Labor Displacement Widens Deficits
 
-### Evidence (Only What Matters)
+**AI labor exposure (2025):**
+- Global jobs exposed: 25% (ILO)
+- High-income economies: 34%
+- Low-income economies: 11%
 
-- Central-bank gold holdings rise from about $1.8T (2020) to about $5.1T (late 2025).
-- Treasury holdings decline from about $4.05T to about $3.6T over the same window.
+**Employer planning signals (2030):**
+- 73% plan task automation (WEF)
+- 41% expect workforce reductions (WEF)
 
-### Source Note
+Source: ILO-NASK Generative AI and Jobs Index (2025); World Economic Forum Future of Jobs Report 2025.
 
-- Source: IMF, Department of Treasury
+### 5.3 There Is No Fiscally Neutral Path Through AI Displacement
 
-## Slide 20
+- 84% of FY2024 federal receipts ($4.136T of $4.919T) are tied to labor taxes (individual income + social insurance). VAT, AI-rent, and automation-tax proposals remain exploratory.
+- Federal workforce programs: ~$20B today. Down from ~$60B inflation-adjusted in 1979 while the labor force grew ~50%.
+- SNAP cuts: $187B estimated reduction (2025-2034) after P.L. 119-21 tightened eligibility.
+- OECD active labor market policy spending: U.S. at ~0.1% of GDP vs Denmark at ~1.9%.
 
-- Section: REAL ASSETS - GOLD
-- Title: Central-bank buying stayed elevated in 2025 after three 1,000t+ years
-- Thesis: Annual net change in central-bank gold holdings (tonnes)
+60% of advanced-economy jobs are exposed to AI. The U.S. relies on labor-heavy taxes and has not enacted a replacement tax base at comparable scale.
 
-### What This Slide Adds
+Source: OECD SOCX (2019 baseline); US Treasury; RAND; CRS; CBO; Brookings.
 
-- 2025 figure reflects full-year data (863t). Net purchases include reported and estimated unreported activity.
+### 5.4 Financial Repression Is the Proven Playbook
 
-### Evidence (Only What Matters)
+The historical precedent for sovereign deleveraging through real-rate suppression:
 
-- Annual central-bank net purchases swing from net selling in prior cycles to strong net buying, with 2022-2024 each above 1,000 tonnes.
-- 2022, 2023, and 2024 each exceeded 1,000 tonnes of net purchases.
-- 2025 remained elevated at ~863 tonnes.
+**1946-1980 repression period:**
+- Debt-to-GDP fell from 119% to 32% — a drop of 87 percentage points over 35 years
+- Real rates held below nominal growth, transferring wealth from nominal claim holders to the sovereign
+- No default, no hyperinflation
 
-### Source Note
+**Real annualized returns during repression (1946-1980):**
 
-- Source: World Gold Council, Gold Demand Trends FY2025
+| Asset | Real Return (annualized) |
+|-------|-------------------------|
+| Equities | ~+6.8% |
+| Long-duration Treasuries | ~-2.0% |
+| Real assets | Clustered above nominal bonds |
 
-## Slide 21
+**Today:** U.S. federal debt-to-GDP has surpassed the 1946 wartime peak (123%) for the first time in history. The same real assets that capture value from the AI buildout are the natural hedge against repression.
 
-- Section: MACRO THESIS
-- Title: Priced in gold, US equities have made no progress since the GFC
-- Thesis: Equities have kept pace with money supply growth, but not with real store-of-value assets
+Source: Federal Reserve, BLS, Ibbotson SBBI, Dimson-Marsh-Staunton Global Returns; Dalio (Principles for Navigating Big Debt Crises, 2018).
 
-### What This Slide Adds
+---
 
-- Equities have kept pace with money supply growth, but not with real store-of-value assets
+## 6. Portfolio Construction and Valuation Context
 
-### Evidence (Only What Matters)
+### 6.1 Passive Equity Is No Longer the Core Return Driver
 
-- The S&P 500-to-gold ratio falls from roughly 100 to 67 on the index basis (Q1 2006 = 100), consistent with weaker real progress for equities when measured in hard-money terms.
+At current starting valuations, historical forward real return base rates for broad equity beta are materially compressed:
 
-### Source Note
+**S&P 500 valuation snapshot (February 2026):**
 
-- Source: S&P Global, LBMA, IndexMundi; ratio indexed to Q1 2006 = 100.
+| Metric | Current | Long-Run Mean | Signal |
+|--------|---------|---------------|--------|
+| Shiller CAPE | 40.38 | 17.33 | 98.8th percentile |
+| Trailing P/E | 29.75 | 16.19 | +84% above mean |
+| Dividend Yield | 1.13% | 4.22% | -73% below mean |
 
-## Slide 22
+**Historical next-10Y real returns by starting CAPE:**
 
-- Section: MACRO THESIS
-- Title: The gold-real yield relationship broke in 2022
-- Thesis: Gold is now priced as a hedge against institutional risk, not rates
+| CAPE Bucket | Median Real Return | P25 | P75 | Observations |
+|-------------|-------------------|-----|-----|-------------|
+| <10 | +11.0% | — | — | — |
+| 10-15 | ~+9% | — | — | — |
+| 15-20 | ~+7% | — | — | — |
+| 20-25 | ~+4% | — | — | — |
+| 25-30 | ~+2% | — | — | — |
+| 30-35 | ~+0% | — | — | — |
+| 35-40 | ~-1% | — | — | — |
+| 40+ | -3.45% | -4.41% | -3.03% | 21 |
 
-### What This Slide Adds
+The current CAPE of 40.38 places us in the 40+ bucket, which historically mapped to deeply negative forward returns. In high-starting-valuation regimes, alpha and manager selection matter more than passive beta.
 
-- Gold is now priced as a hedge against institutional risk, not rates
+Source: Robert Shiller online data (Yale) and multpl.com valuation series (captured Monday, February 9, 2026).
 
-### Evidence (Only What Matters)
+### 6.2 How the Portfolio Performs Across Macro Regimes
 
-- Gold reaches new highs in the sample even after real 10-year yields reprice higher versus 2021 lows.
-- The break in the usual inverse relationship appears after 2022: gold keeps strengthening while real yields are no longer collapsing.
+The fund's scenario matrix identifies four convergence paths, all of which favor the portfolio's positioning:
 
-### Source Note
+1. **Fiscal dominance:** Capital controls, financial repression. Governments direct credit and restrict cross-border flows. Hard assets become the only credible store of value as nominal instruments are subordinated to sovereign funding needs.
+2. **AI infrastructure supercycle:** Hyperscaler capex floods into data centers, grid upgrades, and mineral supply chains. Physical bottlenecks tighten. Hard-asset holders benefit from both rising demand and scarcity premiums.
+3. **Trade fragmentation:** Supply chains re-shore and duplicate across blocs, multiplying demand for physical capacity at its most constrained levels.
+4. **Yield-curve control:** Rates pinned below inflation, engineering negative real returns for savers. Capital migrates toward gold, energy infrastructure, and real assets.
 
-- Source: Federal Reserve, Bloomberg
+Source: Stack Capital internal scenario analysis (February 2026).
 
-## Slide 23
+---
 
-- Section: MACRO THESIS
-- Title: Mine development timelines have tripled in three decades
-- Thesis: Even if demand signals are clear today, new supply cannot respond for 18-29 years
+## 7. Research and Monitoring Framework
 
-### What This Slide Adds
+### 7.1 Proprietary Research System
 
-- Even if demand signals are clear today, new supply cannot respond for 18-29 years
+Stack Capital operates a CLI-based autonomous research agent that ingests live data from financial APIs, semiconductor supply-chain trackers, on-chain feeds, and independent research. The agent executes structured analytical skills for investment workflows. Every output is reviewed by a human expert before informing portfolio decisions.
 
-### Evidence (Only What Matters)
+### 7.2 The Monitoring Framework
 
-- Average mine-development timelines expand from roughly 6 years in the 1990s to about 18 years for recent operating projects, with non-operating projects near 28 years.
+The system tracks 3 macro trends → 13 hypotheses → 39 KPIs → 13 scenario sets → 40 scenarios → 188 validation checks. Each hypothesis has a testable claim, tier classification, monitoring cadence, dependency links, graded KPIs, and a scenario set with explicit persistence rules.
 
-### Source Note
+---
 
-- Source: S&P Global Market Intelligence - Study of 268 mines across 23 countries (2024)
+#### Trend 1: Fiscal Dominance and Real-Asset Repricing (2025-2035)
 
-## Slide 24
+**H-001: Structural Deficit Lock-In** (Tier 1, Monthly)
+- Claim: U.S. federal deficits remain above 5% of GDP through FY 2030, eliminating fiscal space for counter-cyclical spending.
+- KPIs: CBO deficit/GDP forecast (A, semi-annual), Net interest/revenue ratio (A, monthly), Primary balance trend (B, quarterly)
+- Scenarios: Deficit widens >7% GDP | Holds 5-7% GDP | Consolidation below 5% GDP
+- Persistence: Hold long real-assets unless consolidation confirmed for 2 consecutive quarters.
 
-- Section: MACRO THESIS
-- Title: China refines 19 of the 20 strategic minerals the IEA tracks
-- Thesis: Average market share: ~70%. Gallium: 98.7%. Magnesium: 95%. Rare earths: ~90%
+**H-002: Term Premium Regime Shift** (Tier 1, Weekly)
+- Claim: 10-year term premium sustains above +50 bps, repricing duration assets and favoring short-duration real exposures.
+- Dependencies: requires H-001
+- KPIs: ACM term premium 10Y (A, daily), Treasury auction tail spread (B, per auction), Foreign official holdings trend (B, monthly)
+- Scenarios: Premium >100 bps (fiscal alarm) | 50-100 bps (new normal) | Reverts <50 bps
+- Persistence: Re-underwrite gold and TIPS weighting if premium falls below 50 bps for 4 weeks.
 
-### What This Slide Adds
+**H-003: Inflation Persistence Above Target** (Tier 1, Monthly)
+- Claim: Core PCE remains above 2.5% through 2026 due to fiscal impulse and supply-chain restructuring.
+- Dependencies: amplifies H-001
+- KPIs: Core PCE YoY (A, monthly), Sticky CPI Atlanta Fed (A, monthly), 5Y breakeven rate (B, daily)
+- Scenarios: Core PCE >3% (re-acceleration) | 2.5-3% (sticky above) | <2.5% (disinflation)
+- Persistence: Reduce real-asset overweight only if disinflation sustained 3+ months.
 
-- Refining concentration is broad, not isolated to one or two niche inputs.
+**H-004: Central Bank Gold Accumulation** (Tier 2, Quarterly)
+- Claim: Central bank net gold purchases exceed 800 tonnes/year through 2027 as reserve diversification accelerates.
+- Dependencies: conditional_on H-001, amplifies H-002
+- KPIs: CB net purchases tonnes/qtr (A, quarterly), China PBOC gold holdings (B, monthly), Gold ETF flows (C, weekly)
+- Scenarios: Purchases >1000t (acceleration) | 500-1000t (trend) | <500t (reversion)
+- Persistence: Trim gold allocation if CB purchases fall below 500t for 2 quarters.
 
-### Evidence (Only What Matters)
+**H-005: Commodity Supply Constraint** (Tier 2, Quarterly)
+- Claim: Critical mineral supply deficits (copper, uranium) persist due to 15+ year mine development cycles meeting electrification demand.
+- Dependencies: amplifies H-008
+- KPIs: Copper market balance kt (B, monthly), Uranium spot vs contract premium (B, weekly), Mine permitting pipeline count (C, quarterly)
+- Scenarios: Deficit widens (demand surge) | Deficit steady (structural) | Surplus emerges (demand slowdown)
+- Persistence: Exit commodity longs if surplus sustained 2+ quarters.
 
-- Across the tracked strategic minerals, China’s refining share sits in a high-concentration band (roughly 75%-100%), with several minerals near full dominance.
+---
 
-### Source Note
+#### Trend 2: AI Infrastructure Buildout (2024-2030)
 
-- Source: Various. See IEA Critical Minerals report.
+**H-006: Hyperscaler Capex Supercycle** (Tier 1, Quarterly)
+- Claim: Aggregate Big-4 hyperscaler capex exceeds $250B/year by 2026 and sustains through 2028.
+- KPIs: Big-4 aggregate capex $B/qtr (A, quarterly), Capex guidance revision breadth (A, quarterly), Cloud revenue growth rate (B, quarterly)
+- Scenarios: Capex >$300B (overshoot) | $200-300B (base) | Guidance cut >15%
+- Persistence: Reduce AI infra weight on 2 consecutive quarters of guidance cuts.
 
-## Slide 25
+**H-007: Power Grid Bottleneck** (Tier 1, Monthly)
+- Claim: Data center power demand outpaces grid interconnection capacity, creating a 2-4 year structural lag.
+- Dependencies: requires H-006
+- KPIs: Interconnection queue GW (B, annual), Avg queue-to-commercial years (B, annual), Datacenter power demand GW (B, semi-annual)
+- Scenarios: Bottleneck worsens (queue >3TW) | Persists (structural) | Fast-track policy resolves lag
+- Persistence: Maintain utility/power overweight unless queue clears by >30%.
 
-- Section: REAL ASSETS - DEMAND
-- Title: Critical mineral demand is accelerating across the board
-- Thesis: Under stated policies, lithium demand more than doubles by 2030 and quadruples by 2040. Every mineral in this basket faces a supply gap.
+**H-008: Electrification Demand Inflection** (Tier 1, Monthly)
+- Claim: Combined AI + EV + reshoring electricity demand adds 200+ TWh/year by 2028 in the U.S. alone.
+- Dependencies: amplifies H-007, requires H-005
+- KPIs: U.S. electricity consumption TWh (A, monthly), Industrial load growth % (B, monthly), EV sales penetration % (B, quarterly)
+- Scenarios: Demand surge >250 TWh | Growth 100-250 TWh | Growth <100 TWh
+- Persistence: Re-evaluate electrification thesis if growth falls below 100 TWh for 2 readings.
 
-### What This Slide Adds
+**H-009: Packaging and HBM Chokepoint** (Tier 2, Monthly)
+- Claim: Advanced packaging (CoWoS) and HBM supply remain the binding constraint on GPU shipments through 2026.
+- Dependencies: conditional_on H-006
+- KPIs: CoWoS capacity utilization % (C, monthly), HBM lead-time weeks (C, monthly), NVIDIA datacenter revenue $B (A, quarterly)
+- Scenarios: Bottleneck tightens further | Gradual capacity ramp | Constraint resolves (new entrants)
+- Persistence: Reduce semiconductor overweight if constraint resolves for 2 quarters.
 
-- Under stated policies, lithium demand more than doubles by 2030 and quadruples by 2040. Every mineral in this basket faces a supply gap.
+---
 
-### Evidence (Only What Matters)
+#### Trend 3: Sociopolitical Feedback Loops (2025-2030)
 
-- Relative demand index (2024=100) rises sharply by 2030-2040 across all tracked minerals, with lithium as the steepest curve.
-- Absolute-demand levels show copper as the largest tonnage bottleneck even when its index growth is lower than lithium.
-- By 2030, demand indices span from ~117 (copper) to ~222 (lithium); by 2040 they widen to ~128 (copper) versus ~453 (lithium).
-- In absolute 2024 demand, copper is already the dominant volume (~26.7 Mt) while lithium starts from a much smaller base (~0.205 Mt), which is why both growth and scale matter in underwriting supply gaps.
+**H-010: Trade Fragmentation Persistence** (Tier 1, Monthly)
+- Claim: U.S.-China trade decoupling deepens, raising reshoring costs and sustaining input-price inflation.
+- Dependencies: amplifies H-003
+- KPIs: Effective tariff rate % (A, monthly), U.S. import share from China % (A, monthly), Nearshoring capex announcements $B (C, quarterly)
+- Scenarios: Full decoupling (tech + commodities) | Selective (tech only) | Detente / tariff rollback
+- Persistence: Reduce reshoring beneficiaries if tariff rollback confirmed by executive order.
 
-### Source Note
+**H-011: Policy Uncertainty Regime** (Tier 2, Monthly)
+- Claim: EPU stays elevated (>150) through 2026, compressing equity multiples for policy-sensitive sectors.
+- Dependencies: amplifies H-010, conditional_on H-001
+- KPIs: Baker-Bloom EPU Index (A, monthly), VIX term structure slope (B, daily), Fed funds futures implied vol (B, daily)
+- Scenarios: EPU >200 (crisis mode) | 100-200 (elevated) | <100 (calm)
+- Persistence: Increase hedging allocation if EPU >200 sustained for 2 months.
 
-- Source: IEA Global Critical Minerals Outlook 2025 (STEPS scenario)
+**H-012: Labor Market Structural Shift** (Tier 2, Quarterly)
+- Claim: AI-driven automation accelerates white-collar job displacement while blue-collar labor remains tight, widening wage divergence.
+- Dependencies: conditional_on H-006, amplifies H-010
+- KPIs: White-collar job openings JOLTS (A, monthly), AI automation exposure index (C, annual), Wage growth services vs goods % (B, monthly)
+- Scenarios: Rapid displacement (>5% YoY) | Gradual transition | Absorption (new roles emerge)
+- Persistence: Review thesis if white-collar openings recover for 3 consecutive months.
 
-## Slide 26
+**H-013: Equity Valuation Compression** (Tier 1, Monthly)
+- Claim: S&P 500 CAPE >30 combined with rising real rates compresses forward returns to <5% annualized over 5 years.
+- Dependencies: requires H-002, amplifies H-003
+- KPIs: Shiller CAPE ratio (A, monthly), Equity risk premium earnings yield minus 10Y (B, daily), S&P 500 forward P/E (A, weekly)
+- Scenarios: CAPE >35 (bubble risk) | 25-35 (expensive) | <25 (mean reversion)
+- Persistence: Increase equity hedges if CAPE >35 sustained for 1 quarter.
 
-- Section: MACRO THESIS
-- Title: Beyond gold: silver, copper, and uranium are repricing on structural demand
-- Thesis: Electrification, AI infrastructure, and reshoring are converging on the same constrained supply chains
+---
 
-### What This Slide Adds
+**Dependency network:** 14 cross-hypothesis edges across all three trends:
+- H-002 requires H-001
+- H-003 amplifies H-001
+- H-004 conditional_on H-001, amplifies H-002
+- H-005 amplifies H-008
+- H-007 requires H-006
+- H-008 amplifies H-007, requires H-005
+- H-009 conditional_on H-006
+- H-010 amplifies H-003
+- H-011 amplifies H-010, conditional_on H-001
+- H-012 conditional_on H-006, amplifies H-010
+- H-013 requires H-002, amplifies H-003
 
-- EVs, solar buildout, and AI data centers all push demand higher. Supply remains slow because major new mines take nearly two decades to scale.
-- Industrial demand exceeds mine supply for the fourth consecutive year. Solar consumes about 20% of annual production while monetary demand rises.
-- Nuclear capacity expansion and hyperscaler interest in baseload power increase long-cycle fuel demand after a decade of underinvestment.
-- US industrial policy is deploying $280B (CHIPS), $370B (IRA), and $1.2T (IIJA) into capex-heavy buildout. Trade policy and export controls amplify pressure on already tight commodity chains.
+KPI grading: A = institutional source, high frequency | B = reliable but less frequent | C = industry estimates or annual.
 
-### Evidence (Only What Matters)
+### 7.3 Gate-Based Underwriting
 
-- Since the 2022 trough window, copper rebounds to roughly 144 on the index basis while silver rises toward ~299, signaling a broad repricing across industrial and monetary metals.
+Every position passes through institutional gates with explicit failure conditions:
 
-### Source Note
+1. End-market growth must remain durable through an entire cycle.
+2. No plausible forced-seller path under adverse rates, spreads, or volumes.
+3. Return profile must clear hurdle rates without multiple-expansion heroics.
+4. Scarcity duration must exceed what current valuation already discounts.
 
-- Source: Yahoo Finance futures monthly closes (SI=F, HG=F) through February 9, 2026; FRED PURANUSDM (IMF uranium price) through December 2025
+Source: Internal IC underwriting playbook (v2026.02).
 
-## Slide 27
+---
 
-- Section: SECTION DIVIDER
-- Title: THE AI BUILDOUT
-- Thesis: The largest infrastructure deployment since electrification - compounding fiscal, energy, and commodity pressures already in motion.
+## 8. Fund Terms
 
-### What This Slide Adds
+| Term | Detail |
+|------|--------|
+| Strategy | Liquid global macro, quant and value-oriented |
+| Instruments | Equities, commodities, FX, bonds, crypto, and derivatives |
+| Liquidity | Fully liquid under normal market conditions |
+| Management Fee | 2.00% per annum on average daily NAV, accrued daily |
+| Performance Fee | 20% with 5% annual hard hurdle |
+| Catch-Up | Full catch-up provision |
+| High-Water Mark | Investor-level |
+| Subscriptions | Quarterly, effective last business day of each calendar quarter |
+| Redemptions | Quarterly, minimum 60-day notice, 60-90 day effective window |
+| Soft Lock-Up | 12 months from subscription date |
+| Early Redemption Fee | 3%, paid to the fund (not the manager) |
+| Gates | No fund-level gate at launch; may be introduced if capital concentration increases |
+| Position Limits | 10% single-position maximum |
+| Leverage | No margin |
+| Short Selling | No outright shorts |
 
-- The largest infrastructure deployment since electrification - compounding fiscal, energy, and commodity pressures already in motion.
+### Scenario Analysis
 
-## Slide 28
+Interactive model with one control: expected annual return (adjustable from -30% to +50%, default 25%). Tracks six metrics: Gross IRR, Gross MOIC, LP Net IRR, LP Net MOIC, LP Net Profit, GP Carry. Fee structure applied: 2% management fee and 20% carry above 9% preferred return. 10-year fund life.
 
-- Section: AI INFRASTRUCTURE
-- Title: Why AI matters for this portfolio
-- Thesis: Not a technology bet - a physical infrastructure bet. Every GPU cluster needs power, copper, and concrete.
+Source: Internal scenario model. Projections are illustrative.
 
-### What This Slide Adds
+---
 
-- Large-platform 2026 capex guidance points to a multi-year physical infrastructure deployment phase.
-- More copper per MW in data centers than traditional buildings, accelerating existing supply deficits.
-- Projected US data center load by 2029 (from 4.3 GW in 2023), driving power-generation and grid capex.
+## 9. Risk Architecture
 
-### Evidence (Only What Matters)
+**Risk Factors:**
+1. Market risk across concentrated long positions
+2. Crypto and FX volatility at the position level
+3. Liquidity risk in alternative and smaller-cap positions
+4. Correlation risk in macro drawdowns across asset classes
+5. Regulatory and geopolitical disruption to portfolio themes
+6. Key-person risk concentrated in a small team
 
-- China electricity consumption rises from ~1,356 TWh (2000) to ~10,400 TWh (2025), highlighting the scale of power demand that accompanies industrial buildout.
-- U.S. electricity consumption is comparatively flat over the same period (~3,802 to ~4,260 TWh), which reinforces how incremental AI load can strain a slower-growing base system.
+**Structural Mitigants:**
+1. 10% single-position limit enforces diversification
+2. No margin and no outright shorts eliminates forced liquidation risk
+3. Multi-asset class exposure (equities, commodities, crypto, FX, Treasuries)
+4. Conviction positions sized with defined downside tolerance
+5. Quarterly NAV reporting with direct LP-to-GP communication
 
-### Source Note
+**Stress Scenarios:**
 
-- Source: IEA; Goldman Sachs; Ember; EIA; company earnings disclosures (2026)
+| Scenario | Response |
+|----------|----------|
+| -50% portfolio drawdown | No margin means no forced liquidation; fund can wait for recovery |
+| Correlation spike | Multi-asset diversification limits single-scenario drawdown |
+| Liquidity freeze | Long-only structure with no leverage eliminates margin calls |
+| Regime reversal | Conviction positions underwritten with 3-5 year thesis horizon |
 
-## Slide 29
+A long-only, no-leverage structure with position limits creates natural downside protection. The concentrated thesis creates the upside.
 
-- Section: AI INFRASTRUCTURE
-- Title: AI Value Chain: Constraint to Cash-Flow Map
-- Thesis: Investment framing: physical bottlenecks first, capability conversion second, recurring monetization last
+---
 
-### What This Slide Adds
+## 10. Leadership
 
-- Hard assets and permitting cadence set the supply ceiling.
-- Monetization compounds when inference is embedded in workflows.
-- Post-training turns raw capability into reliable production behavior.
-- Portfolio capture tends to favor the constrained physical layers before downstream software margins normalize.
+- **Partner 1:** Oversaw AI automation and ML systems at Kavak, Latin America's largest automotive marketplace. Worked at Angel Ventures, one of the most active VC firms in Latin America, investing across early- and growth-stage companies. Finance, Tecnologico de Monterrey.
+- **Partner 2:** Traded global fixed income, FX, and commodities at Banco de Mexico, managing central bank international reserves. Worked at Seldon Capital, a macro quantitative hedge fund, on trading and research. Master's in Finance, MIT Sloan; Economics, ITAM.
 
-### Source Note
+---
 
-- Sources: TrendForce Q2 2025; IEA Global Critical Minerals Outlook 2025; Menlo Ventures State of GenAI in Enterprise (Jan 2026); public earnings (MSFT, AWS, GOOG, META, NVDA FY2025-26); Mordor Intelligence; S&P Global
-
-## Slide 30
-
-- Section: AI INFRASTRUCTURE
-- Title: Harder benchmarks show capabilities still climbing steeply
-- Thesis: Capability progress continues to open harder commercially relevant tasks and extend the monetization runway
-
-### What This Slide Adds
-
-- Capability progress continues to open harder commercially relevant tasks and extend the monetization runway
-
-### Evidence (Only What Matters)
-
-- Frontier benchmark scores rise sharply over 2023-2025, indicating capability is still compounding rather than plateauing.
-- ECI frontier benchmark score rises from 0.124 to 0.722 (about 5.8x) between June 2023 and December 2025.
-- Task-horizon evidence from the same period shows simultaneous extension into longer-duration tasks.
-
-### Source Note
-
-- Source: Epoch AI Capabilities Index (ECI); performance = best-ever score as of each month
-
-## Slide 31
-
-- Section: THESIS B - SCALING
-- Title: The task horizon is doubling every 4.3 months
-- Thesis: METR Horizon v1.1 - GPT-5.2 can complete tasks that take humans roughly 6.5 hours
-
-### What This Slide Adds
-
-- METR Horizon v1.1 - GPT-5.2 can complete tasks that take humans roughly 6.5 hours
-
-### Evidence (Only What Matters)
-
-- Median solvable task duration expands from near-zero hours to multi-hour tasks over a short model-generation window.
-- METR Horizon p50 task duration rises from near-zero (~0.001h) to ~3.943h in the window shown.
-- Peak model in the shown set reaches ~6.573h solvable horizon.
-
-### Source Note
-
-- Source: METR Horizon v1.1 benchmark; p50 = median task duration where AI succeeds 50% of the time
-
-## Slide 32
-
-- Section: AI INFRASTRUCTURE
-- Title: AI adoption is unprecedented - consumer and enterprise
-- Thesis: ~900M weekly consumer users and 1.3M+ business customers across leading labs. OpenAI leads customer count while Anthropic has material enterprise spend share.
-
-### What This Slide Adds
-
-- Cloud AI backlog has roughly doubled to about $240B.
-- Enterprise seat penetration is rising sharply year over year across major platforms.
-- One leading platform scaled from under 1,000 enterprise customers two years earlier to a seven-figure business-customer base.
-- Consumer demand has reached roughly 900M weekly active users for ChatGPT.
-
-### Evidence (Only What Matters)
-
-- Consumer AI usage rises from roughly 50M weekly users (Mar 2023) to about 900M (Dec 2025), supporting the claim that demand is already at mass scale.
-
-### Source Note
-
-- Source: OpenAI (Nov 2025); Anthropic (Sep 2025); Google (Q4 2025 earnings); The Information (Dec 2025); Menlo Ventures
-
-## Slide 33
-
-- Section: THE AI BUILDOUT - BUSINESS
-- Title: Revenue is already materializing - faster than any prior technology wave
-- Thesis: The market is already paying for model output. OpenAI moved from ~$28M to ~$20B ARR in about three years; Anthropic moved from roughly ~$100M to high-single-digit billions, with recent estimates clustering around the low-double-digit range.
-
-### What This Slide Adds
-
-- The market is already paying for model output. OpenAI moved from ~$28M to ~$20B ARR in about three years; Anthropic moved from roughly ~$100M to high-single-digit billions, with recent estimates clustering around the low-double-digit range.
-
-### Evidence (Only What Matters)
-
-- OpenAI ARR trajectory rises from tens of millions to tens of billions over roughly three years.
-- Anthropic and xAI also show steep ARR ramps, reinforcing that monetization is ecosystem-wide, not single-company.
-- OpenAI ARR rises from about $0.028B to about $20B.
-- Anthropic ARR rises from about $0.1B to about $9B in the plotted series, with later market estimates commonly discussed in the low-double-digit range.
-- xAI ARR rises from about $0.1B to about $0.428B.
-
-### Source Note
-
-- Source: Epoch AI; company disclosures; The Information; Bloomberg; CNBC
-
-## Slide 34
-
-- Section: AI INFRASTRUCTURE
-- Title: Training compute has grown 5 orders of magnitude since 2017
-- Thesis: Each generation requires substantially more compute - from roughly 10^21 to around 5x10^26 FLOP in less than a decade
-
-### What This Slide Adds
-
-- Each generation requires substantially more compute - from roughly 10^21 to around 5x10^26 FLOP in less than a decade
-
-### Evidence (Only What Matters)
-
-- Training compute in the plotted set scales from ~6.19e21 FLOP (XLNet-era) to ~1.51e25 FLOP for recent frontier runs, with a top estimate near ~5.0e26 FLOP (Grok 4).
-
-### Source Note
-
-- Source: Epoch AI Notable AI Models database
-
-## Slide 35
-
-- Section: THESIS B - AI COMPUTE
-- Title: Training costs have crossed $500M - approaching $1B per run
-- Thesis: More compute per model means more chips, power, and cooling. Frontier training is now megaproject-scale capex.
-
-### What This Slide Adds
-
-- More compute per model means more chips, power, and cooling. Frontier training is now megaproject-scale capex.
-
-### Evidence (Only What Matters)
-
-- Estimated training cost in 2023 dollars rises from low-thousands (early large models) to hundreds of millions for frontier runs.
-- In the displayed set, costs move from roughly ~$22k to ~$388M, with a peak estimate near ~$507M.
-
-### Source Note
-
-- Source: Epoch AI Notable AI Models database; costs in 2023 USD
-
-## Slide 36
-
-- Section: AI INFRASTRUCTURE
-- Title: 32x more chips shipped in three years
-- Thesis: Accelerator shipments and associated spend have moved into a steep compounding phase
-
-### What This Slide Adds
-
-- 5.96 GW shipped chip power draw in 2025 (assuming ~600W per accelerator) - roughly six large nuclear plants.
-
-### Evidence (Only What Matters)
-
-- Accelerator spend in this projection rises from about $2B (2020) to roughly $350B (2028E).
-- Unit shipments rise from roughly 0.05M to about 35M over the same window.
-
-### Source Note
-
-- Source: Company filings and SemiAnalysis estimates
-
-## Slide 37
-
-- Section: AI INFRASTRUCTURE
-- Title: Hyperscaler capex is entering escape velocity
-- Thesis: Microsoft, Meta, Alphabet, and Amazon are expected to spend above $600B this year, up materially from 2025 levels.
-
-### What This Slide Adds
-
-- Microsoft, Meta, Alphabet, and Amazon are expected to spend above $600B this year, up materially from 2025 levels.
-
-### Evidence (Only What Matters)
-
-- Alphabet capex scales from about $10.9B (2016) to roughly $180B (2026E).
-- Amazon capex scales from about $12.4B (2016) to roughly $200B (2026E).
-- Meta capex scales from about $4.5B (2016) to roughly $125B (2026E).
-- Microsoft capex scales from about $8.3B (2016) to roughly $100B (2026E).
-
-### Source Note
-
-- Source: Company earnings (Q4 2025 / Q2 FY2026); 2026E = company guidance (META, GOOGL, AMZN) and Bloomberg consensus (MSFT)
-
-## Slide 38
-
-- Section: THESIS B - INFRASTRUCTURE
-- Title: The datacenter buildout is at megaproject scale
-- Thesis: Operational AI datacenter power moves from low single digits to triple digits in GW terms
-
-### What This Slide Adds
-
-- Operational AI datacenter power moves from low single digits to triple digits in GW terms
-
-### Evidence (Only What Matters)
-
-- The directional takeaway is scale: operational AI datacenter load is moving from early single-digit GW deployment toward system-level triple-digit GW requirements.
-
-### Source Note
-
-- Source: RAND / SemiAnalysis / Epoch AI
-
-## Slide 39
-
-- Section: THESIS B - POWER
-- Title: US datacenter load doubles to 130 GW by 2030
-- Thesis: 62 GW consumed in 2025, while capacity market pricing and queue dynamics indicate sustained power scarcity
-
-### What This Slide Adds
-
-- 62 GW consumed in 2025, while capacity market pricing and queue dynamics indicate sustained power scarcity
-
-### Evidence (Only What Matters)
-
-- Across analyst estimates, current U.S. datacenter load clusters around 50-103 GW.
-- The same analyst set points to 106-230 GW in the 2030-2035 window, implying substantial expansion pressure on power infrastructure.
-- Current load range (analyst set): ~50 to ~103 GW.
-- Projected 2030-2035 range (analyst set): ~106 to ~230 GW.
-- Midpoint reference in subtitle: ~62 GW consumed in 2025.
-
-### Source Note
-
-- Source: Energy Institute, JPMAM, PJM Interconnection
-
-## Slide 40
-
-- Section: THESIS B - ECONOMICS
-- Title: Inference is 45% of compute spend and growing
-- Thesis: Agentic workloads turn single prompts into sustained reasoning sessions
-
-### What This Slide Adds
-
-- Models get cheaper per token, but usage grows faster. As workloads shift from single queries to autonomous multi-step agents, inference share compounds and keeps physical infrastructure demand elevated.
-
-### Evidence (Only What Matters)
-
-- Inference share rises from about 10% (2018) toward roughly 70% by 2030 in the base path, while training share falls from ~90% toward ~30%.
-- The key implication is not lower spend overall, but a larger persistent-runtime component that keeps power and hardware demand structurally high.
-
-### Source Note
-
-- Source: SemiAnalysis, company disclosures, Epoch AI
-
-## Slide 41
-
-- Section: SECTION DIVIDER
-- Title: WHY THESE FORCES COMPOUND
-- Thesis: The intersection of macro shift and AI infrastructure
-
-### What This Slide Adds
-
-- The intersection of macro shift and AI infrastructure
-
-## Slide 42
-
-- Section: AI INFRASTRUCTURE
-- Title: AI is deflationary in cognition. Inflationary in everything it needs to run
-- Thesis: Physical bottlenecks are now the real constraint layer
-
-### What This Slide Adds
-
-- Electricity, copper, grid hardware, aluminum, advanced packaging, and specialized memory all face permitting, geopolitical, and supply-chain bottlenecks.
-
-### Evidence (Only What Matters)
-
-- Input-demand growth from 2024 to 2030 is large across electricity, copper, aluminum, and memory-linked bottlenecks.
-- Labor-exposure and automation-intent data are simultaneously elevated, reinforcing the macro-labor channel.
-- From 2024 to 2030, modeled input growth runs from roughly +76% (rare earths) to roughly +175% (aluminum) in the input set.
-- Electricity example: about 415 (2024) rising to about 945 (2030).
-- Aluminum example: about 400 (2024) rising to about 1,100 (2030).
-
-### Source Note
-
-- Source: IEA, McKinsey, Goldman Sachs commodity research
-
-## Slide 43
-
-- Section: INTERSECTION - LABOR
-- Title: Labor exposure is broad and automation plans are accelerating
-- Thesis: Sourced values only: 2025 labor exposure and 2030 employer planning signals
-
-### What This Slide Adds
-
-- ILO's 2025 index puts exposure at 25% globally (34% in high-income economies; 11% in low-income). WEF reports 73% of employers plan task automation and 41% expect workforce reductions by 2030.
-
-### Evidence (Only What Matters)
-
-- ILO estimates around 25% of global jobs are exposed to generative AI (34% in high-income economies; 11% in low-income).
-- WEF reports that 73% of employers plan task automation by 2030, while 41% expect workforce reductions.
-
-### Source Note
-
-- Source: ILO-NASK Generative AI and Jobs Index (2025); World Economic Forum Future of Jobs Report 2025
-
-## Slide 44
-
-- Section: INTERSECTION - FISCAL
-- Title: There is no fiscally neutral path through AI displacement
-- Thesis: Labor-heavy tax systems face rising automation pressure
-
-### What This Slide Adds
-
-- 60% of advanced-economy jobs are exposed to AI. UBI-style responses are possible in theory, but the US still relies on labor-heavy taxes and has not enacted a replacement tax base at comparable scale.
-- Down from roughly $60B inflation-adjusted in 1979 while the labor force grew about 50%. Core WIOA Titles I and II are about $6B.
-- Individual income plus social insurance receipts were $4.136T of $4.919T. VAT, AI-rent, and automation-tax proposals remain exploratory in current US federal policy.
-- P.L. 119-21 tightened eligibility and work rules while shifting costs to states. CBO estimated 2.4M fewer SNAP participants in an average month.
-
-### Evidence (Only What Matters)
-
-- OECD social-spending benchmarks show large cross-country dispersion for labor-transition support: near 0.1% of GDP in the U.S. versus roughly 1.9% in Denmark.
-
-### Source Note
-
-- Source: OECD SOCX (2019 baseline); US Treasury; RAND; CRS; CBO; Brookings
-
-## Slide 45
-
-- Section: INTERSECTION - ENDGAME
-- Title: Financial repression is the proven playbook for sovereign deleveraging
-- Thesis: Real rates below nominal growth transfer wealth from nominal claims to the sovereign
-
-### What This Slide Adds
-
-- Debt-to-GDP fell 87 percentage points over 35 years of negative real rates, without default or hyperinflation.
-- Real rates held below nominal growth for decades, silently transferring wealth from holders of nominal claims to the government. The same real assets that capture value from the AI buildout are the natural hedge.
-- US federal debt-to-GDP has surpassed the 1946 wartime peak for the first time in history.
-- Real annualized returns during financial repression (1946-1980)
-
-### Evidence (Only What Matters)
-
-- During the 1946-1980 repression period highlighted, long-duration Treasuries delivered about -2% real annualized returns while equities delivered about +6.8%, with real assets generally clustering above nominal bonds.
-
-### Source Note
-
-- Source: Federal Reserve, BLS, Ibbotson SBBI, Dimson-Marsh-Staunton Global Returns; Dalio (Principles for Navigating Big Debt Crises, 2018)
-
-## Slide 46
-
-- Section: SECTION DIVIDER
-- Title: How We Underwrite
-- Thesis: How we source, diligence, structure, size, and monitor positions across both the real-estate and long structural sleeves.
-
-### What This Slide Adds
-
-- How we source, diligence, structure, size, and monitor positions across both the real-estate and long structural sleeves.
-
-## Slide 47
-
-- Section: HOW WE UNDERWRITE
-- Title: Proprietary research system powered by a long-horizon AI agent
-- Thesis: A CLI-based autonomous agent ingests live data from financial APIs, semiconductor supply-chain trackers, on-chain feeds, and independent research, then executes structured analytical skills for investment workflows. Every output is reviewed by a human expert before informing portfolio decisions.
-
-### What This Slide Adds
-
-- The system is designed to shorten research cycle time while preserving human decision control.
-
-### Source Note
-
-- Source: Internal research system architecture and workflow design
-
-## Slide 48
-
-- Section: HOW WE UNDERWRITE
-- Title: What we track
-- Thesis: Three signal towers feed one decision engine: buildout velocity, macro constraints, and market regime
-
-### What This Slide Adds
-
-- The monitoring system is organized into three signal towers: AI buildout velocity, macro-constraint regime, and market-regime/positioning.
-- AI buildout signals include hyperscaler capex revision breadth, grid queue conversion pace, packaging/HBM tightness, and training-to-inference mix.
-- Macro signals include term premium and curve structure, real-rate vs breakeven decomposition, debt-service burden, and commodity supply-response lag.
-- Market signals include valuation state (CAPE and earnings-yield spread), volatility/policy uncertainty, cross-asset stress transmission, and crowding deterioration.
-- Signals are linked to explicit action cadence: daily sizing and gross/net updates, weekly conviction rotation and stop tightening, and monthly or event-driven re-underwrite decisions.
-
-### Source Note
-
-- Source: Internal investment committee dashboard schema and linked public data feeds
-
-## Slide 49
-
-- Section: SECTION DIVIDER
-- Title: What We Expect & Fund Terms
-- Thesis: Target outcomes, portfolio profile, alignment, and core investment terms.
-
-### What This Slide Adds
-
-- Target outcomes, portfolio profile, alignment, and core investment terms.
-
-## Slide 50
-
-- Section: WHAT WE EXPECT & FUND TERMS
-- Title: Scenario analysis
-- Thesis: Adjust assumptions to model projected returns. NOI escalates 2% annually. 10-year fund life
-
-### What This Slide Adds
-
-- Returns are most sensitive to three variables: exit cap rate, refinancing cost, and structural-long return.
-- This module is the implementation layer for the thesis: collateral cash flow from NNN assets plus compounding from structural long exposure over a 10-year life.
-
-### Evidence (Only What Matters)
-
-- The engine tracks total NAV, real-estate equity, structural long sleeve, and fee/carry effects over a full 10-year lifecycle.
-- Baseline control values: entry cap 6.0%, exit cap 6.0%, loan rate 5.5%, structural-long return 25.0%.
-- Default-case outputs: gross IRR ~15.86%, LP net IRR ~13.94%, LP net MOIC ~3.687x.
-
-### Mechanics (If Material)
-
-- User controls: entry cap (3-9%), exit cap year 10 (4-10%), loan rate (3-9%), and structural-long return (-100% to 100%).
-- Simulation states: real-estate equity, structural long sleeve, and reserve cash, rolled forward annually.
-- Annual loop: apply property cash flow, amortize debt, apply sleeve returns, charge fees, and replenish debt-service reserve.
-- Exit logic: year-10 property value from NOI/exit cap, net debt payoff, then apply preferred return and carry waterfall.
-- Carry structure: 9% preferred hurdle, GP catch-up, then 20% participation above hurdle.
-- Default controls also imply day-1 RE equity ~$9.0M, day-1 long sleeve ~$9.805M, year-1 debt service ~$0.749M, year-1 DSCR ~1.601x, and GP carry ~$13.44M.
-
-### Source Note
-
-- Source: Internal scenario model. Projections are illustrative. 2% management fee (years 1-5 on committed capital, years 6-10 on NAV) and 20% carry above 9% preferred return.
-
-## Slide 51
-
-- Section: WHAT WE EXPECT & FUND TERMS
-- Title: Terms at a glance
-- Thesis: Key economics, governance, and liquidity mechanics
-
-### What This Slide Adds
-
-- Fee structure: 2.0% management fee on committed capital in years 1-5, then 2.0% on NAV in years 6-10.
-- Performance economics: 9.0% preferred return, 100% GP catch-up until 20% profit share, then 20% carry above hurdle.
-- Formation fee: 1.0% of LP capital.
-- Investment guidelines: permitted instruments include equities, ETFs, bonds, commodities, FX, futures, options, crypto, and Treasuries.
-- Hard risk rails: max single position 10% NAV; no margin/borrowing; no outright shorts.
-- Liquidity terms: years 1-5 full lock-up; years 6-10 GP discretionary liquidation window; secondary transfers priced at 90%/95% NAV with 5% spread accruing to the fund.
-- Reporting and benchmarks: quarterly NAV plus annual letter; real-estate sleeve benchmarked to NCREIF, structural sleeve benchmarked to S&P 500 total return, fund-level as weighted composite.
-
-## Slide 52
-
-- Section: WHAT WE EXPECT & FUND TERMS
-- Title: Risk architecture
-- Thesis: Every risk has a structural mitigation built into the fund design
-
-### What This Slide Adds
-
-- The real-estate collar creates the structural floor; the structural long portfolio creates the upside.
-- Principal risk factors include property-value decline, tenant default, refinancing-rate risk at year 10, structural-long market risk, and crypto/FX volatility at the position level.
-- Structural mitigants include a hard 55% LTV cap, investment-grade NNN lease profile, NOI-surplus accumulation in U.S. Treasuries, 10% position limits, and prohibition of margin/shorts.
-- Debt design (10-year term, 30-year amortization) reduces near-term refinancing fragility and limits forced-seller pathways.
-
-### Evidence (Only What Matters)
-
-- Stress framing in the underwriting pack: a 30% real-estate decline is still buffered by the equity cushion before LTV breach.
-- A 50% structural-long drawdown does not force liquidation because margin leverage is prohibited.
-- Tenant-default and rate-spike scenarios are addressed through reserve policy, lease quality, and fixed-term debt structure.
-
-## Slide 53
-
-- Section: LONG STRUCTURE PORTFOLIO SLEEVE
-- Title: Traditional portfolio construction was designed for a regime that no longer exists
-- Thesis: At current starting valuations, historical forward real return base rates for broad equity beta are materially compressed
-
-### What This Slide Adds
-
-- In high-starting-valuation regimes, index beta carries weaker long-horizon base rates. Allocation edge shifts to manager selection, dispersion capture, and non-index exposures that do not rely on multiple expansion.
-- The 40+ bucket historically mapped to a -3.45% median next-10Y annualized real return, around the 98.8th percentile of historical CAPE readings.
-
-### Evidence (Only What Matters)
-
-- Historical next-10Y real equity returns compress as starting CAPE rises: the median shifts from about +11.0% annualized (CAPE <10) to about -3.45% (CAPE 40+).
-- In the 40+ CAPE bucket, the interquartile range is also negative (roughly -4.41% to -3.03%), and sample size is small (~21 observations), underscoring both weak base rates and estimation uncertainty.
-
-### Mechanics (If Material)
-
-- Current Shiller CAPE reference used in this analysis: 40.38.
-
-### Source Note
-
-- Source: Robert Shiller online data (Yale) and multpl.com valuation series (captured Monday, February 9, 2026; latest close Friday, February 6, 2026).
-
-## Slide 54
-
-- Section: WHAT WE EXPECT & FUND TERMS
-- Title: What if we are right?
-- Thesis: Closing frame for investment-committee discussion
-
-### What This Slide Adds
-
-- Closing frame for investment-committee discussion
-
-### Source Note
-
-- Source: Internal investment committee framing prompt (Feb 2026)
-
-## Slide 55
-
-- Section: SECTION DIVIDER
-- Title: APPENDIX
-- Thesis: Supporting detail and technical reference
-
-### What This Slide Adds
-
-- Supporting detail and technical reference
-
-## Slide 56
-
-- Section: APPENDIX - AI INFRASTRUCTURE
-- Title: Each GPU generation unlocks a new frontier of training scale
-- Thesis: GPT-5.3-Codex (Feb 2026) is the first frontier model fully trained on NVIDIA GB200 NVL72
-
-### What This Slide Adds
-
-- Cluster-size progression across model generations highlights the scaling step from tens of thousands toward hundreds of thousands of accelerators.
-
-### Evidence (Only What Matters)
-
-- Estimated frontier training clusters expand from ~20-25k accelerators (2024 cohort) to around ~300k in the largest 2026 estimate (GPT-5.3-Codex).
-
-### Source Note
-
-- Source: OpenAI, NVIDIA, SemiAnalysis, The Information. Cluster sizes are best public estimates.
-
-## Slide 57
-
-- Section: APPENDIX - POWER
-- Title: Interconnection queues stretch 5-7 years
-- Thesis: The grid cannot accommodate projected demand without large new transmission investment
-
-### What This Slide Adds
-
-- The grid cannot accommodate projected demand without large new transmission investment
-
-### Evidence (Only What Matters)
-
-- U.S. interconnection queues rise from roughly 350 GW (2014) to about 2,300 GW, with a recent peak near 2,600 GW (2023), consistent with multi-year grid-connection delays.
-
-### Source Note
-
-- Source: Lawrence Berkeley National Lab, PJM, EIA
-
-## Slide 58
-
-- Section: APPENDIX - SUPPLY CHAIN
-- Title: GPU supply is a packaging story, not just a wafer story
-- Thesis: CoWoS + HBM is the second chokepoint after leading-edge silicon
-
-### What This Slide Adds
-
-- Packaging and memory bottlenecks cap delivered compute, even when wafer starts expand. Capacity pricing power accrues to upstream physical suppliers.
-- TSMC CoWoS-S and HBM integration determine shipped accelerator volume
-- HBM capacity per GPU - each generation requires more
-
-### Source Note
-
-- Source: TSMC earnings, SK Hynix disclosures, SemiAnalysis
-
-## Slide 59
-
-- Section: APPENDIX
-- Title: How large language models work
-- Thesis: A simplified view of the architecture behind frontier AI systems
-
-### What This Slide Adds
-
-- Frontier runs and inference fleets require semiconductors, power delivery, and cooling at utility scale.
-- Performance improves predictably with more data, parameters, and compute. This drives recurring model scale-ups.
-- Training is bursty and episodic. Inference is persistent and growing, making long-horizon infrastructure demand sticky.
-- You do not need to predict which model wins. Every serious model requires the same physical inputs: chips, copper, power, and cooling.
-
-### Source Note
-
-- Source: Vaswani et al. (2017), Kaplan et al. (2020), Epoch AI
-
-## Slide 60
-
-- Section: APPENDIX - COMPUTE SPEND
-- Title: AI lab compute spend is doubling every year
-- Thesis: Every dollar here flows into chips, power, and cooling - the physical layer of the AI stack
-
-### What This Slide Adds
-
-- Every dollar here flows into chips, power, and cooling - the physical layer of the AI stack
-
-### Evidence (Only What Matters)
-
-- These values are estimated compute spend (infrastructure/training/inference cost), not revenue run rate.
-- OpenAI and Anthropic compute spend both scale steeply over 2022-2025E.
-- OpenAI compute spend rises from about $0.4B (2022) to about $16.0B (2025E).
-- Anthropic compute spend rises from about $0.3B (2023) to about $6.8B (2025E).
-
-### Source Note
-
-- Source: Epoch AI, The Information, company disclosures
-
-## Slide 61
-
-- Section: APPENDIX - COPPER
-- Title: Even if every announced project proceeds, copper faces a ~27% supply deficit by 2035
-- Thesis: Demand from electrification and AI infrastructure outpaces credible supply additions
-
-### What This Slide Adds
-
-- Demand from electrification and AI infrastructure outpaces credible supply additions
-
-### Evidence (Only What Matters)
-
-- The scenario path shows copper demand rising from ~27 Mt (2024) to ~34.1 Mt (2040) while modeled supply declines toward ~22 Mt.
-- By 2035, the implied gap is on the order of ~27%, supporting the argument that announced projects are still insufficient.
-
-### Source Note
-
-- Source: IEA Global Critical Minerals Outlook 2025 (STEPS), BloombergNEF
-
-## Slide 62
-
-- Section: APPENDIX - UNDERWRITING
-- Title: How we underwrite
-- Thesis: Institutional gate-based underwriting with explicit failure conditions, kill-switches, and hard risk rails
-
-### What This Slide Adds
-
-- End-market growth must remain durable through an entire cycle.
-- No plausible forced-seller path under adverse rates, spreads, or volumes.
-- Return profile must clear hurdle rates without multiple-expansion heroics.
-- Scarcity duration must exceed what current valuation already discounts.
-
-### Source Note
-
-- Source: Internal IC underwriting playbook (v2026.02)
+*Confidential — February 2026*
+*Stack Capital Investment Committee*

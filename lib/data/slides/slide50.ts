@@ -24,5 +24,5 @@ export const slide50ScenarioAnalysisData: Slide50ScenarioAnalysisData = {
     { key: "gpCarry", label: "GP Carry", tone: "caution" }
   ],
   sourceLine:
-    "Source: Internal scenario model. Projections are illustrative. 2% management fee (years 1-5 on committed capital, years 6-10 on NAV) and 20% carry above 9% preferred return."
+    "Source: Internal scenario model. Projections are illustrative. 2% management fee on NAV. 20% performance fee above 5% hurdle."
 };

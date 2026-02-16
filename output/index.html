@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stack Holdings — Investor Access</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0d2137;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Subtle grid background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(42,122,140,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42,122,140,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.gate {
+  width: 420px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.logo-mark {
+  width: 48px;
+  height: 48px;
+  border: 2px solid rgba(42,122,140,0.5);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+}
+
+.logo-mark span {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: #2a7a8c;
+}
+
+.fund-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+}
+
+.fund-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 16px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.input-group input::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+
+.input-group input:focus {
+  border-color: #2a7a8c;
+  background: rgba(42,122,140,0.06);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 16px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #2a7a8c;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover {
+  background: #237082;
+}
+
+.submit-btn:active {
+  transform: scale(0.99);
+}
+
+.error-msg {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #e74c3c;
+  margin-top: 12px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.error-msg.show {
+  opacity: 1;
+}
+
+.footer-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.2);
+  margin-top: 48px;
+}
+</style>
+</head>
+<body>
+
+<div class="gate">
+  <div class="logo-mark"><span>S</span></div>
+  <div class="fund-name">Stack Holdings</div>
+  <div class="fund-sub">Investment Thesis</div>
+
+  <form id="authForm" onsubmit="return handleAuth(event)">
+    <div class="input-group">
+      <input type="password" id="passInput" placeholder="Enter access code" autocomplete="off" autofocus>
+    </div>
+    <button type="submit" class="submit-btn">View Presentation</button>
+  </form>
+  <div class="error-msg" id="errorMsg">Incorrect access code</div>
+
+  <div class="footer-text">Confidential &mdash; Authorized recipients only</div>
+</div>
+
+<script>
+// Simple hash check — not meant to be cryptographically secure,
+// just a gate for casual access (same as Docsend, Carta, etc.)
+// Change the password by updating the hash below.
+
+// Default password: "thestack2025"
+// To change: open browser console, run: btoa("yournewpassword")
+// Then replace the value below.
+var ACCESS_HASH = 'dGhlc3RhY2syMDI1';
+
+function handleAuth(e) {
+  e.preventDefault();
+  var input = document.getElementById('passInput').value;
+  var err = document.getElementById('errorMsg');
+
+  if (btoa(input) === ACCESS_HASH) {
+    sessionStorage.setItem('deck_auth', '1');
+    window.location.href = '/deck';
+  } else {
+    err.classList.add('show');
+    document.getElementById('passInput').value = '';
+    document.getElementById('passInput').focus();
+    setTimeout(function() { err.classList.remove('show'); }, 2000);
+  }
+  return false;
+}
+
+// If already authenticated this session, go straight to deck
+if (sessionStorage.getItem('deck_auth') === '1') {
+  window.location.href = '/deck';
+}
+</script>
+
+</body>
+</html>
